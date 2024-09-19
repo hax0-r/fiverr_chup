@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Docs/Assets/Images/Global/favIcon.png" type="image/x-icon">
+    <title>Chup!</title>
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/Docs/Styles/global.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
+
+</head>
+
+<body>
+
+    <nav class="bg-[#f1e4da]">
+        <div class="flex h-16 lg:px-16 px-8 items-center justify-between mx-auto">
+            <a href="/index.html">
+                <img src="/Docs/Assets/Images/Global/logo.svg" alt="log" class="h-9 md:h-12">
+            </a>
+            <ul class="items-center text-[#115934] xl:flex hidden gap-7 text-[17px]">
+                <li><a href="" class="navUnderLine">About Us</a></li>
+                <li><a href="" class="navUnderLine">Case Study</a></li>
+                <li><a href="" class="navUnderLine">News & Blog</a></li>
+                <li><a href="" class="navUnderLine">FAQ</a></li>
+                <li class="flex items-center gap-2 cursor-pointer relative py-5" id="dropDownNav">
+                    Products <i
+                        class="fa-solid fa-angle-down mt-1 text-[#115934] text-sm transition-all duration-300"></i>
+                </li>
+                <li class="flex items-center gap-2 cursor-pointer relative py-5" id="dropDownNav">
+                    More <i class="fa-solid fa-angle-down mt-1 text-[#115934] text-sm transition-all duration-300"></i>
+
+                    <div
+                        class="border-2 border-[#a9a099] w-52 rounded-lg absolute  bg-[#f1e4da] left-1 overflow-hidden fadeIn">
+                        <ul>
+                            <a href="">
+                                <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">Career</li>
+                            </a>
+                            <a href="">
+                                <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">Security
+                                    Compliance</li>
+                            </a>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <button
+                class="bg-[#115934] xl:flex hidden text-[#F1E4DA] px-6 py-2.5 rounded-lg transition-all items-center justify-center gap-2 font-medium ">
+                <img src="/Docs/Assets/Images/Navbar/whatsapp.png" class="h-[18px]" alt="">
+                WhatsApp Us
+            </button>
+            <i class="fa-solid fa-bars text-2xl xl:hidden cursor-pointer text-[#115934]" id="openNav"></i>
+        </div>
+    </nav>
+    <!-- responsive Navbar -->
+    <div class="fixed top-0 right-0 h-screen bg-[#f1e4da] text-[#115934] font-36 z-50 transition-all duration-500"
+        id="responsiveNav" style="width: 0;">
+        <div class="px-10 pt-10 pb-4 relative flex flex-col h-full justify-between">
+            <div class="">
+                <div class="flex items-center justify-between">
+                    <a href="/index.html">
+                        <img src="/Docs/Assets/Images/Global/logo.svg" class="h-[32px]" alt="">
+                    </a>
+                    <img src="/Docs/Assets/Images/Navbar/close.png" id="closeNav" class="h-[21px] cursor-pointer"
+                        alt="">
+                </div>
+                <ul class="mt-10 text-[#115934] flex flex-col text-[17px]">
+                    <a href="">
+                        <li class="py-4  poppins">About Us</li>
+                    </a>
+                    <a href="">
+                        <li class="py-4  poppins">Case Study</li>
+                    </a>
+                    <a href="">
+                        <li class="py-4  poppins">News & Blog</li>
+                    </a>
+                    <a href="">
+                        <li class="py-4  poppins">FAQ</li>
+                    </a>
+                    <li class="py-5" x-data="accordion(1)">
+                        <h2 @click="handleClick()" class="flex flex-row gap-2 items-center cursor-pointer">
+                            <span>Products</span>
+                            <i :class="handleRotate()"
+                                class="fa-solid fa-angle-down mt-1 text-[#115934] text-sm transition-all duration-300"></i>
+                        </h2>
+                        <div x-ref="tab" :style="handleToggle()"
+                            class="overflow-hidden max-h-0 duration-500 transition-all">
+                            <ul class="pl-5 pt-5">
+                                <a href="">
+                                    <li class="py-3">ChupOnline</li>
+                                </a>
+                                <a href="">
+                                    <li class="py-3">ChupHospital</li>
+                                </a>
+                                <a href="">
+                                    <li class="py-3">ChupClinic</li>
+                                </a>
+                                <a href="">
+                                    <li class="py-3">ChupWork</li>
+                                </a>
+                                <a href="">
+                                    <li class="py-3">Paperize.AI</li>
+                                </a>
+                                <a href="">
+                                    <li class="py-3">My Mental</li>
+                                </a>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="py-5" x-data="accordion(2)">
+                        <h2 @click="handleClick()" class="flex flex-row gap-2 items-center cursor-pointer">
+                            <span>More</span>
+                            <i :class="handleRotate()"
+                                class="fa-solid fa-angle-down mt-1 text-[#115934] text-sm transition-all duration-300"></i>
+                        </h2>
+                        <div x-ref="tab" :style="handleToggle()"
+                            class="overflow-hidden max-h-0 duration-500 transition-all">
+                            <ul class="pl-5 pt-5">
+                                <a href="">
+                                    <li class="py-3">Career</li>
+                                </a>
+                                <a href="">
+                                    <li class="py-3">Security Compliance</li>
+                                </a>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <a href="">
+                <button
+                    class="bg-[#115934] flex w-full text-[#F1E4DA] p-3 rounded-lg transition-all items-center justify-center gap-4 font-medium ">
+                    <img src="/Docs/Assets/Images/Navbar/whatsapp.png" class="h-5" alt="">
+                    WhatsApp Us
+                </button>
+            </a>
+
+
+        </div>
+    </div>
+
+    <div class="heroSection flex flex-col px-5 py-16 items-center justify-center w-full bg-[#f1e4da]">
+        <h1
+            class="font-bold md:text-[80px] text-3xl text-center md:flex flex-col items-center justify-center md:leading-[104px] leading-[39px] text-[#115934]">
+            <span>CUT YOUR</span> <span> CURRENT WAIT TIMES</span> <span> FROM
+                <span class="bg-[#F26522A6]">HOURS TO MINUTES.</span> </span> <span>DOUBLE YOUR CUSTOMER’S </span><span>
+                HAPPINESS (AND REVENUE!)</span>
+        </h1>
+    </div>
+
+
+    <!-- meet -->
+
+    <div class="px-5 sm:py-16 py-8 mt-5">
+
+        <h2 class="flex items-center sm:gap-6 gap-3 sm:text-6xl text-4xl text-[#115934] font-bold justify-center">Meet
+            <img src="/Docs/Assets/Images/Global/logo.svg" class="sm:h-16 h-10" alt="">
+        </h2>
+        <div class="max-w-[1200px] max-h-[662px] w-full h-full mx-auto sm:mt-14 mt-8">
+            <img src="/Docs/Assets/Images/Home/youtubr.png" class="w-full h-full" alt="">
+        </div>
+
+        <div class="flex items-center justify-center sm:mt-12 mt-8 ">
+
+            <button
+                class="bg-[#F26522] hover:bg-[#ff5608] transition-all p-3 w-[500px] text-[18px] rounded-full cursor-pointer text-white text-center">
+                Explore More
+            </button>
+        </div>
+
+
+    </div>
+
+
+
+    <div class="px-5 bg-[#115934] py-16 mt-5">
+        <h2 class="text-center gap-6 md:text-6xl text-4xl pt-6 font-bold justify-center text-white">The Fundamental of
+            <span class="text-[#F26522]"> Chup</span>
+        </h2>
+        <p class="lg:text-[32px] sm:text-xl  text-white text-center pt-5 max-w-[1021px] font-light mx-auto">Every
+            visitor will only
+            come when their turns about to be called FOLLOWING REAL-TIME situations at the
+            premise.</p>
+
+
+        <div class="flex items-center justify-center lg:gap-12 gap-8 md:flex-row flex-col sm:mt-16 mt-10">
+
+            <div class="flex flex-col items-center justify-center ">
+                <h2 class="text-[24px] text-white pb-2 text-center">Waiting ON-premise</h2>
+                <p class="bg-[#F26522] rounded-lg text-white px-2 py-1 inline italic uppercase">before chup</p>
+                <div class="grid grid-cols-2 gap-x-2 gap-y-5 mt-7">
+                    <div class="relative max-w-[263.01px] max-h-[210px] w-full h-full">
+                        <img src="/Docs/Assets/Images/Home/canopy.png" class="w-full h-full rounded-md" alt="">
+                        <p
+                            class="absolute w-full p-2 text-[18px] bottom-0 left-0 text-white bg-[#020202b9] text-center rounded-b-md font-medium san tracking-wide">
+                            Canopy</p>
+                    </div>
+                    <div class="relative max-w-[263.01px] max-h-[210px] w-full h-full">
+                        <img src="/Docs/Assets/Images/Home/canopy.png" class="w-full h-full rounded-md" alt="">
+                        <p
+                            class="absolute w-full p-2 text-[18px] bottom-0 left-0 text-white bg-[#020202b9] text-center rounded-b-md font-medium san tracking-wide">
+                            Canopy</p>
+                    </div>
+                    <div class="relative max-w-[263.01px] max-h-[210px] w-full h-full">
+                        <img src="/Docs/Assets/Images/Home/canopy.png" class="w-full h-full rounded-md" alt="">
+                        <p
+                            class="absolute w-full p-2 text-[18px] bottom-0 left-0 text-white bg-[#020202b9] text-center rounded-b-md font-medium san tracking-wide">
+                            Canopy</p>
+                    </div>
+                    <div class="relative max-w-[263.01px] max-h-[210px] w-full h-full">
+                        <img src="/Docs/Assets/Images/Home/canopy.png" class="w-full h-full rounded-md" alt="">
+                        <p
+                            class="absolute w-full p-2 text-[18px] bottom-0 left-0 text-white bg-[#020202b9] text-center rounded-b-md font-medium san tracking-wide">
+                            Canopy</p>
+                    </div>
+                </div>
+            </div>
+
+            <img src="/Docs/Assets/Images/Home/vs.png"
+                class="max-w-[67px] w-full md:mt-10 p-1 border-dashed border rounded-full h-full max-h-[67px]" alt="">
+
+
+            <div class="flex flex-col items-center justify-center relative">
+                <img src="/Docs/Assets/Images/Home/fundamentalChup.png" class="absolute right-0 top-0 h-16" alt="">
+                <h2 class="text-[24px] text-white pb-2 text-center">Waiting OFF-premise</h2>
+                <p class="border-2 border-white rounded-lg text-white px-2 py-1 inline italic uppercase">After chup</p>
+                <div class="grid grid-cols-2 gap-x-2 gap-y-5 mt-7">
+                    <div class="relative max-w-[263.01px] max-h-[210px] w-full h-full">
+                        <img src="/Docs/Assets/Images/Home/canopy.png" class="w-full h-full rounded-md" alt="">
+                        <p
+                            class="absolute w-full p-2 text-[18px] bottom-0 left-0 text-white bg-[#020202b9] text-center rounded-b-md font-medium san tracking-wide">
+                            Canopy</p>
+                    </div>
+                    <div class="relative max-w-[263.01px] max-h-[210px] w-full h-full">
+                        <img src="/Docs/Assets/Images/Home/canopy.png" class="w-full h-full rounded-md" alt="">
+                        <p
+                            class="absolute w-full p-2 text-[18px] bottom-0 left-0 text-white bg-[#020202b9] text-center rounded-b-md font-medium san tracking-wide">
+                            Canopy</p>
+                    </div>
+                    <div class="relative max-w-[263.01px] max-h-[210px] w-full h-full">
+                        <img src="/Docs/Assets/Images/Home/canopy.png" class="w-full h-full rounded-md" alt="">
+                        <p
+                            class="absolute w-full p-2 text-[18px] bottom-0 left-0 text-white bg-[#020202b9] text-center rounded-b-md font-medium san tracking-wide">
+                            Canopy</p>
+                    </div>
+                    <div class="relative max-w-[263.01px] max-h-[210px] w-full h-full">
+                        <img src="/Docs/Assets/Images/Home/canopy.png" class="w-full h-full rounded-md" alt="">
+                        <p
+                            class="absolute w-full p-2 text-[18px] bottom-0 left-0 text-white bg-[#020202b9] text-center rounded-b-md font-medium san tracking-wide">
+                            Canopy</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="px-5 2xl:px-0 bg-[#fbf7f4] md:py-16 py-10 ">
+        <div class=" max-w-7xl mx-auto">
+            <div class="flex md:justify-between justify-center items-center">
+                <div class="flex flex-col md:items-start items-center justify-center">
+                    <h2
+                        class="flex items-center  lg:text-[80px] lg:leading-[104px] md:leading-[78px] leading-[39px] md:text-[60px] md:text-4xl text-2xl font-bold text-[#F26522] flex-nowrap text-nowrap">
+                        FOUR REASONS <img src="/Docs/Assets/Images/Home/chup.svg"
+                            class=" max-h-24 xl:max-w-none lg:max-w-[14rem] max-w-[6rem] md:max-w-[14rem]" alt=""></h2>
+                    <h2
+                        class="flex items-center  lg:text-[80px] lg:leading-[104px] md:leading-[78px] leading-[39px] md:text-[60px] md:text-4xl text-2xl font-bold text-[#F26522]">
+                        CHANGES EVERYTHING</h2>
+                </div>
+                <img src="/Docs/Assets/Images/Home/light.svg" class="xl:block hidden" alt="">
+            </div>
+
+            <div class="w-full h-[1.5px] bg-zinc-400 sm:mt-0 mt-5"></div>
+
+            <div class="py-8 grid md:grid-cols-4 grid-cols-2 md:gap-12 gap-5 ">
+
+                <div class="flex flex-col items-center">
+                    <div class="relative">
+                        <img src="/Docs/Assets/Images/Home/1.svg" class="max-h-20 max-w-20" alt="">
+                        <img src="/Docs/Assets/Images/Home/1stworld.svg"
+                            class="md:h-20 h-16 absolute top-0 sm:left-[-100%] left-[-60%]" alt="">
+                    </div>
+                    <p
+                        class="lg:text-[24px] md:text-[20px] text-[16px] text-[#115934] leading-tight text-center pt-3 font-medium">
+                        Dynamic Realtime Queue / Appointments</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img src="/Docs/Assets/Images/Home/1.svg" class="max-h-20 max-w-20" alt="">
+                    <p
+                        class="lg:text-[24px] md:text-[20px] text-[16px] text-[#115934] leading-tight text-center pt-3 font-medium">
+                        Dynamic Realtime Queue / Appointments</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img src="/Docs/Assets/Images/Home/1.svg" class="max-h-20 max-w-20" alt="">
+                    <p
+                        class="lg:text-[24px] md:text-[20px] text-[16px] text-[#115934] leading-tight text-center pt-3 font-medium">
+                        Dynamic Realtime Queue / Appointments</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img src="/Docs/Assets/Images/Home/1.svg" class="max-h-20 max-w-20" alt="">
+                    <p
+                        class="lg:text-[24px] md:text-[20px] text-[16px] text-[#115934] leading-tight text-center pt-3 font-medium">
+                        Dynamic Realtime Queue / Appointments</p>
+                </div>
+
+            </div>
+
+            <div class="w-full h-[1.5px] bg-zinc-400"></div>
+
+        </div>
+
+    </div>
+
+    <div class="px-5 2xl:px-0 bg-[#fbf7f4]  py-10 ">
+        <div class=" max-w-7xl mx-auto">
+            <div class="flex md:items-center items-start justify-between gap-2 relative">
+                <div class="">
+                    <img src="/Docs/Assets/Images/Home/1.svg" class="max-h-20 max-w-20" alt="">
+                    <h2
+                        class="lg:text-[80px] md:text-[60px] text-[30px] text-[#115934] lg:leading-[104px] leading-[39px] md:leading-[78px] font-medium">
+                        Dynamic Real-Time
+                        Queue/Appointments</h2>
+                </div>
+                <div class="max-w-[212.98px] ">
+                    <img src="/Docs/Assets/Images/Home/1stworld.svg"
+                        class="sm:w-full w-16 sm:static absolute  -top-8 right-1" alt="">
+                </div>
+            </div>
+            <p class="lg:text-[32px] md:text-[24px] text-[#115934] max-w-[1200px] ">We literally program THOUSANDS OF
+                algorithms to cater
+                for every single situation that may or may not happen. </p>
+            <div class="w-full h-[1.5px] bg-zinc-400 my-8"></div>
+
+            <div class="grid grid-cols-2 md:gap-8 gap-3">
+                <div class="w-full  text-[#B64410] bg-[#fde8d9] rounded-lg px-6 pt-6 md:pb-0 pb-6">
+                    <h2 class="font-medium lg:text-[32px] md:text-[24px] text-[20px]">Average Wait Times</h2>
+                    <div class="w-full h-[1.5px] bg-[#F26522] sm:my-3 my-2"></div>
+                    <p class="lg:text-[24px] md:text-[20px] text-[12px] font-medium md:-mb-8">Up to</p>
+                    <h2 class="lg:text-[100px] md:text-[64px] text-[27px]  font-medium ">15<span
+                            class="md:text-6xl text-xl">min</span></h2>
+                </div>
+                <div class="w-full  text-[#B64410] bg-[#fde8d9] rounded-lg px-6 pt-6 md:pb-0 pb-6">
+                    <h2 class="font-medium lg:text-[32px] md:text-[24px] text-[20px]">Customer Satisfaction</h2>
+                    <div class="w-full h-[1.5px] bg-[#F26522] sm:my-3 my-2"></div>
+                    <p class="lg:text-[24px] md:text-[20px] text-[12px] font-medium md:-mb-8">Up to</p>
+                    <h2 class="lg:text-[100px] md:text-[64px] text-[27px]  font-medium ">97<span
+                            class="md:text-6xl text-xl">%</span></h2>
+                </div>
+            </div>
+
+            <h2 class="mt-16 font-bold lg:text-[80px] md:text-[60px] text-[30px] text-center text-[#F26522]">Dynamic
+                Situations</h2>
+
+            <div class="">
+
+                <div class="flex items-center flex-wrap justify-center gap-3  mt-6">
+                    <p
+                        class="lg:text-[24px] font-medium text-nowrap py-2.5 px-4 text-center text-[14px] bg-[#F26522] text-white rounded-sm">
+                        Late Arrival</p>
+                    <p
+                        class="lg:text-[24px] font-medium text-nowrap py-2.5 px-4 text-center text-[14px] bg-[#F26522] text-white rounded-sm">
+                        Early Arrival</p>
+                    <p
+                        class="lg:text-[24px] font-medium text-nowrap py-2.5 px-4 text-center text-[14px] bg-[#F26522] text-white rounded-sm">
+                        Cancellation</p>
+                    <p
+                        class="lg:text-[24px] font-medium text-nowrap py-2.5 px-4 text-center text-[14px] bg-[#F26522] text-white rounded-sm">
+                        Reschedule</p>
+                    <p
+                        class="lg:text-[24px] font-medium text-nowrap py-2.5 px-4 text-center text-[14px] bg-[#F26522] text-white rounded-sm">
+                        Delay (without informing)</p>
+                    <p
+                        class="lg:text-[24px] font-medium text-nowrap py-2.5 px-4 text-center text-[14px] bg-[#F26522] text-white rounded-sm">
+                        Forgot Appointment</p>
+                    <p
+                        class="lg:text-[24px] font-medium text-nowrap py-2.5 px-4 text-center text-[14px] bg-[#F26522] text-white rounded-sm">
+                        Delay (with informing)</p>
+                    <p
+                        class="lg:text-[24px] font-medium text-nowrap py-2.5 px-4 text-center text-[14px] bg-[#F26522] text-white rounded-sm">
+                        No smartphone</p>
+                    <p
+                        class="lg:text-[24px] font-medium text-nowrap py-2.5 px-4 text-center text-[14px] bg-[#F26522] text-white rounded-sm">
+                        Ignorant with Messages</p>
+                    <p
+                        class="lg:text-[24px] font-medium text-nowrap py-2.5 px-4 text-center text-[14px] bg-[#F26522] text-white rounded-sm">
+                        Do not want to download app</p>
+                    <p
+                        class="lg:text-[24px] font-medium text-nowrap py-2.5 px-4 text-center text-[14px] bg-[#F26522] text-white rounded-sm">
+                        No Show</p>
+                    <p
+                        class="lg:text-[24px] font-medium text-nowrap py-2.5 px-4 text-center text-[14px] bg-[#F26522] text-white rounded-sm">
+                        Forgot Appointment</p>
+                </div>
+
+
+                <div class="mt-5">
+                    <button
+                        class="flex font-medium lg:text-[24.42px] text-[16px] items-center bg-[#F8FAFF] text-[#F26522] justify-center gap-10 p-3 border-2 border-[#F26522] rounded-md w-full text-center">
+                        <img src="/Docs/Assets/Images/Home/user.svg" class="h-6" alt="">
+                        USER / CUSTOMER
+                    </button>
+                    <img src="/Docs/Assets/Images/Home/arrow.png" class="rotate-180 h-20 mx-auto" alt="">
+
+                    <img src="/Docs/Assets/Images/Home/policeMan.png" class="max-w-[160px] my-2 mx-auto" alt="">
+
+                    <img src="/Docs/Assets/Images/Home/arrow.png" class=" mx-auto h-20" alt="">
+                    <button
+                        class="flex font-medium lg:text-[24.42px] text-[16px] items-center text-[#115934] justify-center gap-10 bg-[#ECF4F9] p-3 border-2 border-[#115934] rounded-md w-full text-center">
+                        <img src="/Docs/Assets/Images/Home/building.svg" class="h-6" alt="">
+                        SERVICE PROVIDER
+                    </button>
+                </div>
+
+                <div class="flex items-center flex-wrap justify-center gap-3 mt-6">
+                    <p
+                        class="lg:text-[24px] text-[14px] font-medium text-center bg-[#115934] text-white py-2.5 px-4 rounded-sm">
+                        Some of the counter planned / sudden close
+                    </p>
+                    <p
+                        class="lg:text-[24px] text-[14px] font-medium text-center bg-[#115934] text-white py-2.5 px-4 rounded-sm">
+                        Lunch Break
+                    </p>
+                    <p
+                        class="lg:text-[24px] text-[14px] font-medium text-center bg-[#115934] text-white py-2.5 px-4 rounded-sm">
+                        Walk-In
+                    </p>
+                    <p
+                        class="lg:text-[24px] text-[14px] font-medium text-center bg-[#115934] text-white py-2.5 px-4 rounded-sm">
+                        Multi-station visits
+                    </p>
+                    <p
+                        class="lg:text-[24px] text-[14px] font-medium text-center bg-[#115934] text-white py-2.5 px-4 rounded-sm">
+                        All counters for service sudden close
+                    </p>
+                    <p
+                        class="lg:text-[24px] text-[14px] font-medium text-center bg-[#115934] text-white py-2.5 px-4 rounded-sm">
+                        Replacement with other staff
+                    </p>
+                    <p
+                        class="lg:text-[24px] text-[14px] font-medium text-center bg-[#115934] text-white py-2.5 px-4 rounded-sm">
+                        Go to another Branch
+                    </p>
+                    <p
+                        class="lg:text-[24px] text-[14px] font-medium text-center bg-[#115934] text-white py-2.5 px-4 rounded-sm">
+                        Serving longer time than estimated
+                    </p>
+                    <p
+                        class="lg:text-[24px] text-[14px] font-medium text-center bg-[#115934] text-white py-2.5 px-4 rounded-sm">
+                        Serving quicker than estimated
+                    </p>
+                    <p
+                        class="lg:text-[24px] text-[14px] font-medium text-center bg-[#115934] text-white py-2.5 px-4 rounded-sm">
+                        Service Provider’s System Down
+                    </p>
+                    <p
+                        class="lg:text-[24px] text-[14px] font-medium text-center bg-[#115934] text-white py-2.5 px-4 rounded-sm">
+                        Sudden or Fixed Closing Hours
+                    </p>
+                    <p
+                        class="lg:text-[24px] text-[14px] font-medium text-center bg-[#115934] text-white py-2.5 px-4 rounded-sm">
+                        Late Arrival
+                    </p>
+                    <p
+                        class="lg:text-[24px] text-[14px] font-medium text-center bg-[#115934] text-white py-2.5 px-4 rounded-sm">
+                        Emergency leave real-time
+                    </p>
+                    <p
+                        class="lg:text-[24px] text-[14px] font-medium text-center bg-[#115934] text-white py-2.5 px-4 rounded-sm">
+                        Future emergency leave
+                    </p>
+
+                    <p class="lg:text-[28px] sm:text-[18px] text-[12px] bg-[#f1e4da] p-4 mt-8 rounded-md">In a perfect
+                        world, customer makes a booking at <strong>10.00 AM</strong> and the service provider will
+                        attend the customer at <strong>10.00 AM</strong> slot. Or you join a queue and given an accurate
+                        wait times and be served accordingly. <strong>But this is NOT A PERFECT WORLD</strong>. Both
+                        service provider and the customers are <strong>never punctual</strong> - rendering the booking
+                        and estimated wait times <strong>useless</strong>. Why, despite appointment management, do
+                        people still wait for hours? They book at 10:00 AM but end up being attended to at 2:00PM?</p>
+                    <div class="lg:text-[28px] sm:text-[18px] text-[12px] bg-[#d8fae8] p-4 mt-2 rounded-md">
+                        <p>Chup functions as a dynamic traffic manager, akin to police traffic at busy intersections
+                            during rush hour, handling inputs from both users/customers and service providers. Whether
+                            the information is provided by button inputs or gathered through automatic algorithm logics,
+                            Chup takes charge of processing it. Once detected, Chup promptly notifies both the user and
+                            service provider, and accordingly adjusts the ongoing live queue and future queue
+                            appointments.</p> <br>
+
+                        <p class="flex items-center gap-6">
+                            <span
+                                class="lg:text-[80px] md:text-[32px] text-[18px] leading-[60px] text-nowrap text-[#115934] font-bold">The
+                                result? </span>Pre-arrival customers receive notifications, enabling them to plan
+                            their arrival and minimize their wait times.
+                        </p>
+
+                        <p>Post-arrival customers? They can plan to go or wait somewhere else. Research showed that
+                            <strong class="text-[#115934]">not knowing how long to wait kills more than the wait
+                                itself</strong>. As for service providers, they can operate <strong
+                                class="text-[#115934]">efficiently, stress-free, and guilt-free</strong> with Chup's
+                            effective crowd congestion management.
+                        </p>
+                    </div>
+                    <p class="lg:text-[28px] sm:text-[18px] text-[12px] bg-[#E0E0E0] p-4 mt-2 rounded-md">The dynamic
+                        situations mentioned here represent the main scenarios, but there are also numerous
+                        sub-situations under each of them. This list is not exhaustive. The logic and algorithm to
+                        handle these situations have been developed over the course of a few years. Apart from testing
+                        forecasted situations during development, Chup has undergone manual and automated testing after
+                        its development. Additionally, Chup has been trained on eight months' worth of real-world data
+                        and will continue to improve with more input and data over time. </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="px-5 md:py-16 py-10 bg-[#F26522] flex flex-col justify-center items-center">
+        <h2 class="bg-white p-4 rounded-full lg:text-[37.62px] md:text-[21.79px] text-[18px] font-bold sm:mb-16 mb-8">
+            Chup's Smart Algorithm</h2>
+        <img src="/Docs/Assets/Images/Home/smartAlogrithm.png" class="max-w-5xl select-none w-full" alt="">
+    </div>
+    <div class="px-5 md:py-16 py-10 bg-[#115934] flex flex-col justify-center items-center">
+        <img src="/Docs/Assets/Images/Home/smartAlogrithem.png" class="max-w-5xl select-none w-full" alt="">
+    </div>
+
+
+    <div class="px-5 2xl:px-0 bg-[#fbf7f4]  py-10 ">
+        <div class=" max-w-7xl mx-auto">
+            <div class="flex md:items-center items-start justify-between gap-2 relative">
+                <div class="">
+                    <img src="/Docs/Assets/Images/Home/2..svg" class="max-h-20 max-w-20" alt="">
+                    <h2
+                        class="lg:text-[80px] md:text-[60px] text-[30px] text-[#115934] lg:leading-[104px] leading-[39px] md:leading-[78px] font-medium">
+                        Plethora of Automations</h2>
+                </div>
+                <div class="max-w-[212.98px] ">
+                    <img src="/Docs/Assets/Images/Home/2Heading.svg"
+                        class="sm:w-full w-16 sm:static absolute  -top-8 right-1" alt="">
+                </div>
+            </div>
+            <p class="lg:text-[32px] md:text-[24px] text-[#115934] max-w-[1200px] ">Nobody likes waiting, ever. If you solve this issue, you are one step ahead than others. </p>
+            <div class="w-full h-[1.5px] bg-zinc-400 my-8"></div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.store('accordion', {
+            tab: 0
+        });
+
+        Alpine.data('accordion', (idx) => ({
+            init() {
+                this.idx = idx;
+            },
+            idx: -1,
+            handleClick() {
+                this.$store.accordion.tab = this.$store.accordion.tab === this.idx ? 0 : this.idx;
+            },
+            handleRotate() {
+                return this.$store.accordion.tab === this.idx ? 'rotate-180' : '';
+            },
+            handleToggle() {
+                return this.$store.accordion.tab === this.idx ? `max-height: ${this.$refs.tab.scrollHeight}px` : '';
+            }
+        }));
+    })
+</script>
+<script>
+    const openNav = document.getElementById("openNav")
+    const responsiveNav = document.getElementById("responsiveNav")
+    const closeNav = document.getElementById("closeNav")
+
+    openNav.addEventListener('click', () => {
+        responsiveNav.style.width = "100%"
+    })
+    closeNav.addEventListener('click', () => {
+        responsiveNav.style.width = "0rem"
+    })
+
+
+    const lenis = new Lenis()
+
+    function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+</script>
+
+</html>
