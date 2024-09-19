@@ -753,6 +753,288 @@
                         </ul>
                     </div>
                 </li>
+                <li class="bg-white my-2 rounded-lg overflow-hidden shadow-lg" x-data="accordion(2)">
+                    <h2 @click="handleClick()" class="flex flex-row justify-between items-center p-3 cursor-pointer">
+                        <span
+                            class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934]">Reception</span>
+                        <i class="fa-solid fa-plus transition-all duration-500" :class="handleRotate()"></i>
+                    </h2>
+                    <div x-ref="tab" :style="handleToggle()"
+                        class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
+                        <ul
+                            class="p-3 text-[#115934] space-y-1 list-disc pl-8 lg:text-[20px] md:text-[16px] text-[15px]">
+
+                            <li> Self-Pay Options</li>
+                            <li> Insurance Payment Options</li>
+                            <li> Fast Lane Features</li>
+                            <li> Arrival Marking</li>
+                            <li> Chat Initiation</li>
+                            <li> Clinic Visit Monitoring</li>
+                            <li> Chat Features</li>
+                            <li> Edit Patient Details/ Data Features</li>
+
+                        </ul>
+                    </div>
+                </li>
+                <li class="bg-white my-2 rounded-lg overflow-hidden shadow-lg" x-data="accordion(3)">
+                    <h2 @click="handleClick()" class="flex flex-row justify-between items-center p-3 cursor-pointer">
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934]">Registration
+                        </span>
+                        <i class="fa-solid fa-plus transition-all duration-500" :class="handleRotate()"></i>
+                    </h2>
+                    <div x-ref="tab" :style="handleToggle()"
+                        class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
+                        <ul
+                            class="p-3 text-[#115934] space-y-1 list-disc pl-8 lg:text-[20px] md:text-[16px] text-[15px]">
+
+                            <li>Register - Upload / Take ID Card</li>
+
+                        </ul>
+                    </div>
+                </li>
+                <li class="bg-white my-2 rounded-lg overflow-hidden shadow-lg" x-data="accordion(4)">
+                    <h2 @click="handleClick()" class="flex flex-row justify-between items-center p-3 cursor-pointer">
+                        <span
+                            class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934]">Appointment</span>
+                        <i class="fa-solid fa-plus transition-all duration-500" :class="handleRotate()"></i>
+                    </h2>
+                    <div x-ref="tab" :style="handleToggle()"
+                        class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
+                        <ul
+                            class="p-3 text-[#115934] space-y-1 list-disc pl-8 lg:text-[20px] md:text-[16px] text-[15px]">
+
+                            <li> Appointment Booking via WhatsApp Link</li>
+                            <li> Admin-OnIy Appointment Booking</li>
+                            <li> Calendar-Based Appointment Setting</li>
+                            <li> Patient Appointment Notes</li>
+                            <li> Quick Appointment Creation</li>
+                            <li> Automated Appointment Reminders</li>
+                            <li> Automatic Rescheduling</li>
+                            <li> Appointment Cancellation Notification</li>
+                            <li> Doctor Status Closure Notification</li>
+                            <li> Appointment Confirmation Message</li>
+                            <li> Doctor Assignment Lock</li>
+                            <li> Live Queue & Appointment Self-Booking</li>
+                            <li> Appointment Data Export & Import</li>
+                            <li> Automatic Booking Cancellation During Clinic Closure</li>
+                            <li> Early Arrival Marking for Patients</li>
+                            <li> Ward/ Hospitalization Marking</li>
+                            <li> Patient Status Monitoring</li>
+
+                        </ul>
+                    </div>
+                </li>
+                <li class="bg-white my-2 rounded-lg overflow-hidden shadow-lg" x-data="accordion(5)">
+                    <h2 @click="handleClick()" class="flex flex-row justify-between items-center p-3 cursor-pointer">
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934]">Reschedule
+                            Appointment</span>
+                        <i class="fa-solid fa-plus transition-all duration-500" :class="handleRotate()"></i>
+                    </h2>
+                    <div x-ref="tab" :style="handleToggle()"
+                        class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
+                        <ul
+                            class="p-3 text-[#115934] space-y-1 list-disc pl-8 lg:text-[20px] md:text-[16px] text-[15px]">
+
+                            <li> Reschedule Notification via WhatsApp</li>
+                            <li> Customer- Initiated Appointment Rescheduling</li>
+                            <li> Adrnin-lnitiatcd Appointment Rescheduling</li>
+                            <li> Multi-Shift Automatic Rescheduling</li>
+                            <li> Bulk Appointment Rescheduling</li>
+
+                        </ul>
+                    </div>
+                </li>
+                <li class="bg-white my-2 rounded-lg overflow-hidden shadow-lg" x-data="accordion(6)">
+                    <h2 @click="handleClick()" class="flex flex-row justify-between items-center p-3 cursor-pointer">
+                        <span
+                            class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934]">Pharmacy</span>
+                        <i class="fa-solid fa-plus transition-all duration-500" :class="handleRotate()"></i>
+                    </h2>
+                    <div x-ref="tab" :style="handleToggle()"
+                        class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
+                        <ul
+                            class="p-3 text-[#115934] space-y-1 list-disc pl-8 lg:text-[20px] md:text-[16px] text-[15px]">
+
+                            <li>Billing Transfer for Medication Dispensing</li>
+
+                        </ul>
+                    </div>
+                </li>
+                <li class="bg-white my-2 rounded-lg overflow-hidden shadow-lg" x-data="accordion(7)">
+                    <h2 @click="handleClick()" class="flex flex-row justify-between items-center p-3 cursor-pointer">
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934]">Dispensary
+                            Tab</span>
+                        <i class="fa-solid fa-plus transition-all duration-500" :class="handleRotate()"></i>
+                    </h2>
+                    <div x-ref="tab" :style="handleToggle()"
+                        class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
+                        <ul
+                            class="p-3 text-[#115934] space-y-1 list-disc pl-8 lg:text-[20px] md:text-[16px] text-[15px]">
+
+                            <li> Medication Collection Archiving</li>
+                            <li> Pharmacy Transfer Tab</li>
+                            <li> Automatic Dispensary Transfer Upon Payment</li>
+
+                        </ul>
+                    </div>
+                </li>
+                <li class="bg-white my-2 rounded-lg overflow-hidden shadow-lg" x-data="accordion(8)">
+                    <h2 @click="handleClick()" class="flex flex-row justify-between items-center p-3 cursor-pointer">
+                         <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934]">Billing &
+                            Insurance</span>
+                        <i class="fa-solid fa-plus transition-all duration-500" :class="handleRotate()"></i>
+                    </h2>
+                    <div x-ref="tab" :style="handleToggle()"
+                        class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
+                        <ul
+                            class="p-3 text-[#115934] space-y-1 list-disc pl-8 lg:text-[20px] md:text-[16px] text-[15px]">
+
+                            <li> Insurance Details Confirmation</li>
+                            <li> "Mark as paid" Marking Options</li>
+
+                        </ul>
+                    </div>
+                </li>
+                <li class="bg-white my-2 rounded-lg overflow-hidden shadow-lg" x-data="accordion(9)">
+                    <h2 @click="handleClick()" class="flex flex-row justify-between items-center p-3 cursor-pointer">
+                        <span
+                            class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934]">Dashboard</span>
+                        <i class="fa-solid fa-plus transition-all duration-500" :class="handleRotate()"></i>
+                    </h2>
+                    <div x-ref="tab" :style="handleToggle()"
+                        class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
+                        <ul
+                            class="p-3 text-[#115934] space-y-1 list-disc pl-8 lg:text-[20px] md:text-[16px] text-[15px]">
+
+                            <li> Livc OUcUc List Export (POF)</li>
+                            <li> Today's Appointment Export (POF)</li>
+                            <li> Patient Notes Dashboard View</li>
+                            <li> Category Prefix Customization</li>
+                            <li> Clinic Report Dashboard View</li>
+
+                        </ul>
+                    </div>
+                </li>
+                <li class="bg-white my-2 rounded-lg overflow-hidden shadow-lg" x-data="accordion(10)">
+                    <h2 @click="handleClick()" class="flex flex-row justify-between items-center p-3 cursor-pointer">
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934]">Silent
+                            Service</span>
+                        <i class="fa-solid fa-plus transition-all duration-500" :class="handleRotate()"></i>
+                    </h2>
+                    <div x-ref="tab" :style="handleToggle()"
+                        class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
+                        <ul
+                            class="p-3 text-[#115934] space-y-1 list-disc pl-8 lg:text-[20px] md:text-[16px] text-[15px]">
+
+                            <li>Silent Services Category Options</li>
+
+                        </ul>
+                    </div>
+                </li>
+                <li class="bg-white my-2 rounded-lg overflow-hidden shadow-lg" x-data="accordion(11)">
+                    <h2 @click="handleClick()" class="flex flex-row justify-between items-center p-3 cursor-pointer">
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934]">Live
+                            Queue</span>
+                        <i class="fa-solid fa-plus transition-all duration-500" :class="handleRotate()"></i>
+                    </h2>
+                    <div x-ref="tab" :style="handleToggle()"
+                        class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
+                        <ul
+                            class="p-3 text-[#115934] space-y-1 list-disc pl-8 lg:text-[20px] md:text-[16px] text-[15px]">
+
+                            <li> WhatsApp Live Queue Link for Patients</li>
+                            <li> Admin-Only Live Queue Addition</li>
+                            <li> QR Code Live Queue Entry for Walk-ins</li>
+                            <li> Quick Visit Creation (No Details)</li>
+                            <li> Automatic Visit End for Served Patients</li>
+                            <li> Automatic Patient's Stage Transition</li>
+                            <li> Serving Cancellation Button Features</li>
+                            <li> Live Queue update Notification</li>
+                            <li> Patient's Status Notification</li>
+                            <li> No-Show Notification</li>
+                            <li> Queue Delay Alert Notifications</li>
+                            <li> Automatic Visit Cancellation for No-Show</li>
+                            <li> Extended Service Time Notification</li>
+                            <li> Queue Closure Notification</li>
+                            <li> Delay Confirmation Message</li>
+                            <li> Patient Registration Confirmation</li>
+                            <li> Queue Overload Notification</li>
+                            <li> Estimated Waiting Ilme Update Notification</li>
+                            <li> Queue Redirection Notification</li>
+                            <li> Pop-up 30-Minute Queue Reminder</li>
+                            <li> Scheduled Appointment Queue Transition</li>
+                            <li> On—the-Way Notification</li>
+                            <li> patient Assignment Features</li>
+                            <li> Transit Service with Automatic Pause</li>
+                            <li> Print Live Queue List (PDF Export)</li>
+                            <li> Automated Bot Notifications for Clinic Updates</li>
+                            <li> Queue Priority for Appointments</li>
+                            <li> Queue Identification by Token Number</li>
+                            <li> Patient Service Transfer Features After Clinic Hours</li>
+
+                        </ul>
+                    </div>
+                </li>
+                <li class="bg-white my-2 rounded-lg overflow-hidden shadow-lg" x-data="accordion(12)">
+                    <h2 @click="handleClick()" class="flex flex-row justify-between items-center p-3 cursor-pointer">
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934]">Live Queue
+                            Notifications</span>
+                        <i class="fa-solid fa-plus transition-all duration-500" :class="handleRotate()"></i>
+                    </h2>
+                    <div x-ref="tab" :style="handleToggle()"
+                        class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
+                        <ul
+                            class="p-3 text-[#115934] space-y-1 list-disc pl-8 lg:text-[20px] md:text-[16px] text-[15px]">
+
+                            <li> Live queue update Notification</li>
+                            <li> Patient's Status Notification</li>
+                            <li> No-Show Notification</li>
+                            <li> Delay Notifications</li>
+                            <li> Extended Service Time Notifcation</li>
+                            <li> Closure Notification</li>
+                            <li> Way Confrmation Message</li>
+                            <li> Overload Notification</li>
+                            <li> Estimated Time update Notification</li>
+                            <li> Queue Redirection Notification</li>
+                            <li> Pop-up SC-Minute Oueue Remir&r</li>
+                            <li> SNft Delay Long Serve Notification</li>
+                            <li> On-the-Way Notification</li>
+                            <li> Automated Notifications for CT ric Updates</li>
+                            <li> Arrive' Confrmatior Message</li>
+
+                        </ul>
+                    </div>
+                </li>
+                <li class="bg-white my-2 rounded-lg overflow-hidden shadow-lg" x-data="accordion(13)">
+                    <h2 @click="handleClick()" class="flex flex-row justify-between items-center p-3 cursor-pointer">
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934]">Additional
+                            Features
+                        </span>
+                        <i class="fa-solid fa-plus transition-all duration-500" :class="handleRotate()"></i>
+                    </h2>
+                    <div x-ref="tab" :style="handleToggle()"
+                        class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
+                        <ul
+                            class="p-3 text-[#115934] space-y-1 list-disc pl-8 lg:text-[20px] md:text-[16px] text-[15px]">
+
+                            <li> Automatic Reporting</li>
+                            <li> Available Slots View on Doctor's Name</li>
+                            <li> Reschedule Appointment Within Same Week</li>
+                            <li> Remove Whatsapp opt-in</li>
+                            <li> Unsatisfied Votes Summary</li>
+                            <li> Analytics Page Data Verification</li>
+                            <li> Google Calendar Appointments Integration</li>
+                            <li> Patient Timelines in Visit Tab</li>
+                            <li> Chup Remote Support</li>
+                            <li> User Satisfaction: Doctor Profile & Reviews</li>
+                            <li> Email Marketing Campaign</li>
+                            <li> Multi Branch Access</li>
+                            <li> Billing Payment Gateway</li>
+                            <li> Chup Mobile App</li>
+
+                        </ul>
+                    </div>
+                </li>
             </ul>
 
         </div>
