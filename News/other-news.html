@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Docs/Assets/Images/Global/favIcon.png" type="image/x-icon">
+    <title>Chup!</title>
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/Docs/Styles/global.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
+
+</head>
+
+<style>
+    @media screen and (min-width:768px) {
+        .heroSectionNews {
+            min-height: calc(100vh - 289px);
+        }
+    }
+
+    .heroSectionNewsEmpty {
+        min-height: calc(100vh - 310px);
+    }
+</style>
+
+<body>
+
+    <nav class="bg-[#f1e4da]">
+        <div class="flex h-16 lg:px-16 px-8 items-center justify-between mx-auto">
+            <a href="/index.html">
+                <img src="/Docs/Assets/Images/Global/logo.svg" alt="log" class="h-9 md:h-12">
+            </a>
+            <ul class="items-center text-[#115934] xl:flex hidden gap-7 text-[17px]">
+                <li><a href="" class="navUnderLine">About Us</a></li>
+                <li><a href="" class="navUnderLine">Case Study</a></li>
+                <li><a href="" class="navUnderLine">News & Blog</a></li>
+                <li><a href="" class="navUnderLine">FAQ</a></li>
+                <li class="flex items-center gap-2 cursor-pointer relative py-5" id="dropDownNav">
+                    Products <i
+                        class="fa-solid fa-angle-down mt-1 text-[#115934] text-sm transition-all duration-300"></i>
+                </li>
+                <li class="flex items-center gap-2 cursor-pointer relative py-5" id="dropDownNav">
+                    More <i class="fa-solid fa-angle-down mt-1 text-[#115934] text-sm transition-all duration-300"></i>
+
+                    <div
+                        class="border-2 border-[#a9a099] w-52 rounded-lg absolute  bg-[#f1e4da] left-1 overflow-hidden fadeIn">
+                        <ul>
+                            <a href="">
+                                <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">Career</li>
+                            </a>
+                            <a href="">
+                                <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">Security
+                                    Compliance</li>
+                            </a>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <button
+                class="bg-[#115934] xl:flex hidden text-[#F1E4DA] px-6 py-2.5 rounded-lg transition-all items-center justify-center gap-2 font-medium ">
+                <img src="/Docs/Assets/Images/Navbar/whatsapp.png" class="h-[18px]" alt="">
+                WhatsApp Us
+            </button>
+            <i class="fa-solid fa-bars text-2xl xl:hidden cursor-pointer text-[#115934]" id="openNav"></i>
+        </div>
+    </nav>
+    <!-- responsive Navbar -->
+    <div class="fixed top-0 right-0 h-screen bg-[#f1e4da] text-[#115934] font-36 z-50 transition-all duration-500"
+        id="responsiveNav" style="width: 0;">
+        <div class="px-10 pt-10 pb-4 relative flex flex-col h-full justify-between">
+            <div class="">
+                <div class="flex items-center justify-between">
+                    <a href="/index.html">
+                        <img src="/Docs/Assets/Images/Global/logo.svg" class="h-[32px]" alt="">
+                    </a>
+                    <img src="/Docs/Assets/Images/Navbar/close.png" id="closeNav" class="h-[21px] cursor-pointer"
+                        alt="">
+                </div>
+                <ul class="mt-10 text-[#115934] flex flex-col text-[17px]">
+                    <a href="">
+                        <li class="py-4  poppins">About Us</li>
+                    </a>
+                    <a href="">
+                        <li class="py-4  poppins">Case Study</li>
+                    </a>
+                    <a href="">
+                        <li class="py-4  poppins">News & Blog</li>
+                    </a>
+                    <a href="">
+                        <li class="py-4  poppins">FAQ</li>
+                    </a>
+                    <li class="py-5" x-data="accordion(1)">
+                        <h2 @click="handleClick()" class="flex flex-row gap-2 items-center cursor-pointer">
+                            <span>Products</span>
+                            <i :class="handleRotate()"
+                                class="fa-solid fa-angle-down mt-1 text-[#115934] text-sm transition-all duration-300"></i>
+                        </h2>
+                        <div x-ref="tab" :style="handleToggle()"
+                            class="overflow-hidden max-h-0 duration-500 transition-all">
+                            <ul class="pl-5 pt-5">
+                                <a href="">
+                                    <li class="py-3">ChupOnline</li>
+                                </a>
+                                <a href="">
+                                    <li class="py-3">ChupHospital</li>
+                                </a>
+                                <a href="">
+                                    <li class="py-3">ChupClinic</li>
+                                </a>
+                                <a href="">
+                                    <li class="py-3">ChupWork</li>
+                                </a>
+                                <a href="">
+                                    <li class="py-3">Paperize.AI</li>
+                                </a>
+                                <a href="">
+                                    <li class="py-3">My Mental</li>
+                                </a>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="py-5" x-data="accordion(2)">
+                        <h2 @click="handleClick()" class="flex flex-row gap-2 items-center cursor-pointer">
+                            <span>More</span>
+                            <i :class="handleRotate()"
+                                class="fa-solid fa-angle-down mt-1 text-[#115934] text-sm transition-all duration-300"></i>
+                        </h2>
+                        <div x-ref="tab" :style="handleToggle()"
+                            class="overflow-hidden max-h-0 duration-500 transition-all">
+                            <ul class="pl-5 pt-5">
+                                <a href="">
+                                    <li class="py-3">Career</li>
+                                </a>
+                                <a href="">
+                                    <li class="py-3">Security Compliance</li>
+                                </a>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <a href="">
+                <button
+                    class="bg-[#115934] flex w-full text-[#F1E4DA] p-3 rounded-lg transition-all items-center justify-center gap-4 font-medium ">
+                    <img src="/Docs/Assets/Images/Navbar/whatsapp.png" class="h-5" alt="">
+                    WhatsApp Us
+                </button>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="heroSectionNews px-5  w-full bg-[#fbf7f4]">
+
+        <div class="max-w-7xl mx-auto ">
+            <ul class="flex text-[#115934] font-medium md:text-[20px] text-[14px] items-center gap-1 md:py-6 py-4">
+                <a href="/News/chup-news.html">
+                    <li class="hover:bg-[#3493621A] md:py-3 py-1.5 md:px-4 px-2 rounded-md transition-all">Chup News
+                    </li>
+                </a>
+                <a href="/News/other-news.html">
+                    <li class="bg-[#3493621A] md:py-3 py-1.5 md:px-4 px-2 rounded-md">Other News</li>
+                </a>
+                <a href="/News/Blog.html">
+                    <li class="hover:bg-[#3493621A] md:py-3 py-1.5 md:px-4 px-2 rounded-md transition-all">Blog</li>
+                </a>
+            </ul>
+
+            <div class="w-full h-[1px] bg-[#CFD1D4]"></div>
+
+            <div id="card-container" class="flex items-center justify-center flex-wrap mt-8 gap-x-5 gap-y-8 pt-5 pb-14">
+                <!-- Dynamic cards will be injected here -->
+            </div>
+
+
+            <div class="flex items-center justify-center gap-4 pb-16">
+                <button id="prev-button" class="border-2 border-[#494949] w-10 h-10 transition-all hover:bg-[#494949] text-[#494949]  pb-0.5 hover:text-white rounded-full flex items-center justify-center" disabled>
+                    <i class="fa-solid fa-arrow-right rotate-180"></i>
+                </button>
+                
+                <!-- Pagination Numbers -->
+                <div id="pagination-numbers" class="flex items-center justify-center gap-4"></div>
+                
+                <button id="next-button" class="border-2 border-[#494949] w-10 h-10 transition-all hover:bg-[#494949] text-[#494949] pt-0.5 hover:text-white rounded-full flex items-center justify-center">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+            
+            
+        </div>
+
+    </div>
+
+
+
+    <div class="" id="dynamic-footer"></div>
+</body>
+<script src="/Docs/Assets/script/footer.js"></script>
+<script src=" https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.store('accordion', {
+            tab: 0
+        });
+
+        Alpine.data('accordion', (idx) => ({
+            init() {
+                this.idx = idx;
+            },
+            idx: -1,
+            handleClick() {
+                this.$store.accordion.tab = this.$store.accordion.tab === this.idx ? 0 : this.idx;
+            },
+            handleRotate() {
+                return this.$store.accordion.tab === this.idx ? 'rotate-180' : '';
+            },
+            handleToggle() {
+                return this.$store.accordion.tab === this.idx ? `max-height: ${this.$refs.tab.scrollHeight}px` : '';
+            }
+        }));
+    })
+
+
+    const openNav = document.getElementById("openNav")
+    const responsiveNav = document.getElementById("responsiveNav")
+    const closeNav = document.getElementById("closeNav")
+
+    openNav.addEventListener('click', () => {
+        responsiveNav.style.width = "100%"
+    })
+    closeNav.addEventListener('click', () => {
+        responsiveNav.style.width = "0rem"
+    })
+
+    const lenis = new Lenis()
+
+    function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+</script>
+
+
+<script>
+    const newsData = [
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img1.png",
+            title: "Isu kesesakan Klinik Kampung Pandan makin parah",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "7 Sep 2024",
+            link: "#"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img2.png",
+            title: "Pencemaran sungai semakin meningkat",
+            category: "Environment",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "8 Sep 2024",
+            link: "#"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img2.png",
+            title: "Pencemaran sungai semakin meningkat",
+            category: "Environment",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "8 Sep 2024",
+            link: "#"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img2.png",
+            title: "Pencemaran sungai semakin meningkat",
+            category: "Environment",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "8 Sep 2024",
+            link: "#"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img2.png",
+            title: "Pencemaran sungai semakin meningkat",
+            category: "Environment",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "8 Sep 2024",
+            link: "#"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img2.png",
+            title: "Pencemaran sungai semakin meningkat",
+            category: "Environment",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "8 Sep 2024",
+            link: "#"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img2.png",
+            title: "Pencemaran sungai semakin meningkat",
+            category: "Environment",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "8 Sep 2024",
+            link: "#"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img2.png",
+            title: "Pencemaran sungai semakin meningkat",
+            category: "Environment",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "8 Sep 2024",
+            link: "#"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img2.png",
+            title: "Pencemaran sungai semakin meningkat",
+            category: "Environment",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "8 Sep 2024",
+            link: "#"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img2.png",
+            title: "Pencemaran sungai semakin meningkat",
+            category: "Environment",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "8 Sep 2024",
+            link: "#"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img2.png",
+            title: "Pencemaran sungai semakin meningkat",
+            category: "Environment",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "8 Sep 2024",
+            link: "#"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img2.png",
+            title: "Pencemaran sungai semakin meningkat",
+            category: "Environment",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "8 Sep 2024",
+            link: "#"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img2.png",
+            title: "Pencemaran sungai semakin meningkat",
+            category: "Environment",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "8 Sep 2024",
+            link: "#"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img2.png",
+            title: "Pencemaran sungai semakin meningkat",
+            category: "Environment",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "8 Sep 2024",
+            link: "#"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img2.png",
+            title: "Pencemaran sungai semakin meningkat",
+            category: "Environment",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "8 Sep 2024",
+            link: "#"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img2.png",
+            title: "Pencemaran sungai semakin meningkat",
+            category: "Environment",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "8 Sep 2024",
+            link: "#"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img2.png",
+            title: "Pencemaran sungai semakin meningkat",
+            category: "Environment",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "8 Sep 2024",
+            link: "#"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img2.png",
+            title: "Pencemaran sungai semakin meningkat",
+            category: "Environment",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "8 Sep 2024",
+            link: "#"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img2.png",
+            title: "Pencemaran sungai semakin meningkat",
+            category: "Environment",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "8 Sep 2024",
+            link: "#"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img2.png",
+            title: "Pencemaran sungai semakin meningkat",
+            category: "Environment",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "8 Sep 2024",
+            link: "#"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img2.png",
+            title: "Pencemaran sungai semakin meningkat",
+            category: "Environment",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "8 Sep 2024",
+            link: "#"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img2.png",
+            title: "Pencemaran sungai semakin meningkat",
+            category: "Environment",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "8 Sep 2024",
+            link: "#"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img2.png",
+            title: "Pencemaran sungai semakin meningkat",
+            category: "Environment",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "8 Sep 2024",
+            link: "#"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img2.png",
+            title: "Pencemaran sungai semakin meningkat",
+            category: "Environment",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "8 Sep 2024",
+            link: "#"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img2.png",
+            title: "Pencemaran sungai semakin meningkat",
+            category: "Environment",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "8 Sep 2024",
+            link: "#"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img2.png",
+            title: "Pencemaran sungai semakin meningkat",
+            category: "Environment",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "8 Sep 2024",
+            link: "#"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img2.png",
+            title: "Pencemaran sungai semakin meningkat",
+            category: "Environment",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "8 Sep 2024",
+            link: "#"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img2.png",
+            title: "Pencemaran sungai semakin meningkat",
+            category: "Environment",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "8 Sep 2024",
+            link: "#"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img2.png",
+            title: "Pencemaran sungai semakin meningkat",
+            category: "Environment",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "8 Sep 2024",
+            link: "#"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img2.png",
+            title: "Pencemaran sungai semakin meningkat",
+            category: "Environment",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "8 Sep 2024",
+            link: "#"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img2.png",
+            title: "Pencemaran sungai semakin meningkat",
+            category: "Environment",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "8 Sep 2024",
+            link: "#"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img2.png",
+            title: "Pencemaran sungai semakin meningkat",
+            category: "Environment",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "8 Sep 2024",
+            link: "#"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img2.png",
+            title: "Pencemaran sungai semakin meningkat",
+            category: "Environment",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "8 Sep 2024",
+            link: "#"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img2.png",
+            title: "Pencemaran sungai semakin meningkat",
+            category: "Environment",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "8 Sep 2024",
+            link: "#"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img2.png",
+            title: "Pencemaran sungai semakin meningkat",
+            category: "Environment",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "8 Sep 2024",
+            link: "#"
+        },
+    ];
+
+    const cardsPerPage = 9;
+    let currentPage = 1;
+    const totalPages = Math.ceil(newsData.length / cardsPerPage);
+
+    const cardContainer = document.getElementById("card-container");
+    const paginationNumbers = document.getElementById("pagination-numbers");
+    const prevButton = document.getElementById("prev-button");
+    const nextButton = document.getElementById("next-button");
+
+    // Function to render the cards for the current page
+    function renderCards(page) {
+        cardContainer.innerHTML = ""; // Clear previous cards
+        const startIndex = (page - 1) * cardsPerPage;
+        const endIndex = startIndex + cardsPerPage;
+        const cardsToShow = newsData.slice(startIndex, endIndex);
+
+        cardsToShow.forEach(news => {
+            const cardHTML = `
+                <div class="md:max-w-[373.33px] fadeIn max-w-[327.33px] w-full flex md:flex-col flex-row md:gap-0 gap-3">
+                    <img src="${news.image}" class="w-full md:max-w-[373.33px] max-w-[90px] md:h-auto h-[90px] rounded-xl" alt="image">
+                    <div class="">
+                        <h2 class="md:text-[22px] text-[18px] md:leading-[28px] leading-[22px] font-semibold md:pt-4 pb-3">
+                            ${news.title}
+                        </h2>
+                        <div class="flex items-center gap-3 md:mb-14 mb-6">
+                            <p class="py-2 px-3 san rounded-md md:text-[14px] text-[12px] font-bold"
+                                style="background-color: ${news.categoryBg}; color: ${news.categoryColor};">
+                                ${news.category}
+                            </p>
+                            <p class="text-[#5C5C5C] md:text-[14px] text-[12px] ">${news.date}</p>
+                        </div>
+                        <a href="${news.link}" class="text-[#F26522] flex items-center gap-2 transition-all hover:gap-4 duration-500 md:text-[20px] text-[16px]">
+                            Read more <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            `;
+            cardContainer.innerHTML += cardHTML;
+        });
+
+        updatePaginationButtons();
+    }
+
+    // Function to render pagination numbers
+    function renderPaginationNumbers() {
+        paginationNumbers.innerHTML = "";
+        for (let i = 1; i <= totalPages; i++) {
+            const pageButton = document.createElement("button");
+            pageButton.className = "text-lg";
+            pageButton.innerText = i;
+            pageButton.style.color = i === currentPage ? "#F26522" : "#1D1D1D80";
+            pageButton.addEventListener("click", () => {
+                currentPage = i;
+                renderCards(currentPage);
+            });
+            paginationNumbers.appendChild(pageButton);
+        }
+    }
+
+    // Function to enable/disable pagination buttons
+    function updatePaginationButtons() {
+        prevButton.disabled = currentPage === 1;
+        nextButton.disabled = currentPage === totalPages;
+        renderPaginationNumbers();
+    }
+
+    // Event listeners for prev/next buttons
+    prevButton.addEventListener("click", () => {
+        if (currentPage > 1) {
+            currentPage--;
+            renderCards(currentPage);
+        }
+    });
+
+    nextButton.addEventListener("click", () => {
+        if (currentPage < totalPages) {
+            currentPage++;
+            renderCards(currentPage);
+        }
+    });
+
+    // Initial rendering
+    renderCards(currentPage);
+    renderPaginationNumbers();
+</script>
+
+</html>

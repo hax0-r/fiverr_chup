@@ -12,7 +12,7 @@ document.getElementById('dynamic-footer').innerHTML = `
                         <a href=""><li>Career</li></a>
                         <a href=""><li>News & Blog</li></a>
                         <a href=""><li>FAQ</li></a>
-                        <a href=""><li class="text-nowrap">Security Compliance</li></a>
+                        <a href="/Security-Compliance.html"><li class="text-nowrap">Security Compliance</li></a>
                         <a href=""><li>Products</li></a>
                     </ul>
                 </div>
