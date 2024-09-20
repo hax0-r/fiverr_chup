@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Docs/Assets/Images/Global/favIcon.png" type="image/x-icon">
+    <title>Chup!</title>
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/Docs/Styles/global.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
+
+</head>
+
+<body>
+
+    <nav class="bg-[#f1e4da]">
+        <div class="flex h-16 lg:px-16 px-8 items-center justify-between mx-auto">
+            <a href="/index.html">
+                <img src="/Docs/Assets/Images/Global/logo.svg" alt="log" class="h-9 md:h-12">
+            </a>
+            <ul class="items-center text-[#115934] xl:flex hidden gap-7 text-[17px]">
+                <li><a href="" class="navUnderLine">About Us</a></li>
+                <li><a href="" class="navUnderLine">Case Study</a></li>
+                <li><a href="" class="navUnderLine">News & Blog</a></li>
+                <li><a href="" class="navUnderLine">FAQ</a></li>
+                <li class="flex items-center gap-2 cursor-pointer relative py-5" id="dropDownNav">
+                    Products <i
+                        class="fa-solid fa-angle-down mt-1 text-[#115934] text-sm transition-all duration-300"></i>
+                </li>
+                <li class="flex items-center gap-2 cursor-pointer relative py-5" id="dropDownNav">
+                    More <i class="fa-solid fa-angle-down mt-1 text-[#115934] text-sm transition-all duration-300"></i>
+
+                    <div
+                        class="border-2 border-[#a9a099] w-52 rounded-lg absolute  bg-[#f1e4da] left-1 overflow-hidden fadeIn">
+                        <ul>
+                            <a href="">
+                                <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">Career</li>
+                            </a>
+                            <a href="">
+                                <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">Security
+                                    Compliance</li>
+                            </a>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <button
+                class="bg-[#115934] xl:flex hidden text-[#F1E4DA] px-6 py-2.5 rounded-lg transition-all items-center justify-center gap-2 font-medium ">
+                <img src="/Docs/Assets/Images/Navbar/whatsapp.png" class="h-[18px]" alt="">
+                WhatsApp Us
+            </button>
+            <i class="fa-solid fa-bars text-2xl xl:hidden cursor-pointer text-[#115934]" id="openNav"></i>
+        </div>
+    </nav>
+    <!-- responsive Navbar -->
+    <div class="fixed top-0 right-0 h-screen bg-[#f1e4da] text-[#115934] font-36 z-50 transition-all duration-500"
+        id="responsiveNav" style="width: 0;">
+        <div class="px-10 pt-10 pb-4 relative flex flex-col h-full justify-between">
+            <div class="">
+                <div class="flex items-center justify-between">
+                    <a href="/index.html">
+                        <img src="/Docs/Assets/Images/Global/logo.svg" class="h-[32px]" alt="">
+                    </a>
+                    <img src="/Docs/Assets/Images/Navbar/close.png" id="closeNav" class="h-[21px] cursor-pointer"
+                        alt="">
+                </div>
+                <ul class="mt-10 text-[#115934] flex flex-col text-[17px]">
+                    <a href="">
+                        <li class="py-4  poppins">About Us</li>
+                    </a>
+                    <a href="">
+                        <li class="py-4  poppins">Case Study</li>
+                    </a>
+                    <a href="">
+                        <li class="py-4  poppins">News & Blog</li>
+                    </a>
+                    <a href="">
+                        <li class="py-4  poppins">FAQ</li>
+                    </a>
+                    <li class="py-5" x-data="accordion(1)">
+                        <h2 @click="handleClick()" class="flex flex-row gap-2 items-center cursor-pointer">
+                            <span>Products</span>
+                            <i :class="handleRotate()"
+                                class="fa-solid fa-angle-down mt-1 text-[#115934] text-sm transition-all duration-300"></i>
+                        </h2>
+                        <div x-ref="tab" :style="handleToggle()"
+                            class="overflow-hidden max-h-0 duration-500 transition-all">
+                            <ul class="pl-5 pt-5">
+                                <a href="">
+                                    <li class="py-3">ChupOnline</li>
+                                </a>
+                                <a href="">
+                                    <li class="py-3">ChupHospital</li>
+                                </a>
+                                <a href="">
+                                    <li class="py-3">ChupClinic</li>
+                                </a>
+                                <a href="">
+                                    <li class="py-3">ChupWork</li>
+                                </a>
+                                <a href="">
+                                    <li class="py-3">Paperize.AI</li>
+                                </a>
+                                <a href="">
+                                    <li class="py-3">My Mental</li>
+                                </a>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="py-5" x-data="accordion(2)">
+                        <h2 @click="handleClick()" class="flex flex-row gap-2 items-center cursor-pointer">
+                            <span>More</span>
+                            <i :class="handleRotate()"
+                                class="fa-solid fa-angle-down mt-1 text-[#115934] text-sm transition-all duration-300"></i>
+                        </h2>
+                        <div x-ref="tab" :style="handleToggle()"
+                            class="overflow-hidden max-h-0 duration-500 transition-all">
+                            <ul class="pl-5 pt-5">
+                                <a href="">
+                                    <li class="py-3">Career</li>
+                                </a>
+                                <a href="">
+                                    <li class="py-3">Security Compliance</li>
+                                </a>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <a href="">
+                <button
+                    class="bg-[#115934] flex w-full text-[#F1E4DA] p-3 rounded-lg transition-all items-center justify-center gap-4 font-medium ">
+                    <img src="/Docs/Assets/Images/Navbar/whatsapp.png" class="h-5" alt="">
+                    WhatsApp Us
+                </button>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="heroSection flex flex-col px-5 md:py-16 py-10 items-center justify-center w-full bg-[#f1e4da]">
+        <h2 class="lg:text-[48px] text-[#115934] text-[24px] md:pb-16 pb-8  font-bold"><span class="text-[#F26522]">Our</span>
+            HealthTech Solutions</h2>
+
+        <div class="max-w-7xl  w-full mx-auto grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 bg-[#fbf7f4] overflow-hidden rounded-2xl">
+            <div class="rounded-2xl flex md:flex-col flex-row items-center md:items-end gap-2 justify-between md:min-h-[333px] md:p-8 p-5 bg-[#115934]">
+                <div class="">
+                    <img src="/Docs/Assets/Images/products/Chup Online.svg" class="md:max-w-[306.45px] max-w-[180.3px] w-full md:mb-6 mb-3" alt="">
+                    <p class="text-white lg:text-[32px] text-[16px] lg:leading-[41.6px] leading-[20.8px]">Dynamic queue
+                        and appointment automation</p>
+                </div>
+                <div class="flex justify-end">
+                    <i
+                        class="fa-solid fa-arrow-right cursor-pointer transition-all hover:scale-105 bg-white text-[#115934] md:text-2xl text-lg md:w-12 w-8 md:h-12 h-8 flex items-center justify-center rounded-full pt-[1px]"></i>
+                </div>
+            </div>
+            <div class="flex md:flex-col flex-row items-center md:items-end border-[#b0adab] gap-2 justify-between md:min-h-[333px] md:p-8 p-5 bg-[#fbf7f4] md:border-r border-b">
+                <div class="">
+                    <img src="/Docs/Assets/Images/products/Chup clinic.svg" class="md:max-w-[224.54px] max-w-[115.71px] w-full md:mb-6 mb-3" alt="">
+                    <p class="text-[#115934] lg:text-[24px] text-[16px] lg:leading-[31.2px] leading-[20.8px]">AI-Powered Clinic Management System</p>
+                </div>
+                <div class="flex justify-end">
+                    <i
+                        class="fa-solid fa-arrow-right cursor-pointer transition-all hover:scale-105 bg-[#115934] text-[#ffffff] md:text-2xl text-lg md:w-12 w-8 md:h-12 h-8 flex items-center justify-center rounded-full pt-[1px]"></i>
+                </div>
+            </div>
+            <div class="flex md:flex-col flex-row items-center md:items-end border-[#b0adab] gap-2 justify-between md:min-h-[333px] md:p-8 p-5 bg-[#fbf7f4] border-b">
+                <div class="">
+                    <img src="/Docs/Assets/Images/products/Chuphospital.svg" class="md:max-w-[224.54px] max-w-[115.71px] w-full md:mb-6 mb-3" alt="">
+                    <p class="text-[#115934] lg:text-[24px] text-[16px] lg:leading-[31.2px] leading-[20.8px]">Next generation Hospital Management System</p>
+                </div>
+                <div class="flex justify-end">
+                    <i
+                        class="fa-solid fa-arrow-right cursor-pointer transition-all hover:scale-105 bg-[#115934] text-[#ffffff] md:text-2xl text-lg md:w-12 w-8 md:h-12 h-8 flex items-center justify-center rounded-full pt-[1px]"></i>
+                </div>
+            </div>
+            <div class="flex md:flex-col flex-row items-center md:items-end border-[#b0adab] gap-2 justify-between md:min-h-[333px] md:p-8 p-5 bg-[#fbf7f4] md:border-r md:border-b-0 border-b">
+                <div class="">
+                    <img src="/Docs/Assets/Images/products/Chupwork.svg" class="md:max-w-[224.54px] max-w-[115.71px] w-full md:mb-6 mb-3" alt="">
+                    <p class="text-[#115934] lg:text-[24px] text-[16px] lg:leading-[31.2px] leading-[20.8px]">Dynamic Personal Appointment App</p>
+                </div>
+                <div class="flex justify-end">
+                    <i
+                        class="fa-solid fa-arrow-right cursor-pointer transition-all hover:scale-105 bg-[#115934] text-[#ffffff] md:text-2xl text-lg md:w-12 w-8 md:h-12 h-8 flex items-center justify-center rounded-full pt-[1px]"></i>
+                </div>
+            </div>
+            <div class="flex md:flex-col flex-row items-center md:items-end border-[#b0adab] gap-2 justify-between md:min-h-[333px] md:p-8 p-5 bg-[#fbf7f4] md:border-r md:border-b-0 border-b">
+                <div class="">
+                    <img src="/Docs/Assets/Images/products/Logo Paperize.AI.svg" class="md:max-w-[162.44px] max-w-[115.71px] w-full md:mb-6 mb-3" alt="">
+                    <p class="text-[#115934] lg:text-[24px] text-[16px] lg:leading-[31.2px] leading-[20.8px]">AI Digitize Your Paper Document, including handwriting</p>
+                </div>
+                <div class="flex justify-end">
+                    <i
+                        class="fa-solid fa-arrow-right cursor-pointer transition-all hover:scale-105 bg-[#115934] text-[#ffffff] md:text-2xl text-lg md:w-12 w-8 md:h-12 h-8 flex items-center justify-center rounded-full pt-[1px]"></i>
+                </div>
+            </div>
+            <div class="flex md:flex-col flex-row items-center md:items-end border-[#b0adab] gap-2 justify-between md:min-h-[333px] md:p-8 p-5 bg-[#fbf7f4]">
+                <div class="">
+                    <img src="/Docs/Assets/Images/products/Logo MyMental.svg" class="md:max-w-[162.44px] max-w-[115.71px] w-full md:mb-6 mb-3" alt="">
+                    <p class="text-[#115934] lg:text-[24px] text-[16px] lg:leading-[31.2px] leading-[20.8px]">Personalized mental health platform</p>
+                </div>
+                <div class="flex justify-end">
+                    <i
+                        class="fa-solid fa-arrow-right cursor-pointer transition-all hover:scale-105 bg-[#115934] text-[#ffffff] md:text-2xl text-lg md:w-12 w-8 md:h-12 h-8 flex items-center justify-center rounded-full pt-[1px]"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="" id="dynamic-footer"></div>
+</body>
+<script src="/Docs/Assets/script/footer.js"></script>
+<script src=" https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.store('accordion', {
+            tab: 0
+        });
+
+        Alpine.data('accordion', (idx) => ({
+            init() {
+                this.idx = idx;
+            },
+            idx: -1,
+            handleClick() {
+                this.$store.accordion.tab = this.$store.accordion.tab === this.idx ? 0 : this.idx;
+            },
+            handleRotate() {
+                return this.$store.accordion.tab === this.idx ? 'rotate-180' : '';
+            },
+            handleToggle() {
+                return this.$store.accordion.tab === this.idx ? `max-height: ${this.$refs.tab.scrollHeight}px` : '';
+            }
+        }));
+    })
+
+
+    const openNav = document.getElementById("openNav")
+    const responsiveNav = document.getElementById("responsiveNav")
+    const closeNav = document.getElementById("closeNav")
+
+    openNav.addEventListener('click', () => {
+        responsiveNav.style.width = "100%"
+    })
+    closeNav.addEventListener('click', () => {
+        responsiveNav.style.width = "0rem"
+    })
+
+    const lenis = new Lenis()
+
+    function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+</script>
+
+</html>
