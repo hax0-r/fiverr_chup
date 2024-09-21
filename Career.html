@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Docs/Assets/Images/Global/favIcon.png" type="image/x-icon">
+    <title>Chup!</title>
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/Docs/Styles/global.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
+
+</head>
+
+<body>
+
+    <nav class="bg-[#f1e4da]">
+        <div class="flex h-24 lg:px-16 px-8 items-center justify-between mx-auto">
+            <a href="/index.html">
+                <img src="/Docs/Assets/Images/Global/logo.svg" alt="log" class="h-9 md:h-12">
+            </a>
+            <ul class="items-center text-[#115934] xl:flex hidden gap-7 text-[17px]">
+                <li><a href="" class="navUnderLine">About Us</a></li>
+                <li><a href="" class="navUnderLine">Case Study</a></li>
+                <li><a href="" class="navUnderLine">News & Blog</a></li>
+                <li><a href="" class="navUnderLine">FAQ</a></li>
+                <li class="flex items-center gap-2 cursor-pointer relative py-5" id="dropDownNav">
+                    Products <i
+                        class="fa-solid fa-angle-down mt-1 text-[#115934] text-sm transition-all duration-300"></i>
+                </li>
+                <li class="flex items-center gap-2 cursor-pointer relative py-5" id="dropDownNav">
+                    More <i class="fa-solid fa-angle-down mt-1 text-[#115934] text-sm transition-all duration-300"></i>
+
+                    <div
+                        class="border-2 border-[#a9a099] w-52 rounded-lg absolute  bg-[#f1e4da] left-1 overflow-hidden fadeIn">
+                        <ul>
+                            <a href="">
+                                <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">Career</li>
+                            </a>
+                            <a href="">
+                                <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">Security
+                                    Compliance</li>
+                            </a>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <button
+                class="bg-[#115934] xl:flex hidden text-[#F1E4DA] px-6 py-3 rounded-lg transition-all items-center justify-center gap-2 font-medium ">
+                <img src="/Docs/Assets/Images/Navbar/whatsapp.png" class="h-[18px]" alt="">
+                WhatsApp Us
+            </button>
+            <i class="fa-solid fa-bars text-2xl xl:hidden cursor-pointer text-[#115934]" id="openNav"></i>
+        </div>
+    </nav>
+    <!-- responsive Navbar -->
+    <div class="fixed top-0 right-0 h-screen bg-[#f1e4da] text-[#115934] font-36 z-50 transition-all duration-500"
+        id="responsiveNav" style="width: 0;">
+        <div class="px-10 pt-10 pb-4 relative flex flex-col h-full justify-between">
+            <div class="">
+                <div class="flex items-center justify-between">
+                    <a href="/index.html">
+                        <img src="/Docs/Assets/Images/Global/logo.svg" class="h-[32px]" alt="">
+                    </a>
+                    <img src="/Docs/Assets/Images/Navbar/close.png" id="closeNav" class="h-[21px] cursor-pointer"
+                        alt="">
+                </div>
+                <ul class="mt-10 text-[#115934] flex flex-col text-[17px]">
+                    <a href="">
+                        <li class="py-4  poppins">About Us</li>
+                    </a>
+                    <a href="">
+                        <li class="py-4  poppins">Case Study</li>
+                    </a>
+                    <a href="">
+                        <li class="py-4  poppins">News & Blog</li>
+                    </a>
+                    <a href="">
+                        <li class="py-4  poppins">FAQ</li>
+                    </a>
+                    <li class="py-5" x-data="accordion(1)">
+                        <h2 @click="handleClick()" class="flex flex-row gap-2 items-center cursor-pointer">
+                            <span>Products</span>
+                            <i :class="handleRotate()"
+                                class="fa-solid fa-angle-down mt-1 text-[#115934] text-sm transition-all duration-300"></i>
+                        </h2>
+                        <div x-ref="tab" :style="handleToggle()"
+                            class="overflow-hidden max-h-0 duration-500 transition-all">
+                            <ul class="pl-5 pt-5">
+                                <a href="">
+                                    <li class="py-3">ChupOnline</li>
+                                </a>
+                                <a href="">
+                                    <li class="py-3">ChupHospital</li>
+                                </a>
+                                <a href="">
+                                    <li class="py-3">ChupClinic</li>
+                                </a>
+                                <a href="">
+                                    <li class="py-3">ChupWork</li>
+                                </a>
+                                <a href="">
+                                    <li class="py-3">Paperize.AI</li>
+                                </a>
+                                <a href="">
+                                    <li class="py-3">My Mental</li>
+                                </a>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="py-5" x-data="accordion(2)">
+                        <h2 @click="handleClick()" class="flex flex-row gap-2 items-center cursor-pointer">
+                            <span>More</span>
+                            <i :class="handleRotate()"
+                                class="fa-solid fa-angle-down mt-1 text-[#115934] text-sm transition-all duration-300"></i>
+                        </h2>
+                        <div x-ref="tab" :style="handleToggle()"
+                            class="overflow-hidden max-h-0 duration-500 transition-all">
+                            <ul class="pl-5 pt-5">
+                                <a href="">
+                                    <li class="py-3">Career</li>
+                                </a>
+                                <a href="">
+                                    <li class="py-3">Security Compliance</li>
+                                </a>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <a href="">
+                <button
+                    class="bg-[#115934] flex w-full text-[#F1E4DA] p-3 rounded-lg transition-all items-center justify-center gap-4 font-medium ">
+                    <img src="/Docs/Assets/Images/Navbar/whatsapp.png" class="h-5" alt="">
+                    WhatsApp Us
+                </button>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="px-5 pt-5 pb-14 w-full bg-[#fbf7f4]">
+        <div class="max-w-7xl mx-auto w-full">
+            <div class="grid items-center md:grid-cols-3 sm:grid-cols-2 grid-cols-1 justify-center sm:gap-5 gap-3 mt-14"
+                id="cardContainer"></div>
+        </div>
+    </div>
+
+    <div class="px-5 py-14 w-full bg-[#ffede5]">
+        <div class="max-w-7xl mx-auto w-full">
+
+            <h2
+                class="text-[#115934] flex items-center gap-2 font-semibold text-center mx-auto justify-center md:flex-row flex-col lg:text-[60px] text-[32px]">
+                Value works at <img src="/Docs/Assets/Images/Global/logo.svg"
+                    class="lg:max-w-[250px] max-w-[195px] w-full" alt=""></h2>
+
+
+            <div class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 sm:gap-5 gap-3 mt-10 justify-center items-center"
+                id="cardContainer2">
+                <!-- Cards will be dynamically inserted here -->
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="" id="dynamic-footer"></div>
+</body>
+<script src="/Docs/Assets/script/footer.js"></script>
+<script src=" https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.store('accordion', {
+            tab: 0
+        });
+
+        Alpine.data('accordion', (idx) => ({
+            init() {
+                this.idx = idx;
+            },
+            idx: -1,
+            handleClick() {
+                this.$store.accordion.tab = this.$store.accordion.tab === this.idx ? 0 : this.idx;
+            },
+            handleRotate() {
+                return this.$store.accordion.tab === this.idx ? 'rotate-180' : '';
+            },
+            handleToggle() {
+                return this.$store.accordion.tab === this.idx ? `max-height: ${this.$refs.tab.scrollHeight}px` : '';
+            }
+        }));
+    })
+
+
+    const openNav = document.getElementById("openNav")
+    const responsiveNav = document.getElementById("responsiveNav")
+    const closeNav = document.getElementById("closeNav")
+
+    openNav.addEventListener('click', () => {
+        responsiveNav.style.width = "100%"
+    })
+    closeNav.addEventListener('click', () => {
+        responsiveNav.style.width = "0rem"
+    })
+
+    const lenis = new Lenis()
+
+    function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+
+
+    const cardsData = [
+        {
+            title: "Machine Learning",
+            imgSrc: "/Docs/Assets/Images/career/Frame1.png",
+            buttonText: "Apply",
+            link: "Machine-Learning",
+        },
+        {
+            title: "Data Science",
+            imgSrc: "/Docs/Assets/Images/career/Frame1.png",
+            buttonText: "Apply",
+            link: "Machine-Learning",
+        },
+        {
+            title: "Front End",
+            imgSrc: "/Docs/Assets/Images/career/Frame1.png",
+            buttonText: "Apply",
+            link: "Machine-Learning",
+        },
+        {
+            title: "Product Manager",
+            imgSrc: "/Docs/Assets/Images/career/Frame1.png",
+            buttonText: "Apply",
+            link: "Machine-Learning",
+        },
+        {
+            title: "DevOps",
+            imgSrc: "/Docs/Assets/Images/career/Frame1.png",
+            buttonText: "Apply",
+            link: "Machine-Learning",
+        },
+        {
+            title: "Marketing",
+            imgSrc: "/Docs/Assets/Images/career/Frame1.png",
+            buttonText: "Apply",
+            link: "Machine-Learning",
+        },
+    ]
+
+    function renderCards(cards) {
+        const cardContainer = document.getElementById('cardContainer');
+        cardContainer.innerHTML = '';
+
+        cards.forEach(card => {
+            const cardHTML = `
+                        <div class="card bg-white border-2 mx-auto flex flex-col h-full md:gap-5 gap-3 p-4 pt-6  w-full rounded-xl justify-center"
+                    data-title="${card.title}">
+                    <h2 class="md:text-[26px] text-[18px] font-medium ">${card.title}</h2>
+
+                    <div class="flex flex-col gap-1">
+                        <div class="flex items-center gap-2">
+                            <img src="/Docs/Assets/Images/career/bag.svg" class="md:max-w-[19.5px] max-w-[13px] w-full" alt="">
+                            <p class="text-[#00000099] md:text-[18px] text-[14px]">Internship & Fulltime</p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <img src="/Docs/Assets/Images/career/location.svg" class="md:max-w-[19.5px] max-w-[13px] w-full" alt="">
+                            <p class="text-[#00000099] md:text-[18px] text-[14px]">Remote</p>
+                        </div>
+                    </div>
+
+                    <a href="/Career/${card.link}.html">
+                        <button
+                            class="bg-[#F26522] transition-all w-full font-medium hover:bg-[#fd6823] text-white p-2.5 w-full text-center rounded-full">${card.buttonText}</button>
+                    </a>
+                </div>
+    `;
+
+            cardContainer.innerHTML += cardHTML;
+        });
+    }
+
+    renderCards(cardsData);
+
+
+    // Array of objects representing card two data
+    const cardsData2 = [
+        {
+            title: "Collaborative Culture",
+            description: "ChupOnline values teamwork and collaboration.",
+            imgSrc: "/Docs/Assets/Images/career/work1.png"
+        },
+        {
+            title: "Remote Work Opportunity",
+            description: "ChupOnline allows you to collaborate & grow from anywhere.",
+            imgSrc: "/Docs/Assets/Images/career/work2.png"
+        },
+        {
+            title: "Innovation-Driven Culture",
+            description: "Innovation and creativity are encouraged.",
+            imgSrc: "/Docs/Assets/Images/career/work3.png"
+        },
+        {
+            title: "Work-Life Balance",
+            description: "ChupOnline supports work-life balance with flexibility.",
+            imgSrc: "/Docs/Assets/Images/career/work4.png"
+        },
+        {
+            title: "Continuous Learning",
+            description: "Ongoing education and skill growth are promoted.",
+            imgSrc: "/Docs/Assets/Images/career/work5.png"
+        },
+        {
+            title: "Flexible Works Hours",
+            description: "Automatically retrieves and fills patient data",
+            imgSrc: "/Docs/Assets/Images/career/work6.png"
+        },
+    ];
+
+    function renderCards2(cards) {
+        const cardContainer = document.getElementById('cardContainer2');
+        cardContainer.innerHTML = ''; // Clear previous cards
+
+        cards.forEach(card => {
+            const cardHTML = `
+      <div class="bg-white text-[#115934] p-5 md:pr-0 rounded-xl mx-auto w-full h-full">
+        <h2 class="font-semibold lg:text-[32px] text-[18px] md:pr-5 max-w-[300px] w-full md:leading-[41.6px] sm:pb-5 pb-2">${card.title}</h2>
+        <div class="flex items-start justify-between gap-2 lg:text-[18px] text-[14px] poppins">
+          <p>${card.description}</p>
+          <img src="${card.imgSrc}" class="max-w-[225px] w-full md:block hidden" alt="${card.title}">
+        </div>
+      </div>
+    `;
+
+            cardContainer.innerHTML += cardHTML;
+        });
+    }
+
+    renderCards2(cardsData2);
+
+
+
+</script>
+
+</html>

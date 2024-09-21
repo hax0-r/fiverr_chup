@@ -7,7 +7,7 @@ document.getElementById('dynamic-footer').innerHTML = `
                 </a>
                 <div class="w-full">
                     <ul class="grid text-white md:grid-cols-4 grid-cols-3 gap-y-2 w-full md:text-[16px] text-[12px]">
-                        <a href=""><li>About us</li></a>
+                        <a href=""><li>About Us</li></a>
                         <a href=""><li>Case Study</li></a>
                         <a href=""><li>Career</li></a>
                         <a href=""><li>News & Blog</li></a>
