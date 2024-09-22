@@ -28,12 +28,9 @@
                 <li><a href="/case-study.html" class="navUnderLine">Case Study</a></li>
                 <li><a href="/News/chup-news.html" class="navUnderLine">News & Blog</a></li>
                 <li><a href="/FAQ.html" class="navUnderLine">FAQ</a></li>
+                <li><a href="/Products.html" class="navUnderLine">Products</a></li>
                 <li class="flex items-center gap-2 cursor-pointer relative py-5" id="dropDownNav">
-                    Products <i
-                        class="fa-solid fa-angle-down mt-1 text-[#115934] text-sm transition-all duration-300"></i>
-                </li>
-                <li class="flex items-center gap-2 cursor-pointer relative py-5" id="dropDownNav">
-                    <a href="/Products.html">More </a><i class="fa-solid fa-angle-down mt-1 text-[#115934] text-sm transition-all duration-300"></i>
+                    More<i class="fa-solid fa-angle-down mt-1 text-[#115934] text-sm transition-all duration-300"></i>
 
                     <div
                         class="border-2 border-[#a9a099] w-52 rounded-lg absolute  bg-[#f1e4da] left-1 overflow-hidden fadeIn">
@@ -82,36 +79,9 @@
                     <a href="/FAQ.html">
                         <li class="py-4  poppins">FAQ</li>
                     </a>
-                    <li class="py-5" x-data="accordion(1)">
-                        <h2 @click="handleClick()" class="flex flex-row gap-2 items-center cursor-pointer">
-                            <span>Products</span>
-                            <i :class="handleRotate()"
-                                class="fa-solid fa-angle-down mt-1 text-[#115934] text-sm transition-all duration-300"></i>
-                        </h2>
-                        <div x-ref="tab" :style="handleToggle()"
-                            class="overflow-hidden max-h-0 duration-500 transition-all">
-                            <ul class="pl-5 pt-5">
-                                <a href="/Products.html">
-                                    <li class="py-3">ChupOnline</li>
-                                </a>
-                                <a href="/Products.html">
-                                    <li class="py-3">ChupHospital</li>
-                                </a>
-                                <a href="/Products.html">
-                                    <li class="py-3">ChupClinic</li>
-                                </a>
-                                <a href="/Products.html">
-                                    <li class="py-3">ChupWork</li>
-                                </a>
-                                <a href="/Products.html">
-                                    <li class="py-3">Paperize.AI</li>
-                                </a>
-                                <a href="/Products.html">
-                                    <li class="py-3">My Mental</li>
-                                </a>
-                            </ul>
-                        </div>
-                    </li>
+                    <a href="/Products.html">
+                        <li class="py-4  poppins">Products</li>
+                    </a>
                     <li class="py-5" x-data="accordion(2)">
                         <h2 @click="handleClick()" class="flex flex-row gap-2 items-center cursor-pointer">
                             <span>More</span>
@@ -141,7 +111,6 @@
             </a>
         </div>
     </div>
-
 
     <div class="heroSection flex flex-col px-5 pt-12 pb-14 items-center justify-center w-full bg-[#f1e4da]">
 

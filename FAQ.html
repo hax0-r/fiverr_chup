@@ -28,33 +28,7 @@
                 <li><a href="/case-study.html" class="navUnderLine">Case Study</a></li>
                 <li><a href="/News/chup-news.html" class="navUnderLine">News & Blog</a></li>
                 <li><a href="/FAQ.html" class="navUnderLine">FAQ</a></li>
-                <li class="flex items-center gap-2 cursor-pointer z-20 relative py-5" id="dropDownNav">
-                    <a href="/Products.html">Products</a> <i
-                        class="fa-solid fa-angle-down mt-1 text-[#115934] text-sm transition-all duration-300"></i>
-                    <div
-                        class="border-2 border-[#a9a099] w-52 rounded-lg absolute z-30  bg-[#f1e4da] left-1 overflow-hidden fadeIn">
-                        <ul>
-                             <a href="/index.html">
-                                <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">ChupOnline</li>
-                            </a>
-                            <a href="/Products.html">
-                                <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">ChupHospital</li>
-                            </a>
-                            <a href="/Products.html">
-                                <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">ChupClinic</li>
-                            </a>
-                            <a href="/Products.html">
-                                <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">ChupWork</li>
-                            </a>
-                            <a href="/Products.html">
-                                <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">Paperize.AI</li>
-                            </a>
-                            <a href="/Products.html">
-                                <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">MyMental</li>
-                            </a>
-                        </ul>
-                    </div>
-                </li>
+                <li><a href="/Products.html" class="navUnderLine">Products</a></li>
                 <li class="flex items-center gap-2 cursor-pointer relative py-5" id="dropDownNav">
                     More<i class="fa-solid fa-angle-down mt-1 text-[#115934] text-sm transition-all duration-300"></i>
 
@@ -82,6 +56,61 @@
     </nav>
     <!-- responsive Navbar -->
     <div class="fixed top-0 right-0 h-screen bg-[#f1e4da] text-[#115934] font-36 z-50 transition-all duration-500"
+        id="responsiveNav" style="width: 0;">
+        <div class="px-10 pt-10 pb-4 relative flex flex-col h-full justify-between">
+            <div class="">
+                <div class="flex items-center justify-between">
+                    <a href="/index.html">
+                        <img src="/Docs/Assets/Images/Global/logo.svg" class="h-[32px]" alt="">
+                    </a>
+                    <img src="/Docs/Assets/Images/Navbar/close.png" id="closeNav" class="h-[21px] cursor-pointer"
+                        alt="">
+                </div>
+                <ul class="mt-10 text-[#115934] flex flex-col text-[17px]">
+                    <a href="/about.html">
+                        <li class="py-4  poppins">About Us</li>
+                    </a>
+                    <a href="/case-study.html">
+                        <li class="py-4  poppins">Case Study</li>
+                    </a>
+                    <a href="/News/chup-news.html">
+                        <li class="py-4  poppins">News & Blog</li>
+                    </a>
+                    <a href="/FAQ.html">
+                        <li class="py-4  poppins">FAQ</li>
+                    </a>
+                    <a href="/Products.html">
+                        <li class="py-4  poppins">Products</li>
+                    </a>
+                    <li class="py-5" x-data="accordion(2)">
+                        <h2 @click="handleClick()" class="flex flex-row gap-2 items-center cursor-pointer">
+                            <span>More</span>
+                            <i :class="handleRotate()"
+                                class="fa-solid fa-angle-down mt-1 text-[#115934] text-sm transition-all duration-300"></i>
+                        </h2>
+                        <div x-ref="tab" :style="handleToggle()"
+                            class="overflow-hidden max-h-0 duration-500 transition-all">
+                            <ul class="pl-5 pt-5">
+                                <a href="/Career.html">
+                                    <li class="py-3">Career</li>
+                                </a>
+                                <a href="/Security-Compliance.html">
+                                    <li class="py-3">Security Compliance</li>
+                                </a>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <a href="">
+                <button
+                    class="bg-[#115934] flex w-full text-[#F1E4DA] p-3 rounded-lg transition-all items-center justify-center gap-4 font-medium ">
+                    <img src="/Docs/Assets/Images/Navbar/whatsapp.png" class="h-5" alt="">
+                    WhatsApp Us
+                </button>
+            </a>
+        </div>
+    </div>s="fixed top-0 right-0 h-screen bg-[#f1e4da] text-[#115934] font-36 z-50 transition-all duration-500"
         id="responsiveNav" style="width: 0;">
         <div class="px-10 pt-10 pb-4 relative flex flex-col h-full justify-between">
             <div class="">
