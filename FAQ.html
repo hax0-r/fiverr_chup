@@ -114,11 +114,11 @@
 
 
     <div class="heroSection flex flex-col px-5 md:py-16 py-10 items-center justify-center w-full bg-[#f1e4da]">
-        <h2 class="lg:text-[60px] text-[#115934] text-[36px] md:pb-10 pb-6  font-bold">How Can Chup Online <span
+        <h2 class="lg:text-[60px] text-[#115934] text-[36px] md:pb-10 pb-6 text-center font-bold">How Can Chup Online <span
                 class="text-[#F26522]">Help You?</span></h2>
 
         <div
-            class="border border-white flex items-center max-w-[988px] myShadow w-full gap-2 bg-white px-3 rounded-lg mb-6">
+            class="border border-white flex items-center max-w-[988px] myShadow w-full gap-2 bg-white px-3 rounded-lg md:mb-6">
             <i class="fa-solid fa-magnifying-glass pt-0.5 text-[#00000080]"></i>
             <input type="text" id="searchInput" class="py-3.5 px-2 w-full text-[#00000080]"
                 placeholder="Describe your problem">
@@ -253,7 +253,7 @@
 
         cards.forEach(card => {
             const cardHTML = `
-      <div class="card bg-white border-2 flex flex-col h-full gap-5 p-4 pt-6 max-w-[580px] w-full rounded-xl justify-center" data-title="${card.title}">
+      <div class="card bg-white border-2 flex flex-col h-full gap-5 p-4 pt-6 max-w-[580px] w-full rounded-xl justify-between" data-title="${card.title}">
         <img src="${card.imgSrc}" class="md:max-w-[56px] mx-auto max-w-[48px] w-full" alt="img">
         <h2 class="md:text-[26px] text-[14px] text-[#115934] font-medium text-center">${card.title}</h2>
         <a href="/faq/${card.link}.html">
