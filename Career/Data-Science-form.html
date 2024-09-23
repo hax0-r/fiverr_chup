@@ -174,54 +174,151 @@
     </div>
 
 
-    <div class="px-5 pt-5 md:pb-14 pb-8 w-full bg-[#fbf7f4] heroSectionCareers">
+    <div class="px-5 pt-5 md:pb-14 pb-8 w-full bg-[#ffffff] heroSectionCareers">
         <div class="max-w-7xl mx-auto w-full">
 
             <div
                 class="py-5 max-w-7xl w-full mx-auto text-[18px]  transition-all font-semibold text-[#F26522]  poppins ">
-                <a href="/Career.html" class="hover:opacity-65 duration-500 inline-flex items-center gap-3">
+                <a href="/Career/Data-Science.html" class="hover:opacity-65 duration-500 inline-flex items-center gap-3">
                     <i class="fa-solid fa-angle-left"></i>
                     Back
                 </a>
             </div>
 
 
-            <h2 class="md:text-[26px] text-[18px] font-medium ">Digital Marketing</h2>
+            <h2 class="md:text-[26px] text-[18px] font-medium ">Basic Information<span class="text-[#E02D2D]">*</span>
+            </h2>
 
-            <div class="flex md:items-center md:flex-row flex-col md:gap-6 gap-2 mt-2">
-                <div class="flex items-center gap-2 ">
-                    <img src="/Docs/Assets/Images/career/bag.svg" class="md:max-w-[19.5px] max-w-[13px] w-full" alt="">
-                    <p class="text-[#00000099] md:text-[18px] text-[14px]">Internship & Fulltime</p>
+            <form>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-5">
+
+                    <!-- Full Name -->
+                    <div>
+                        <label class="block font-medium text-[#1D1D1D] poppins">Full Name<span
+                                class="text-[#E02D2D]">*</span></label>
+                        <input type="text" placeholder="Your full name" class="mt-2 p-3  w-full rounded-md border-2">
+                    </div>
+
+                    <div>
+                        <label class="block font-medium text-[#1D1D1D] poppins">Email<span
+                                class="text-[#E02D2D]">*</span></label>
+                        <input type="email" placeholder="Your email" class="mt-2 p-3  w-full rounded-md border-2">
+                    </div>
+
+                    <!-- Phone Number -->
+                    <div>
+                        <label class="block font-medium text-[#1D1D1D] poppins">Phone Number<span
+                                class="text-[#E02D2D]">*</span></label>
+                        <div class="flex">
+                            <select class="mt-2 p-3  rounded-md border-2  rounded-r-none">
+                                <option value="+60"> +60</option>
+                                <option value="+61"> +61</option>
+                                <option value="+62"> +62</option>
+                                <option value="+63"> +63</option>
+                                <!-- Add more country codes as needed -->
+                            </select>
+                            <input type="tel" placeholder="Your phone number"
+                                class="mt-2 p-3  w-full rounded-md border-2 border-l-0 rounded-l-none">
+                        </div>
+                    </div>
+
+                    <!-- Education -->
+                    <div>
+                        <label class="block font-medium text-[#1D1D1D] poppins">Education<span
+                                class="text-[#E02D2D]">*</span></label>
+                        <select class="mt-2 p-3  w-full rounded-md border-2">
+                            <option>Choose</option>
+                            <option>High School Diploma</option>
+                            <option>Bachelor</option>
+                            <option>Master</option>
+                            <option>Doctor</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <!-- Work Experience -->
+                    <div>
+                        <label class="block font-medium text-[#1D1D1D] poppins">Work Experience<span
+                                class="text-[#E02D2D]">*</span></label>
+                        <select class="mt-2 p-3  w-full rounded-md border-2">
+                            <option>Choose</option>
+                            <option>Les than 1 Years</option>
+                            <option>1 Years</option>
+                            <option>2 Years</option>
+                            <option>more than 2 Years</option>
+                            <!-- Add options for work experience -->
+                        </select>
+                    </div>
+
+                    <!-- Job Information -->
+                    <div>
+                        <label class="block font-medium text-[#1D1D1D] poppins">Job Information<span
+                                class="text-[#E02D2D]">*</span></label>
+                        <select class="mt-2 p-3  w-full rounded-md border-2">
+                            <option>Choose</option>
+                            <option>Instagram</option>
+                            <option>Facebook</option>
+                            <option>Search Engine (Google)</option>
+                            <option>Linkedin</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <!-- Address -->
+                    <div class="md:col-span-2">
+                        <label class="block font-medium text-[#1D1D1D] poppins">Address<span
+                                class="text-[#E02D2D]">*</span></label>
+                        <input type="text" placeholder="Your address" class="mt-2 p-3  w-full rounded-md border-2">
+                    </div>
+
+                    <div class="md:col-span-2">
+                        <h2 class="md:text-[26px] pb-2 text-[18px] font-medium ">Resume<span
+                                class="text-[#E02D2D]">*</span>
+                        </h2>
+
+                        <!-- Resume -->
+                        <div class=" w-full">
+                            <label class="block font-medium text-[#1D1D1D] poppins">Other Certificates<span
+                                    class="text-[#E02D2D]">*</span></label>
+                            <div
+                                class="mt-1 flex justify-center px-6 py-10 border-2 bg-[#f5f7fa] border-dashed border-gray-300 rounded-xl">
+                                <div class="space-y-1 text-center">
+                                    <img src="/Docs/Assets/Images/career/uploadFile.svg"
+                                        class="max-w-[37.33px] w-full mx-auto" alt="">
+                                    <div class="pt-2 ">
+                                        <label for="resume-upload"
+                                            class="relative cursor-pointer poppins text-[#403F3F]">
+                                            <span>Drag & Drop your files or <span class="text-[#115934] font-medium">
+                                                    Choose file</span></span>
+                                            <input id="resume-upload" name="resume-upload" type="file" class="sr-only">
+                                        </label>
+                                    </div>
+                                    <p class="text-[#757474]">10MB Max file size</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Portfolio URL -->
+
+                    <div class="md:col-span-2">
+                        <h2 class="md:text-[26px] pb-2 text-[18px] font-medium ">Url Portfolio<span
+                                class="text-[#E02D2D]">*</span>
+                        </h2>
+                        <div class="">
+                            <label class="block font-medium text-[#1D1D1D] poppins">Portfolio URL</label>
+                            <input type="url" placeholder="Input Link" class="mt-2 p-3  w-full rounded-md border-2">
+                        </div>
+                    </div>
+
                 </div>
-                <div class="flex items-center gap-2">
-                    <img src="/Docs/Assets/Images/career/location.svg" class="md:max-w-[19.5px] max-w-[13px] w-full"
-                        alt="">
-                    <p class="text-[#00000099] md:text-[18px] text-[14px]">Remote</p>
-                </div>
-            </div>
 
-            <h2 class="md:text-[20px] mt-6 text-[16px] text-[#000000BF] font-medium ">Key Responsibilities:</h2>
-            <ul class="space-y-1 list-disc pl-8 mt-3 text-[#00000099] md:text-[18px] text-[14px]">
-                <li> Develop digital marketing campaigns.</li>
-                <li> Analyze online traffic and optimize SEO/SEM.</li>
-                <li> Manage social media and email strategies.</li>
-                <li> Generate reports for campaign effectiveness.</li>
-            </ul>
-
-            <h2 class="md:text-[20px] mt-6 text-[16px] text-[#000000BF] font-medium ">What We’re Looking For:</h2>
-            <ul class="space-y-1 list-disc pl-8 mt-3 text-[#00000099] md:text-[18px] text-[14px]">
-                <li> Strong understanding of digital marketing tools.</li>
-                <li> Experience with analytics and content creation.</li>
-                <li> Ability to lead digital growth strategies.</li>
-                <li> Excellent communication and creative skills.</li>
-            </ul>
-
-            <a href="/Career/Marketing-form.html">
 
                 <button
-                    class="w-full p-3 text-center rounded-full font-semibold md:text-[24px] text-[20px] text-white bg-[#F26522] mt-8 transition-all hover:bg-[#ff5a0d] duration-500">Apply
-                    Now</button>
-            </a>
+                    class="w-full p-3 text-center rounded-full font-semibold md:text-[24px] text-[20px] text-white bg-[#F26522] mt-8 transition-all hover:bg-[#ff5a0d] duration-500">Submit</button>
+            </form>
+
+
 
         </div>
     </div>
