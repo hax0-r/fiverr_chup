@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Docs/Assets/Images/Global/favIcon.png" type="image/x-icon">
+    <title>Chup!</title>
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/Docs/Styles/global.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
+
+</head>
+
+<body>
+
+    <nav class="bg-[#ffede5]">
+        <div class="flex h-16 lg:px-16 px-8 items-center justify-between mx-auto">
+            <a href="/index.html">
+                <img src="/Docs/Assets/Images/Global/logo.svg" alt="log" class="h-9 md:h-12">
+            </a>
+            <ul class="items-center text-[#115934] xl:flex hidden gap-7 text-[17px]">
+                <li><a href="/about.html" class="navUnderLine">About Us</a></li>
+                <li><a href="/case-study.html" class="navUnderLine">Case Study</a></li>
+                <li><a href="/News/chup-news.html" class="navUnderLine">News & Blog</a></li>
+                <li><a href="/FAQ.html" class="navUnderLine">FAQ</a></li>
+                <li><a href="/Products.html" class="navUnderLine">Products</a></li>
+                <li class="flex items-center gap-2 cursor-pointer relative py-5" id="dropDownNav">
+                    More<i class="fa-solid fa-angle-down mt-1 text-[#115934] text-sm transition-all duration-300"></i>
+
+                    <div
+                        class="border-2 border-[#a9a099] w-52 rounded-lg absolute z-30  bg-[#ffede5] left-1 overflow-hidden fadeIn">
+                        <ul>
+                            <a href="/Career.html">
+                                <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">Career</li>
+                            </a>
+                            <a href="/Security-Compliance.html">
+                                <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">Security
+                                    Compliance</li>
+                            </a>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <button
+                class="bg-[#115934] xl:flex hidden text-[#ffede5] px-6 py-2.5 rounded-lg transition-all items-center justify-center gap-2 font-medium ">
+                <img src="/Docs/Assets/Images/Navbar/whatsapp.png" class="h-[18px]" alt="">
+                WhatsApp Us
+            </button>
+            <i class="fa-solid fa-bars text-2xl xl:hidden cursor-pointer text-[#115934]" id="openNav"></i>
+        </div>
+    </nav>
+    <!-- responsive Navbar -->
+    <div class="fixed top-0 right-0 h-screen bg-[#ffede5] text-[#115934] font-36 z-50 transition-all duration-500"
+        id="responsiveNav" style="width: 0;">
+        <div class="px-10 pt-10 pb-4 relative flex flex-col h-full justify-between">
+            <div class="">
+                <div class="flex items-center justify-between">
+                    <a href="/index.html">
+                        <img src="/Docs/Assets/Images/Global/logo.svg" class="h-[32px]" alt="">
+                    </a>
+                    <img src="/Docs/Assets/Images/Navbar/close.png" id="closeNav" class="h-[21px] cursor-pointer"
+                        alt="">
+                </div>
+                <ul class="mt-10 text-[#115934] flex flex-col text-[17px]">
+                    <a href="/about.html">
+                        <li class="py-4  poppins">About Us</li>
+                    </a>
+                    <a href="/case-study.html">
+                        <li class="py-4  poppins">Case Study</li>
+                    </a>
+                    <a href="/News/chup-news.html">
+                        <li class="py-4  poppins">News & Blog</li>
+                    </a>
+                    <a href="/FAQ.html">
+                        <li class="py-4  poppins">FAQ</li>
+                    </a>
+                    <a href="/Products.html">
+                        <li class="py-4  poppins">Products</li>
+                    </a>
+                    <li class="py-5" x-data="accordion(2)">
+                        <h2 @click="handleClick()" class="flex flex-row gap-2 items-center cursor-pointer">
+                            <span>More</span>
+                            <i :class="handleRotate()"
+                                class="fa-solid fa-angle-down mt-1 text-[#115934] text-sm transition-all duration-300"></i>
+                        </h2>
+                        <div x-ref="tab" :style="handleToggle()"
+                            class="overflow-hidden max-h-0 duration-500 transition-all">
+                            <ul class="pl-5 pt-5">
+                                <a href="/Career.html">
+                                    <li class="py-3">Career</li>
+                                </a>
+                                <a href="/Security-Compliance.html">
+                                    <li class="py-3">Security Compliance</li>
+                                </a>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <a href="">
+                <button
+                    class="bg-[#115934] flex w-full text-[#ffede5] p-3 rounded-lg transition-all items-center justify-center gap-4 font-medium ">
+                    <img src="/Docs/Assets/Images/Navbar/whatsapp.png" class="h-5" alt="">
+                    WhatsApp Us
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <div class="heroSection flex flex-col px-5 relative py-16 items-center justify-center w-full bg-[#ffede5]">
+
+        <div
+            class="p-5 max-w-7xl w-full mx-auto text-[18px] absolute top-0  transition-all font-semibold text-[#000000]  poppins ">
+            <a href="/case-study.html" class="hover:opacity-65 duration-500 inline-flex items-center gap-3">
+                <i class="fa-solid fa-angle-left"></i>
+                Back
+            </a>
+        </div>
+
+        <img src="/Docs/Assets/Images/caseStudy/img3.png" class="md:max-w-[276.35px] md:mt-10 max-w-[200px] w-full "
+            alt="">
+        <h1
+            class="font-bold md:text-[60px] uppercase text-3xl text-center md:flex flex-col items-center justify-center md:leading-[78px] leading-[39px] text-[#115934]">
+            <span class="slidein [--slidein-delay:300ms] opacity-0">Transforming Patient Care</span>
+            <span class="slidein [--slidein-delay:400ms] opacity-0"> Experience: Chup Online Delivers</span>
+            <span class="slidein [--slidein-delay:500ms] opacity-0"> Exceptional <span
+                    class="bg-[#f26522] rounded-lg text-white">Near-Perfect</span>
+            </span>
+            <span class="slidein [--slidein-delay:600ms] opacity-0">
+                <span class="bg-[#f26522] rounded-lg text-white"> Satisfaction</span> at Annur Hospital
+            </span>
+        </h1>
+    </div>
+
+
+    <div class="bg-[#fbf7f4]">
+
+
+        <div class="max-w-7xl w-full mx-auto lg:pt-16 pt-10 p-5">
+            <div class="flex justify-center items-start lg:flex-row flex-col w-full lg:gap-14 gap-6">
+                <div class="max-w-[427px] w-full">
+                    <div class="flex justify-between w-full items-center gap-2">
+                        <div class="">
+                            <h2 class="text-[#F26522] md:text-[18px] text-[14px] font-bold poppins">Company</h2>
+                            <p class="text-[#115934] md:text-[24px] text-[16px]">Hospital Pakar An-Nur </p>
+                        </div>
+                        <div class="">
+                            <h2 class="text-[#F26522] md:text-[18px] text-[14px] font-bold poppins">Industry</h2>
+                            <p class="text-[#115934] md:text-[24px] text-[16px]">Hospital </p>
+                        </div>
+                    </div>
+                    <div class="mt-7">
+                        <h2 class="text-[#F26522] md:text-[18px] text-[14px] font-bold poppins">Office</h2>
+                        <p class="text-[#115934] md:text-[24px] text-[16px]">Jalan Gerbang Wawasan 1, Seksyen 15, 43650
+                            Bandar Baru Bangi, Selangor, Malaysia</p>
+                    </div>
+                    <div class="mt-7">
+                        <h2 class="text-[#F26522] md:text-[18px] text-[14px] font-bold poppins">Starting Date</h2>
+                        <p class="text-[#115934] md:text-[24px] text-[16px]">5th December 2023 </p>
+                    </div>
+                </div>
+
+                <div class="w-[1px] h-[22rem] lg:block hidden bg-[#AEAEB2]"></div>
+                <div class="w-full h-[1px] bg-[#AEAEB2] lg:hidden"></div>
+
+                <p class="text-[#115934] max-w-[753px] w-full md:text-[24px] text-[16px]">An-Nur Specialist Hospital
+                    (ANSH), a premier multidisciplinary facility, has grown since its founding in September 2005 into a
+                    leading Shari’ah Compliant private hospital in Malaysia. Equipped with <strong>advanced medical
+                        technology and designed to create a soothing, healing environment</strong>. ANSH supports both
+                    the emotional and spiritual well-being of its patients. By integrating Chup Online, ANSH effectively
+                    cuts waiting times across departments, improves the patient experience, and ensures more efficient
+                    care, thereby significantly <strong>increasing patient satisfaction through enhanced
+                        convenience.</strong> </p>
+
+            </div>
+        </div>
+
+
+        <div class="max-w-[1200px] w-full p-5 mx-auto flex items-center justify-between gap-5 md:gap-10">
+            <div class="sm:max-w-[570px]">
+                <img src="/Docs/Assets/Images/caseStudy/nur/img1.png" class=" w-full" alt="">
+            </div>
+            <div class="sm:max-w-[570px]">
+                <img src="/Docs/Assets/Images/caseStudy/nur/img2.png" class=" w-full" alt="">
+            </div>
+        </div>
+
+        <div class="max-w-7xl w-full mx-auto lg:py-16 py-8 ">
+
+            <div class="grid md:grid-cols-3 gap-x-2 gap-y-5">
+                <div class="text-center mx-auto">
+                    <h2 class="md:text-[60px] text-[45px] font-bold text-[#F26522]">98.8%</h2>
+                    <p class="text-[#115934] md:text-[28px] text-[22px] font-medium ">Customer Satisfaction</p>
+                </div>
+                <div class="text-center mx-auto">
+                    <h2 class="md:text-[60px] text-[45px] font-bold text-[#F26522]">207</h2>
+                    <p class="text-[#115934] md:text-[28px] text-[22px] font-medium ">Patients Served</p>
+                    <p class="text-[#115934] md:text-[22px] text-[17.5px]">*in only 2 clinics</p>
+                </div>
+                <div class="text-center mx-auto">
+                    <h2 class="md:text-[60px] text-[45px] font-bold text-[#F26522]">99.4% </h2>
+                    <p class="text-[#115934] md:text-[28px] text-[22px] font-medium ">Succeed Rate</p>
+                    <p class="text-[#115934] md:text-[22px] text-[17.5px]">*Real Time - updates</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-[#115934] p-5 lg:py-16 py-10">
+
+        <div class="max-w-7xl mx-auto w-full">
+            <div class="flex items-center justify-center md:flex-row flex-col md:gap-12 gap-4">
+                <h2 class="lg:text-[60px] text-[45px] md:max-w-[298px] leading-tight w-full font-semibold text-white">
+                    The <span class="text-[#F26522]">Challenge</span></h2>
+                <p class="text-white lg:text-[24px] text-[16px] w-full poppins">An-Nur Hospital <strong>struggled with
+                        several patient flow issues</strong> that directly impacted their service efficiency.
+                    <strong>Long wait times were a significant concern</strong>, especially for special needs patients,
+                    as the manual processes for handling arrivals, registrations, and insurance verification created
+                    bottlenecks.
+                </p>
+            </div>
+            <p class="text-white pt-12 lg:text-[24px] text-[16px] w-full poppins">Staff were often overburdened, causing
+                delays in processing patient details, verifying <strong>insurance</strong>, and <strong>managing
+                    real-time scheduling</strong>, which
+                resulted in frustration for both staff and patients alike. Additionally, the lack of a cohesive system
+                to handle early arrivals further contributed to an inefficient and disorganized patient journey, making
+                it challenging for staff to provide the level of care that patients deserved.
+                <br><br>
+                With manual insurance verification in place, errors were frequent, leading to confusion
+                <strong>regarding
+                    insurance</strong> status. Patients were left in the dark, waiting longer than necessary for
+                approvals, while
+                staff spent excessive time tracking and <strong>updating insurance records manually</strong>.
+                Furthermore, patients
+                arriving early for appointments were added to an already congested queue, <strong>causing frustration
+                    for both
+                    staff and patients</strong>.
+                <br><br>
+                Finally, pharmacy and billing processes <strong>suffered from inefficiencies</strong>, with patients
+                waiting for
+                medication and payment verification, disrupting their experience. <strong>Manual tracking caused
+                    delays</strong> in
+                dispensing medication and collecting payments, worsening dissatisfaction and reducing operational
+                efficiency.
+            </p>
+        </div>
+    </div>
+
+
+    <div class="bg-[#fbf7f4] p-5 lg:py-16 py-10">
+        <div class="max-w-7xl mx-auto w-full">
+
+            <h2 class="lg:text-[60px] text-[45px] text-center font-semibold text-[#115934]">The <span
+                    class="text-[#F26522]">Solution</span></h2>
+            <p class="text-[#115934] text-center lg:text-[24px] text-[16px] w-full poppins">An-Nur Specialist Hospital
+                partnered with Chup Online to <strong>elevate customer satisfaction</strong> and <strong>optimize
+                    hospital management</strong>. This collaboration focused on integrating advanced solutions to refine
+                operational <strong>processes and enhance patient flow</strong>, while also developing customize
+                features tailored to the hospital’s unique requirements, including:
+            </p>
+
+
+            <div class="grid sm:grid-cols-3 gap-6 md:mt-16 mt-10">
+
+                <div class="flex flex-col md:gap-5 gap-2.5 w-full bg-white p-5 md:p-10 rounded-xl">
+                    <img src="/Docs/Assets/Images/caseStudy/nur/solution1.png"
+                        class="max-w-[252px] md:block hidden w-full mx-auto" alt="">
+                    <h2 class="text-[24px] font-semibold md:text-center text-[#115934]">Patients Journey Timeline</h2>
+                    <p class="text-[#115934] text-[18px] poppins md:text-center">Tracks and displays the patient’s
+                        journey, including waiting and service times</p>
+                </div>
+                <div class="flex flex-col md:gap-5 gap-2.5 w-full bg-white p-5 md:p-10 rounded-xl">
+                    <img src="/Docs/Assets/Images/caseStudy/nur/solution2.png"
+                        class="max-w-[252px] md:block hidden w-full mx-auto" alt="">
+                    <h2 class="text-[24px] font-semibold md:text-center text-[#115934]">Automatic Arrangement</h2>
+                    <p class="text-[#115934] text-[18px] poppins md:text-center">Prioritizes and arranges patient
+                        appointments according to booked time slots</p>
+                </div>
+                <div class="flex flex-col md:gap-5 gap-2.5 w-full bg-white p-5 md:p-10 rounded-xl">
+                    <img src="/Docs/Assets/Images/caseStudy/nur/solution3.png"
+                        class="max-w-[252px] md:block hidden w-full mx-auto" alt="">
+                    <h2 class="text-[24px] font-semibold md:text-center text-[#115934]">Transit Service</h2>
+                    <p class="text-[#115934] text-[18px] poppins md:text-center">Guides patients through required
+                        procedures or services before seeing the doctor</p>
+                </div>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-6 mt-6">
+
+                <div class="flex flex-col md:gap-5 gap-2.5 w-full bg-white p-5 md:p-10 rounded-xl">
+                    <img src="/Docs/Assets/Images/caseStudy/nur/solution4.png"
+                        class="max-w-[252px] md:block hidden w-full mx-auto" alt="">
+                    <h2 class="text-[24px] font-semibold md:text-center text-[#115934]">Integrated Patients Token Number
+                    </h2>
+                    <p class="text-[#115934] text-[18px] poppins md:text-center">Issues a consistent toke number fot
+                        patients throughout their visit</p>
+                </div>
+                <div class="flex flex-col md:gap-5 gap-2.5 w-full bg-white p-5 md:p-10 rounded-xl">
+                    <img src="/Docs/Assets/Images/caseStudy/nur/solution5.png"
+                        class="max-w-[252px] md:block hidden w-full mx-auto" alt="">
+                    <h2 class="text-[24px] font-semibold md:text-center text-[#115934]">Insurance Verification & Billing
+                        Features</h2>
+                    <p class="text-[#115934] text-[18px] poppins md:text-center">Customized features for HIAZ include
+                        additional buttons designed to streamline management during the Insurance verification and
+                        Billings states</p>
+                </div>
+            </div>
+
+            <div class="w-full text-[#115934] sm:p-8 p-4 bg-white myShadow rounded-lg mt-10">
+                <h2 class=" lg:text-[60px] text-[24px] md:text-[36px] font-semibold">Patient Journey Timeline
+                </h2>
+                <img src="/Docs/Assets/Images/caseStudy/nur/Picture1.png"
+                    class="max-w-[1120px] select-none w-full mx-auto my-6 md:mt-10" alt="">
+                <p class="lg:text-[32px] md:text-[24px] text-[16px] ">Chup Online's Patient Journey Timeline
+                    <strong>tracks each
+                        step of a patient’s visit</strong>, capturing details like waiting times and service durations
+                    to <strong>provide
+                        insights into care efficiency</strong> and enhance patient satisfaction.
+                    <br><br>
+                    At the end of the visit, the system provides a <strong>complete summary of the total visit
+                        duration</strong>, which
+                    can be easily shared or printed for record-keeping. This ensures accurate documentation and
+                    <strong>facilitates transparency and accountability in patient care</strong>. Both staff and
+                    patients can <strong>clearly
+                        understand</strong> the time spent during the visit.</strong>
+                </p>
+            </div>
+            <div class="w-full text-[#115934] sm:p-8 p-4 bg-white myShadow rounded-lg mt-10">
+                <h2 class=" lg:text-[60px] text-[24px] md:text-[36px] font-semibold">Automatic Arrangement
+                </h2>
+                <img src="/Docs/Assets/Images/caseStudy/nur/Picture2.png"
+                    class="max-w-[1120px] select-none w-full mx-auto my-6 md:mt-10" alt="">
+                <p class="lg:text-[32px] md:text-[24px] text-[16px] ">The Automatic Arrange based on Appointment Time
+                    Feature manages <strong>both scheduled and walk-in patients</strong> by organizing them according to
+                    their time
+                    slots. It ensures a smooth flow by <strong>prioritizing appointments and handling each patient based
+                        on
+                        their arrival and schedule</strong>. This feature creates an efficient and orderly system for
+                    managing
+                    visits.
+                    <br><br>
+                    This integration streamlines daily operations for staff and <strong>enhances the patient
+                        experience</strong> by
+                    organizing all patients scheduled and walk-in <strong>into an orderly timeline</strong>. This
+                    reduces wait times and
+                    ensures a smooth, predictable visit, creating a <strong>more efficient and pleasant healthcare
+                        environment</strong>
+                    for everyone.
+                </p>
+            </div>
+            <div class="w-full text-[#115934] sm:p-8 p-4 bg-white myShadow rounded-lg mt-10">
+                <h2 class=" lg:text-[60px] text-[24px] md:text-[36px] font-semibold">Transit Services
+                </h2>
+                <img src="/Docs/Assets/Images/caseStudy/nur/Picture3.png"
+                    class="max-w-[1120px] select-none w-full mx-auto my-6 md:mt-10" alt="">
+                <p class="lg:text-[32px] md:text-[24px] text-[16px] ">The Transit Service (Automatic Guide) feature
+                    enhances patient flow in healthcare facilities by providing automated, step-by-step guidance. Upon
+                    arrival, <strong>patients are directed to key service points</strong>, such as registration and lab
+                    tests,
+                    <strong>eliminating confusion</strong> and ensuring they know exactly where to go and what to do
+                    before their
+                    appointment.
+                    <br><br>
+                    By guiding patients through preliminary steps, the system reduces bottlenecks and waiting times,
+                    <strong>ensuring a smooth process</strong>. This enhances the patient experience and helps
+                    healthcare providers
+                    manage patient flow more effectively.
+                </p>
+            </div>
+            <div class="w-full text-[#115934] sm:p-8 p-4 bg-white myShadow rounded-lg mt-10">
+                <h2 class=" lg:text-[60px] text-[24px] md:text-[36px] font-semibold">Integrated Patients Token Number
+                </h2>
+                <img src="/Docs/Assets/Images/caseStudy/nur/solution6.png"
+                    class="max-w-[1120px] select-none w-full mx-auto my-6 md:mt-10" alt="">
+                <p class="lg:text-[32px] md:text-[24px] text-[16px] ">Chup streamlines the patient experience by
+                    assigning a <strong>consistent token number for the entire journey</strong>, eliminating the need
+                    for multiple
+                    numbers and <strong>reducing confusion across all departments and services</strong>.
+                    <br><br>
+                    This feature <strong>streamlines the patient journey</strong> and boosts operational efficiency by
+                    <strong>assigning a single
+                        token number for all services</strong>. This allows for seamless tracking and management,
+                    <strong>reducing wait times
+                        and errors</strong>. This uniform approach creates a more organized environment, enabling
+                    patients to focus
+                    on their healthcare needs without the <strong>hassle of managing multiple numbers</strong>.
+                </p>
+            </div>
+            <div class="w-full text-[#115934] sm:p-8 p-4 bg-white myShadow rounded-lg mt-10">
+                <h2 class=" lg:text-[60px] text-[24px] md:text-[36px] font-semibold">Insurance Verification & Billing
+                    Button Features
+                </h2>
+                <img src="/Docs/Assets/Images/caseStudy/nur/Picture4.png"
+                    class="max-w-[1120px] select-none w-full mx-auto my-6 md:mt-10" alt="">
+                <p class="lg:text-[32px] md:text-[24px] text-[16px] ">Chup Online’s Verify Button and Edit Details
+                    features streamline insurance processing by enabling staff to update insurance status in real-time
+                    and customize patient profiles. This automation reduces manual errors and speeds up verification,
+                    <strong>ensuring patients receive timely updates on their insurance status.</strong>
+                    <br><br>
+                    Chup Online's <strong>"Mark As Paid"</strong> button and <strong>"Ready to Dispense"</strong> status automate patient movement between
+                    pharmacy and billing. This system allows real-time tracking and alerts for medication pickup,
+                    reducing waiting times and improving patient flow.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="bg-[#FFEDE5]">
+        <div class="max-w-7xl w-full mx-auto p-5 md:py-16 py-10">
+            <div class="flex items-center justify-center md:flex-row flex-col md:gap-12 gap-4 text-[#115934]">
+                <h2 class="lg:text-[60px] text-[45px] md:max-w-[298px] leading-tight w-full font-semibold">
+                    The <span class="text-[#F26522]">Result</span></h2>
+                <p class="lg:text-[24px] text-[16px] w-full poppins">Chup Online transformed patient experience at
+                    An-Nur Hospital by offering special needs patients the Fast Lane, <strong>reducing wait times and
+                        improving
+                        access to care</strong>. By managing early arrivals efficiently, the hospital minimizes
+                    scheduling conflicts
+                    and enhances the patient environment. This streamlined approach <strong>reduces frustration, boosts
+                        staff
+                        productivity, and fosters compassion</strong>, ensuring timely care for all and meeting the
+                    diverse needs of
+                    the community.
+                </p>
+            </div>
+
+
+            <div class="bg-white rounded-md my-8 md:block hidden md:mt-16 mt-10">
+                <h2 class=" mb-4 text-[12px] font-medium px-5 pt-3 poppins lg:text-[24px]">Satisfaction’s WhatsApp Vote
+                    Summary</h2>
+                <table class="w-full table-auto border-collapse border-l">
+                    <thead class="lg:text-[24px] text-[12px]">
+                        <tr class="text-left border-t">
+                            <th class="px-4 py-2.5 flex gap-6 items-center bg-white text-center font-normal poppins">
+                                <img src="/Docs/Assets/Images/caseStudy/ukmsc/calender.svg" alt=""> <span>Month</span>
+                            </th>
+                            <th class="px-4 py-2.5 text-center bg-[#89E1B4] font-normal poppins"><i
+                                    class="fa-regular fa-thumbs-up"></i> <span>Satisfied</span></th>
+                            <th class="px-4 py-2.5 text-center bg-[#FFA29D] font-normal poppins"><i
+                                    class="fa-regular fa-thumbs-up rotate-180"></i> <span>Not Satisfied</span></th>
+                            <th class="px-4 py-2.5 text-center bg-[#89E1B4] font-normal poppins"><i
+                                    class="fa-regular fa-thumbs-up"></i> <span>Satisfied (%)</span></th>
+                            <th class="px-4 py-2.5 text-center bg-[#FFA29D] font-normal poppins"><i
+                                    class="fa-regular fa-thumbs-up rotate-180"></i> <span>Not Satisfied (%)</span></th>
+                        </tr>
+                    </thead>
+                    <tbody class="lg:text-[22px] text-[12px] font-normal">
+                        <tr>
+                            <td class="px-4 py-2.5">December 2023</td>
+                            <td class="px-4 text-center py-2.5 poppins bg-[#89E1B4]">205 Patients</td>
+                            <td class="px-4 text-center py-2.5 poppins bg-[#FFA29D]">2 Patients</td>
+                            <td class="px-4 text-center py-2.5 poppins bg-[#89E1B4]">98.80% Patients</td>
+                            <td class="px-4 text-center py-2.5 poppins bg-[#FFA29D]">1.20% Patients</td>
+                        </tr>
+
+                        <tr class="border-b font-semibold">
+                            <td class="px-4 py-2.5">Total</td>
+                            <td class="px-4 text-center py-2.5 poppins bg-[#89E1B4]">205 Patients</td>
+                            <td class="px-4 text-center py-2.5 poppins bg-[#FFA29D]">2 Patients</td>
+                            <td class="px-4 text-center py-2.5 poppins bg-[#89E1B4]">98.80% Patients</td>
+                            <td class="px-4 text-center py-2.5 poppins bg-[#FFA29D]">1.20% Patients</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="bg-white rounded-md my-8 md:hidden">
+                <h2 class=" mb-4 text-[12px] font-medium px-5 pt-3 poppins lg:text-[24px]">Satisfaction’s WhatsApp Vote
+                    Summary</h2>
+                <table class="w-full table-auto border-collapse border-l">
+                    <thead class="lg:text-[24px] text-[12px]">
+                        <tr class="text-left border-t">
+                            <th
+                                class="px-4 py-2.5 flex gap-6 items-center justify-center bg-white text-center font-normal poppins">
+                                <img src="/Docs/Assets/Images/caseStudy/ukmsc/calender.svg" class="h-4" alt="">
+                            </th>
+                            <th class="px-4 py-2.5 text-center bg-[#89E1B4] font-normal poppins"><i
+                                    class="fa-regular fa-thumbs-up"></i> </th>
+                            <th class="px-4 py-2.5 text-center bg-[#FFA29D] font-normal poppins"><i
+                                    class="fa-regular fa-thumbs-up rotate-180"></i></th>
+                            <th class="px-4 py-2.5 text-center bg-[#89E1B4] font-normal poppins"><i
+                                    class="fa-regular fa-thumbs-up"></i> </th>
+                            <th class="px-4 py-2.5 text-center bg-[#FFA29D] font-normal poppins"><i
+                                    class="fa-regular fa-thumbs-up rotate-180"></i></th>
+                        </tr>
+                    </thead>
+                    <tbody class="lg:text-[22px] text-[12px] font-normal">
+                        <tr>
+                            <td class="px-4 py-2.5">December 2023</td>
+                            <td class="px-4 text-center py-2.5 poppins bg-[#89E1B4]">205</td>
+                            <td class="px-4 text-center py-2.5 poppins bg-[#FFA29D]">2</td>
+                            <td class="px-4 text-center py-2.5 poppins bg-[#89E1B4]">98.80%</td>
+                            <td class="px-4 text-center py-2.5 poppins bg-[#FFA29D]">1.20%</td>
+                        </tr>
+                        <tr class="border-b font-semibold">
+                            <td class="px-4 py-2.5">Total</td>
+                            <td class="px-4 text-center py-2.5 poppins bg-[#89E1B4]">205</td>
+                            <td class="px-4 text-center py-2.5 poppins bg-[#FFA29D]">2</td>
+                            <td class="px-4 text-center py-2.5 poppins bg-[#89E1B4]">98.80%</td>
+                            <td class="px-4 text-center py-2.5 poppins bg-[#FFA29D]">1.20%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+
+            <p class="lg:text-[24px] text-[#115934] text-[16px] w-full poppins">The overwhelmingly positive feedback,
+                <strong>nearly 100% of users reported complete satisfaction</strong>. This remarkable feedback
+                underscores how our system
+                significantly boosts operational efficiency and transforms the patient experience. By
+                <strong>streamlining
+                    workflows and minimizing delays</strong>, it truly enhances every step of the patient journey,
+                making a
+                noticeable difference in both how smoothly hospital operations run and how patients feel throughout
+                their visit
+                <br><br>
+                The automated insurance verification system at An-Nur Hospital, featuring the Verify Button and Edit
+                Details, <strong>significant reduced errors and delays</strong>, leading to quicker approvals and
+                <strong>clearer patient
+                    updates</strong>. This automation freed staff from manual tasks, allowing them to focus on patient
+                care.
+                Additionally, it streamlined pharmacy and billing services by speeding up medication transitions and
+                <strong>providing real-time alerts</strong>, resulting in shorter wait times and a more
+                <strong>organized healthcare system</strong>.
+            </p>
+
+        </div>
+    </div>
+
+
+    <div class="bg-[#115934]">
+        <div class="max-w-7xl w-full mx-auto p-5 md:py-16 py-10">
+            <div class="flex md:flex-row flex-col md:items-center justify-between">
+                <i class="fa-solid fa-quote-left text-white md:text-6xl text-4xl"></i>
+                <h2 class="lg:text-[60px] text-[45px] text-center font-semibold flex items-center text-[#ffffff]">
+                    Special <span class="text-[#F26522]">Thanks</span></h2>
+                <i class="fa-solid fa-quote-right text-white md:text-6xl text-4xl md:block hidden"></i>
+            </div>
+            <p class="text-[#ffffff] text-center lg:text-[24px] md:mt-14 mt-8  text-[16px] w-full poppins">Chup Online
+                extends heartfelt thanks to the dedicated staff and senior management at An-Nur Specialist Hospital,
+                especially Dr. Dato' Oteh Bin Maskon from Cardiology and Dr. Dato' Abdul Halim Yusof from Orthopaedics.
+                Their commitment and collaboration have been crucial in enhancing care quality at the hospital. We look
+                forward to continuing this partnership to deliver exceptional healthcare services
+                <br><br>
+                The success of this initiative is due to the collaboration between An-Nur Specialist Hospital and Chup
+                Online. Your commitment has significantly improved healthcare services, making them more efficient and
+                patient-centered. We value your dedication and look forward to continuing our partnership to advance
+                healthcare excellence further
+            </p>
+            <div class="mt-1 flex items-end justify-end">
+                <i class="fa-solid fa-quote-right text-white md:text-6xl text-4xl md:hidden"></i>
+            </div>
+
+            <h2
+                class="lg:text-[60px]  text-[45px] text-center justify-center md:gap-3 md:mt-16 mt-8 font-semibold xl:flex items-center text-[#ffffff]">
+                What hospital <span class="text-[#F26522]"> say about </span> <img
+                    src="/Docs/Assets/Images/caseStudy/ukmsc/chup.svg"
+                    class="md:max-w-[250px] max-w-[180px] md:mx-0 mx-auto w-full md:mt-0 mt-2" alt=""> </h2>
+
+            <div
+                class="max-w-[1200px] flex items-center  w-full md:flex-row flex-col justify-center mx-auto md:gap-16 gap-6 bg-[#FFEDE5] rounded-3xl md:p-10 p-5 mt-8">
+                <img src="/Docs/Assets/Images/caseStudy/nur/man.png" class="md:max-w-[300px] max-w-[150px] w-full"
+                    alt="">
+                <div class="text-[#115934] w-full poppins md:text-start text-center">
+                    <h2 class="font-bold md:text-[30px] text-[18px]">Dato’ Dr. Oteh Maskon</h2>
+                    <p class="font-semibold md:text-[20px] text-[14px]">Medical Director <br> Hospital Pakar An-Nur </p>
+                    <p class="md:text-[24px] text-[16px] pt-7">“ChupOnline has redefined how we manage patient queues
+                        and handle delays. With its real-time updates and remote queue system, our operations are now
+                        smoother, and patient experience has drastically improved.”</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="bg-[#FFEDE5]">
+        <div class="max-w-7xl w-full mx-auto p-5 md:py-16 py-10">
+            <div class="md:p-10 p-5 bg-[#115934] rounded-xl">
+                <h2
+                    class="text-white lg:text-[52px] md:text-[40px] text-[32px] leading-[31.2px] font-medium md:leading-[52px]">
+                    Eleveate your care experience at an-nur specialist hospital
+
+                </h2>
+
+                <p class="md:text-[38px] text-[24px] text-white font-medium pt-8 pb-5 leading-tight">
+                    Book with Chup Online and discover <span class="text-[#F26522]">excellence in care</span> in at
+                    An-Nur Specialist Hospital. Enjoy
+                    <span class="text-[#F26522]">top-notch treatment</span> in a supportive and comprehensive
+                    environment, complete with <span class="text-[#F26522]">modern medical
+                        facilities</span>
+                </p>
+
+                <button
+                    class="text-white md:w-auto w-full md:text-nowrap bg-[#F26522] flex py-4 px-6 items-center rounded-lg gap-3 lg:text-[22px] md:text-[22px] text-[18px] font-bold">
+                    <img src="/Docs/Assets/Images/caseStudy/ukmsc/schedule.svg" class="max-w-[26.67px] w-full" alt="">
+                    Schedule Appointment Now!</button>
+            </div>
+
+
+            <h2
+                class="lg:text-[60px] text-[45px] md:pt-8 pt-4 text-center leading-tight font-semibold md:mt-16 mt-8 text-[#115934]">
+                Onboarding <span class="text-[#F26522]"> Journey</span></h2>
+
+            <div class="flex items-center justify-center gap-5 flex-wrap md:mt-10 mt-6">
+                <div class="md:max-w-[380px] w-full flex">
+                    <img src="/Docs/Assets/Images/caseStudy/nur/onboard1.png" class="w-full" alt="">
+                </div>
+                <div class="md:max-w-[380px] w-full flex">
+                    <img src="/Docs/Assets/Images/caseStudy/nur/onboard1.png" class="w-full" alt="">
+                </div>
+                <div class="md:max-w-[380px] w-full flex">
+                    <img src="/Docs/Assets/Images/caseStudy/nur/onboard1.png" class="w-full" alt="">
+                </div>
+            </div>
+
+            <div class="md:p-10 p-5 bg-[#115934] md:mt-16 mt-10 rounded-xl">
+                <h2
+                    class="text-white lg:text-[40px] md:text-[40px] text-[24px] leading-[31.2px] font-medium md:leading-[52px]">
+                    Be part of the future of healthcare with Chup Online's automated queue solution.
+                </h2>
+
+                <div class="flex md:items-center md:flex-row flex-col justify-between md:gap-2 gap-6 mt-10">
+                    <div class="flex items-center md:flex-row flex-col gap-3 w-full">
+                        <button
+                            class="text-white md:w-auto w-full  bg-[#F26522] flex py-5 px-6 items-center rounded-lg gap-3 lg:text-[22px] md:text-[22px] text-[18px] font-bold">
+                            <img src="/Docs/Assets/Images/Navbar/whatsapp.png" class="max-w-[26.67px] w-full" alt="">
+                            Free Consultation</button>
+                        <a href="mailto:hello@chup.online" class="md:w-auto w-full">
+                            <div
+                                class="text-white md:w-auto w-full  bg-[#F26522] flex py-2 font-bold px-6 items-center rounded-lg gap-4 lg:text-[22px] md:text-[22px] text-[18px] ">
+                                <img src="/Docs/Assets/Images/Home/mail.svg" class="max-w-[26.67px] w-full" alt="">
+                                <div class="">
+                                    Email Us
+                                    <p class="lg:text-[19px] text-[14px] font-normal">hello@chup.online</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <a href="/index.html">
+                        <img src="/Docs/Assets/Images/Global/whiteLogo.svg" class="max-w-[189.22px] w-full" alt="">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="" id="dynamic-footer"></div>
+
+
+
+
+
+</body>
+<script src="/Docs/Assets/script/footer.js"></script>
+<script src=" https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.store('accordion', {
+            tab: 0
+        });
+
+        Alpine.data('accordion', (idx) => ({
+            init() {
+                this.idx = idx;
+            },
+            idx: -1,
+            handleClick() {
+                this.$store.accordion.tab = this.$store.accordion.tab === this.idx ? 0 : this.idx;
+            },
+            handleRotate() {
+                return this.$store.accordion.tab === this.idx ? 'rotate-180' : '';
+            },
+            handleToggle() {
+                return this.$store.accordion.tab === this.idx ? `max-height: ${this.$refs.tab.scrollHeight}px` : '';
+            }
+        }));
+    })
+
+
+    const openNav = document.getElementById("openNav")
+    const responsiveNav = document.getElementById("responsiveNav")
+    const closeNav = document.getElementById("closeNav")
+
+    openNav.addEventListener('click', () => {
+        responsiveNav.style.width = "100%"
+    })
+    closeNav.addEventListener('click', () => {
+        responsiveNav.style.width = "0rem"
+    })
+
+    const lenis = new Lenis()
+
+    function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+</script>
+
+</html>
