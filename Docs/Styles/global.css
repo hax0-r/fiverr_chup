@@ -135,3 +135,21 @@
         min-height: calc(100vh - 64px);
     }
 }
+
+.language {
+    div{
+        display:none;
+    }
+}
+.mainlanguage:hover {
+    i {
+        transform: rotate(180deg);
+    }
+    .div2{
+        display: block;
+    }
+}
+
+img,a,button{
+    user-select: none;
+}

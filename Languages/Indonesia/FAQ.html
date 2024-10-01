@@ -20,37 +20,74 @@
 
     <nav class="bg-[#f1e4da]">
         <div class="flex h-16 lg:px-16 px-8 items-center justify-between mx-auto">
-            <a href="/index.html">
+            <a href="/Languages/Indonesia/index.html">
                 <img src="/Docs/Assets/Images/Global/logo.svg" alt="log" class="h-9 md:h-12">
             </a>
             <ul class="items-center text-[#115934] xl:flex hidden gap-7 text-[17px]">
-                <li><a href="/about.html" class="navUnderLine">About Us</a></li>
-                <li><a href="/case-study.html" class="navUnderLine">Case Study</a></li>
-                <li><a href="/News/chup-news.html" class="navUnderLine">News & Blog</a></li>
-                <li><a href="/FAQ.html" class="navUnderLine">FAQ</a></li>
-                <li><a href="/Products.html" class="navUnderLine">Products</a></li>
+                <li><a href="/Languages/Indonesia/about.html" class="navUnderLine">Tentang Kami</a></li>
+                <li><a href="/Languages/Indonesia/case-study.html" class="navUnderLine">Studi Kasus</a></li>
+                <li><a href="/Languages/Indonesia/News/chup-news.html" class="navUnderLine">Berita & Blog</a></li>
+                <li><a href="/Languages/Indonesia/FAQ.html" class="navUnderLine">Tanya Jawab</a></li>
+                <li><a href="/Languages/Indonesia/Products.html" class="navUnderLine">Produk</a></li>
                 <li class="flex items-center gap-2 cursor-pointer relative py-5" id="dropDownNav">
-                    More<i class="fa-solid fa-angle-down mt-1 text-[#115934] text-sm transition-all duration-300"></i>
+                    Lainnya<i
+                        class="fa-solid fa-angle-down mt-1 text-[#115934] text-sm transition-all duration-300"></i>
 
                     <div
-                        class="border-2 border-[#a9a099] w-52 rounded-lg absolute  bg-[#f1e4da] left-1 overflow-hidden fadeIn">
+                        class="border-2 border-[#a9a099] w-56 rounded-lg absolute  bg-[#f1e4da] left-1 overflow-hidden fadeIn">
                         <ul>
-                            <a href="/Career.html">
-                                <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">Career</li>
+                            <a href="/Languages/Indonesia/Career.html">
+                                <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">Karir</li>
                             </a>
-                            <a href="/Security-Compliance.html">
-                                <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">Security
-                                    Compliance</li>
+                            <a href="/Languages/Indonesia/Security-Compliance.html">
+                                <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">Kepatuhan
+                                    Keamanan</li>
                             </a>
                         </ul>
                     </div>
                 </li>
             </ul>
-            <button
-                class="bg-[#115934] xl:flex hidden text-[#F1E4DA] px-6 py-2.5 rounded-lg transition-all items-center justify-center gap-2 font-medium ">
-                <img src="/Docs/Assets/Images/Navbar/whatsapp.png" class="h-[18px]" alt="">
-                WhatsApp Us
-            </button>
+            <div class="flex items-center gap-4">
+
+                <div class="relative py-3 mainlanguage">
+                    <div
+                        class="flex items-center  gap-1.5 border-2 border-[#115934]  p-2.5 transition-all cursor-pointer rounded-xl language">
+                        <img src="/Docs/Assets/Images/Global/language.svg" class="max-w-[19.5px] w-full" alt="">
+                        <i class="fa-solid fa-angle-down text-sm text-[#115934] transition-all duration-500"></i>
+                        <div
+                            class="border-2 border-[#115934] text-[#115934] w-32 rounded-lg absolute z-20  bg-[#f1e4da] top-16 right-0 overflow-hidden fadeIn div2">
+                            <ul>
+                                <a href="/Languages/English/index.html">
+                                    <li class="px-5 py-3 transition-all hover:bg-[#115934]  hover:text-white">English
+                                    </li>
+                                </a>
+                                <a href="#">
+                                    <li class="px-5 py-3 transition-all hover:bg-[#115934]  hover:text-white">Malaysia
+                                    </li>
+                                </a>
+                                <a href="/Languages/Indonesia/index.html">
+                                    <li class="px-5 py-3 transition-all hover:bg-[#115934] font-bold hover:text-white">
+                                        Indonesia</li>
+                                </a>
+                                <a href="#">
+                                    <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">Thailand
+                                    </li>
+                                </a>
+                                <a href="#">
+                                    <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">Mandarin
+                                    </li>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <button
+                    class="bg-[#115934] xl:flex hidden text-[#F1E4DA] px-6 py-2.5 rounded-lg transition-all items-center justify-center gap-2 font-medium ">
+                    <img src="/Docs/Assets/Images/Navbar/whatsapp.png" class="h-[18px]" alt="">
+                    Hubungi Kami
+                </button>
+            </div>
             <i class="fa-solid fa-bars text-2xl xl:hidden cursor-pointer text-[#115934]" id="openNav"></i>
         </div>
     </nav>
@@ -133,7 +170,6 @@
     </div>
 
 
-
     <div class="" id="dynamic-footer"></div>
 </body>
 <script src="/Docs/Assets/script/footer.js"></script>
@@ -186,63 +222,63 @@
     // Array of objects representing card data
     const cardsData = [
         {
-            title: "Overview and Details",
+            title: "Gambaran Umum dan Rincian",
             imgSrc: "/Docs/Assets/Images/faq/Frame1.png",
-            buttonText: "Read FAQs",
+            buttonText: "Lebih Lanjut",
             link:"Overview-and-Details",
         },
         {
-            title: "Dynamic Queue & Automatic Appointment",
+            title: "Antrian Dinamis & Janji Temu Otomatis",
             imgSrc: "/Docs/Assets/Images/faq/Frame2.png",
-            buttonText: "Read FAQs",
+            buttonText: "Lebih Lanjut",
             link:"Dynamic-Queue-&-Automatic-Appointment",
         },
         {
-            title: "Appointment Scheduling",
+            title: "Penjadwalan Janji Temu",
             imgSrc: "/Docs/Assets/Images/faq/Frame3.png",
-            buttonText: "Read FAQs",
+            buttonText: "Lebih Lanjut",
             link:"Appointment-Scheduling",
         },
         {
-            title: "Integration and Compatibility",
+            title: "Integrasi dan Kompatibilitas",
             imgSrc: "/Docs/Assets/Images/faq/Frame4.png",
-            buttonText: "Read FAQs",
+            buttonText: "Lebih Lanjut",
             link:"Integration-and-Compatibility",
         },
         {
-            title: "Pricing and Costs",
+            title: "Harga dan Biaya",
             imgSrc: "/Docs/Assets/Images/faq/Frame5.png",
-            buttonText: "Read FAQs",
+            buttonText: "Lebih Lanjut",
             link:"Pricing-and-Costs",
         },
         {
-            title: "Setup and Installation",
+            title: "Pengaturan dan Instalasi",
             imgSrc: "/Docs/Assets/Images/faq/Frame6.png",
-            buttonText: "Read FAQs",
+            buttonText: "Lebih Lanjut",
             link:"Setup-and-Installation",
         },
         {
-            title: "Security and Compliance",
+            title: "Keamanan dan Kepatuhan",
             imgSrc: "/Docs/Assets/Images/faq/Frame7.png",
-            buttonText: "Read FAQs",
+            buttonText: "Lebih Lanjut",
             link:"Security-and-Compliance",
         },
         {
-            title: "Support and Training",
+            title: "Dukungan dan Pelatihan",
             imgSrc: "/Docs/Assets/Images/faq/Frame8.png",
-            buttonText: "Read FAQs",
+            buttonText: "Lebih Lanjut",
             link:"Support-and-Training",
         },
         {
-            title: "Customization",
+            title: "Kustomisasi",
             imgSrc: "/Docs/Assets/Images/faq/Frame9.png",
-            buttonText: "Read FAQs",
+            buttonText: "Lebih Lanjut",
             link:"Customization",
         },
         {
-            title: "Cloud, Kiosk, and TV App Integration",
+            title: " Integrasi Aplikasi Cloud, Kiosk, and TV",
             imgSrc: "/Docs/Assets/Images/faq/Frame10.png",
-            buttonText: "Read FAQs",
+            buttonText: "Lebih Lanjut",
             link:"Cloud-Kiosk-and-TV-App-Integration",
         },
     ];
@@ -256,7 +292,7 @@
       <div class="card bg-white border-2 flex flex-col h-full gap-5 p-4 pt-6 max-w-[580px] w-full rounded-xl justify-between" data-title="${card.title}">
         <img src="${card.imgSrc}" class="md:max-w-[56px] mx-auto max-w-[48px] w-full" alt="img">
         <h2 class="md:text-[26px] text-[14px] text-[#115934] font-medium text-center">${card.title}</h2>
-        <a href="/faq/${card.link}.html">
+        <a href="/Languages/Indonesia/faq/${card.link}.html">
           <button class="bg-[#F26522] transition-all w-full font-medium hover:bg-[#fd6823] text-white p-2.5 w-full text-center rounded-lg">${card.buttonText}</button>
         </a>
       </div>

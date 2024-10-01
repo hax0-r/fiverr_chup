@@ -58,11 +58,47 @@
                     </div>
                 </li>
             </ul>
-            <button
-                class="bg-[#115934] xl:flex hidden text-[#fbf7f4] px-6 py-2.5 rounded-lg transition-all items-center justify-center gap-2 font-medium ">
-                <img src="/Docs/Assets/Images/Navbar/whatsapp.png" class="h-[18px]" alt="">
-                WhatsApp Us
-            </button>
+            <div class="flex items-center gap-4">
+
+                <div class="relative py-3 mainlanguage">
+                    <div
+                        class="flex items-center  gap-1.5 border-2 border-[#115934]  p-2.5 transition-all cursor-pointer rounded-xl language">
+                        <img src="/Docs/Assets/Images/Global/language.svg" class="max-w-[19.5px] w-full" alt="">
+                        <i class="fa-solid fa-angle-down text-sm text-[#115934] transition-all duration-500"></i>
+                        <div
+                            class="border-2 border-[#115934] text-[#115934] w-32 rounded-lg absolute z-20  bg-[#f1e4da] top-16 right-0 overflow-hidden fadeIn div2">
+                            <ul>
+                                <a href="/Languages/English/index.html">
+                                    <li class="px-5 py-3 transition-all hover:bg-[#115934] font-bold hover:text-white">
+                                        English</li>
+                                </a>
+                                <a href="">
+                                    <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">Malaysia
+                                    </li>
+                                </a>
+                                <a href="/Languages/Indonesia/index.html">
+                                    <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">Indonesia
+                                    </li>
+                                </a>
+                                <a href="#">
+                                    <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">Thailand
+                                    </li>
+                                </a>
+                                <a href="#">
+                                    <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">Mandarin
+                                    </li>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <button
+                    class="bg-[#115934] xl:flex hidden text-[#F1E4DA] px-6 py-2.5 rounded-lg transition-all items-center justify-center gap-2 font-medium ">
+                    <img src="/Docs/Assets/Images/Navbar/whatsapp.png" class="h-[18px]" alt="">
+                    WhatsApp Us
+                </button>
+            </div>
             <i class="fa-solid fa-bars text-2xl xl:hidden cursor-pointer text-[#115934]" id="openNav"></i>
         </div>
     </nav>
