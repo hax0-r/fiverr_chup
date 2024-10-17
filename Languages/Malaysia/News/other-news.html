@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Docs/Assets/Images/Global/favIcon.png" type="image/x-icon">
+    <title>Chup!</title>
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/Docs/Styles/global.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
+
+</head>
+
+<style>
+    @media screen and (min-width:768px) {
+        .heroSectionNews {
+            min-height: calc(100vh - 289px);
+        }
+    }
+
+    .heroSectionNewsEmpty {
+        min-height: calc(100vh - 310px);
+    }
+</style>
+
+<body>
+
+    <nav class="bg-[#f1e4da]">
+        <div class="flex h-20 lg:px-16 px-8 items-center justify-between mx-auto">
+            <a href="/Languages/Indonesia/index.html">
+                <img src="/Docs/Assets/Images/Global/logo.svg" alt="log" class="h-9 md:h-12">
+            </a>
+            <ul class="items-center text-[#115934] xl:flex hidden gap-7 text-[17px]">
+                <li><a href="/Languages/Indonesia/about.html" class="navUnderLine">Tentang Kami</a></li>
+                <li><a href="/Languages/Indonesia/case-study.html" class="navUnderLine">Studi Kasus</a></li>
+                <li><a href="/Languages/Indonesia/News/chup-news.html" class="navUnderLine">Berita & Blog</a></li>
+                <li><a href="/Languages/Indonesia/FAQ.html" class="navUnderLine">Tanya Jawab</a></li>
+                <li><a href="/Languages/Indonesia/Products.html" class="navUnderLine">Produk</a></li>
+                <li class="flex items-center gap-2 cursor-pointer relative py-5" id="dropDownNav">
+                    Lainnya<i
+                        class="fa-solid fa-angle-down mt-1 text-[#115934] text-sm transition-all duration-300"></i>
+
+                    <div
+                        class="border-2 border-[#a9a099] w-56 rounded-lg absolute  bg-[#f1e4da] left-1 overflow-hidden fadeIn">
+                        <ul>
+                            <a href="/Languages/Indonesia/Career.html">
+                                <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">Karir</li>
+                            </a>
+                            <a href="/Languages/Indonesia/Security-Compliance.html">
+                                <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">Kepatuhan
+                                    Keamanan</li>
+                            </a>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <div class=" items-center gap-4 sm:flex hidden">
+
+                <div class="relative py-3 mainlanguage">
+                    <div
+                        class="flex items-center  gap-1.5 border-2 border-[#115934]  p-2.5 transition-all cursor-pointer rounded-xl language">
+                        <img src="/Docs/Assets/Images/Global/language.svg" class="max-w-[19.5px] w-full" alt="">
+                        <i class="fa-solid fa-angle-down text-sm text-[#115934] transition-all duration-500"></i>
+                        <div
+                            class="border-2 border-[#115934] text-[#115934] w-32 rounded-lg absolute z-20  bg-[#f1e4da] top-16 right-0 overflow-hidden fadeIn div2">
+                            <ul>
+                                <a href="/index.html">
+                                    <li class="px-5 py-3 transition-all hover:bg-[#115934]  hover:text-white">English
+                                    </li>
+                                </a>
+                                <a href="/Languages/Malaysia/index.html">
+                                    <li class="px-5 py-3 transition-all hover:bg-[#115934]  hover:text-white">Malaysia
+                                    </li>
+                                </a>
+                                <a href="/Languages/Indonesia/index.html">
+                                    <li class="px-5 py-3 transition-all hover:bg-[#115934] font-bold hover:text-white">
+                                        Indonesia</li>
+                                </a>
+                                <a href="/Languages/Thailand/index.html">
+                                    <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">Thailand
+                                    </li>
+                                </a>
+                                <a href="/Languages/Mandarin/index.html">
+                                    <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">Mandarin
+                                    </li>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <button
+                    class="bg-[#115934] xl:flex hidden text-[#F1E4DA] px-6 py-2.5 rounded-lg transition-all items-center justify-center gap-2 font-medium ">
+                    <img src="/Docs/Assets/Images/Navbar/whatsapp.png" class="h-[18px]" alt="">
+                    Hubungi Kami
+                </button>
+            </div>
+            <i class="fa-solid fa-bars text-2xl xl:hidden cursor-pointer text-[#115934]" id="openNav"></i>
+        </div>
+    </nav>
+    <!-- responsive Navbar -->
+    <div class="fixed top-0 right-0 h-screen bg-[#f1e4da] text-[#115934] font-36 z-50 transition-all duration-500"
+        id="responsiveNav" style="width: 0;">
+        <div class="px-10 pt-10 pb-4 relative flex flex-col h-full justify-between">
+            <div class="">
+                <div class="flex items-center justify-between">
+                    <a href="/index.html">
+                        <img src="/Docs/Assets/Images/Global/logo.svg" class="h-[32px]" alt="">
+                    </a>
+                    <img src="/Docs/Assets/Images/Navbar/close.png" id="closeNav" class="h-[21px] cursor-pointer"
+                        alt="">
+                </div>
+                <ul class="mt-10 text-[#115934] flex flex-col text-[17px]">
+                    <a href="/about.html">
+                        <li class="py-4  poppins">About Us</li>
+                    </a>
+                    <a href="/case-study.html">
+                        <li class="py-4  poppins">Case Study</li>
+                    </a>
+                    <a href="/News/chup-news.html">
+                        <li class="py-4  poppins">News & Blog</li>
+                    </a>
+                    <a href="/FAQ.html">
+                        <li class="py-4  poppins">FAQ</li>
+                    </a>
+                    <a href="/Products.html">
+                        <li class="py-4  poppins">Products</li>
+                    </a>
+                    <li class="py-5" x-data="accordion(2)">
+                        <h2 @click="handleClick()" class="flex flex-row gap-2 items-center cursor-pointer">
+                            <span>More</span>
+                            <i :class="handleRotate()"
+                                class="fa-solid fa-angle-down mt-1 text-[#115934] text-sm transition-all duration-300"></i>
+                        </h2>
+                        <div x-ref="tab" :style="handleToggle()"
+                            class="overflow-hidden max-h-0 duration-500 transition-all">
+                            <ul class="pl-5 pt-5">
+                                <a href="/Career.html">
+                                    <li class="py-3">Career</li>
+                                </a>
+                                <a href="/Security-Compliance.html">
+                                    <li class="py-3">Security Compliance</li>
+                                </a>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <a href="">
+                <button
+                    class="bg-[#115934] flex w-full text-[#F1E4DA] p-3 rounded-lg transition-all items-center justify-center gap-4 font-medium ">
+                    <img src="/Docs/Assets/Images/Navbar/whatsapp.png" class="h-5" alt="">
+                    WhatsApp Us
+                </button>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="heroSectionNews px-5  w-full bg-[#fbf7f4]">
+
+        <div class="max-w-7xl mx-auto ">
+            <ul class="flex text-[#115934] font-medium md:text-[20px] text-[14px] items-center gap-1 md:py-6 py-4">
+                <a href="/Languages/Indonesia/News/chup-news.html">
+                    <li class="hover:bg-[#3493621A] md:py-3 py-1.5 md:px-4 px-2 rounded-md transition-all">Berita Chup
+                    </li>
+                </a>
+                <a href="/Languages/Indonesia/News/other-news.html">
+                    <li class="bg-[#3493621A] md:py-3 py-1.5 md:px-4 px-2 rounded-md">Berita Lainnya</li>
+                </a>
+                <a href="/Languages/Indonesia/News/Blog.html">
+                    <li class="hover:bg-[#3493621A] md:py-3 py-1.5 md:px-4 px-2 rounded-md transition-all">Blog</li>
+                </a>
+            </ul>
+
+            <div class="w-full h-[1px] bg-[#CFD1D4]"></div>
+
+            <div id="card-container" class="flex items-center justify-center flex-wrap mt-8 gap-x-5 gap-y-8 pt-5 pb-14">
+                <!-- Dynamic cards will be injected here -->
+            </div>
+
+
+            <div class="flex items-center justify-center gap-4 pb-16">
+                <button id="prev-button"
+                    class="border-2 border-[#494949] w-10 h-10 transition-all hover:bg-[#494949] text-[#494949]  pb-0.5 hover:text-white rounded-full flex items-center justify-center"
+                    disabled>
+                    <i class="fa-solid fa-arrow-right rotate-180"></i>
+                </button>
+
+                <!-- Pagination Numbers -->
+                <div id="pagination-numbers" class="flex items-center justify-center gap-4"></div>
+
+                <button id="next-button"
+                    class="border-2 border-[#494949]  w-10 h-10 transition-all hover:bg-[#494949] text-[#494949] pt-0.5 hover:text-white rounded-full flex items-center justify-center">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <div class="" id="dynamic-footer"></div>
+</body>
+<script src="/Languages/Malaysia/Docs/javascript/footer.js"></script>
+<script src=" https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.store('accordion', {
+            tab: 0
+        });
+
+        Alpine.data('accordion', (idx) => ({
+            init() {
+                this.idx = idx;
+            },
+            idx: -1,
+            handleClick() {
+                this.$store.accordion.tab = this.$store.accordion.tab === this.idx ? 0 : this.idx;
+            },
+            handleRotate() {
+                return this.$store.accordion.tab === this.idx ? 'rotate-180' : '';
+            },
+            handleToggle() {
+                return this.$store.accordion.tab === this.idx ? `max-height: ${this.$refs.tab.scrollHeight}px` : '';
+            }
+        }));
+    })
+
+
+    const openNav = document.getElementById("openNav")
+    const responsiveNav = document.getElementById("responsiveNav")
+    const closeNav = document.getElementById("closeNav")
+
+    openNav.addEventListener('click', () => {
+        responsiveNav.style.width = "100%"
+    })
+    closeNav.addEventListener('click', () => {
+        responsiveNav.style.width = "0rem"
+    })
+
+    const lenis = new Lenis()
+
+    function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+</script>
+
+
+<script>
+    const newsData = [
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img1.png",
+            title: "Isu kesesakan Klinik Kampung Pandan makin parah",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "7 Sep 2024",
+            link: "#"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img2.png",
+            title: "Beratur Seawal Jam 2 Pagi, Pusat Rawatan Didakwa Berjaya Bantu Ramai Orang Berjalan Semula",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "9 Jul 2024",
+            link: "#####################################"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img3.png",
+            title: "Doktor kurang hingga pesakit tunggu 5 jam, kakitangan hospital mohon maaf",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "16 May 2024",
+            link: "#####################################"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img4.png",
+            title: "Maaf terpaksa tunggu lama, kami kekurangan doktor...",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "15 May 2024",
+            link: "#####################################"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img5.png",
+            title: "Kami Kekurangan Doktor, Masa Menunggu 5 Jam’ – Notis Peringatan Tular, Berlaku Di Hospital Kulim?",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "15 May 2024",
+            link: "#####################################"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img6.png",
+            title: "PRK KKB: 'Kami keluar awal sebab tak mahu beratur panjang'",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "10 May 2024",
+            link: "#####################################"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img7.png",
+            title: "Masa menunggu 120 minit di hospital, Dr Sim minta penjelasan terperinci",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "6 May 2024",
+            link: "#####################################"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img8.png",
+            title: "Pesakit Kesal Terpaksa Tunggu 120 Minit Demi Dapat Rawatan Di Sebuah Hospital Di Bintulu",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "6 May 2024",
+            link: "#####################################"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img9.png",
+            title: "Jabatan kecemasan sesak, pesakit zon hijau paling lama menunggu",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "3 May 2024",
+            link: "#####################################"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img10.png",
+            title: "Menjadi hospital pilihan rakyat, perbaikilah masa menunggu",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "22 Oct 2024",
+            link: "#####################################"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img11.png",
+            title: "Penatnya kena 'sidai' di hospital",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "27 Sept 2024",
+            link: "#####################################"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img12.png",
+            title: "Masalah komunikasi punca isu tular pesakit tunggu lama di Hospital Sultan Ismail",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "14 Aug 2024",
+            link: "#####################################"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img13.png",
+            title: "Bengang Tunggu Lama Di Klinik, Individu Dakwa Jururawat Leka Main Phone Di Samarahan",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "27 July 2024",
+            link: "#####################################"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img14.png",
+            title: "KKM diseru pandang serius isu kekurangan doktor, pegawai perubatan di Hospital Sibu",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "1 July 2024",
+            link: "#####################################"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img15.png",
+            title: "Hospital pakar baharu bantu IJN kurangkan waktu menunggu pesakit",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "28 May 2024",
+            link: "#####################################"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img16.png",
+            title: "Johor kemuka cadangan atasi masalah menunggu lama di Jabatan Kecemasan HSI",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "23 May 2024",
+            link: "#####################################"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img17.png",
+            title: "Johor kekurangan doktor, jururawat, pesakit tunggu lama",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "23 May 2024",
+            link: "#####################################"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img18.png",
+            title: "Kecewa kualiti servis hospital di Jempol, terpaksa tunggu 10 jam rawat jari pekerja terkoyak",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "17 May 2024",
+            link: "#####################################"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img19.png",
+            title: "Atasi masalah tunggu lama, Young Syefura cadang bina hospital baharu di Bentong",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "26 Feb 2024",
+            link: "#####################################"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img20.png",
+            title: "Tunggu berjam-jam akhirnya balik tanpa dapat rawatan",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "26 Feb 2024",
+            link: "#####################################"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img21.png",
+            title: "Malaysia healthcare capacity stretched with long waiting times, manpower shortage: Reports",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "25 Feb 2024",
+            link: "#####################################"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img22.png",
+            title: "Menteri: Atasi proses berulang, tempoh tunggu rawatan di jabatan kecemasan disingkat",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "15 Feb 2024",
+            link: "#####################################"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img23.png",
+            title: "Pesakit Psikiatri Tikam Orang, Marah Kerana Tunggu Lama Di Hospital Selayang",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "15 Feb 2024",
+            link: "#####################################"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img24.png",
+            title: "Geram Tunggu Giliran Sampai 9 Jam, Individu Luah Kekecewaan Dengan Servis Hospital Di Miri",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "14 Feb 2024",
+            link: "#####################################"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img25.png",
+            title: "Selangor Ruler calls for shorter waiting time at hospitals",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "10 Feb 2024",
+            link: "#####################################"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img26.png",
+            title: "Selesaikan isu pesakit tunggu lama – Sultan Selangor",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "9 Feb 2024",
+            link: "#####################################"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img27.png",
+            title: "Hospital kerajaan dicop 'mengecewakan', rakyat mahu 5 perubahan drastik",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "7 Feb 2024",
+            link: "#####################################"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img28.png",
+            title: "Menteri mohon maaf isu pesakit mengamuk di Pusat Jantung Hospital Serdang",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "5 Feb 2024",
+            link: "#####################################"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img29.png",
+            title: "Tular Video Pesakit Bergaduh Mulut Di Hospital Gara-Gara Tunggu Rawatan Terlalu Lama",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "5 Feb 2024",
+            link: "#####################################"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img30.png",
+            title: "Kecoh di Hospital Serdang, pesakit tunggu terlalu lama",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "5 Feb 2024",
+            link: "#####################################"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img31.png",
+            title: "Why it's so chaotic at our hospital emergency departments",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "30 Jan 2023",
+            link: "#####################################"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img32.png",
+            title: "Menteri Kesihatan mahu tangani isu menunggu lama di HTAR",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "29 Dec 2022",
+            link: "#####################################"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img33.png",
+            title: "Hospital Klang: Menteri Kesihatan buat lawatan mengejut, mahu tangani isu pesakit tunggu lama",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "29 Dec 2022",
+            link: "#####################################"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img34.png",
+            title: "Perkhidmatan baik, tapi waktu menunggu lama",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "29 Sept 2022",
+            link: "#####################################"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img35.png",
+            title: "Hospital Sesak, KKM tidak sewenang - wenang pesakit menunggu lama",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "5 Aug 2022",
+            link: "#####################################"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img36.png",
+            title: "Wajarlah klinik kerajaan dibuka sampai malam",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "29 July 2022",
+            link: "#####################################"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img37.png",
+            title: "“Apa yang lama sangat?” – Terpaksa Tunggu 12 Jam Untuk Dirawat, Doktor Dedah Situasi di Hospital",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "27 June 2022",
+            link: "#####################################"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img38.png",
+            title: "Tingkat fasiliti JPJ, elak pengguna beratur lama",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "3 June 2022",
+            link: "#####################################"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img39.png",
+            title: "Beratur seawal 4 pagi demi nombor gili imigresen",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "30 May 2022",
+            link: "#####################################"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img40.png",
+            title: "JB passport applicants fume at huge queue and 4-hour waits",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "29 May 2022",
+            link: "#####################################"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img41.png",
+            title: "Jangan biar pesakit tunggu lama untuk dirawat",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "18 Sept 2021",
+            link: "#####################################"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img42.png",
+            title: "Beratur panjang, tunggu lama – Dr Fitri saran ke klinik amanah KKM",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "27 July 2021",
+            link: "#####################################"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img43.png",
+            title: "Hospital Selayang laksana penambahbaikan tangani pesakit beratur panjang",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "30 Nov 2020",
+            link: "#####################################"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img44.png",
+            title: "Berkampung' awal pagi dapatkan nombor giliran",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "6 May 2020",
+            link: "#####################################"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img45.png",
+            title: "6 Hours waiting time in ER, I go KL better, netizens outraged by penang hospital ER’s notice",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "3 Oct 2019",
+            link: "#####################################"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img46.png",
+            title: "Penang Hospital Apologises For Emergency Department’s Six-Hour Wait Notice",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "3 Oct 2019",
+            link: "#####################################"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img47.png",
+            title: "2 jam tunggu mendaftar di Hospital Selayang",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "1 Oct 2019",
+            link: "#####################################"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img48.png",
+            title: "2 jam tunggu mendaftar di Hospital Selayang",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "1 Oct 2019",
+            link: "#####################################"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img49.png",
+            title: "Kenapa tunggu lama di jabatan kecemasan?",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "23 July 2019",
+            link: "#####################################"
+        },
+        {
+            image: "/Docs/Assets/Images/News/otherNews/img50.png",
+            title: "Hours-long hospital waits driving some to abandon treatment",
+            category: "Other News",
+            categoryBg: "#DFFFEF",
+            categoryColor: "#349362",
+            date: "22 Aug 2017",
+            link: "#####################################"
+        },
+    ];
+
+    const cardsPerPage = 9;
+    let currentPage = 1;
+    const totalPages = Math.ceil(newsData.length / cardsPerPage);
+
+    const cardContainer = document.getElementById("card-container");
+    const paginationNumbers = document.getElementById("pagination-numbers");
+    const prevButton = document.getElementById("prev-button");
+    const nextButton = document.getElementById("next-button");
+
+    // Function to render the cards for the current page
+    function renderCards(page) {
+        cardContainer.innerHTML = ""; // Clear previous cards
+        const startIndex = (page - 1) * cardsPerPage;
+        const endIndex = startIndex + cardsPerPage;
+        const cardsToShow = newsData.slice(startIndex, endIndex);
+
+        cardsToShow.forEach(news => {
+            const cardHTML = `
+                <div class="md:max-w-[373.33px] fadeIn max-w-[327.33px] w-full flex md:flex-col flex-row md:gap-0 gap-3">
+                    <img src="${news.image}" class="w-full md:max-w-[373.33px] max-w-[90px] md:h-auto h-[90px] rounded-xl" alt="image">
+                    <div class="">
+                        <h2 class="md:text-[22px] capitalize text-[18px] md:leading-[28px] leading-[22px] font-semibold md:pt-4 pb-3">
+                    ${news.title.slice(0, 50)}...
+                    </h2>
+                        <div class="flex items-center gap-3 md:mb-14 mb-6">
+                            <p class="py-2 px-3 san rounded-md md:text-[14px] text-[12px] font-bold"
+                                style="background-color: ${news.categoryBg}; color: ${news.categoryColor};">
+                                Berita Lainnya
+                            </p>
+                            <p class="text-[#5C5C5C] md:text-[14px] text-[12px] ">${news.date}</p>
+                        </div>
+                        <a href="${news.link}" class="text-[#F26522] flex items-center gap-2 transition-all hover:gap-4 duration-500 md:text-[20px] text-[16px]">
+                            Baca Selengkapnya <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            `;
+            cardContainer.innerHTML += cardHTML;
+        });
+
+        updatePaginationButtons();
+    }
+
+    // Function to render pagination numbers
+    function renderPaginationNumbers() {
+        paginationNumbers.innerHTML = "";
+        for (let i = 1; i <= totalPages; i++) {
+            const pageButton = document.createElement("button");
+            pageButton.className = "text-lg";
+            pageButton.innerText = i;
+            pageButton.style.color = i === currentPage ? "#F26522" : "#1D1D1D80";
+            pageButton.addEventListener("click", () => {
+                currentPage = i;
+                renderCards(currentPage);
+            });
+            paginationNumbers.appendChild(pageButton);
+        }
+    }
+
+    // Function to enable/disable pagination buttons
+    function updatePaginationButtons() {
+        prevButton.disabled = currentPage === 1;
+        nextButton.disabled = currentPage === totalPages;
+        renderPaginationNumbers();
+    }
+
+    // Event listeners for prev/next buttons
+    prevButton.addEventListener("click", () => {
+        if (currentPage > 1) {
+            currentPage--;
+            renderCards(currentPage);
+        }
+    });
+
+    nextButton.addEventListener("click", () => {
+        if (currentPage < totalPages) {
+            currentPage++;
+            renderCards(currentPage);
+        }
+    });
+
+    // Initial rendering
+    renderCards(currentPage);
+    renderPaginationNumbers();
+</script>
+
+</html>

@@ -7,13 +7,13 @@ document.getElementById('dynamic-footer').innerHTML = `
                 </a>
                 <div class="w-full">
                     <ul class="grid text-white md:grid-cols-4 grid-cols-3 gap-y-2 w-full md:text-[16px] text-[12px]">
-                        <a href="/about.html"><li>Tentang Kami</li></a>
-                        <a href="/case-study.html"><li>Studi Kasus</li></a>
-                        <a href="/News/chup-news.html"><li>Berita & Blog</li></a>
-                        <a href="/Products.html"><li>Produk</li></a>
-                        <a href="/FAQ"><li>Tanya Jawab</li></a>
-                        <a href="/Career.html"><li>Karir</li></a>
-                        <a href="/Security-Compliance.html"><li class="text-nowrap">Keamanan & Kepatuhan</li></a>
+                        <a href="/Languages/Indonesia/about.html"><li>Tentang Kami</li></a>
+                        <a href="/Languages/Indonesia/case-study.html"><li>Studi Kasus</li></a>
+                        <a href="/Languages/Indonesia/News/chup-news.html"><li>Berita & Blog</li></a>
+                        <a href="/Languages/Indonesia/Products.html"><li>Produk</li></a>
+                        <a href="/Languages/Indonesia/FAQ.html"><li>Tanya Jawab</li></a>
+                        <a href="/Languages/Indonesia/Career.html"><li>Karir</li></a>
+                        <a href="/Languages/Indonesia/Security-Compliance.html"><li class="text-nowrap">Keamanan & Kepatuhan</li></a>
                     </ul>
                 </div>
             </div>
