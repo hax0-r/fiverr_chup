@@ -20,28 +20,27 @@
 
     <nav class="bg-[#f1e4da]">
         <div class="flex h-16 lg:px-16 px-8 items-center justify-between mx-auto">
-            <a href="/Languages/Indonesia/index.html">
+            <a href="/Languages/Malaysia/index.html">
                 <img src="/Docs/Assets/Images/Global/logo.svg" alt="log" class="h-9 md:h-12">
             </a>
             <ul class="items-center text-[#115934] xl:flex hidden gap-7 text-[17px]">
-                <li><a href="/Languages/Indonesia/about.html" class="navUnderLine">Tentang Kami</a></li>
-                <li><a href="/Languages/Indonesia/case-study.html" class="navUnderLine">Studi Kasus</a></li>
-                <li><a href="/Languages/Indonesia/News/chup-news.html" class="navUnderLine">Berita & Blog</a></li>
-                <li><a href="/Languages/Indonesia/FAQ.html" class="navUnderLine">Tanya Jawab</a></li>
-                <li><a href="/Languages/Indonesia/Products.html" class="navUnderLine">Produk</a></li>
+                <li><a href="/Languages/Malaysia/about.html" class="navUnderLine">Tentang Kami</a></li>
+                <li><a href="/Languages/Malaysia/case-study.html" class="navUnderLine">Kajian Kes</a></li>
+                <li><a href="/Languages/Malaysia/News/chup-news.html" class="navUnderLine">Berita & Blog</a></li>
+                <li><a href="/Languages/Malaysia/FAQ.html" class="navUnderLine">Soalan Lazim</a></li>
+                <li><a href="/Languages/Malaysia/Products.html" class="navUnderLine">Produk</a></li>
                 <li class="flex items-center gap-2 cursor-pointer relative py-5" id="dropDownNav">
-                    Lainnya<i
+                    Lain-Lain<i
                         class="fa-solid fa-angle-down mt-1 text-[#115934] text-sm transition-all duration-300"></i>
 
                     <div
-                        class="border-2 border-[#a9a099] w-56 rounded-lg absolute  bg-[#f1e4da] left-1 overflow-hidden fadeIn">
+                        class="border-2 border-[#a9a099] w-64 rounded-lg absolute  bg-[#f1e4da] left-1 overflow-hidden fadeIn">
                         <ul>
-                            <a href="/Languages/Indonesia/Career.html">
-                                <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">Karir</li>
+                            <a href="/Languages/Malaysia/Career.html">
+                                <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">Kerjaya</li>
                             </a>
-                            <a href="/Languages/Indonesia/Security-Compliance.html">
-                                <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">Kepatuhan
-                                    Keamanan</li>
+                            <a href="/Languages/Malaysia/Security-Compliance.html">
+                                <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">Pematuhan Keselamatan</li>
                             </a>
                         </ul>
                     </div>
@@ -62,11 +61,12 @@
                                     </li>
                                 </a>
                                 <a href="/Languages/Malaysia/index.html">
-                                    <li class="px-5 py-3 transition-all hover:bg-[#115934]  hover:text-white">Malaysia
+                                    <li class="px-5 py-3 transition-all hover:bg-[#115934] font-bold hover:text-white">
+                                        Malaysia
                                     </li>
                                 </a>
                                 <a href="/Languages/Indonesia/index.html">
-                                    <li class="px-5 py-3 transition-all hover:bg-[#115934] font-bold hover:text-white">
+                                    <li class="px-5 py-3 transition-all hover:bg-[#115934]  hover:text-white">
                                         Indonesia</li>
                                 </a>
                                 <a href="/Languages/Thailand/index.html">
@@ -153,7 +153,7 @@
     <div class="heroSection flex flex-col px-5 md:pt-12 pb-14 items-center justify-center w-full bg-[#f1e4da]">
 
         <div class="p-5 xl:px-0 max-w-7xl w-full mx-auto text-[18px]  transition-all font-semibold  poppins ">
-            <a href="/Languages/Indonesia/FAQ.html" class="hover:opacity-65 duration-500 inline-flex items-center gap-3">
+            <a href="/Languages/Malaysia/FAQ.html" class="hover:opacity-65 duration-500 inline-flex items-center gap-3">
                 <i class="fa-solid fa-angle-left"></i>
                 Kembali
             </a>
@@ -162,76 +162,86 @@
         <div class=" sm:mt-5 bg-white p-5 md:px-8 rounded-xl max-w-7xl mx-auto">
             <h2 class="font-medium lg:text-[44px] text-[20px] text-[#F26522] flex items-center gap-3"> <img
                     src="/Docs/Assets/Images/faq/Frame3.png" class="md:max-w-[60px] max-w-[52px] w-full " alt="">
-                    Penjadwalan Janji Temu</h2>
+                Jadual Janji Temu</h2>
             <div class="w-full h-[1px] bg-[#ECECEC] my-5"></div>
             <ul class="flex flex-col">
                 <li class="my-2 rounded-xl overflow-hidden border border-[#9D9D9D] bg-[#fbf7f4]" x-data="accordion(3)">
                     <h2 @click="handleClick()"
                         class="flex flex-row justify-between items-center p-3 gap-3  cursor-pointer">
-                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">Bagaimana cara ChupOnline menangani pemesanan janji temu?</span>
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">Bagaimanakah
+                            ChupOnline mengendalikan tempahan janji temu?</span>
                         <i class="fa-solid fa-plus transition-all duration-500 text-[#115934]"
                             :class="handleRotate()"></i>
                     </h2>
                     <div x-ref="tab" :style="handleToggle()"
                         class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
                         <p class="p-3 text-[#115934] lg:text-[20px] md:text-[16px] text-[15px]">
-                            ChupOnline menyederhanakan manajemen janji temu melalui situs web atau WhatsApp, sehingga pasien dapat dengan mudah memesan dan mengelola janji temu dari jarak jauh.
+                            ChupOnline memudahkan pengurusan janji temu melalui laman web atau WhatsApp, jadi pesakit
+                            boleh menempah dan mengurus janji temu dari jauh dengan mudah.
                         </p>
                     </div>
                 </li>
                 <li class="my-2 rounded-xl overflow-hidden border border-[#9D9D9D] bg-[#fbf7f4]" x-data="accordion(4)">
                     <h2 @click="handleClick()"
                         class="flex flex-row justify-between gap-3 items-center p-3 cursor-pointer">
-                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">Bagaimana cara ChupOnline memastikan janji temu tidak tumpang tindih?</span>
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">Bagaimanakah
+                            ChupOnline memastikan janji temu tidak bertindih?</span>
                         <i class="fa-solid fa-plus transition-all duration-500 text-[#115934]"
                             :class="handleRotate()"></i>
                     </h2>
                     <div x-ref="tab" :style="handleToggle()"
                         class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
                         <p class="p-3 text-[#115934] lg:text-[20px] md:text-[16px] text-[15px]">
-                            Sistem ini secara dinamis mengelola slot waktu secara real-time, mencegah overbooking dan konflik penjadwalan.
-                        </p>
+                            Sistem ini menguruskan slot masa secara dinamik dalam masa nyata, menghalang tempahan
+                            terlebih dahulu dan konflik penjadualan. </p>
                     </div>
                 </li>
                 <li class="my-2 rounded-xl overflow-hidden border border-[#9D9D9D] bg-[#fbf7f4]" x-data="accordion(5)">
                     <h2 @click="handleClick()"
                         class="flex flex-row justify-between items-center p-3 gap-3 cursor-pointer">
-                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">Bagaimana ChupOnline membantu klinik mengelola arus pasien selama penundaan?</span>
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">Bagaimanakah
+                            ChupOnline membantu klinik menguruskan aliran pesakit semasa kelewatan?</span>
                         <i class="fa-solid fa-plus transition-all duration-500 text-[#115934]"
                             :class="handleRotate()"></i>
                     </h2>
                     <div x-ref="tab" :style="handleToggle()"
                         class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
                         <p class="p-3 text-[#115934] lg:text-[20px] md:text-[16px] text-[15px]">
-                            ChupOnline menjadwalkan ulang secara otomatis dan memberikan pembaruan waktu nyata, memastikan alur pasien yang lancar selama penundaan yang tidak terduga.
+                            ChupOnline secara automatik menjadualkan semula dan menyediakan kemas kini masa nyata,
+                            memastikan aliran pesakit lancar semasa kelewatan yang tidak dijangka.
                         </p>
                     </div>
                 </li>
                 <li class="my-2 rounded-xl overflow-hidden border border-[#9D9D9D] bg-[#fbf7f4]" x-data="accordion(6)">
                     <h2 @click="handleClick()"
                         class="flex flex-row justify-between items-center p-3 gap-3 cursor-pointer">
-                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">Bagaimana ChupOnline mengurangi pekerjaan manual untuk staf?</span>
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">Bagaimanakah
+                            ChupOnline mengurangkan kerja manual untuk kakitangan?</span>
                         <i class="fa-solid fa-plus transition-all duration-500 text-[#115934]"
                             :class="handleRotate()"></i>
                     </h2>
                     <div x-ref="tab" :style="handleToggle()"
                         class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
                         <p class="p-3 text-[#115934] lg:text-[20px] md:text-[16px] text-[15px]">
-                            Dengan mengotomatiskan penjadwalan ulang dan pemberitahuan kepada pasien, ChupOnline mengurangi kebutuhan staf untuk menyesuaikan jadwal secara manual atau menginformasikan perubahan kepada pasien.
+                            Dengan mengautomasikan penjadualan semula dan pemberitahuan pesakit, ChupOnline mengurangkan
+                            keperluan untuk kakitangan melaraskan jadual secara manual atau memaklumkan kepada pesakit
+                            tentang perubahan.
                         </p>
                     </div>
                 </li>
                 <li class="my-2 rounded-xl overflow-hidden border border-[#9D9D9D] bg-[#fbf7f4]" x-data="accordion(7)">
                     <h2 @click="handleClick()"
                         class="flex flex-row justify-between items-center p-3 gap-3 cursor-pointer">
-                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">Bagaimana ChupOnline beradaptasi dengan perubahan janji temu di menit-menit terakhir?</span>
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">Bagaimanakah
+                            ChupOnline menyesuaikan diri dengan perubahan janji temu saat akhir?</span>
                         <i class="fa-solid fa-plus transition-all duration-500 text-[#115934]"
                             :class="handleRotate()"></i>
                     </h2>
                     <div x-ref="tab" :style="handleToggle()"
                         class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
                         <p class="p-3 text-[#115934] lg:text-[20px] md:text-[16px] text-[15px]">
-                            ChupOnline secara instan menyesuaikan jadwal dan memberi tahu pasien dan dokter tentang perubahan apa pun dengan pembaruan waktu nyata.
+                            ChupOnline melaraskan jadual serta-merta dan memberitahu pesakit dan doktor tentang sebarang
+                            perubahan dengan kemas kini masa nyata.
                         </p>
                     </div>
                 </li>
