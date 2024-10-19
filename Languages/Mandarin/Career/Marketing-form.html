@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Docs/Assets/Images/Global/favIcon.png" type="image/x-icon">
+    <title>Chup!</title>
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/Docs/Styles/global.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
+
+</head>
+
+<style>
+    @media screen and (min-width:768px) {
+        .heroSectionCareers {
+            min-height: calc(100vh - 289px);
+        }
+    }
+</style>
+
+<body>
+
+    <nav class="bg-[#f1e4da]">
+        <div class="flex h-16 lg:px-16 px-8 items-center justify-between mx-auto">
+            <a href="/Languages/Mandarin/index.html">
+                <img src="/Docs/Assets/Images/Global/logo.svg" alt="log" class="h-9 md:h-12">
+            </a>
+            <ul class="items-center text-[#115934] xl:flex hidden gap-7 text-[17px]">
+                <li><a href="/Languages/Mandarin/about.html" class="navUnderLine">关于我们</a></li>
+                <li><a href="/Languages/Mandarin/case-study.html" class="navUnderLine">案例研究</a></li>
+                <li><a href="/Languages/Mandarin/News/chup-news.html" class="navUnderLine">新闻与博客</a></li>
+                <li><a href="/Languages/Mandarin/FAQ.html" class="navUnderLine">常见问题</a></li>
+                <li><a href="/Languages/Mandarin/Products.html" class="navUnderLine">产品</a></li>
+                <li class="flex items-center gap-2 cursor-pointer relative py-5" id="dropDownNav">
+                    更多信息<i class="fa-solid fa-angle-down mt-1 text-[#115934] text-sm transition-all duration-300"></i>
+
+                    <div
+                        class="border-2 border-[#a9a099] w-52 rounded-lg absolute z-30 bg-[#ffede5] left-1 overflow-hidden fadeIn">
+                        <ul>
+                            <a href="/Languages/Mandarin/Career.html">
+                                <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">职业生涯</li>
+                            </a>
+                            <a href="/Languages/Mandarin/Security-Compliance.html">
+                                <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">安全合规</li>
+                            </a>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <div class=" items-center gap-4 sm:flex hidden">
+
+                <div class="relative py-3 mainlanguage">
+                    <div
+                        class="flex items-center  gap-1.5 border-2 border-[#115934]  p-2.5 transition-all cursor-pointer rounded-xl language">
+                        <img src="/Docs/Assets/Images/Global/language.svg" class="max-w-[19.5px] w-full" alt="">
+                        <i class="fa-solid fa-angle-down text-sm text-[#115934] transition-all duration-500"></i>
+                        <div
+                            class="border-2 border-[#115934] text-[#115934] w-32 rounded-lg absolute z-20  bg-[#f1e4da] top-16 right-0 overflow-hidden fadeIn div2">
+                            <ul>
+                                <a href="/index.html">
+                                    <li class="px-5 py-3 transition-all hover:bg-[#115934]  hover:text-white">
+                                        English
+                                    </li>
+                                </a>
+                                <a href="/Languages/Malaysia/index.html">
+                                    <li class="px-5 py-3 transition-all hover:bg-[#115934]  hover:text-white">
+                                        Malaysia
+                                    </li>
+                                </a>
+                                <a href="/Languages/Indonesia/index.html">
+                                    <li class="px-5 py-3 transition-all hover:bg-[#115934]  hover:text-white">
+                                        Indonesia</li>
+                                </a>
+                                <a href="/Languages/Thailand/index.html">
+                                    <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">
+                                        Thailand
+                                    </li>
+                                </a>
+                                <a href="/Languages/Mandarin/index.html">
+                                    <li class="px-5 py-3 transition-all hover:bg-[#115934] font-bold hover:text-white">
+                                        Mandarin
+                                    </li>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <button
+                    class="bg-[#115934] xl:flex hidden text-[#F1E4DA] px-6 py-2.5 rounded-lg transition-all items-center justify-center gap-2 font-medium ">
+                    <img src="/Docs/Assets/Images/Navbar/whatsapp.png" class="h-[18px]" alt="">
+                    联络我们
+                </button>
+            </div>
+            <i class="fa-solid fa-bars text-2xl xl:hidden cursor-pointer text-[#115934]" id="openNav"></i>
+        </div>
+    </nav>
+    <!-- responsive Navbar -->
+    <div class="fixed top-0 right-0 h-screen bg-[#f1e4da] text-[#115934] font-36 z-50 transition-all duration-500"
+        id="responsiveNav" style="width: 0;">
+        <div class="px-10 pt-10 pb-4 relative flex flex-col h-full justify-between">
+            <div class="">
+                <div class="flex items-center justify-between">
+                    <a href="/index.html">
+                        <img src="/Docs/Assets/Images/Global/logo.svg" class="h-[32px]" alt="">
+                    </a>
+                    <img src="/Docs/Assets/Images/Navbar/close.png" id="closeNav" class="h-[21px] cursor-pointer"
+                        alt="">
+                </div>
+                <ul class="mt-10 text-[#115934] flex flex-col text-[17px]">
+                    <a href="/about.html">
+                        <li class="py-4  poppins">About Us</li>
+                    </a>
+                    <a href="/case-study.html">
+                        <li class="py-4  poppins">Case Study</li>
+                    </a>
+                    <a href="/News/chup-news.html">
+                        <li class="py-4  poppins">News & Blog</li>
+                    </a>
+                    <a href="/FAQ.html">
+                        <li class="py-4  poppins">FAQ</li>
+                    </a>
+                    <li class="py-5" x-data="accordion(1)">
+                        <h2 @click="handleClick()" class="flex flex-row gap-2 items-center cursor-pointer">
+                            <span>Products</span>
+                            <i :class="handleRotate()"
+                                class="fa-solid fa-angle-down mt-1 text-[#115934] text-sm transition-all duration-300"></i>
+                        </h2>
+                        <div x-ref="tab" :style="handleToggle()"
+                            class="overflow-hidden max-h-0 duration-500 transition-all">
+                            <ul class="pl-5 pt-5">
+                                <a href="/Products.html">
+                                    <li class="py-3">ChupOnline</li>
+                                </a>
+                                <a href="/Products.html">
+                                    <li class="py-3">ChupHospital</li>
+                                </a>
+                                <a href="/Products.html">
+                                    <li class="py-3">ChupClinic</li>
+                                </a>
+                                <a href="/Products.html">
+                                    <li class="py-3">ChupWork</li>
+                                </a>
+                                <a href="/Products.html">
+                                    <li class="py-3">Paperize.AI</li>
+                                </a>
+                                <a href="/Products.html">
+                                    <li class="py-3">My Mental</li>
+                                </a>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="py-5" x-data="accordion(2)">
+                        <h2 @click="handleClick()" class="flex flex-row gap-2 items-center cursor-pointer">
+                            <span>More</span>
+                            <i :class="handleRotate()"
+                                class="fa-solid fa-angle-down mt-1 text-[#115934] text-sm transition-all duration-300"></i>
+                        </h2>
+                        <div x-ref="tab" :style="handleToggle()"
+                            class="overflow-hidden max-h-0 duration-500 transition-all">
+                            <ul class="pl-5 pt-5">
+                                <a href="/Career.html">
+                                    <li class="py-3">Career</li>
+                                </a>
+                                <a href="/Security-Compliance.html">
+                                    <li class="py-3">Security Compliance</li>
+                                </a>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <a href="">
+                <button
+                    class="bg-[#115934] flex w-full text-[#F1E4DA] p-3 rounded-lg transition-all items-center justify-center gap-4 font-medium ">
+                    <img src="/Docs/Assets/Images/Navbar/whatsapp.png" class="h-5" alt="">
+                    WhatsApp Us
+                </button>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="px-5 pt-5 md:pb-14 pb-8 w-full bg-[#ffffff] heroSectionCareers">
+        <div class="max-w-7xl mx-auto w-full">
+
+            <div
+                class="py-5 max-w-7xl w-full mx-auto text-[18px]  transition-all font-semibold text-[#F26522]  poppins ">
+                  <a href="/Languages/Malaysia/Career/Marketing-form.html" class="hover:opacity-65 duration-500 inline-flex items-center gap-3">
+                    <i class="fa-solid fa-angle-left"></i>
+                    Back
+                </a>
+            </div>
+
+
+            <h2 class="md:text-[26px] text-[18px] font-medium ">Maklumat Asas<span class="text-[#E02D2D]">*</span>
+            </h2>
+
+            <form>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-5">
+
+                    <!-- Full Name -->
+                    <div>
+                        <label class="block font-medium text-[#1D1D1D] poppins">Nama Penuh<span
+                                class="text-[#E02D2D]">*</span></label>
+                        <input type="text" placeholder="Nama penuh anda" class="mt-2 p-3  w-full rounded-md border-2">
+                    </div>
+
+                    <div>
+                        <label class="block font-medium text-[#1D1D1D] poppins">Email<span
+                                class="text-[#E02D2D]">*</span></label>
+                        <input type="email" placeholder="email anda" class="mt-2 p-3  w-full rounded-md border-2">
+                    </div>
+
+                    <!-- Phone Number -->
+                    <div>
+                        <label class="block font-medium text-[#1D1D1D] poppins">Nombor Telefon<span
+                                class="text-[#E02D2D]">*</span></label>
+                        <div class="flex">
+                            <select class="mt-2 p-3  rounded-md border-2  rounded-r-none">
+                                <option value="+60"> +60</option>
+                                <option value="+61"> +61</option>
+                                <option value="+62"> +62</option>
+                                <option value="+63"> +63</option>
+                                <!-- Add more country codes as needed -->
+                            </select>
+                            <input type="tel" placeholder="Nomor telepon Anda"
+                                class="mt-2 p-3  w-full rounded-md border-2 border-l-0 rounded-l-none">
+                        </div>
+                    </div>
+
+                    <!-- Education -->
+                    <div>
+                        <label class="block font-medium text-[#1D1D1D] poppins">Pendidikan<span
+                                class="text-[#E02D2D]">*</span></label>
+                        <select class="mt-2 p-3  w-full rounded-md border-2">
+                            <option>Pilih</option>
+                            <option>Diploma Sekolah Menengah</option>
+                            <option>Ijazah Sarjana Muda</option>
+                            <option>Ijazah Sarjana</option>
+                            <option>Doktor</option>
+                            <option>Lain-lain</option>
+                        </select>
+                    </div>
+
+                    <!-- Work Experience -->
+                    <div>
+                        <label class="block font-medium text-[#1D1D1D] poppins">Pengalaman Kerja<span
+                                class="text-[#E02D2D]">*</span></label>
+                        <select class="mt-2 p-3  w-full rounded-md border-2">
+                            <option>Pilih</option>
+                            <option>Kurang dari 1 tahun</option>
+                            <option>1 Tahun</option>
+                            <option>2 Tahun</option>
+                            <option>Lebih dari 2 Tahun</option>
+                            <!-- Add options for work experience -->
+                        </select>
+                    </div>
+
+                    <!-- Job Information -->
+                    <div>
+                        <label class="block font-medium text-[#1D1D1D] poppins">Maklumat Pekerjaan<span
+                                class="text-[#E02D2D]">*</span></label>
+                        <select class="mt-2 p-3  w-full rounded-md border-2">
+                            <option>Pilih</option>
+                            <option>Instagram</option>
+                            <option>Facebook</option>
+                            <option>Search Engine (Google)</option>
+                            <option>Lain-lain</option>
+                            <option>Rujukan</option>
+                        </select>
+                    </div>
+
+                    <!-- Address -->
+                    <div class="md:col-span-2">
+                        <label class="block font-medium text-[#1D1D1D] poppins">Alamat<span
+                                class="text-[#E02D2D]">*</span></label>
+                        <input type="text" placeholder="Alamat anda" class="mt-2 p-3  w-full rounded-md border-2">
+                    </div>
+
+                    <div class="md:col-span-2">
+                        <h2 class="md:text-[26px] pb-2 text-[18px] font-medium ">Resume<span
+                                class="text-[#E02D2D]">*</span>
+                        </h2>
+
+                        <!-- Resume -->
+                        <div class=" w-full">
+                            <label class="block font-medium text-[#1D1D1D] poppins">Sijil Lain<span
+                                    class="text-[#E02D2D]">*</span></label>
+                            <div
+                                class="mt-1 flex justify-center px-6 py-10 border-2 bg-[#f5f7fa] border-dashed border-gray-300 rounded-xl">
+                                <div class="space-y-1 text-center">
+                                    <img src="/Docs/Assets/Images/career/uploadFile.svg"
+                                        class="max-w-[37.33px] w-full mx-auto" alt="">
+                                    <div class="pt-2 ">
+                                        <label for="resume-upload"
+                                            class="relative cursor-pointer poppins text-[#403F3F]">
+                                            <span>Seret & Lepaskan fail anda atau  <span class="text-[#115934] font-medium">
+                                                Pilih fail</span></span>
+                                            <input id="resume-upload" name="resume-upload" type="file" class="sr-only">
+                                        </label>
+                                    </div>
+                                    <p class="text-[#757474]">Saiz fail maksimum 10MB.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Portfolio URL -->
+
+                    <div class="md:col-span-2">
+                        <h2 class="md:text-[26px] pb-2 text-[18px] font-medium ">Url Portfolio<span
+                                class="text-[#E02D2D]">*</span>
+                        </h2>
+                        <div class="">
+                            <label class="block font-medium text-[#1D1D1D] poppins">Url Portfolio</label>
+                            <input type="url" placeholder="Masukkan pautan" class="mt-2 p-3  w-full rounded-md border-2">
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="w-full p-3 text-center rounded-full font-semibold md:text-[24px] text-[20px] text-white bg-[#F26522] mt-8 transition-all hover:bg-[#ff5a0d] duration-500">Mohon Sekarang</button>
+            </form>
+
+
+
+        </div>
+    </div>
+
+
+
+    <div class="" id="dynamic-footer"></div>
+</body>
+<script src="/Languages/Mandarin/Docs/javascript/footer.js"></script>
+<script src=" https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.store('accordion', {
+            tab: 0
+        });
+
+        Alpine.data('accordion', (idx) => ({
+            init() {
+                this.idx = idx;
+            },
+            idx: -1,
+            handleClick() {
+                this.$store.accordion.tab = this.$store.accordion.tab === this.idx ? 0 : this.idx;
+            },
+            handleRotate() {
+                return this.$store.accordion.tab === this.idx ? 'rotate-180' : '';
+            },
+            handleToggle() {
+                return this.$store.accordion.tab === this.idx ? `max-height: ${this.$refs.tab.scrollHeight}px` : '';
+            }
+        }));
+    })
+
+
+    const openNav = document.getElementById("openNav")
+    const responsiveNav = document.getElementById("responsiveNav")
+    const closeNav = document.getElementById("closeNav")
+
+    openNav.addEventListener('click', () => {
+        responsiveNav.style.width = "100%"
+    })
+    closeNav.addEventListener('click', () => {
+        responsiveNav.style.width = "0rem"
+    })
+
+    const lenis = new Lenis()
+
+    function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+
+</script>
+
+</html>

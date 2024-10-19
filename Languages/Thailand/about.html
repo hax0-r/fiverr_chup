@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Docs/Assets/Images/Global/favIcon.png" type="image/x-icon">
+    <title>Chup!</title>
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/Docs/Styles/global.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
+
+</head>
+
+<body>
+
+    <nav class="bg-[#ffede5]">
+        <div class="flex h-16 lg:px-16 px-8 items-center justify-between mx-auto">
+            <a href="/Languages/Malaysia/index.html">
+                <img src="/Docs/Assets/Images/Global/logo.svg" alt="log" class="h-9 md:h-12">
+            </a>
+            <ul class="items-center text-[#115934] xl:flex hidden gap-7 text-[17px]">
+                <li><a href="/Languages/Malaysia/about.html" class="navUnderLine">Tentang Kami</a></li>
+                <li><a href="/Languages/Malaysia/case-study.html" class="navUnderLine">Kajian Kes</a></li>
+                <li><a href="/Languages/Malaysia/News/chup-news.html" class="navUnderLine">Berita & Blog</a></li>
+                <li><a href="/Languages/Malaysia/FAQ.html" class="navUnderLine">Soalan Lazim</a></li>
+                <li><a href="/Languages/Malaysia/Products.html" class="navUnderLine">Produk</a></li>
+                <li class="flex items-center gap-2 cursor-pointer relative py-5" id="dropDownNav">
+                    Lain-Lain<i
+                        class="fa-solid fa-angle-down mt-1 text-[#115934] text-sm transition-all duration-300"></i>
+
+                    <div
+                        class="border-2 border-[#a9a099] w-64 rounded-lg z-20 absolute  bg-[#ffede5] left-1 overflow-hidden fadeIn">
+                        <ul>
+                            <a href="/Languages/Malaysia/Career.html">
+                                <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">Kerjaya</li>
+                            </a>
+                            <a href="/Languages/Malaysia/Security-Compliance.html">
+                                <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">Pematuhan
+                                    Keselamatan</li>
+                            </a>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <div class=" items-center gap-4 sm:flex hidden">
+
+                <div class="relative py-3 mainlanguage">
+                    <div
+                        class="flex items-center  gap-1.5 border-2 border-[#115934]  p-2.5 transition-all cursor-pointer rounded-xl language">
+                        <img src="/Docs/Assets/Images/Global/language.svg" class="max-w-[19.5px] w-full" alt="">
+                        <i class="fa-solid fa-angle-down text-sm text-[#115934] transition-all duration-500"></i>
+                        <div
+                            class="border-2 border-[#115934] text-[#115934] w-32 rounded-lg absolute z-20  bg-[#f1e4da] top-16 right-0 overflow-hidden fadeIn div2">
+                            <ul>
+                                <a href="/index.html">
+                                    <li class="px-5 py-3 transition-all hover:bg-[#115934]  hover:text-white">English
+                                    </li>
+                                </a>
+                                <a href="/Languages/Malaysia/index.html">
+                                    <li class="px-5 py-3 transition-all hover:bg-[#115934] font-bold hover:text-white">
+                                        Malaysia
+                                    </li>
+                                </a>
+                                <a href="/Languages/Indonesia/index.html">
+                                    <li class="px-5 py-3 transition-all hover:bg-[#115934]  hover:text-white">
+                                        Indonesia</li>
+                                </a>
+                                <a href="/Languages/Thailand/index.html">
+                                    <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">Thailand
+                                    </li>
+                                </a>
+                                <a href="/Languages/Mandarin/index.html">
+                                    <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">Mandarin
+                                    </li>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <button
+                    class="bg-[#115934] xl:flex hidden text-[#F1E4DA] px-6 py-2.5 rounded-lg transition-all items-center justify-center gap-2 font-medium ">
+                    <img src="/Docs/Assets/Images/Navbar/whatsapp.png" class="h-[18px]" alt="">
+                    Hubungi Kami
+                </button>
+            </div>
+            <i class="fa-solid fa-bars text-2xl xl:hidden cursor-pointer text-[#115934]" id="openNav"></i>
+        </div>
+    </nav>
+    <!-- responsive Navbar -->
+    <div class="fixed top-0 right-0 h-screen bg-[#ffede5] text-[#115934] font-36 z-50 transition-all duration-500"
+        id="responsiveNav" style="width: 0;">
+        <div class="px-10 pt-10 pb-4 relative flex flex-col h-full justify-between">
+            <div class="">
+                <div class="flex items-center justify-between">
+                    <a href="/index.html">
+                        <img src="/Docs/Assets/Images/Global/logo.svg" class="h-[32px]" alt="">
+                    </a>
+                    <img src="/Docs/Assets/Images/Navbar/close.png" id="closeNav" class="h-[21px] cursor-pointer"
+                        alt="">
+                </div>
+                <ul class="mt-10 text-[#115934] flex flex-col text-[17px]">
+                    <a href="/about.html">
+                        <li class="py-4  poppins">About Us</li>
+                    </a>
+                    <a href="/case-study.html">
+                        <li class="py-4  poppins">Case Study</li>
+                    </a>
+                    <a href="/News/chup-news.html">
+                        <li class="py-4  poppins">News & Blog</li>
+                    </a>
+                    <a href="/FAQ.html">
+                        <li class="py-4  poppins">FAQ</li>
+                    </a>
+                    <a href="/Products.html">
+                        <li class="py-4  poppins">Products</li>
+                    </a>
+                    <li class="py-5" x-data="accordion(2)">
+                        <h2 @click="handleClick()" class="flex flex-row gap-2 items-center cursor-pointer">
+                            <span>More</span>
+                            <i :class="handleRotate()"
+                                class="fa-solid fa-angle-down mt-1 text-[#115934] text-sm transition-all duration-300"></i>
+                        </h2>
+                        <div x-ref="tab" :style="handleToggle()"
+                            class="overflow-hidden max-h-0 duration-500 transition-all">
+                            <ul class="pl-5 pt-5">
+                                <a href="/Career.html">
+                                    <li class="py-3">Career</li>
+                                </a>
+                                <a href="/Security-Compliance.html">
+                                    <li class="py-3">Security Compliance</li>
+                                </a>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <a href="">
+                <button
+                    class="bg-[#115934] flex w-full text-[#ffede5] p-3 rounded-lg transition-all items-center justify-center gap-4 font-medium ">
+                    <img src="/Docs/Assets/Images/Navbar/whatsapp.png" class="h-5" alt="">
+                    WhatsApp Us
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <div class="heroSection flex px-5 md:py-16 py-5 items-center justify-center w-full bg-[#ffede5]">
+
+        <div class="max-w-7xl mx-auto flex items-center justify-between gap-10">
+            <img src="/Docs/Assets/Images/about/aboutImg.webp" class="max-w-[466px] w-full lg:block hidden" alt="">
+
+            <div class="max-w-[674px] w-full relative">
+                <img src="/Docs/Assets/Images/about/star.webp"
+                    class="max-w-[62px] w-full absolute lg:block hidden right-0 top-32" alt="">
+
+                <h1
+                    class="md:text-[50px] text-[40px] text-[#115934] sm:w-auto w-[310px] font-bold md:text-start text-center leading-tight">
+                    Revolusikan <span class="text-[#F26522]">Pengalaman Antrian & Janji Temu Anda</span> <span
+                        class="flex gap-3 md:flex-nowrap flex-wrap md:justify-start justify-center  sm:pl-0 pl-7 items-center">Dengan
+                        <img src="/Docs/Assets/Images/about/ChupOnline.svg"
+                            class="md:max-w-[320px] mx-auto md:mx-0 sm:max-w-[212.5px] max-w-[180px] w-full "
+                            alt=""></span> </h1>
+
+                <p class="lg:text-[20px] text-[#115934] pt-8 poppins lg:text-start text-center">ChupOnline mempermudah
+                    operasi hospital dan klinik dengan menggunakan <strong>algoritma masa nyata</strong> dan pembelajaran mesin untuk
+                    <strong>algoritma masa nyata</strong>. ChupOnline menawarkan <strong>kemas kini temujanji automatik</strong> dan penjadualan
+                    yang dioptimumkan tanpa memerlukan perkakasan atau muat turun aplikasi. Fitur-fitur seperti <strong>tempahan
+                        sendiri, pemecahan kecemasan</strong>, dan pengagihan semula sumber memastikan pengalaman yang lancar,
+                    <strong>menyesuaikan secara dinamik dengan keadaan masa nyata</strong>, berbeda dengan sistem tradisional yang
+                    berasaskan siapa cepat, dia dapat.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="py-16 bg-[#115934] p-5">
+        <div class="max-w-7xl w-full mx-auto">
+            <div class="bg-[#F26522] py-10 px-5 rounded-xl gap-10 flex items-center justify-center flex-col">
+
+                <h2 class="text-[#115934] py-2 rounded-lg px-6 lg:text-[48px] text-[30px] font-semibold bg-[#FFEDE5]">
+                    Visi</h2>
+
+                <h2 class="md:text-[40px] leading-tight text-[28px] font-bold text-center text-[#FFEDE5]">Sebuah dunia
+                    Dunia di mana tiada siapa yang perlu menunggu berjam-jam untuk dilayani</h2>
+            </div>
+            <div class="bg-[#FFEDE5] mt-6 py-10 px-5 rounded-xl gap-10 flex items-center justify-center flex-col">
+
+                <h2 class="text-[#FFEDE5] py-2 rounded-lg px-6 lg:text-[48px] text-[30px] font-semibold bg-[#115934]">
+                    Misi</h2>
+
+                <p class="md:text-[40px] leading-tight text-[28px]  text-center text-[#115934]">Mengurangi waktu tunggu
+                    Mengurangkan masa menunggu di lokasi dari berjam-jam kepada minit dengan menggunakan algoritma untuk
+                    <strong>menyusun semula barisan secara dinamik dan memberitahu pengguna</strong> sebelum ketibaan
+                    mereka.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="px-5 2xl:px-0 bg-[#fbf7f4]  md:py-16 py-10 ">
+        <div class=" max-w-7xl mx-auto">
+
+            <div
+                class="flex items-center justify-center md:flex-row flex-col sm:gap-3 gap-1.5 text-[#F26522] lg:text-[60px] md:text-[50px] text-[40px]   font-bold">
+                Sejarah <span class="text-[#115934]"> Ringkas </span> <img src="/Docs/Assets/Images/Global/logo.svg"
+                    class="lg:max-w-[250px] max-w-[187px] w-full sm:mx-0 mx-auto" alt="">
+            </div>
+
+            <div class="flex flex-col gap-7 md:mt-16 mt-10">
+
+                <div class="bg-[#ffffff] md:p-12 p-5 flex lg:flex-row flex-col items-center lg:gap-16 gap-6 rounded-md">
+                    <img src="/Docs/Assets/Images/about/img1.webp"
+                        class="lg:max-w-[450.01px] max-w-[275px] mx-auto w-full" alt="">
+                    <div class="text-[#115934] md:text-start text-center">
+                        <p class="lg:text-[32px] md:text-[18.53px] text-[14px] lg:leading-tight">Semasa Perintah Kawalan
+                            Pergerakan yang Hebat, sekumpulan pemaju perisian, arkitek, jurutera, saintis data, ahli
+                            matematik, dan pereka berkumpul BUKAN hanya untuk mencipta aplikasi barisan yang lain tetapi
+                            untuk <strong>membangunkan satu-satunya penyelesaian di dunia</strong> kepada salah satu masalah terpanjang
+                            iaitu masa <b>menunggu yang tidak perlu</b> dalam kehidupan kita.</p>
+                    </div>
+                </div>
+                <div class="bg-[#ffffff] md:p-12 p-5 flex lg:flex-row flex-col items-center lg:gap-16 gap-6 rounded-md">
+                    <img src="/Docs/Assets/Images/about/img2.webp"
+                        class="lg:max-w-[450.01px] max-w-[275px] mx-auto w-full" alt="">
+                    <div class="text-[#115934] md:text-start text-center">
+                        <p class="lg:text-[32px] md:text-[18.53px] text-[14px] lg:leading-tight">Sejurus selepas
+                            pandemik COVID melanda dunia, dengan peraturan penjarakan sosial, didapati bahawa <strong>orang
+                                terpaksa beratur sangat lama</strong> untuk pergi ke mana-mana. Dan industri penjagaan kesihatan
+                            adalah yang paling terjejas (dan masih terjejas) kerana <strong>tiada siapa yang dapat meramalkan
+                                bila doktor akan selesai dengan  pesakit</strong>. Ini boleh menyebabkan kelewatan yang berjam-jam.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-[#ffffff] md:p-12 p-5 flex lg:flex-row flex-col items-center lg:gap-16 gap-6 rounded-md">
+                    <img src="/Docs/Assets/Images/about/img3.webp"
+                        class="lg:max-w-[450.01px] max-w-[275px] mx-auto w-full" alt="">
+                    <div class="text-[#115934] md:text-start text-center">
+                        <p class="lg:text-[32px] md:text-[18.53px] text-[14px] lg:leading-tight">Sejak awal tahun 2020,
+                            Chup telah diprogramkan dengan lebih daripada 2000 (dan terus bertambah) logik, algoritma,
+                            pemodelan, dan senario. Chup mengambil data masa lalu, input manual oleh kaunter hadapan
+                            dengan pelanggan dan <strong>menggabungkannya dengan situasi langsung di lokasi</strong> untuk menyusun
+                            semula barisan atau <strong>tempahan secara masa nyata</strong>.</p>
+                    </div>
+                </div>
+                <div class="bg-[#ffffff] md:p-12 p-5 flex lg:flex-row flex-col items-center lg:gap-16 gap-6 rounded-md">
+                    <img src="/Docs/Assets/Images/about/img4.webp"
+                        class="lg:max-w-[450.01px] max-w-[275px] mx-auto w-full" alt="">
+                    <div class="text-[#115934] md:text-start text-center">
+                        <p class="lg:text-[32px] md:text-[18.53px] text-[14px] lg:leading-tight">Selain itu, <strong>algoritma
+                            kawalan kesesakan</strong> yang berfungsi di latar belakang ini akan <strong>mengautomasikan</strong> kebanyakan kerja
+                            seperti <strong>memberitahu pelanggan sebelum ketibaan dan pelanggan yang telah tiba</strong>.
+                            <br><br>
+                            Matlamatnya adalah mudah: untuk memastikan mereka <strong>menunggu seminimum mungkin - DI LOKASI</strong>.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="" id="dynamic-footer"></div>
+
+
+
+
+
+</body>
+<script src="/Languages/Malaysia/Docs/javascript/footer.js"></script>
+<script src=" https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.store('accordion', {
+            tab: 0
+        });
+
+        Alpine.data('accordion', (idx) => ({
+            init() {
+                this.idx = idx;
+            },
+            idx: -1,
+            handleClick() {
+                this.$store.accordion.tab = this.$store.accordion.tab === this.idx ? 0 : this.idx;
+            },
+            handleRotate() {
+                return this.$store.accordion.tab === this.idx ? 'rotate-180' : '';
+            },
+            handleToggle() {
+                return this.$store.accordion.tab === this.idx ? `max-height: ${this.$refs.tab.scrollHeight}px` : '';
+            }
+        }));
+    })
+
+
+    const openNav = document.getElementById("openNav")
+    const responsiveNav = document.getElementById("responsiveNav")
+    const closeNav = document.getElementById("closeNav")
+
+    openNav.addEventListener('click', () => {
+        responsiveNav.style.width = "100%"
+    })
+    closeNav.addEventListener('click', () => {
+        responsiveNav.style.width = "0rem"
+    })
+
+    const lenis = new Lenis()
+
+    function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+</script>
+
+</html>

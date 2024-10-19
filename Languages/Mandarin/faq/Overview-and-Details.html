@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Docs/Assets/Images/Global/favIcon.png" type="image/x-icon">
+    <title>Chup!</title>
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/Docs/Styles/global.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
+
+</head>
+
+<body>
+
+    <nav class="bg-[#f1e4da]">
+        <div class="flex h-16 lg:px-16 px-8 items-center justify-between mx-auto">
+            <a href="/Languages/Mandarin/index.html">
+                <img src="/Docs/Assets/Images/Global/logo.svg" alt="log" class="h-9 md:h-12">
+            </a>
+            <ul class="items-center text-[#115934] xl:flex hidden gap-7 text-[17px]">
+                <li><a href="/Languages/Mandarin/about.html" class="navUnderLine">关于我们</a></li>
+                <li><a href="/Languages/Mandarin/case-study.html" class="navUnderLine">案例研究</a></li>
+                <li><a href="/Languages/Mandarin/News/chup-news.html" class="navUnderLine">新闻与博客</a></li>
+                <li><a href="/Languages/Mandarin/FAQ.html" class="navUnderLine">常见问题</a></li>
+                <li><a href="/Languages/Mandarin/Products.html" class="navUnderLine">产品</a></li>
+                <li class="flex items-center gap-2 cursor-pointer relative py-5" id="dropDownNav">
+                    更多信息<i class="fa-solid fa-angle-down mt-1 text-[#115934] text-sm transition-all duration-300"></i>
+
+                    <div
+                        class="border-2 border-[#a9a099] w-52 rounded-lg absolute z-30 bg-[#ffede5] left-1 overflow-hidden fadeIn">
+                        <ul>
+                            <a href="/Languages/Mandarin/Career.html">
+                                <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">职业生涯</li>
+                            </a>
+                            <a href="/Languages/Mandarin/Security-Compliance.html">
+                                <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">安全合规</li>
+                            </a>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <div class=" items-center gap-4 sm:flex hidden">
+
+                <div class="relative py-3 mainlanguage">
+                    <div
+                        class="flex items-center  gap-1.5 border-2 border-[#115934]  p-2.5 transition-all cursor-pointer rounded-xl language">
+                        <img src="/Docs/Assets/Images/Global/language.svg" class="max-w-[19.5px] w-full" alt="">
+                        <i class="fa-solid fa-angle-down text-sm text-[#115934] transition-all duration-500"></i>
+                        <div
+                            class="border-2 border-[#115934] text-[#115934] w-32 rounded-lg absolute z-20  bg-[#f1e4da] top-16 right-0 overflow-hidden fadeIn div2">
+                            <ul>
+                                <a href="/index.html">
+                                    <li class="px-5 py-3 transition-all hover:bg-[#115934]  hover:text-white">
+                                        English
+                                    </li>
+                                </a>
+                                <a href="/Languages/Malaysia/index.html">
+                                    <li class="px-5 py-3 transition-all hover:bg-[#115934]  hover:text-white">
+                                        Malaysia
+                                    </li>
+                                </a>
+                                <a href="/Languages/Indonesia/index.html">
+                                    <li class="px-5 py-3 transition-all hover:bg-[#115934]  hover:text-white">
+                                        Indonesia</li>
+                                </a>
+                                <a href="/Languages/Thailand/index.html">
+                                    <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">
+                                        Thailand
+                                    </li>
+                                </a>
+                                <a href="/Languages/Mandarin/index.html">
+                                    <li class="px-5 py-3 transition-all hover:bg-[#115934] font-bold hover:text-white">
+                                        Mandarin
+                                    </li>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <button
+                    class="bg-[#115934] xl:flex hidden text-[#F1E4DA] px-6 py-2.5 rounded-lg transition-all items-center justify-center gap-2 font-medium ">
+                    <img src="/Docs/Assets/Images/Navbar/whatsapp.png" class="h-[18px]" alt="">
+                    联络我们
+                </button>
+            </div>
+            <i class="fa-solid fa-bars text-2xl xl:hidden cursor-pointer text-[#115934]" id="openNav"></i>
+        </div>
+    </nav>
+    <!-- responsive Navbar -->
+    <div class="fixed top-0 right-0 h-screen bg-[#f1e4da] text-[#115934] font-36 z-50 transition-all duration-500"
+        id="responsiveNav" style="width: 0;">
+        <div class="px-10 pt-10 pb-4 relative flex flex-col h-full justify-between">
+            <div class="">
+                <div class="flex items-center justify-between">
+                    <a href="/index.html">
+                        <img src="/Docs/Assets/Images/Global/logo.svg" class="h-[32px]" alt="">
+                    </a>
+                    <img src="/Docs/Assets/Images/Navbar/close.png" id="closeNav" class="h-[21px] cursor-pointer"
+                        alt="">
+                </div>
+                <ul class="mt-10 text-[#115934] flex flex-col text-[17px]">
+                    <a href="/about.html">
+                        <li class="py-4  poppins">About Us</li>
+                    </a>
+                    <a href="/case-study.html">
+                        <li class="py-4  poppins">Case Study</li>
+                    </a>
+                    <a href="/News/chup-news.html">
+                        <li class="py-4  poppins">News & Blog</li>
+                    </a>
+                    <a href="/FAQ.html">
+                        <li class="py-4  poppins">FAQ</li>
+                    </a>
+                    <a href="/Products.html">
+                        <li class="py-4  poppins">Products</li>
+                    </a>
+                    <li class="py-5" x-data="accordion(2)">
+                        <h2 @click="handleClick()" class="flex flex-row gap-2 items-center cursor-pointer">
+                            <span>More</span>
+                            <i :class="handleRotate()"
+                                class="fa-solid fa-angle-down mt-1 text-[#115934] text-sm transition-all duration-300"></i>
+                        </h2>
+                        <div x-ref="tab" :style="handleToggle()"
+                            class="overflow-hidden max-h-0 duration-500 transition-all">
+                            <ul class="pl-5 pt-5">
+                                <a href="/Career.html">
+                                    <li class="py-3">Career</li>
+                                </a>
+                                <a href="/Security-Compliance.html">
+                                    <li class="py-3">Security Compliance</li>
+                                </a>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <a href="">
+                <button
+                    class="bg-[#115934] flex w-full text-[#F1E4DA] p-3 rounded-lg transition-all items-center justify-center gap-4 font-medium ">
+                    <img src="/Docs/Assets/Images/Navbar/whatsapp.png" class="h-5" alt="">
+                    WhatsApp Us
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <div class="heroSection flex flex-col px-5 md:pt-12 pb-14 items-center justify-center w-full bg-[#f1e4da]">
+
+        <div class="p-5 xl:px-0 max-w-7xl w-full mx-auto text-[18px]  transition-all font-semibold  poppins ">
+            <a href="/Languages/Malaysia/FAQ.html" class="hover:opacity-65 duration-500 inline-flex items-center gap-3">
+                <i class="fa-solid fa-angle-left"></i>
+                Kembali
+            </a>
+        </div>
+
+        <div class=" sm:mt-5 bg-white p-5 md:px-8 rounded-xl max-w-7xl mx-auto">
+            <h2 class="font-medium lg:text-[44px] text-[20px] text-[#F26522] flex items-center gap-3"> <img
+                    src="/Docs/Assets/Images/faq/Frame1.png" class="md:max-w-[60px] max-w-[52px] w-full " alt="">
+                    Gambaran Keseluruhan dan Butiran</h2>
+            <div class="w-full h-[1px] bg-[#ECECEC] my-5"></div>
+            <ul class="flex flex-col">
+                <li class="my-2 rounded-xl overflow-hidden border border-[#9D9D9D] bg-[#fbf7f4]" x-data="accordion(3)">
+                    <h2 @click="handleClick()"
+                        class="flex flex-row justify-between items-center p-3 gap-3  cursor-pointer">
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">Apa yang ditawarkan ChupOnline?</span>
+                        <i class="fa-solid fa-plus transition-all duration-500 text-[#115934]"
+                            :class="handleRotate()"></i>
+                    </h2>
+                    <div x-ref="tab" :style="handleToggle()"
+                        class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
+                        <p class="p-3 text-[#115934] lg:text-[20px] md:text-[16px] text-[15px]">
+                            Chup mengoptimumkan pengalaman pesakit dengan menjadualkan semula janji temu secara automatik dalam masa nyata, menyesuaikan diri dengan kelewatan atau kecemasan, memastikan masa menunggu yang minimum.
+                        </p>
+                    </div>
+                </li>
+                <li class="my-2 rounded-xl overflow-hidden border border-[#9D9D9D] bg-[#fbf7f4]" x-data="accordion(4)">
+                    <h2 @click="handleClick()"
+                        class="flex flex-row justify-between gap-3 items-center p-3 cursor-pointer">
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">Bagaimanakah ChupOnline memberi manfaat kepada penyedia penjagaan kesihatan?</span>
+                        <i class="fa-solid fa-plus transition-all duration-500 text-[#115934]"
+                            :class="handleRotate()"></i>
+                    </h2>
+                    <div x-ref="tab" :style="handleToggle()"
+                        class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
+                        <p class="p-3 text-[#115934] lg:text-[20px] md:text-[16px] text-[15px]">
+                            Chup meningkatkan kecekapan dengan melaraskan jadual secara dinamik berdasarkan keadaan masa nyata, mengurangkan masa menunggu dan menambah baik peruntukan sumber.
+                        </p>
+                    </div>
+                </li>
+                <li class="my-2 rounded-xl overflow-hidden border border-[#9D9D9D] bg-[#fbf7f4]" x-data="accordion(5)">
+                    <h2 @click="handleClick()"
+                        class="flex flex-row justify-between items-center p-3 gap-3 cursor-pointer">
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">Bagaimanakah ChupOnline membantu mengurangkan masa menunggu pesakit?</span>
+                        <i class="fa-solid fa-plus transition-all duration-500 text-[#115934]"
+                            :class="handleRotate()"></i>
+                    </h2>
+                    <div x-ref="tab" :style="handleToggle()"
+                        class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
+                        <p class="p-3 text-[#115934] lg:text-[20px] md:text-[16px] text-[15px]">
+                            Chup menjadualkan semula secara automatik berdasarkan kemas kini masa nyata daripada doktor dan pesakit, menyesuaikan diri dengan kelewatan dan meminimumkan masa menunggu yang tidak perlu.
+                        </p>
+                    </div>
+                </li>
+                <li class="my-2 rounded-xl overflow-hidden border border-[#9D9D9D] bg-[#fbf7f4]" x-data="accordion(6)">
+                    <h2 @click="handleClick()"
+                        class="flex flex-row justify-between items-center p-3 gap-3 cursor-pointer">
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">Di negara manakah Chup tersedia?</span>
+                        <i class="fa-solid fa-plus transition-all duration-500 text-[#115934]"
+                            :class="handleRotate()"></i>
+                    </h2>
+                    <div x-ref="tab" :style="handleToggle()"
+                        class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
+                        <p class="p-3 text-[#115934] lg:text-[20px] md:text-[16px] text-[15px]">
+                            Kini di Malaysia, dengan rancangan untuk berkembang ke ASEAN.
+                        </p>
+                    </div>
+                </li>
+                <li class="my-2 rounded-xl overflow-hidden border border-[#9D9D9D] bg-[#fbf7f4]" x-data="accordion(7)">
+                    <h2 @click="handleClick()"
+                        class="flex flex-row justify-between items-center p-3 gap-3 cursor-pointer">
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">Apakah visi di sebalik ChupOnline?</span>
+                        <i class="fa-solid fa-plus transition-all duration-500 text-[#115934]"
+                            :class="handleRotate()"></i>
+                    </h2>
+                    <div x-ref="tab" :style="handleToggle()"
+                        class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
+                        <p class="p-3 text-[#115934] lg:text-[20px] md:text-[16px] text-[15px]">
+                            Chup bertujuan untuk mengubah penjagaan pesakit dengan mengurangkan masa menunggu melalui penjadualan dinamik masa nyata yang disepadukan dengan sistem penjagaan kesihatan.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div class="" id="dynamic-footer"></div>
+</body>
+<script src="/Languages/Mandarin/Docs/javascript/footer.js"></script>
+<script src=" https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.store('accordion', {
+            tab: 0
+        });
+
+        Alpine.data('accordion', (idx) => ({
+            init() {
+                this.idx = idx;
+            },
+            idx: -1,
+            handleClick() {
+                this.$store.accordion.tab = this.$store.accordion.tab === this.idx ? 0 : this.idx;
+            },
+            handleRotate() {
+                return this.$store.accordion.tab === this.idx ? 'rotate-180' : '';
+            },
+            handleToggle() {
+                return this.$store.accordion.tab === this.idx ? `max-height: ${this.$refs.tab.scrollHeight}px` : '';
+            }
+        }));
+    })
+
+
+    const openNav = document.getElementById("openNav")
+    const responsiveNav = document.getElementById("responsiveNav")
+    const closeNav = document.getElementById("closeNav")
+
+    openNav.addEventListener('click', () => {
+        responsiveNav.style.width = "100%"
+    })
+    closeNav.addEventListener('click', () => {
+        responsiveNav.style.width = "0rem"
+    })
+
+    const lenis = new Lenis()
+
+    function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+
+
+</script>
+
+</html>

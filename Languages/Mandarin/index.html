@@ -1,0 +1,1537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Docs/Assets/Images/Global/favIcon.png" type="image/x-icon">
+    <title>Chup!</title>
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/Docs/Styles/global.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
+
+</head>
+<style>
+    .language {
+        div {
+            display: none;
+        }
+    }
+
+    .mainlanguage:hover {
+        i {
+            transform: rotate(180deg);
+        }
+
+        .div2 {
+            display: block;
+        }
+    }
+</style>
+
+<body>
+
+    <nav class="bg-[#f1e4da]">
+        <div class="flex h-16 lg:px-16 px-8 items-center justify-between mx-auto">
+            <a href="/Languages/Mandarin/index.html">
+                <img src="/Docs/Assets/Images/Global/logo.svg" alt="log" class="h-9 md:h-12">
+            </a>
+            <ul class="items-center text-[#115934] xl:flex hidden gap-7 text-[17px]">
+                <li><a href="/Languages/Mandarin/about.html" class="navUnderLine">关于我们</a></li>
+                <li><a href="/Languages/Mandarin/case-study.html" class="navUnderLine">案例研究</a></li>
+                <li><a href="/Languages/Mandarin/News/chup-news.html" class="navUnderLine">新闻与博客</a></li>
+                <li><a href="/Languages/Mandarin/FAQ.html" class="navUnderLine">常见问题</a></li>
+                <li><a href="/Languages/Mandarin/Products.html" class="navUnderLine">产品</a></li>
+                <li class="flex items-center gap-2 cursor-pointer relative py-5" id="dropDownNav">
+                    更多信息<i class="fa-solid fa-angle-down mt-1 text-[#115934] text-sm transition-all duration-300"></i>
+
+                    <div
+                        class="border-2 border-[#a9a099] w-52 rounded-lg absolute  bg-[#f1e4da] left-1 overflow-hidden fadeIn">
+                        <ul>
+                            <a href="/Languages/Mandarin/Career.html">
+                                <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">职业生涯</li>
+                            </a>
+                            <a href="/Languages/Mandarin/Security-Compliance.html">
+                                <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">安全合规</li>
+                            </a>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <div class=" items-center gap-4 sm:flex hidden">
+
+                <div class="relative py-3 mainlanguage">
+                    <div
+                        class="flex items-center  gap-1.5 border-2 border-[#115934]  p-2.5 transition-all cursor-pointer rounded-xl language">
+                        <img src="/Docs/Assets/Images/Global/language.svg" class="max-w-[19.5px] w-full" alt="">
+                        <i class="fa-solid fa-angle-down text-sm text-[#115934] transition-all duration-500"></i>
+                        <div
+                            class="border-2 border-[#115934] text-[#115934] w-32 rounded-lg absolute z-20  bg-[#f1e4da] top-16 right-0 overflow-hidden fadeIn div2">
+                            <ul>
+                                <a href="/index.html">
+                                    <li class="px-5 py-3 transition-all hover:bg-[#115934]  hover:text-white">English
+                                    </li>
+                                </a>
+                                <a href="/Languages/Malaysia/index.html">
+                                    <li class="px-5 py-3 transition-all hover:bg-[#115934]  hover:text-white">
+                                        Malaysia
+                                    </li>
+                                </a>
+                                <a href="/Languages/Indonesia/index.html">
+                                    <li class="px-5 py-3 transition-all hover:bg-[#115934]  hover:text-white">
+                                        Indonesia</li>
+                                </a>
+                                <a href="/Languages/Thailand/index.html">
+                                    <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">Thailand
+                                    </li>
+                                </a>
+                                <a href="/Languages/Mandarin/index.html">
+                                    <li class="px-5 py-3 transition-all hover:bg-[#115934] font-bold hover:text-white">
+                                        Mandarin
+                                    </li>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <button
+                    class="bg-[#115934] xl:flex hidden text-[#F1E4DA] px-6 py-2.5 rounded-lg transition-all items-center justify-center gap-2 font-medium ">
+                    <img src="/Docs/Assets/Images/Navbar/whatsapp.png" class="h-[18px]" alt="">
+                    联络我们
+                </button>
+            </div>
+            <i class="fa-solid fa-bars text-2xl xl:hidden cursor-pointer text-[#115934]" id="openNav"></i>
+        </div>
+    </nav>
+    <!-- responsive Navbar -->
+    <div class="fixed top-0 right-0 h-screen bg-[#f1e4da] text-[#115934] font-36 z-50 transition-all duration-500"
+        id="responsiveNav" style="width: 0;">
+        <div class="px-10 pt-10 pb-4 relative flex flex-col h-full justify-between">
+            <div class="">
+                <div class="flex items-center justify-between">
+                    <a href="/index.html">
+                        <img src="/Docs/Assets/Images/Global/logo.svg" class="h-[32px]" alt="">
+                    </a>
+                    <img src="/Docs/Assets/Images/Navbar/close.png" id="closeNav" class="h-[21px] cursor-pointer"
+                        alt="">
+                </div>
+                <ul class="mt-10 text-[#115934] flex flex-col text-[17px]">
+                    <a href="/about.html">
+                        <li class="py-4  poppins">Tentang Kami</li>
+                    </a>
+                    <a href="/case-study.html">
+                        <li class="py-4  poppins">Kajian Kes</li>
+                    </a>
+                    <a href="/News/chup-news.html">
+                        <li class="py-4  poppins">Berita & Blog</li>
+                    </a>
+                    <a href="/FAQ.html">
+                        <li class="py-4  poppins">Soalan Lazim</li>
+                    </a>
+                    <a href="/Products.html">
+                        <li class="py-4  poppins">Produk</li>
+                    </a>
+                    <li class="py-5" x-data="accordion(2)">
+                        <h2 @click="handleClick()" class="flex flex-row gap-2 items-center cursor-pointer">
+                            <span>Lainnya</span>
+                            <i :class="handleRotate()"
+                                class="fa-solid fa-angle-down mt-1 text-[#115934] text-sm transition-all duration-300"></i>
+                        </h2>
+                        <div x-ref="tab" :style="handleToggle()"
+                            class="overflow-hidden max-h-0 duration-500 transition-all">
+                            <ul class="pl-5 pt-5">
+                                <a href="/Career.html">
+                                    <li class="py-3">Karir</li>
+                                </a>
+                                <a href="/Security-Compliance.html">
+                                    <li class="py-3">Kepatuhan Keamanan</li>
+                                </a>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <a href="">
+                <button
+                    class="bg-[#115934] flex w-full text-[#F1E4DA] p-3 rounded-lg transition-all items-center justify-center gap-4 font-medium ">
+                    <img src="/Docs/Assets/Images/Navbar/whatsapp.png" class="h-5" alt="">
+                    Hubungi Kami
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <div class="heroSection flex flex-col px-5 py-16 items-center justify-center w-full bg-[#f1e4da]">
+        <h1
+            class="font-bold uppercase md:text-[50px] text-[30px] text-center max-w-[1323px] sm:w-full w-[327px] md:leading-[65px] leading-[39px] text-[#115934]">
+            将您当前的等待时间从几
+        </h1>
+        <h2
+            class="bg-[#f29162]  rounded-lg  font-bold uppercase md:text-[50px] text-[30px] text-center md:leading-[65px] leading-[39px] text-[#115934] inline">
+            小时到几分钟。</h2>
+        <h1
+            class="font-bold uppercase md:text-[50px] text-[30px] text-center max-w-[1323px] sm:w-full w-[327px] md:leading-[65px] leading-[39px] text-[#115934]">
+            让客户的幸福感（和收入）加倍！
+        </h1>
+
+    </div>
+
+
+    <div class="px-5 sm:py-16 py-8 mt-5">
+
+        <h2 class="flex items-center sm:gap-6 gap-3 sm:text-6xl text-4xl text-[#115934] font-bold justify-center">认识
+            <img src="/Docs/Assets/Images/Global/logo.svg" class="sm:h-16 h-10" alt="">
+        </h2>
+        <div class="max-w-[1200px] max-h-[662px] w-full h-full mx-auto sm:mt-14 mt-8">
+            <img src="/Docs/Assets/Images/Home/youtubr.webp" class="w-full h-full" alt="">
+        </div>
+
+        <div class="flex items-center justify-center sm:mt-12 mt-8 ">
+
+            <button
+                class="bg-[#F26522] hover:bg-[#ff5608] transition-all p-3 w-[500px] text-[18px] rounded-full cursor-pointer text-white text-center">
+                Explore More
+            </button>
+        </div>
+
+
+    </div>
+
+
+
+    <div class="px-5 bg-[#115934] py-16 mt-5">
+        <h2 class="text-center gap-6 md:text-6xl text-4xl pt-6 font-bold justify-center text-white">
+            <span class="text-[#F26522]"> Chup</span> 的基本原理
+        </h2>
+        <p
+            class="lg:text-[32px] lg:leading-[48px] md:leading-[24.2px] leading-[16.94px] sm:text-xl  text-white text-center pt-5 max-w-[1021px] font-light mx-auto">
+            每个访客只有在快轮到他们时才肯出现.
+        </p>
+
+
+        <div class="flex items-center justify-center lg:gap-12 gap-8 md:flex-row flex-col sm:mt-16 mt-10">
+
+            <div class="flex flex-col items-center justify-center ">
+                <h2 class="text-[24px] text-white pb-2 text-center">在原地等待</h2>
+                <p class="bg-[#F26522] rounded-lg text-white px-2 py-1 inline italic uppercase">之前</p>
+                <div class="grid grid-cols-2 gap-x-2 gap-y-5 mt-7">
+                    <div class="relative max-w-[263.01px] w-full h-full">
+                        <img src="/Docs/Assets/Images/Home/canopy.webp" class="w-full h-full rounded-md" alt="">
+                        <p
+                            class="absolute w-full p-2 text-[18px] bottom-0 left-0 text-white bg-[#020202b9] text-center rounded-b-md font-medium san tracking-wide">
+                            天篷</p>
+                    </div>
+                    <div class="relative max-w-[263.01px] w-full h-full">
+                        <img src="/Docs/Assets/Images/Home/fullHall1.webp" class="w-full h-full rounded-md" alt="">
+                        <p
+                            class="absolute w-full p-2 text-[18px] bottom-0 left-0 text-white bg-[#020202b9] text-center rounded-b-md font-medium san tracking-wide">
+                            满堂</p>
+                    </div>
+                    <div class="relative max-w-[263.01px] w-full h-full">
+                        <img src="/Docs/Assets/Images/Home/fullhall2.webp" class="w-full h-full rounded-md" alt="">
+                        <p
+                            class="absolute w-full p-2 text-[18px] bottom-0 left-0 text-white bg-[#020202b9] text-center rounded-b-md font-medium san tracking-wide">
+                            满堂</p>
+                    </div>
+                    <div class="relative max-w-[263.01px] w-full h-full">
+                        <img src="/Docs/Assets/Images/Home/fighting.webp" class="w-full h-full rounded-md" alt="">
+                        <p
+                            class="absolute w-full p-2 text-[18px] bottom-0 left-0 text-white bg-[#020202b9] text-center rounded-b-md font-medium san tracking-wide">
+                            争吵</p>
+                    </div>
+                </div>
+            </div>
+
+            <img src="/Docs/Assets/Images/Home/vs.webp"
+                class="max-w-[67px] w-full md:mt-10 p-1 border-dashed border rounded-full h-full max-h-[67px]" alt="">
+
+
+            <div class="flex flex-col items-center justify-center relative">
+                <img src="/Docs/Assets/Images/Home/fundamentalChup.webp" class="absolute right-0 top-0 h-16" alt="">
+                <h2 class="text-[24px] text-white pb-2 text-center">在场外等待</h2>
+                <p class="border-2 border-white rounded-lg text-white px-2 py-1 inline italic uppercase">使用楚普之后
+                </p>
+                <div class="grid grid-cols-2 gap-x-2 gap-y-5 mt-7">
+                    <div class="relative max-w-[263.01px] w-full h-full">
+                        <img src="/Docs/Assets/Images/Home/cafe.webp" class="w-full h-full rounded-md" alt="">
+                        <p
+                            class="absolute w-full p-2 text-[18px] bottom-0 left-0 text-white bg-[#020202b9] text-center rounded-b-md font-medium san tracking-wide">
+                            咖啡店</p>
+                    </div>
+                    <div class="relative max-w-[263.01px] w-full h-full">
+                        <img src="/Docs/Assets/Images/Home/home.webp" class="w-full h-full rounded-md" alt="">
+                        <p
+                            class="absolute w-full p-2 text-[18px] bottom-0 left-0 text-white bg-[#020202b9] text-center rounded-b-md font-medium san tracking-wide">
+                            家</p>
+                    </div>
+                    <div class="relative max-w-[263.01px] w-full h-full">
+                        <img src="/Docs/Assets/Images/Home/market.webp" class="w-full h-full rounded-md" alt="">
+                        <p
+                            class="absolute w-full p-2 text-[18px] bottom-0 left-0 text-white bg-[#020202b9] text-center rounded-b-md font-medium san tracking-wide">
+                            市场</p>
+                    </div>
+                    <div class="relative max-w-[263.01px] w-full h-full">
+                        <img src="/Docs/Assets/Images/Home/office.webp" class="w-full h-full rounded-md" alt="">
+                        <p
+                            class="absolute w-full p-2 text-[18px] bottom-0 left-0 text-white bg-[#020202b9] text-center rounded-b-md font-medium san tracking-wide">
+                            办公室</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="px-5 2xl:px-0 bg-[#fbf7f4] md:py-16 py-10 ">
+        <div class=" max-w-7xl mx-auto">
+            <div class="flex md:justify-between justify-center items-center">
+                <div class="flex flex-col md:items-start items-center justify-center">
+                    <h2
+                        class="flex uppercase items-center  lg:text-[80px] lg:leading-[104px] md:leading-[78px] leading-[39px] md:text-[60px] md:text-4xl text-2xl font-bold text-[#F26522] flex-nowrap text-nowrap">
+                        <img src="/Docs/Assets/Images/Home/chup.svg"
+                            class=" max-h-24 xl:max-w-none lg:max-w-[14rem] max-w-[6rem] md:max-w-[14rem]"
+                            alt="">&nbsp;改变一切的四个原因
+                    </h2>
+                </div>
+                <img src="/Docs/Assets/Images/Home/light.svg" class="xl:block hidden" alt="">
+            </div>
+
+            <div class="w-full h-[1.5px] bg-zinc-400 sm:mt-0 mt-5"></div>
+
+            <div class="py-8 grid md:grid-cols-4 grid-cols-2 md:gap-12 gap-5 ">
+
+                <div class="flex flex-col items-center justify-center">
+                    <div class="relative">
+                        <img src="/Docs/Assets/Images/Home/1..webp" class=" select-none h-full max-h-20" alt="">
+                        <img src="/Docs/Assets/Images/Home/1stworld.svg"
+                            class=" h-16 absolute top-0 sm:left-[-100%] left-[-60%]" alt="">
+                    </div>
+                    <p
+                        class="lg:text-[24px] md:text-[20px] text-[16px] text-[#115934] leading-tight text-center pt-3 font-medium">
+                        实时动态队列/预约</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img src="/Docs/Assets/Images/Home/2..webp" class=" select-none h-full max-h-[82px]" alt="">
+                    <p
+                        class="lg:text-[24px] md:text-[20px] md:max-w-[15rem] text-[16px] text-[#115934] leading-tight text-center pt-3 font-medium">
+                        多种自动化功能</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img src="/Docs/Assets/Images/Home/3..webp" class=" select-none h-full max-h-20 mb-1" alt="">
+                    <p
+                        class="lg:text-[24px] md:text-[20px] text-[16px] text-[#115934] leading-tight text-center pt-3 font-medium">
+                        简化医院运营</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img src="/Docs/Assets/Images/Home/4..webp" class=" select-none h-full max-h-[82px]  " alt="">
+                    <p
+                        class="lg:text-[24px] md:text-[20px] text-[16px] md:max-w-[15rem] text-[#115934] leading-tight text-center pt-3 font-medium">
+                        顾客的幸福</p>
+                </div>
+
+            </div>
+
+            <div class="w-full h-[1.5px] bg-zinc-400"></div>
+
+        </div>
+
+    </div>
+
+    <div class="px-5 2xl:px-0 bg-[#fbf7f4]  py-10 ">
+        <div class=" max-w-7xl mx-auto">
+            <div class="flex md:items-center items-start justify-between gap-2 relative">
+                <div class="">
+                    <img src="/Docs/Assets/Images/Home/1..webp" class="max-h-20 max-w-20" alt="">
+                    <h2
+                        class="lg:text-[80px] md:text-[60px] text-[30px] text-[#115934] lg:leading-[104px] leading-[39px] md:leading-[78px] font-medium">
+                        实时动态队列/预约</h2>
+                </div>
+                <div class="max-w-[212.98px] ">
+                    <img src="/Docs/Assets/Images/Home/1stworld.svg"
+                        class="sm:w-full w-16 sm:static absolute  -top-8 right-1" alt="">
+                </div>
+            </div>
+            <p class="lg:text-[32px] md:text-[24px] text-[#115934] max-w-[1200px] ">我们编写了数千种算法来满足可能或不可能发生的种种情况。</p>
+            <div class="w-full h-[1.5px] bg-zinc-400 my-8"></div>
+
+            <div class="grid grid-cols-2 md:gap-8 gap-3">
+                <div class="w-full  text-[#B64410] bg-[#fde8d9] rounded-lg px-6 pt-6 md:pb-0 pb-6">
+                    <h2 class="font-medium lg:text-[32px] md:text-[24px] text-[20px]">平均等待时间</h2>
+                    <div class="w-full h-[1.5px] bg-[#F26522] sm:my-3 my-2"></div>
+                    <p class="lg:text-[24px] md:text-[20px] text-[12px] font-medium md:-mb-8">最多</p>
+                    <h2 class="lg:text-[100px] md:text-[64px] text-[27px]  font-medium ">15<span
+                            class="md:text-6xl text-xl">分钟</span></h2>
+                </div>
+                <div class="w-full  text-[#B64410] bg-[#fde8d9] rounded-lg px-6 pt-6 md:pb-0 pb-6">
+                    <h2 class="font-medium lg:text-[32px] md:text-[24px] text-[20px]">客户满意度</h2>
+                    <div class="w-full h-[1.5px] bg-[#F26522] sm:my-3 my-2"></div>
+                    <p class="lg:text-[24px] md:text-[20px] text-[12px] font-medium md:-mb-8">最多</p>
+                    <h2 class="lg:text-[100px] md:text-[64px] text-[27px]  font-medium ">97<span
+                            class="md:text-6xl text-xl">%</span></h2>
+                </div>
+            </div>
+
+            <h2 class="mt-16 font-bold lg:text-[80px] md:text-[60px] text-[30px] text-center text-[#F26522]">动态情况</h2>
+
+            <div class="">
+
+                <div class="flex items-center flex-wrap justify-center gap-3  mt-6">
+                    <p
+                        class="lg:text-[24px] font-medium text-nowrap py-2.5 px-4 text-center text-[14px] bg-[#F26522] text-white rounded-sm">
+                        迟到</p>
+                    <p
+                        class="lg:text-[24px] font-medium text-nowrap py-2.5 px-4 text-center text-[14px] bg-[#F26522] text-white rounded-sm">
+                        提早抵达</p>
+                    <p
+                        class="lg:text-[24px] font-medium text-nowrap py-2.5 px-4 text-center text-[14px] bg-[#F26522] text-white rounded-sm">
+                        取消</p>
+                    <p
+                        class="lg:text-[24px] font-medium text-nowrap py-2.5 px-4 text-center text-[14px] bg-[#F26522] text-white rounded-sm">
+                        重新安排</p>
+                    <p
+                        class="lg:text-[24px] font-medium text-nowrap py-2.5 px-4 text-center text-[14px] bg-[#F26522] text-white rounded-sm">
+                        延迟（不通知）</p>
+                    <p
+                        class="lg:text-[24px] font-medium text-nowrap py-2.5 px-4 text-center text-[14px] bg-[#F26522] text-white rounded-sm">
+                        忘记预约</p>
+                    <p
+                        class="lg:text-[24px] font-medium text-nowrap py-2.5 px-4 text-center text-[14px] bg-[#F26522] text-white rounded-sm">
+                        延迟（有通知）</p>
+                    <p
+                        class="lg:text-[24px] font-medium text-nowrap py-2.5 px-4 text-center text-[14px] bg-[#F26522] text-white rounded-sm">
+                        没有智能手机</p>
+                    <p
+                        class="lg:text-[24px] font-medium text-nowrap py-2.5 px-4 text-center text-[14px] bg-[#F26522] text-white rounded-sm">
+                        对消息一无所知</p>
+                    <p
+                        class="lg:text-[24px] font-medium text-nowrap py-2.5 px-4 text-center text-[14px] bg-[#F26522] text-white rounded-sm">
+                        不想下载应用程序</p>
+                    <p
+                        class="lg:text-[24px] font-medium text-nowrap py-2.5 px-4 text-center text-[14px] bg-[#F26522] text-white rounded-sm">
+                        缺席</p>
+                    <p
+                        class="lg:text-[24px] font-medium text-nowrap py-2.5 px-4 text-center text-[14px] bg-[#F26522] text-white rounded-sm">
+                        忘记预约</p>
+                </div>
+
+
+                <div class="mt-5">
+                    <button
+                        class="flex font-medium lg:text-[24.42px] text-[16px] items-center bg-[#F8FAFF] text-[#F26522] justify-center gap-10 p-3 border-2 border-[#F26522] rounded-md w-full text-center">
+                        <img src="/Docs/Assets/Images/Home/user.svg" class="h-6" alt="">
+                        用户/客户
+                    </button>
+                    <img src="/Docs/Assets/Images/Home/arrow.webp" class="rotate-180 h-20 mx-auto" alt="">
+
+                    <img src="/Docs/Assets/Images/Home/policeMan.webp" class="max-w-[160px] my-2 mx-auto" alt="">
+
+                    <img src="/Docs/Assets/Images/Home/arrow.webp" class=" mx-auto h-20" alt="">
+                    <button
+                        class="flex font-medium lg:text-[24.42px] text-[16px] items-center text-[#115934] justify-center gap-10 bg-[#ECF4F9] p-3 border-2 border-[#115934] rounded-md w-full text-center">
+                        <img src="/Docs/Assets/Images/Home/building.svg" class="h-6" alt="">
+                        服务提供商
+                    </button>
+                </div>
+
+                <div class="flex items-center flex-wrap justify-center gap-3 mt-6">
+                    <p
+                        class="lg:text-[24px] text-[14px] font-medium text-center bg-[#115934] text-white py-2.5 px-4 rounded-sm">
+                        部分柜台计划/突然关闭
+                    </p>
+                    <p
+                        class="lg:text-[24px] text-[14px] font-medium text-center bg-[#115934] text-white py-2.5 px-4 rounded-sm">
+                        午休时间
+                    </p>
+                    <p
+                        class="lg:text-[24px] text-[14px] font-medium text-center bg-[#115934] text-white py-2.5 px-4 rounded-sm">
+                        步入式
+                    </p>
+                    <p
+                        class="lg:text-[24px] text-[14px] font-medium text-center bg-[#115934] text-white py-2.5 px-4 rounded-sm">
+                        多站访问
+                    </p>
+                    <p
+                        class="lg:text-[24px] text-[14px] font-medium text-center bg-[#115934] text-white py-2.5 px-4 rounded-sm">
+                        所有服务柜台突然关闭
+                    </p>
+                    <p
+                        class="lg:text-[24px] text-[14px] font-medium text-center bg-[#115934] text-white py-2.5 px-4 rounded-sm">
+                        更换其他人员
+                    </p>
+                    <p
+                        class="lg:text-[24px] text-[14px] font-medium text-center bg-[#115934] text-white py-2.5 px-4 rounded-sm">
+                        前往另一个分行
+                    </p>
+                    <p
+                        class="lg:text-[24px] text-[14px] font-medium text-center bg-[#115934] text-white py-2.5 px-4 rounded-sm">
+                        服务时间比预计时间长
+                    </p>
+                    <p
+                        class="lg:text-[24px] text-[14px] font-medium text-center bg-[#115934] text-white py-2.5 px-4 rounded-sm">
+                        服务速度比预计的要快
+                    </p>
+                    <p
+                        class="lg:text-[24px] text-[14px] font-medium text-center bg-[#115934] text-white py-2.5 px-4 rounded-sm">
+                        服务提供商的系统宕机
+                    </p>
+                    <p
+                        class="lg:text-[24px] text-[14px] font-medium text-center bg-[#115934] text-white py-2.5 px-4 rounded-sm">
+                        突然或固定关闭时间
+                    </p>
+                    <p
+                        class="lg:text-[24px] text-[14px] font-medium text-center bg-[#115934] text-white py-2.5 px-4 rounded-sm">
+                        迟到
+                    </p>
+                    <p
+                        class="lg:text-[24px] text-[14px] font-medium text-center bg-[#115934] text-white py-2.5 px-4 rounded-sm">
+                        实时紧急请假
+                    </p>
+                    <p
+                        class="lg:text-[24px] text-[14px] font-medium text-center bg-[#115934] text-white py-2.5 px-4 rounded-sm">
+                        未来紧急休假
+                    </p>
+
+                    <p class="lg:text-[28px] sm:text-[18px] text-[12px] bg-[#f1e4da] p-4 mt-8 rounded-md">在理想情况下，客户在上午
+                        10 点进行预订, 服务提供商将在上午 10
+                        点时段接待客户。或者您加入队列并给出准确的等待时间等待时间，并获得相应的服务。但这不是一个完美的世界，服务提供商和顾客都不会准时——这使得预订和预计的等待时间毫毫无用处。为什么管有预约管理，人们仍然要等待几个小时？他们在上午
+                        10:00 预订，但最终在下午 2:00 才得到接待？</p>
+                    <div class="lg:text-[28px] sm:text-[18px] text-[12px] bg-[#d8fae8] p-4 mt-2 rounded-md">
+                        <p>Chup 充当动态交通管理者，类似于高峰时段在繁忙十字路口的交通警察，处理来自用户/客户和服务提供商的输入。无论信息是通过按钮输入提供的，还是通过自动算法逻辑收集的，Chup
+                            都会负责处理它。一旦检测到，Chup 会立即通知用户和服务提供商，并相应地调整正在进行的实时队列和未来的队列预约。</p> <br>
+
+                        <p class="flex items-center gap-6">
+                            <span
+                                class="lg:text-[80px] md:text-[32px] text-[18px] leading-[60px] text-nowrap text-[#115934] font-bold">结果呢？
+                            </span>预到客户会收到通知，使他们能够按计划抵达并最大限度地减少等待时间。
+                        </p>
+
+                        <p class="text-[#115934]">到达后的客户？他们可以计划去其他地方或等待。研究表明，不知道等待多长时间比等待本身更致命。对于服务提供商而言，通过 Chup
+                            有效的人群拥堵管理，他们可以高效、无压力、无负罪感地运营。
+                        </p>
+                    </div>
+                    <p class="lg:text-[28px] sm:text-[18px] text-[12px] bg-[#E0E0E0] p-4 mt-2 rounded-md">
+                        这里提到的动态情况代表了主要会发生的情况，但每种情况下还存在许多不同的情况，此列表并不详尽。处理这些情况的逻辑和算法已经开发了几年。除了在开发过程中测试预测情况外，Chup
+                        在开发后还进行了手动和自动测试。此外，Chup 还接受了八个月的真实世界数据的培训，并将随着时间的推移，通过更多的输入和数据继续改进。</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="px-5 md:py-16 py-10 bg-[#F26522] flex flex-col justify-center items-center">
+        <h2 class="bg-white p-4 rounded-full lg:text-[37.62px] md:text-[21.79px] text-[18px] font-bold sm:mb-16 mb-8">
+            Chup 的智能算法</h2>
+        <img src="/Docs/Assets/Images/Home/smartAlogrithm.webp" class="max-w-5xl select-none w-full" alt="">
+    </div>
+    <div class="px-5 md:py-16 py-10 bg-[#115934] flex flex-col justify-center items-center">
+        <img src="/Docs/Assets/Images/Home/smartAlogrithem.webp" class="max-w-5xl select-none w-full" alt="">
+    </div>
+
+
+    <div class="px-5 2xl:px-0 bg-[#fbf7f4]  py-10 ">
+        <div class=" max-w-7xl mx-auto">
+            <div class="flex md:items-center items-start justify-between gap-2 relative">
+                <div class="">
+                    <img src="/Docs/Assets/Images/Home/2..webp" class="max-h-20 max-w-20" alt="">
+                    <h2
+                        class="lg:text-[80px] md:text-[60px] text-[30px] text-[#115934] lg:leading-[104px] leading-[39px] md:leading-[78px] font-medium">
+                        多种自动化功能</h2>
+                </div>
+                <div class="max-w-[212.98px] ">
+                    <img src="/Docs/Assets/Images/Home/2Heading.svg"
+                        class="sm:w-full w-16 sm:static absolute  -top-8 right-1" alt="">
+                </div>
+            </div>
+            <p class="lg:text-[32px] md:text-[24px] text-[#115934] max-w-[1200px] ">从来没有人喜欢等待。如果你解决了这个问题，你就比别人领先了一步。
+            </p>
+            <div class="w-full h-[1.5px] bg-zinc-400 my-8"></div>
+
+            <div class="w-full text-[#115934] sm:p-8 p-4 bg-white myShadow rounded-md">
+                <h2 class="lg:text-[72px] md:text-[42px] text-[24px] font-bold">自动重新安排
+                </h2>
+                <h2 class=" lg:text-[60px] text-[24px] md:text-[36px] font-semibold">长时间服务</h2>
+                <img src="/Docs/Assets/Images/Home/longServer.webp"
+                    class="max-w-[700px] select-none w-full mx-auto my-6" alt="">
+                <p class="lg:text-[32px] md:text-[24px] text-[16px] ">当医生需要更长时间服务时，排队的患者将通过 WhatsApp
+                    收到延迟消息，其他患者将自动重新安排到新的时间。</p>
+            </div>
+
+            <div class="w-full text-[#115934] sm:p-8 p-4 bg-white myShadow rounded-md mt-10">
+                <h2 class=" lg:text-[60px] text-[24px] md:text-[36px] font-semibold">定制关闭</h2>
+                <img src="/Docs/Assets/Images/Home/customClose.webp"
+                    class="max-w-[1120px] select-none w-full mx-auto my-6" alt="">
+                <p class="lg:text-[32px] md:text-[24px] text-[16px] ">在 Chup
+                    中，管理员可以出于紧急情况或其他原因使用自定义关闭功能。待定的预约可以取消或移至下一个可用时段。</p>
+            </div>
+
+            <div class="w-full text-[#115934] sm:p-8 p-4 bg-white myShadow rounded-md mt-10">
+                <h2 class=" lg:text-[60px] text-[24px] md:text-[36px] font-semibold">紧急休息</h2>
+                <img src="/Docs/Assets/Images/Home/emergncyBreak.webp"
+                    class="max-w-[700px] select-none w-full mx-auto my-6" alt="">
+                <p class="lg:text-[32px] md:text-[24px] text-[16px] ">在 Chup
+                    中，管理员可以激活紧急中断功能来处理紧急情况。它会取消待定的预约，并通知患者重新安排到下一个可用的时段。</p>
+            </div>
+
+
+            <div class="w-full text-[#115934] sm:p-8 p-4 bg-white myShadow rounded-md mt-10">
+                <h2 class=" lg:text-[60px] text-[24px] md:text-[36px] font-semibold">医生迟到</h2>
+                <img src="/Docs/Assets/Images/Home/doctorlate.webp"
+                    class="max-w-[700px] select-none w-full mx-auto my-6" alt="">
+                <p class="lg:text-[32px] md:text-[24px] text-[16px] ">管理员可以向医生发送有关他们迟到的信息并提供重新安排选项，以便医生可以根据他们的抵达情况选择时间表。
+                </p>
+                <img src="/Docs/Assets/Images/Home/doctorlate2.webp"
+                    class="max-w-[700px] select-none w-full mx-auto my-6" alt="">
+                <p class="lg:text-[32px] md:text-[24px] text-[16px] ">当医生迟到时，患者会通过 WhatsApp 收到自动提醒。</p>
+            </div>
+
+
+            <div class="w-full text-[#115934] sm:p-8 p-4 bg-white myShadow rounded-md mt-10">
+                <h2 class=" lg:text-[60px] text-[24px] md:text-[36px] font-semibold">自动转运服务</h2>
+                <img src="/Docs/Assets/Images/Home/automaticTransit.webp"
+                    class="max-w-[1120px] select-none w-full mx-auto my-6 sm:block hidden" alt="">
+                <img src="/Docs/Assets/Images/Home/automaticTransitres1.webp"
+                    class="max-w-[1120px] select-none w-full mx-auto my-6 sm:hidden" alt="">
+                <img src="/Docs/Assets/Images/Home/automaticTransitres2.webp"
+                    class="max-w-[1120px] select-none w-full mx-auto my-6 sm:hidden" alt="">
+                <p class="lg:text-[32px] md:text-[24px] text-[16px] ">预约医生的患者会自动分配站前和站后服务。</p>
+            </div>
+
+
+            <div class="w-full text-[#115934] sm:p-8 p-4 bg-white myShadow rounded-md mt-10">
+                <h2 class=" lg:text-[60px] text-[24px] md:text-[36px] font-semibold">自动提醒</h2>
+                <img src="/Docs/Assets/Images/Home/automaticReminder.webp"
+                    class="max-w-[700px] select-none w-full mx-auto my-6" alt="">
+                <p class="lg:text-[32px] md:text-[24px] text-[16px] ">患者会在预约前 1 天、2 小时甚至 1 小时内多次收到提醒。所有提醒都会在每个时间间隔通过
+                    WhatsApp 自动发送，以帮助患者随时了解情况并做好准备。</p>
+            </div>
+
+
+            <div class="flex md:items-center mt-16 items-start justify-between gap-2 relative">
+                <div class="">
+                    <img src="/Docs/Assets/Images/Home/3..webp" class="max-h-20 max-w-20" alt="">
+                    <h2
+                        class="lg:text-[80px] md:text-[60px] text-[30px] text-[#115934] lg:leading-[104px] leading-[39px] md:leading-[78px] font-medium">
+                        精简医院</h2>
+                </div>
+                <div class="max-w-[212.98px] ">
+                    <img src="/Docs/Assets/Images/Home/2Heading.svg"
+                        class="sm:w-full w-16 sm:static absolute  -top-8 right-1" alt="">
+                </div>
+            </div>
+            <p class="lg:text-[32px] md:text-[24px] text-[#115934] max-w-[1200px] ">我们确实编写了数千种算法来满足可能或不可能发生的每种情况。</p>
+            <div class="w-full h-[1.5px] bg-zinc-400 my-8"></div>
+
+
+
+            <div class="w-full text-[#115934] sm:p-8 p-4 bg-white myShadow rounded-md mt-10">
+                <h2 class=" lg:text-[60px] text-[24px] md:text-[36px] font-semibold">预批准 - 推荐信
+                </h2>
+                <img src="/Docs/Assets/Images/Home/preApprovel.webp"
+                    class="max-w-[1120px] select-none w-full mx-auto my-6" alt="">
+                <p class="lg:text-[32px] md:text-[24px] text-[16px] ">
+                    预先批准预约系统允许医院根据推荐信分配预约时段，确保患者与合适的医生相匹配。患者完成预订步骤后，他们会收到 WhatsApp 通知。
+                </p>
+            </div>
+
+
+            <div class="w-full text-[#115934] sm:p-8 p-4 bg-white myShadow rounded-md mt-10">
+                <h2 class=" lg:text-[60px] text-[24px] md:text-[36px] font-semibold">计费 - 标记为已付款
+                </h2>
+                <img src="/Docs/Assets/Images/Home/billing1.webp" class="max-w-[856px] select-none w-full mx-auto my-6"
+                    alt="">
+                <p class="lg:text-[32px] md:text-[24px] text-[16px] ">在 ChupOnline 的 Billings -
+                    标记为已付款功能中，一旦患者完成付款，收银员点击“标记为已付款”即可更新患者的状态。</p>
+                <img src="/Docs/Assets/Images/Home/billing2.webp" class="max-w-[856px] select-none w-full mx-auto my-8"
+                    alt="">
+                <p class="lg:text-[32px] md:text-[24px] text-[16px] ">
+                    如果患者需要去药房，他们会自动转移到那里。如果患者没有服用药物，患者就诊流程视为结束。如果“标记为已付费”按钮没有自动移动患者，也可以手动移动患者。</p>
+            </div>
+            <div class="w-full text-[#115934] sm:p-8 p-4 bg-white myShadow rounded-md mt-10">
+                <h2 class=" lg:text-[60px] text-[24px] md:text-[36px] font-semibold">保险</h2>
+                <img src="/Docs/Assets/Images/Home/insurence.webp"
+                    class="max-w-[1120px] select-none w-full mx-auto my-6" alt="">
+                <p class="lg:text-[32px] md:text-[24px] text-[16px] ">在 Chup 中，管理员可以验证保险并设置承保限额。保险工作人员还可以自动生成请求信。</p>
+            </div>
+            <div class="w-full text-[#115934] sm:p-8 p-4 bg-white myShadow rounded-md mt-10">
+                <h2 class=" lg:text-[60px] text-[24px] md:text-[36px] font-semibold">电视应用程序（安卓）</h2>
+                <img src="/Docs/Assets/Images/Home/tvApp.webp"
+                    class="max-w-[1120px] select-none w-full mx-auto md:my-10 my-6" alt="">
+                <p class="lg:text-[32px] md:text-[24px] text-[16px] ">ChupOnline 的电视应用程序提供灵活便捷的系统访问。</p>
+            </div>
+
+            <div class="w-full text-[#115934] sm:p-8 p-4 bg-white myShadow rounded-md mt-10">
+                <h2 class=" lg:text-[60px] text-[24px] md:text-[36px] font-semibold">信息亭（安卓）</h2>
+                <img src="/Docs/Assets/Images/Home/Kiosk.webp"
+                    class="max-w-[1120px] select-none w-full mx-auto md:my-10 my-6 sm:block hidden" alt="">
+                <img src="/Docs/Assets/Images/Home/Kioskres.webp"
+                    class="max-w-[1120px] select-none w-full mx-auto md:my-10 my-6 sm:hidden" alt="">
+                <p class="lg:text-[32px] md:text-[24px] text-[16px] ">ChupOnline 的 Kiosk 应用程序使患者能够签到和管理预约</p>
+            </div>
+
+
+
+            <div class="flex md:items-center items-start justify-between gap-2 relative mt-16">
+                <div class="">
+                    <img src="/Docs/Assets/Images/Home/4..webp" class="max-h-20 max-w-20" alt="">
+                    <h2
+                        class="lg:text-[80px] md:text-[60px] text-[30px] text-[#115934] lg:leading-[104px] leading-[39px] md:leading-[78px] font-medium">
+                        顾客的幸福</h2>
+                </div>
+                <div class="max-w-[212.98px] ">
+                    <img src="/Docs/Assets/Images/Home/4heading.svg"
+                        class="sm:w-full w-16 sm:static absolute  -top-8 right-1" alt="">
+                </div>
+            </div>
+            <div class="w-full h-[1.5px] bg-zinc-400 my-8"></div>
+
+            <div class="w-full text-[#115934] sm:p-8 p-4 bg-white myShadow rounded-md mt-10">
+                <h2 class=" lg:text-[60px] text-[24px] md:text-[36px] font-semibold">分析</h2>
+                <img src="/Docs/Assets/Images/Home/Analytics.webp"
+                    class="max-w-[1120px] select-none w-full mx-auto md:my-10 my-6" alt="">
+                <p class="lg:text-[32px] md:text-[24px] text-[16px] ">追踪患者就诊和服务绩效，提供效率洞察。</p>
+            </div>
+            <div class="w-full text-[#115934] sm:p-8 p-4 bg-white myShadow rounded-md mt-10">
+                <h2 class=" lg:text-[60px] text-[24px] md:text-[36px] font-semibold">满意度</h2>
+                <img src="/Docs/Assets/Images/Home/Satisfaction.webp"
+                    class="max-w-[1120px] select-none w-full mx-auto md:my-10 my-6" alt="">
+                <p class="lg:text-[32px] md:text-[24px] text-[16px] ">实时追踪满意度趋势，显示给定时间内有多少患者感到满意。</p>
+            </div>
+            <div class="w-full text-[#115934] sm:p-8 p-4 bg-white myShadow rounded-md mt-10">
+                <h2 class=" lg:text-[60px] text-[24px] md:text-[36px] font-semibold">谷歌评论</h2>
+                <img src="/Docs/Assets/Images/Home/GoogleReview.webp"
+                    class="max-w-[1120px] select-none w-full mx-auto md:my-10 my-6 sm:block hidden" alt="">
+                <img src="/Docs/Assets/Images/Home/GoogleReviewres.webp"
+                    class="max-w-[1120px] select-none w-full mx-auto md:my-10 my-6 sm:hidden" alt="">
+                <p class="lg:text-[32px] md:text-[24px] text-[16px] ">ChupOnline 与医院和诊所无缝集成，链接 Google
+                    评论。它同步患者反馈，帮助医疗保健提供者追踪满意度并根据真实的用户体验进行改进。</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="px-5 2xl:px-0 bg-[#115934]  md:py-16 py-10 ">
+        <div class=" max-w-7xl mx-auto">
+
+            <h2
+                class="text-[#fff] lg:text-[80px] md:text-[60px] text-[30px] md:leading-[78px] leading-[39px] font-bold max-w-[980px]  w-full mx-auto lg:leading-[104px] text-center">
+                您需要的所有功能以及更多</h2>
+
+
+            <ul class="flex flex-col sm:mt-10 mt-6">
+                <li class="bg-white my-2 rounded-lg overflow-hidden shadow-lg" x-data="accordion(1)">
+                    <h2 @click="handleClick()" class="flex flex-row justify-between items-center p-3 cursor-pointer">
+                        <span
+                            class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934]">业务及用户设置</span>
+                        <i class="fa-solid fa-plus transition-all duration-500" :class="handleRotate()"></i>
+                    </h2>
+                    <div x-ref="tab" :style="handleToggle()"
+                        class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
+                        <ul
+                            class="p-3 text-[#115934] space-y-1 list-disc pl-8 lg:text-[20px] md:text-[16px] text-[15px]">
+                            <li> 超级管理员和用户管理</li>
+                            <li> 编号管理</li>
+                            <li> 小时</li>
+                            <li> 类别前缀定制</li>
+                            <li> QR码打印</li>
+                            <li> 多语言支持</li>
+                            <li> 服务之间访问结束</li>
+                            <li> 汽车保险处理</li>
+                            <li> 提醒和重新安排管理</li>
+                            <li> 营业时间设定</li>
+                            <li> 可用性安排</li>
+                            <li> 管理服务和员工</li>
+                            <li> 显示屏管理</li>
+                            <li> WhatsApp 机器人定制</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="bg-white my-2 rounded-lg overflow-hidden shadow-lg" x-data="accordion(2)">
+                    <h2 @click="handleClick()" class="flex flex-row justify-between items-center p-3 cursor-pointer">
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934]">接待</span>
+                        <i class="fa-solid fa-plus transition-all duration-500" :class="handleRotate()"></i>
+                    </h2>
+                    <div x-ref="tab" :style="handleToggle()"
+                        class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
+                        <ul
+                            class="p-3 text-[#115934] space-y-1 list-disc pl-8 lg:text-[20px] md:text-[16px] text-[15px]">
+                            <li> 自付选项</li>
+                            <li> 保险付款方式</li>
+                            <li> 快车道特点</li>
+                            <li> 已到达标记</li>
+                            <li> 发起聊天</li>
+                            <li> 门诊就诊监控</li>
+                            <li> 聊天功能</li>
+                            <li> 编辑患者详细信息/数据特征</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="bg-white my-2 rounded-lg overflow-hidden shadow-lg" x-data="accordion(3)">
+                    <h2 @click="handleClick()" class="flex flex-row justify-between items-center p-3 cursor-pointer">
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934]">登记
+                        </span>
+                        <i class="fa-solid fa-plus transition-all duration-500" :class="handleRotate()"></i>
+                    </h2>
+                    <div x-ref="tab" :style="handleToggle()"
+                        class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
+                        <ul
+                            class="p-3 text-[#115934] space-y-1 list-disc pl-8 lg:text-[20px] md:text-[16px] text-[15px]">
+
+                            <li>注册-上传/领取身份证</li>
+
+                        </ul>
+                    </div>
+                </li>
+                <li class="bg-white my-2 rounded-lg overflow-hidden shadow-lg" x-data="accordion(4)">
+                    <h2 @click="handleClick()" class="flex flex-row justify-between items-center p-3 cursor-pointer">
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934]">预约</span>
+                        <i class="fa-solid fa-plus transition-all duration-500" :class="handleRotate()"></i>
+                    </h2>
+                    <div x-ref="tab" :style="handleToggle()"
+                        class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
+                        <ul
+                            class="p-3 text-[#115934] space-y-1 list-disc pl-8 lg:text-[20px] md:text-[16px] text-[15px]">
+                            <li> 通过 WhatsApp 链接预约</li>
+                            <li> 仅限管理员预约</li>
+                            <li> 基于日历的预约设置</li>
+                            <li> 病人预约须知</li>
+                            <li> 快速创建预约</li>
+                            <li> 自动预约提醒</li>
+                            <li> 自动重新安排</li>
+                            <li> 预约取消通知</li>
+                            <li> 医生状态关闭通知</li>
+                            <li> 预约确认信息</li>
+                            <li> 医生分配或锁定权利</li>
+                            <li> 实时排队及预约自助预约</li>
+                            <li> 预约数据导出和导入</li>
+                            <li> 诊所关闭期间自动取消预订</li>
+                            <li> 患者提前到达标记</li>
+                            <li> 病房/住院标记</li>
+                            <li> 患者状态监测</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="bg-white my-2 rounded-lg overflow-hidden shadow-lg" x-data="accordion(5)">
+                    <h2 @click="handleClick()" class="flex flex-row justify-between items-center p-3 cursor-pointer">
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934]">重新安排预约</span>
+                        <i class="fa-solid fa-plus transition-all duration-500" :class="handleRotate()"></i>
+                    </h2>
+                    <div x-ref="tab" :style="handleToggle()"
+                        class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
+                        <ul
+                            class="p-3 text-[#115934] space-y-1 list-disc pl-8 lg:text-[20px] md:text-[16px] text-[15px]">
+                            <li> 通过 WhatsApp 重新安排通知</li>
+                            <li> 重新安排客户发起的预约</li>
+                            <li> 重新安排管理员发起的预约</li>
+                            <li> 多班次自动重新排班</li>
+                            <li> 重新安排批量预约</li>
+
+                        </ul>
+                    </div>
+                </li>
+                <li class="bg-white my-2 rounded-lg overflow-hidden shadow-lg" x-data="accordion(6)">
+                    <h2 @click="handleClick()" class="flex flex-row justify-between items-center p-3 cursor-pointer">
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934]">药店</span>
+                        <i class="fa-solid fa-plus transition-all duration-500" :class="handleRotate()"></i>
+                    </h2>
+                    <div x-ref="tab" :style="handleToggle()"
+                        class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
+                        <ul
+                            class="p-3 text-[#115934] space-y-1 list-disc pl-8 lg:text-[20px] md:text-[16px] text-[15px]">
+
+                            <li>药物配发账单转账</li>
+
+                        </ul>
+                    </div>
+                </li>
+                <li class="bg-white my-2 rounded-lg overflow-hidden shadow-lg" x-data="accordion(7)">
+                    <h2 @click="handleClick()" class="flex flex-row justify-between items-center p-3 cursor-pointer">
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934]">药房选项卡</span>
+                        <i class="fa-solid fa-plus transition-all duration-500" :class="handleRotate()"></i>
+                    </h2>
+                    <div x-ref="tab" :style="handleToggle()"
+                        class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
+                        <ul
+                            class="p-3 text-[#115934] space-y-1 list-disc pl-8 lg:text-[20px] md:text-[16px] text-[15px]">
+                            <li> 药物收集归档</li>
+                            <li> 药房转移标签</li>
+                            <li> 付款后自动药房转账</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="bg-white my-2 rounded-lg overflow-hidden shadow-lg" x-data="accordion(8)">
+                    <h2 @click="handleClick()" class="flex flex-row justify-between items-center p-3 cursor-pointer">
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934]">账单和保险</span>
+                        <i class="fa-solid fa-plus transition-all duration-500" :class="handleRotate()"></i>
+                    </h2>
+                    <div x-ref="tab" :style="handleToggle()"
+                        class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
+                        <ul
+                            class="p-3 text-[#115934] space-y-1 list-disc pl-8 lg:text-[20px] md:text-[16px] text-[15px]">
+
+                            <li> 确认保险详情</li>
+                            <li> “标记为已付款”标记选项</li>
+
+                        </ul>
+                    </div>
+                </li>
+                <li class="bg-white my-2 rounded-lg overflow-hidden shadow-lg" x-data="accordion(9)">
+                    <h2 @click="handleClick()" class="flex flex-row justify-between items-center p-3 cursor-pointer">
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934]">仪表板</span>
+                        <i class="fa-solid fa-plus transition-all duration-500" :class="handleRotate()"></i>
+                    </h2>
+                    <div x-ref="tab" :style="handleToggle()"
+                        class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
+                        <ul
+                            class="p-3 text-[#115934] space-y-1 list-disc pl-8 lg:text-[20px] md:text-[16px] text-[15px]">
+
+                            <li> 实时队列列表导出 (PDF)</li>
+                            <li> 今日预约导出 (PDF)</li>
+                            <li> 患者注释仪表板视图</li>
+                            <li> 类别前缀定制</li>
+                            <li> 临床报告仪表板视图</li>
+
+                        </ul>
+                    </div>
+                </li>
+                <li class="bg-white my-2 rounded-lg overflow-hidden shadow-lg" x-data="accordion(10)">
+                    <h2 @click="handleClick()" class="flex flex-row justify-between items-center p-3 cursor-pointer">
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934]">无声服务</span>
+                        <i class="fa-solid fa-plus transition-all duration-500" :class="handleRotate()"></i>
+                    </h2>
+                    <div x-ref="tab" :style="handleToggle()"
+                        class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
+                        <ul
+                            class="p-3 text-[#115934] space-y-1 list-disc pl-8 lg:text-[20px] md:text-[16px] text-[15px]">
+
+                            <li>无声服务类别选项</li>
+
+                        </ul>
+                    </div>
+                </li>
+                <li class="bg-white my-2 rounded-lg overflow-hidden shadow-lg" x-data="accordion(11)">
+                    <h2 @click="handleClick()" class="flex flex-row justify-between items-center p-3 cursor-pointer">
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934]">直播队列</span>
+                        <i class="fa-solid fa-plus transition-all duration-500" :class="handleRotate()"></i>
+                    </h2>
+                    <div x-ref="tab" :style="handleToggle()"
+                        class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
+                        <ul
+                            class="p-3 text-[#115934] space-y-1 list-disc pl-8 lg:text-[20px] md:text-[16px] text-[15px]">
+                            <li> 患者的 WhatsApp 实时队列链接</li>
+                            <li> 仅限管理员实时队列添加</li>
+                            <li> 二维码实时排队入场</li>
+                            <li> 快速访问创建（无详细信息）</li>
+                            <li> 自动结束所服务患者的就诊</li>
+                            <li> 自动患者阶段转换</li>
+                            <li> 取消服务按钮功能</li>
+                            <li> 缺席时自动取消访问</li>
+                            <li> 患者登记确认</li>
+                            <li> 预定的预约队列转换</li>
+                            <li> 医生的病人分配功能</li>
+                            <li> 自动暂停的公交服务</li>
+                            <li> 打印实时队列列表（PDF 导出）</li>
+                            <li> 预约的队列优先级</li>
+                            <li> 通过令牌号识别队列</li>
+                            <li> 门内诊时间外的患者服务转移功能</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="bg-white my-2 rounded-lg overflow-hidden shadow-lg" x-data="accordion(12)">
+                    <h2 @click="handleClick()" class="flex flex-row justify-between items-center p-3 cursor-pointer">
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934]">实时队列通知</span>
+                        <i class="fa-solid fa-plus transition-all duration-500" :class="handleRotate()"></i>
+                    </h2>
+                    <div x-ref="tab" :style="handleToggle()"
+                        class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
+                        <ul
+                            class="p-3 text-[#115934] space-y-1 list-disc pl-8 lg:text-[20px] md:text-[16px] text-[15px]">
+
+                            <li> 实时队列更新通知</li>
+                            <li> 患者状态通知</li>
+                            <li> 缺席通知</li>
+                            <li> 队列延迟警报通知</li>
+                            <li> 延长服务时间通知</li>
+                            <li> 队列关闭通知</li>
+                            <li> 确认延迟消息</li>
+                            <li> 队列过载通知</li>
+                            <li> 预计等待时间更新通知</li>
+                            <li> 队列重定向通知</li>
+                            <li> 弹出 30 分钟排队提醒</li>
+                            <li> 已出发通知</li>
+                            <li> 诊所更新的自动通知</li>
+
+                        </ul>
+                    </div>
+                </li>
+                <li class="bg-white my-2 rounded-lg overflow-hidden shadow-lg" x-data="accordion(13)">
+                    <h2 @click="handleClick()" class="flex flex-row justify-between items-center p-3 cursor-pointer">
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934]">附加功能
+                        </span>
+                        <i class="fa-solid fa-plus transition-all duration-500" :class="handleRotate()"></i>
+                    </h2>
+                    <div x-ref="tab" :style="handleToggle()"
+                        class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
+                        <ul
+                            class="p-3 text-[#115934] space-y-1 list-disc pl-8 lg:text-[20px] md:text-[16px] text-[15px]">
+                            <li> 自动报告</li>
+                            <li> 医生姓名上的可用插槽视图</li>
+                            <li> 在同一周内重新安排预约</li>
+                            <li> 删除 Whatsapp 选择加入</li>
+                            <li> 不满意票总结</li>
+                            <li> 分析页面数据验证</li>
+                            <li> Google日历预约集成</li>
+                            <li> 就诊选项卡中的患者时间表</li>
+                            <li> 楚普远程支持</li>
+                            <li> 用户满意度：医生简介和评论</li>
+                            <li> 电子邮件营销活动</li>
+                            <li> 多分支访问</li>
+                            <li> 计费支付网关</li>
+                            <li> 楚普移动应用程序</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+
+    <div class="px-5 2xl:px-0 bg-[#fbf7f4]  md:py-16 py-10 ">
+        <div class=" max-w-7xl mx-auto">
+
+            <div
+                class="flex sm:flex-row flex-col items-center justify-center sm:gap-2 gap-1.5 text-[#F26522] lg:text-[80px] md:text-[60px] text-[30px]   font-bold ">
+                如何使用 <img src="/Docs/Assets/Images/Home/chup.svg" class="lg:h-20 md:h-16 h-8" alt=""> <img
+                    src="/Docs/Assets/Images/Home/questionMark.svg" class="lg:h-20 md:h-16 h-8" alt="">
+            </div>
+            <p
+                class="text-[14px] md:text-[24px] text-center text-[#115934] max-w-[978px] w-full mx-auto lg:leading-tight lg:text-[32px]">
+                Chup 的工作就像 ABC 一样简单。他们仍在等待，但他们可以方便地在家里等待。因为在现场，等待的时间感觉更长。
+            </p>
+
+
+            <div class="grid sm:grid-cols-2 md:gap-16 gap-10 md:mt-16 mt-10">
+
+                <div class="flex flex-col gap-5 w-full">
+                    <img src="/Docs/Assets/Images/Home/howChupWork1.webp" alt="">
+                    <p class="text-[#115934] lg:leading-tight font-medium lg:text-[38px] md:text-[24px] text-[16px]">
+                        客户收到一个
+                        来自他们诊所的短信 </p>
+                </div>
+                <div class="flex flex-col gap-5 w-full">
+                    <img src="/Docs/Assets/Images/Home/howChupWork2.webp" alt="">
+                    <p class="text-[#115934] lg:leading-tight font-medium lg:text-[38px] md:text-[24px] text-[16px]">
+                        客户加入实时队列或预约 </p>
+                </div>
+                <div class="flex flex-col gap-5 w-full">
+                    <img src="/Docs/Assets/Images/Home/howChupWork3.webp" alt="">
+                    <p class="text-[#115934] lg:leading-tight font-medium lg:text-[38px] md:text-[24px] text-[16px]">
+                        客户可以获得实时更新，以便他们可以根据诊所的实时情况以最短的时间到达诊所
+                    </p>
+                </div>
+                <div class="flex flex-col gap-5 w-full">
+                    <img src="/Docs/Assets/Images/Home/howChupWork4.webp" alt="">
+                    <p class="text-[#115934] lg:leading-tight font-medium lg:text-[38px] md:text-[24px] text-[16px]">
+                        客户接到电话时
+                        就代表轮到他们了</p>
+                </div>
+                <div class="flex flex-col gap-5 w-full">
+                    <img src="/Docs/Assets/Images/Home/howChupWork5.webp" alt="">
+                    <p class="text-[#115934] lg:leading-tight font-medium lg:text-[38px] md:text-[24px] text-[16px]">
+                        客户得到多项服务（如果有需要）</p>
+                </div>
+                <div class="flex flex-col gap-5 w-full">
+                    <img src="/Docs/Assets/Images/Home/howChupWork6.webp" alt="">
+                    <p class="text-[#115934] lg:leading-tight font-medium lg:text-[38px] md:text-[24px] text-[16px]">
+                        客户获得多项服务（如果有需要）</p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="px-5 2xl:px-0 bg-[#F26522]  md:py-16 py-10 relative">
+        <img src="/Docs/Assets/Images/Home/customerToJoin.webp"
+            class="max-w-[200px] w-full lg:hidden absolute top-0 -left-10" alt="">
+        <div class=" max-w-[1200px] w-full mx-auto z-10">
+
+            <div class="flex items-center justify-between z-20 gap-5">
+
+                <div class="flex max-w-[738px] w-full items-center z-30 justify-center gap-8">
+                    <img src="/Docs/Assets/Images/Home/MandarinChoose.svg" class="max-w-[27px] w-full lg:block hidden" alt="">
+                    <div class="lg:text-start text-center">
+                        <img src="/Docs/Assets/Images/Home/MandarinChoose2.svg" class="max-w-[175.33px] mx-auto w-full lg:hidden"
+                            alt="">
+                        <h2 class="font-bold lg:text-[60px] md:text-[32px] text-[29px] leading-tight">您希望客户如何加入您的候补名单或预订时间。</h2>
+                        <p class="lg:text-[32px] md:text-[20px] text-[14px] pt-5">Chup支持多种注册方式，您可以选择您的企业和客户喜欢的方式。</p>
+                    </div>
+                </div>
+                <img src="/Docs/Assets/Images/Home/customerToJoin.webp" class="max-w-[342px] w-full lg:block hidden"
+                    alt="">
+            </div>
+
+
+            <div class="flex flex-wrap justify-center md:mt-16 mt-10 lg:gap-16 gap-5 sm:w-auto w-[300px] mx-auto ">
+
+                <div
+                    class="flex flex-col text-center items-center gap-5 lg:max-w-[180px] md:max-w-[120px] max-w-[100px] w-full">
+                    <img src="/Docs/Assets/Images/Home/customerToJoin1.webp"
+                        class="lg:max-w-[240px]  md:max-w-[160px] max-w-[74.05px] w-full" alt="">
+                    <div class="">
+                        <h2 class="lg:text-[30px] pb-2 font-medium md:leading-tight md:text-[20px] text-[16px] ">
+                            自动的
+                        </h2>
+                        <p class="lg:text-[18px] md:text-[16px] text-[12px]">客户自动接收短信
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="flex flex-col text-center items-center gap-5 lg:max-w-[180px] md:max-w-[120px] max-w-[100px] w-full">
+                    <img src="/Docs/Assets/Images/Home/customerToJoin2.webp"
+                        class="lg:max-w-[240px]  md:max-w-[160px] max-w-[74.05px] w-full" alt="">
+                    <div class="">
+                        <h2 class="lg:text-[30px] pb-2 font-medium md:leading-tight md:text-[20px] text-[16px] ">在线的
+                        </h2>
+                        <p class="lg:text-[18px] md:text-[16px] text-[12px]">通过 Google 的网络链接，
+                            或您的网站</p>
+                    </div>
+                </div>
+                <div
+                    class="flex flex-col text-center items-center gap-5 lg:max-w-[180px] md:max-w-[120px] max-w-[100px] w-full">
+                    <img src="/Docs/Assets/Images/Home/customerToJoin3.webp"
+                        class="lg:max-w-[240px]  md:max-w-[160px] max-w-[74.05px] w-full" alt="">
+                    <div class="">
+                        <h2 class="lg:text-[30px] pb-2 font-medium md:leading-tight md:text-[20px] text-[16px] ">二维码
+                        </h2>
+                        <p class="lg:text-[18px] md:text-[16px] text-[12px]">客户自动接收短信
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="flex flex-col text-center items-center gap-5 lg:max-w-[180px] md:max-w-[120px] max-w-[100px] w-full">
+                    <img src="/Docs/Assets/Images/Home/customerToJoin4.webp"
+                        class="lg:max-w-[240px]  md:max-w-[160px] max-w-[74.05px] w-full" alt="">
+                    <div class="">
+                        <h2 class="lg:text-[30px] pb-2 font-medium md:leading-tight md:text-[20px] text-[16px] ">亭
+                        </h2>
+                        <p class="lg:text-[18px] md:text-[16px] text-[12px]">通过平板电脑注册</p>
+                    </div>
+                </div>
+                <div
+                    class="flex flex-col text-center items-center gap-5 lg:max-w-[180px] md:max-w-[120px] max-w-[100px] w-full">
+                    <img src="/Docs/Assets/Images/Home/customerToJoin5.webp"
+                        class="lg:max-w-[240px]  md:max-w-[160px] max-w-[74.05px] w-full" alt="">
+                    <div class="">
+                        <h2 class="lg:text-[30px] pb-2 font-medium md:leading-tight md:text-[20px] text-[16px] ">
+                            通话和短信
+                        </h2>
+                        <p class="lg:text-[18px] md:text-[16px] text-[12px]">通话后收到短信
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <div class="px-5 2xl:px-0 bg-[#fbf7f4]  md:py-16 py-10 ">
+        <div class=" max-w-7xl mx-auto">
+
+            <div
+                class="flex items-center sm:flex-row flex-col justify-center sm:gap-2 gap-1.5 text-[#F26522] lg:text-[80px] md:text-[60px] text-[30px]   font-bold">
+                为什么选择 <img src="/Docs/Assets/Images/Home/chup.svg" class="lg:h-20 md:h-16 h-8" alt="">  <img
+                    src="/Docs/Assets/Images/Home/questionMark.svg" class="lg:h-20 md:h-16 h-8" alt="">
+            </div>
+            <p
+                class="text-[14px] md:text-[24px] text-center text-[#115934] max-w-[978px] w-full mx-auto lg:leading-tight lg:text-[32px]">
+                为什么与市场上的其他解决方案相比，Chup可以解决您的队列问题？
+            </p>
+
+            <div class="flex flex-col gap-7 md:mt-16 mt-10">
+
+                <div class="bg-[#f1e4da] md:p-12 p-5 flex lg:flex-row flex-col items-center lg:gap-16 gap-6 rounded-md">
+                    <img src="/Docs/Assets/Images/Home/whyChupWork1.webp"
+                        class="lg:max-w-[240px] max-w-[145px] mx-auto w-full" alt="">
+                    <div class="text-[#115934] md:text-start text-center">
+                        <h2 class="lg:text-[38px] md:text-[22.01px] text-[18px] font-bold lg:pb-5 pb-2">动态排队系统</h2>
+                        <p class="lg:text-[32px] md:text-[18.53px] text-[14px] lg:leading-tight">使用机器学习算法，该应用程序将解决服务时间、紧急休息、延误和现场发生的所有情况，以确保客户获得最新的预计等待时间（实时队列）或重新预约的时间（预约预订）。
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-[#f1e4da] md:p-12 p-5 flex lg:flex-row flex-col items-center lg:gap-16 gap-6 rounded-md">
+                    <img src="/Docs/Assets/Images/Home/whyChupWork2.webp"
+                        class="lg:max-w-[240px] max-w-[145px] mx-auto w-full" alt="">
+                    <div class="text-[#115934] md:text-start text-center">
+                        <h2 class="lg:text-[38px] md:text-[22.01px] text-[18px] font-bold lg:pb-5 pb-2">不需要下载应用程序</h2>
+                        <p class="lg:text-[32px] md:text-[18.53px] text-[14px] lg:leading-tight">您的用户或您的场所无需下载应用程序，因为所有内容都将存储在云端。对于现有客户，只需上传您的数据，他们无需执行任何操作，因为系统会在时间到时发送通知。</p>
+                    </div>
+                </div>
+                <div class="bg-[#f1e4da] md:p-12 p-5 flex lg:flex-row flex-col items-center lg:gap-16 gap-6 rounded-md">
+                    <img src="/Docs/Assets/Images/Home/whyChupWork3.webp"
+                        class="lg:max-w-[240px] max-w-[145px] mx-auto w-full" alt="">
+                    <div class="text-[#115934] md:text-start text-center">
+                        <h2 class="lg:text-[38px] md:text-[22.01px] text-[18px] font-bold lg:pb-5 pb-2">自助预订、自助排队、自助取消</h2>
+                        <p class="lg:text-[32px] md:text-[18.53px] text-[14px] lg:leading-tight">您的客户可以自己处理所有事情，避免与接待员长时间打电话进行预订、加入实时队列、重新安排或取消以及通知任何延误或到达。
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-[#f1e4da] md:p-12 p-5 flex lg:flex-row flex-col items-center lg:gap-16 gap-6 rounded-md">
+                    <img src="/Docs/Assets/Images/Home/whyChupWork4.webp"
+                        class="lg:max-w-[240px] max-w-[145px] mx-auto w-full" alt="">
+                    <div class="text-[#115934] md:text-start text-center">
+                        <h2 class="lg:text-[38px] md:text-[22.01px] text-[18px] font-bold lg:pb-5 pb-2">
+                            自动频繁提醒</h2>
+                        <p class="lg:text-[32px] md:text-[18.53px] text-[14px] lg:leading-tight">该应用程序会提醒您实时排队的排队位置。对于相关预约，该应用程序将默认发送通知——提前 1 天、4 小时、2 小时和 30 分钟，以便他们可以计划并且不会忘记。
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-[#f1e4da] md:p-12 p-5 flex lg:flex-row flex-col items-center lg:gap-16 gap-6 rounded-md">
+                    <img src="/Docs/Assets/Images/Home/whyChupWork5.webp"
+                        class="lg:max-w-[240px] max-w-[145px] mx-auto w-full" alt="">
+                    <div class="text-[#115934] md:text-start text-center">
+                        <h2 class="lg:text-[38px] md:text-[22.01px] text-[18px] font-bold lg:pb-5 pb-2">合并预约</h2>
+                        <p class="lg:text-[32px] md:text-[18.53px] text-[14px] lg:leading-tight">大多数预约和队列应用程序都会失败，因为实际上有太多预约。 Chup 的工作方式是将这两种复杂的情况完美地融合在一起。</p>
+                    </div>
+                </div>
+                <div class="bg-[#f1e4da] md:p-12 p-5 flex lg:flex-row flex-col items-center lg:gap-16 gap-6 rounded-md">
+                    <img src="/Docs/Assets/Images/Home/whyChupWork6.webp"
+                        class="lg:max-w-[240px] max-w-[145px] mx-auto w-full" alt="">
+                    <div class="text-[#115934] md:text-start text-center">
+                        <h2 class="lg:text-[38px] md:text-[22.01px] text-[18px] font-bold lg:pb-5 pb-2">无需购买硬件</h2>
+                        <p class="lg:text-[32px] md:text-[18.53px] text-[14px] lg:leading-tight">Chup 在云端工作。您可以选择不购买任何硬件。您甚至可以100%使用手机管理您的场所。只要您的场所有互联网连接，电视和平板电脑都是好的选择。</p>
+                    </div>
+                </div>
+                <div class="bg-[#f1e4da] md:p-12 p-5 flex lg:flex-row flex-col items-center lg:gap-16 gap-6 rounded-md">
+                    <img src="/Docs/Assets/Images/Home/whyChupWork7.webp"
+                        class="lg:max-w-[240px] max-w-[145px] mx-auto w-full" alt="">
+                    <div class="text-[#115934] md:text-start text-center">
+                        <h2 class="lg:text-[38px] md:text-[22.01px] text-[18px] font-bold lg:pb-5 pb-2">
+                            紧急休息 </h2>
+                        <p class="lg:text-[32px] md:text-[18.53px] text-[14px] lg:leading-tight">事实上，提供者可能需要稍微休息一会，该应用程序可以通知并重新安排预约和实时排队人员，以便他们可以继续在其他地方等待，或选择重新安排。</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="px-5 2xl:px-0 bg-[#f26522]  md:py-16 py-10 ">
+        <div class=" max-w-7xl mx-auto">
+
+            <div
+                class="sm:flex items-center justify-center sm:gap-2 text-center gap-1.5 text-[#000000] lg:text-[80px] md:text-[60px] text-[30px]   ">
+                卓普工业&nbsp;<b>解决方案</b>
+                <!-- <img src="/Docs/Assets/Images/Home/PEWELESAIAN.svg" class="lg:h-28 pl-3 mx-auto sm:mx-0 md:h-16 h-12"
+                    alt=""> -->
+            </div>
+
+
+            <div class="flex flex-wrap items-center justify-center md:mt-16 mt-10 lg:gap-16 gap-5">
+
+                <div class="flex flex-col text-center items-center gap-5 lg:max-w-[250px] md:max-w-[160px] w-full">
+                    <img src="/Docs/Assets/Images/Home/industry1.webp"
+                        class="lg:max-w-[240px]  md:max-w-[160px] max-w-[87.14px] w-full" alt="">
+                    <h2 class="lg:text-[38px] font-medium md:leading-tight text-[22px] ">政府
+                        服务
+                    </h2>
+                </div>
+                <div class="flex flex-col text-center items-center gap-5 lg:max-w-[250px] md:max-w-[160px] w-full">
+                    <img src="/Docs/Assets/Images/Home/industry2.webp"
+                        class="lg:max-w-[240px]  md:max-w-[160px] max-w-[87.14px] w-full" alt="">
+                    <h2 class="lg:text-[38px] font-medium md:leading-tight text-[22px] ">卫生保健</h2>
+                </div>
+                <div class="flex flex-col text-center items-center gap-5 lg:max-w-[250px] md:max-w-[160px] w-full">
+                    <img src="/Docs/Assets/Images/Home/industry3.webp"
+                        class="lg:max-w-[240px]  md:max-w-[160px] max-w-[87.14px] w-full" alt="">
+                    <h2 class="lg:text-[38px] font-medium md:leading-tight text-[22px] ">汽车</h2>
+                </div>
+                <div class="flex flex-col text-center items-center gap-5 lg:max-w-[250px] md:max-w-[160px] w-full">
+                    <img src="/Docs/Assets/Images/Home/industry4.webp"
+                        class="lg:max-w-[240px]  md:max-w-[160px] max-w-[87.14px] w-full" alt="">
+                    <h2 class="lg:text-[38px] font-medium md:leading-tight text-[22px] ">沙龙/水疗中心</h2>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="px-5 2xl:px-0 bg-[#ffffff]  md:py-16 py-10 ">
+        <div class=" max-w-7xl mx-auto">
+
+            <div class="flex items-center justify-center text-center">
+                <div
+                    class="flex sm:flex-row flex-col flex-wrap max-w-[1200px] w-full mx-auto items-center justify-center sm:gap-2 gap-1.5 text-[#F26522] lg:text-[80px] md:text-[60px] text-[30px]   font-bold xl:text-nowrap">
+                    使用 <img src="/Docs/Assets/Images/Home/chup.svg" class="lg:h-20 xl:mx-0 mx-auto md:h-16 h-8"
+                        alt="">  <span class="flex items-center gap-2">的好处 <img
+                            src="/Docs/Assets/Images/Home/questionMark.svg" class="lg:h-20 md:h-16 h-8 xl:mx-0 mx-auto"
+                            alt=""></span>
+
+                </div>
+            </div>
+
+
+            <div class="flex flex-col gap-7 md:mt-16 mt-10">
+
+                <div class="bg-[#f1e4da] md:p-12 p-5 flex lg:flex-row flex-col items-center lg:gap-16 gap-6 rounded-md">
+                    <img src="/Docs/Assets/Images/Home/benefit1.webp"
+                        class="lg:max-w-[240px] max-w-[145px] mx-auto w-full" alt="">
+                    <div class="text-[#115934] md:text-start text-center">
+                        <h2 class="lg:text-[38px] md:text-[22.01px] text-[18px] font-bold lg:pb-5 pb-2">解决您的排队问题</h2>
+                        <p class="lg:text-[32px] md:text-[18.53px] text-[14px] lg:leading-tight">没有人喜欢等待，如果你解决了这个问题，你就比别人领先了一步。
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-[#f1e4da] md:p-12 p-5 flex lg:flex-row flex-col items-center lg:gap-16 gap-6 rounded-md">
+                    <img src="/Docs/Assets/Images/Home/benefit2.webp"
+                        class="lg:max-w-[240px] max-w-[145px] mx-auto w-full" alt="">
+                    <div class="text-[#115934] md:text-start text-center">
+                        <h2 class="lg:text-[38px] md:text-[22.01px] text-[18px] font-bold lg:pb-5 pb-2">更多业务和回头客</h2>
+                        <p class="lg:text-[32px] md:text-[18.53px] text-[14px] lg:leading-tight">当你珍惜别人的时间时，他们会带着好心情离开你的场所，并告诉别人你的优点。</p>
+                    </div>
+                </div>
+                <div class="bg-[#f1e4da] md:p-12 p-5 flex lg:flex-row flex-col items-center lg:gap-16 gap-6 rounded-md">
+                    <img src="/Docs/Assets/Images/Home/benefit3.webp"
+                        class="lg:max-w-[240px] max-w-[145px] mx-auto w-full" alt="">
+                    <div class="text-[#115934] md:text-start text-center">
+                        <h2 class="lg:text-[38px] md:text-[22.01px] text-[18px] font-bold lg:pb-5 pb-2">
+                            重要见解和数据</h2>
+                        <p class="lg:text-[32px] md:text-[18.53px] text-[14px] lg:leading-tight">您可以评估业务瓶颈，例如特定资源或服务的等待时间，并立即采取行动。</p>
+                    </div>
+                </div>
+                <div class="bg-[#f1e4da] md:p-12 p-5 flex lg:flex-row flex-col items-center lg:gap-16 gap-6 rounded-md">
+                    <img src="/Docs/Assets/Images/Home/benefit4.webp"
+                        class="lg:max-w-[240px] max-w-[145px] mx-auto w-full" alt="">
+                    <div class="text-[#115934] md:text-start text-center">
+                        <h2 class="lg:text-[38px] md:text-[22.01px] text-[18px] font-bold lg:pb-5 pb-2">提升员工的幸福感</h2>
+                        <p class="lg:text-[32px] md:text-[18.53px] text-[14px] lg:leading-tight">告别那些因等待过度而对员工进行严厉批评的顾客。</p>
+                    </div>
+                </div>
+                <div class="bg-[#f1e4da] md:p-12 p-5 flex lg:flex-row flex-col items-center lg:gap-16 gap-6 rounded-md">
+                    <img src="/Docs/Assets/Images/Home/benefit5.webp"
+                        class="lg:max-w-[240px] max-w-[145px] mx-auto w-full" alt="">
+                    <div class="text-[#115934] md:text-start text-center">
+                        <h2 class="lg:text-[38px] md:text-[22.01px] text-[18px] font-bold lg:pb-5 pb-2">
+                            灵活的休息和工作时间</h2>
+                        <p class="lg:text-[32px] md:text-[18.53px] text-[14px] lg:leading-tight">需要走出去，闭关一下吗？需要打几个电话吗？去吧。每个人都会收到通知，这样他们就不必来得太早并进行不必要的等待。</p>
+                    </div>
+                </div>
+                <div class="bg-[#f1e4da] md:p-12 p-5 flex lg:flex-row flex-col items-center lg:gap-16 gap-6 rounded-md">
+                    <img src="/Docs/Assets/Images/Home/benefit6.webp"
+                        class="lg:max-w-[240px] max-w-[145px] mx-auto w-full" alt="">
+                    <div class="text-[#115934] md:text-start text-center">
+                        <h2 class="lg:text-[38px] md:text-[22.01px] text-[18px] font-bold lg:pb-5 pb-2">评论
+                        </h2>
+                        <p class="lg:text-[32px] md:text-[18.53px] text-[14px] lg:leading-tight">客户可以选择留下评论，以便您可以改进您的服务。如果他们对服务感到满意，也可以选择 Google评论。</p>
+                    </div>
+                </div>
+                <div class="bg-[#f1e4da] md:p-12 p-5 flex lg:flex-row flex-col items-center lg:gap-16 gap-6 rounded-md">
+                    <img src="/Docs/Assets/Images/Home/benefit7.webp"
+                        class="lg:max-w-[240px] max-w-[145px] mx-auto w-full" alt="">
+                    <div class="text-[#115934] md:text-start text-center">
+                        <h2 class="lg:text-[38px] md:text-[22.01px] text-[18px] font-bold lg:pb-5 pb-2">停车问题
+                        </h2>
+                        <p class="lg:text-[32px] md:text-[18.53px] text-[14px] lg:leading-tight">随着人们准确地来到他们的位置，您有限的停车位将不再是问题。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="px-5 2xl:px-0 bg-[#f1e4da]  md:py-16 py-10 ">
+        <div class=" max-w-7xl mx-auto">
+
+            <h2
+                class="text-[#F26522] lg:text-[80px] md:text-[60px] text-[30px] md:leading-[78px] leading-[39px] font-bold max-w-[980px]  w-full mx-auto lg:leading-[104px] text-center">
+                常见问题</h2>
+
+
+
+            <!-- <h3
+                class="text-[14px] md:text-[24px] font-bold pt-4 pb-1 text-center text-[#115934] max-w-[978px] w-full mx-auto lg:leading-tight lg:text-[32px]">
+                Soalan Kerap Ditanya
+            </h3> -->
+            <p
+                class="text-[14px] md:text-[24px] text-center text-[#115934] max-w-[978px] w-full mx-auto lg:leading-tight lg:text-[32px]">
+                常见问题解释了 ChupOnline 如何优化您的操作、减少等待时间并提高患者满意度
+            </p>
+
+
+            <ul class="flex flex-col sm:mt-10 mt-6 bg-white p-5 rounded-xl">
+                <li class="my-2 rounded-xl overflow-hidden border border-[#9D9D9D] bg-[#fbf7f4]" x-data="accordion(14)">
+                    <h2 @click="handleClick()" class="flex flex-row justify-between items-center p-3 cursor-pointer">
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">ChupOnline是什么？</span>
+                        <i class="fa-solid fa-plus transition-all duration-500" :class="handleRotate()"></i>
+                    </h2>
+                    <div x-ref="tab" :style="handleToggle()"
+                        class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
+                        <p class="p-3 text-[#115934] lg:text-[20px] md:text-[16px] text-[15px]">
+                            ChupOnline 是世界上最动态的排队和预约应用程序，可根据现场真实情况进行更新，让人们在访问前收到通知。
+                        </p>
+                    </div>
+                </li>
+                <li class="my-2 rounded-xl overflow-hidden border border-[#9D9D9D] bg-[#fbf7f4]" x-data="accordion(15)">
+                    <h2 @click="handleClick()" class="flex flex-row justify-between items-center p-3 cursor-pointer">
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">Chup 和其他应用程序有什么区别？</span>
+                        <i class="fa-solid fa-plus transition-all duration-500" :class="handleRotate()"></i>
+                    </h2>
+                    <div x-ref="tab" :style="handleToggle()"
+                        class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
+                        <p class="p-3 text-[#115934] lg:text-[20px] md:text-[16px] text-[15px]">
+                            与依赖严格准时的传统系统不同，Chup 能够适应实时条件，确保患者准时到达。
+                        </p>
+                    </div>
+                </li>
+                <li class="my-2 rounded-xl overflow-hidden border border-[#9D9D9D] bg-[#fbf7f4]" x-data="accordion(16)">
+                    <h2 @click="handleClick()" class="flex flex-row justify-between items-center p-3 cursor-pointer">
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">为什么患者等待时间对医院很重要？</span>
+                        <i class="fa-solid fa-plus transition-all duration-500" :class="handleRotate()"></i>
+                    </h2>
+                    <div x-ref="tab" :style="handleToggle()"
+                        class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
+                        <p class="p-3 text-[#115934] lg:text-[20px] md:text-[16px] text-[15px]">
+                            减少等待时间可以提高效率、患者满意度并简化医院运营。
+                        </p>
+                    </div>
+                </li>
+                <li class="my-2 rounded-xl overflow-hidden border border-[#9D9D9D] bg-[#fbf7f4]" x-data="accordion(17)">
+                    <h2 @click="handleClick()" class="flex flex-row justify-between items-center p-3 cursor-pointer">
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">Chup 与 CMS 或 HIS 系统兼容吗？</span>
+                        <i class="fa-solid fa-plus transition-all duration-500" :class="handleRotate()"></i>
+                    </h2>
+                    <div x-ref="tab" :style="handleToggle()"
+                        class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
+                        <p class="p-3 text-[#115934] lg:text-[20px] md:text-[16px] text-[15px]">
+                            是的，Chup 与 CMS 和 HIS 一起来管理动态队列，并实时同步患者和时间表数据。
+                        </p>
+                    </div>
+                </li>
+                <li class="my-2 rounded-xl overflow-hidden border border-[#9D9D9D] bg-[#fbf7f4]" x-data="accordion(18)">
+                    <h2 @click="handleClick()" class="flex flex-row justify-between items-center p-3 cursor-pointer">
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">谁可以使用 ChupOnline？</span>
+                        <i class="fa-solid fa-plus transition-all duration-500" :class="handleRotate()"></i>
+                    </h2>
+                    <div x-ref="tab" :style="handleToggle()"
+                        class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
+                        <p class="p-3 text-[#115934] lg:text-[20px] md:text-[16px] text-[15px]">
+                            Chup 专注于医疗保健，但也可以应用于政府、沙龙、水疗中心和汽车等行业。
+                        </p>
+                    </div>
+                </li>
+
+                <div class="flex items-center justify-center mt-4">
+                    <a href="/FAQ.html">
+                        <button class="bg-[#115934] text-white py-2.5 px-5 rounded-lg poppins font-medium">查看更多</button>
+                    </a>
+                </div>
+
+            </ul>
+
+
+            <div class="md:p-10 p-5 bg-[#115934] mt-10 rounded-xl">
+                <h2
+                    class="text-white lg:text-[40px] md:text-[40px] text-[24px] leading-[31.2px] font-medium md:leading-[52px]">
+                    不知道“等待需要多长时间”比等待本身更令人沮丧。立即使用 ChupOnline 减少不必要的现场等待！
+                </h2>
+
+                <div class="flex md:items-center md:flex-row flex-col justify-between md:gap-2 gap-6 mt-10">
+                    <div class="flex items-center md:flex-row flex-col gap-3 w-full">
+                        <a href="https://wa.me/60173756569">
+                            <button
+                                class="text-white md:w-auto w-full  bg-[#F26522] flex py-5 px-6 items-center rounded-lg gap-3 lg:text-[22px] md:text-[22px] text-[18px] font-bold">
+                                <img src="/Docs/Assets/Images/Navbar/whatsapp.png" class="max-w-[26.67px] w-full"
+                                    alt="">
+                                    免费咨询</button>
+                        </a>
+                        <a href="mailto:hello@chup.online" class="md:w-auto w-full">
+                            <div
+                                class="text-white md:w-auto w-full  bg-[#F26522] flex py-2 font-bold px-6 items-center rounded-lg gap-4 lg:text-[22px] md:text-[22px] text-[18px] ">
+                                <img src="/Docs/Assets/Images/Home/mail.svg" class="max-w-[26.67px] w-full" alt="">
+                                <div class="">
+                                    给我们发电子邮件 <p class="lg:text-[19px] text-[14px] font-normal">hello@chup.online</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <a href="/index.html">
+                        <img src="/Docs/Assets/Images/Global/whiteLogo.svg" class="max-w-[189.22px] w-full" alt="">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="" id="dynamic-footer"></div>
+
+
+
+
+
+</body>
+<script src="/Languages/Mandarin/Docs/javascript/footer.js"></script>
+<script src=" https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.store('accordion', {
+            tab: 0
+        });
+
+        Alpine.data('accordion', (idx) => ({
+            init() {
+                this.idx = idx;
+            },
+            idx: -1,
+            handleClick() {
+                this.$store.accordion.tab = this.$store.accordion.tab === this.idx ? 0 : this.idx;
+            },
+            handleRotate() {
+                return this.$store.accordion.tab === this.idx ? 'rotate-180' : '';
+            },
+            handleToggle() {
+                return this.$store.accordion.tab === this.idx ? `max-height: ${this.$refs.tab.scrollHeight}px` : '';
+            }
+        }));
+    })
+
+
+    const openNav = document.getElementById("openNav")
+    const responsiveNav = document.getElementById("responsiveNav")
+    const closeNav = document.getElementById("closeNav")
+
+    openNav.addEventListener('click', () => {
+        responsiveNav.style.width = "100%"
+    })
+    closeNav.addEventListener('click', () => {
+        responsiveNav.style.width = "0rem"
+    })
+
+    const lenis = new Lenis()
+
+    function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+</script>
+
+</html>

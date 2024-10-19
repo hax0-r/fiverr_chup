@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Docs/Assets/Images/Global/favIcon.png" type="image/x-icon">
+    <title>Chup!</title>
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/Docs/Styles/global.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
+
+</head>
+
+<body>
+
+        <nav class="bg-[#f1e4da]">
+                <div class="flex h-16 lg:px-16 px-8 items-center justify-between mx-auto">
+                    <a href="/Languages/Mandarin/index.html">
+                        <img src="/Docs/Assets/Images/Global/logo.svg" alt="log" class="h-9 md:h-12">
+                    </a>
+                    <ul class="items-center text-[#115934] xl:flex hidden gap-7 text-[17px]">
+                        <li><a href="/Languages/Mandarin/about.html" class="navUnderLine">关于我们</a></li>
+                        <li><a href="/Languages/Mandarin/case-study.html" class="navUnderLine">案例研究</a></li>
+                        <li><a href="/Languages/Mandarin/News/chup-news.html" class="navUnderLine">新闻与博客</a></li>
+                        <li><a href="/Languages/Mandarin/FAQ.html" class="navUnderLine">常见问题</a></li>
+                        <li><a href="/Languages/Mandarin/Products.html" class="navUnderLine">产品</a></li>
+                        <li class="flex items-center gap-2 cursor-pointer relative py-5" id="dropDownNav">
+                            更多信息<i class="fa-solid fa-angle-down mt-1 text-[#115934] text-sm transition-all duration-300"></i>
+        
+                            <div
+                                class="border-2 border-[#a9a099] w-52 rounded-lg absolute  bg-[#f1e4da] left-1 overflow-hidden fadeIn">
+                                <ul>
+                                    <a href="/Languages/Mandarin/Career.html">
+                                        <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">职业生涯</li>
+                                    </a>
+                                    <a href="/Languages/Mandarin/Security-Compliance.html">
+                                        <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">安全合规</li>
+                                    </a>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class=" items-center gap-4 sm:flex hidden">
+        
+                        <div class="relative py-3 mainlanguage">
+                            <div
+                                class="flex items-center  gap-1.5 border-2 border-[#115934]  p-2.5 transition-all cursor-pointer rounded-xl language">
+                                <img src="/Docs/Assets/Images/Global/language.svg" class="max-w-[19.5px] w-full" alt="">
+                                <i class="fa-solid fa-angle-down text-sm text-[#115934] transition-all duration-500"></i>
+                                <div
+                                    class="border-2 border-[#115934] text-[#115934] w-32 rounded-lg absolute z-20  bg-[#f1e4da] top-16 right-0 overflow-hidden fadeIn div2">
+                                    <ul>
+                                        <a href="/index.html">
+                                            <li class="px-5 py-3 transition-all hover:bg-[#115934]  hover:text-white">English
+                                            </li>
+                                        </a>
+                                        <a href="/Languages/Malaysia/index.html">
+                                            <li class="px-5 py-3 transition-all hover:bg-[#115934]  hover:text-white">
+                                                Malaysia
+                                            </li>
+                                        </a>
+                                        <a href="/Languages/Indonesia/index.html">
+                                            <li class="px-5 py-3 transition-all hover:bg-[#115934]  hover:text-white">
+                                                Indonesia</li>
+                                        </a>
+                                        <a href="/Languages/Thailand/index.html">
+                                            <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">Thailand
+                                            </li>
+                                        </a>
+                                        <a href="/Languages/Mandarin/index.html">
+                                            <li class="px-5 py-3 transition-all hover:bg-[#115934] font-bold hover:text-white">
+                                                Mandarin
+                                            </li>
+                                        </a>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <button
+                            class="bg-[#115934] xl:flex hidden text-[#F1E4DA] px-6 py-2.5 rounded-lg transition-all items-center justify-center gap-2 font-medium ">
+                            <img src="/Docs/Assets/Images/Navbar/whatsapp.png" class="h-[18px]" alt="">
+                            联络我们
+                        </button>
+                    </div>
+                    <i class="fa-solid fa-bars text-2xl xl:hidden cursor-pointer text-[#115934]" id="openNav"></i>
+                </div>
+            </nav>
+    <!-- responsive Navbar -->
+    <div class="fixed top-0 right-0 h-screen bg-[#f1e4da] text-[#115934] font-36 z-50 transition-all duration-500"
+        id="responsiveNav" style="width: 0;">
+        <div class="px-10 pt-10 pb-4 relative flex flex-col h-full justify-between">
+            <div class="">
+                <div class="flex items-center justify-between">
+                    <a href="/index.html">
+                        <img src="/Docs/Assets/Images/Global/logo.svg" class="h-[32px]" alt="">
+                    </a>
+                    <img src="/Docs/Assets/Images/Navbar/close.png" id="closeNav" class="h-[21px] cursor-pointer"
+                        alt="">
+                </div>
+                <ul class="mt-10 text-[#115934] flex flex-col text-[17px]">
+                    <a href="/about.html">
+                        <li class="py-4  poppins">About Us</li>
+                    </a>
+                    <a href="/case-study.html">
+                        <li class="py-4  poppins">Case Study</li>
+                    </a>
+                    <a href="/News/chup-news.html">
+                        <li class="py-4  poppins">News & Blog</li>
+                    </a>
+                    <a href="/FAQ.html">
+                        <li class="py-4  poppins">FAQ</li>
+                    </a>
+                    <a href="/Products.html">
+                        <li class="py-4  poppins">Products</li>
+                    </a>
+                    <li class="py-5" x-data="accordion(2)">
+                        <h2 @click="handleClick()" class="flex flex-row gap-2 items-center cursor-pointer">
+                            <span>More</span>
+                            <i :class="handleRotate()"
+                                class="fa-solid fa-angle-down mt-1 text-[#115934] text-sm transition-all duration-300"></i>
+                        </h2>
+                        <div x-ref="tab" :style="handleToggle()"
+                            class="overflow-hidden max-h-0 duration-500 transition-all">
+                            <ul class="pl-5 pt-5">
+                                <a href="/Career.html">
+                                    <li class="py-3">Career</li>
+                                </a>
+                                <a href="/Security-Compliance.html">
+                                    <li class="py-3">Security Compliance</li>
+                                </a>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <a href="">
+                <button
+                    class="bg-[#115934] flex w-full text-[#F1E4DA] p-3 rounded-lg transition-all items-center justify-center gap-4 font-medium ">
+                    <img src="/Docs/Assets/Images/Navbar/whatsapp.png" class="h-5" alt="">
+                    WhatsApp Us
+                </button>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="px-5 pt-5 pb-14 w-full bg-[#fbf7f4]">
+        <div class="max-w-7xl mx-auto w-full">
+            <div class="grid items-center md:grid-cols-3 sm:grid-cols-2 grid-cols-1 justify-center sm:gap-5 gap-3 mt-14"
+                id="cardContainer"></div>
+        </div>
+    </div>
+
+    <div class="px-5 py-14 w-full bg-[#ffede5]">
+        <div class="max-w-7xl mx-auto w-full">
+
+            <h2
+                class="text-[#115934] flex items-center gap-2 font-semibold text-center mx-auto justify-center md:flex-row flex-col lg:text-[60px] text-[32px]">
+                Nilai bekerja di <img src="/Docs/Assets/Images/Global/logo.svg"
+                    class="lg:max-w-[250px] max-w-[195px] w-full" alt=""></h2>
+
+            <div class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 sm:gap-5 gap-3 mt-10 justify-center items-center"
+                id="cardContainer2">
+                <!-- Cards will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="" id="dynamic-footer"></div>
+</body>
+<script src="/Languages/Mandarin/Docs/javascript/footer.js"></script>
+<script src=" https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.store('accordion', {
+            tab: 0
+        });
+
+        Alpine.data('accordion', (idx) => ({
+            init() {
+                this.idx = idx;
+            },
+            idx: -1,
+            handleClick() {
+                this.$store.accordion.tab = this.$store.accordion.tab === this.idx ? 0 : this.idx;
+            },
+            handleRotate() {
+                return this.$store.accordion.tab === this.idx ? 'rotate-180' : '';
+            },
+            handleToggle() {
+                return this.$store.accordion.tab === this.idx ? `max-height: ${this.$refs.tab.scrollHeight}px` : '';
+            }
+        }));
+    })
+
+
+    const openNav = document.getElementById("openNav")
+    const responsiveNav = document.getElementById("responsiveNav")
+    const closeNav = document.getElementById("closeNav")
+
+    openNav.addEventListener('click', () => {
+        responsiveNav.style.width = "100%"
+    })
+    closeNav.addEventListener('click', () => {
+        responsiveNav.style.width = "0rem"
+    })
+
+    const lenis = new Lenis()
+
+    function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+
+
+    const cardsData = [
+        {
+            title: "Machine Learning",
+            imgSrc: "/Docs/Assets/Images/career/Frame1.png",
+            buttonText: "Apply",
+            link: "Machine-Learning",
+        },
+        {
+            title: "Data Science",
+            imgSrc: "/Docs/Assets/Images/career/Frame1.png",
+            buttonText: "Apply",
+            link: "Data-Science",
+        },
+        {
+            title: "Front End",
+            imgSrc: "/Docs/Assets/Images/career/Frame1.png",
+            buttonText: "Apply",
+            link: "Front-End",
+        },
+        {
+            title: "Product Manager",
+            imgSrc: "/Docs/Assets/Images/career/Frame1.png",
+            buttonText: "Apply",
+            link: "Product-Manager",
+        },
+        {
+            title: "DevOps",
+            imgSrc: "/Docs/Assets/Images/career/Frame1.png",
+            buttonText: "Apply",
+            link: "DevOps",
+        },
+        {
+            title: "Marketing",
+            imgSrc: "/Docs/Assets/Images/career/Frame1.png",
+            buttonText: "Apply",
+            link: "Marketing",
+        },
+    ]
+
+    function renderCards(cards) {
+        const cardContainer = document.getElementById('cardContainer');
+        cardContainer.innerHTML = '';
+
+        cards.forEach(card => {
+            const cardHTML = `
+                        <div class="card bg-white border-2 mx-auto flex flex-col h-full md:gap-5 gap-3 p-4 pt-6  w-full rounded-xl justify-center"
+                    data-title="${card.title}">
+                    <h2 class="md:text-[26px] text-[18px] font-medium ">${card.title}</h2>
+
+                    <div class="flex flex-col gap-1">
+                        <div class="flex items-center gap-2">
+                            <img src="/Docs/Assets/Images/career/bag.svg" class="md:max-w-[19.5px] max-w-[13px] w-full" alt="">
+                            <p class="text-[#00000099] md:text-[18px] text-[14px]">Latihan Industri & Penuh Waktu</p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <img src="/Docs/Assets/Images/career/location.svg" class="md:max-w-[19.5px] max-w-[13px] w-full" alt="">
+                            <p class="text-[#00000099] md:text-[18px] text-[14px]">Remote</p>
+                        </div>
+                    </div>
+
+                    <a href="/Languages/Malaysia/Career/${card.link}.html">
+                        <button
+                            class="bg-[#F26522] transition-all w-full font-medium hover:bg-[#fd6823] text-white p-2.5 w-full text-center rounded-full">Mohon</button>
+                    </a>
+                </div>
+    `;
+
+            cardContainer.innerHTML += cardHTML;
+        });
+    }
+
+    renderCards(cardsData);
+
+
+    // Array of objects representing card two data
+    const cardsData2 = [
+        {
+            title: "Budaya Kolaboratif",
+            description: "ChupOnline menghargai kerja berpasukan dan kolaborasi.",
+            imgSrc: "/Docs/Assets/Images/career/work1.webp"
+        },
+        {
+            title: "Peluang Kerja Remote",
+            description: "ChupOnline membolehkan anda berkolaborasi dan berkembang dari mana-mana.",
+            imgSrc: "/Docs/Assets/Images/career/work2.webp"
+        },
+        {
+            title: "Budaya Berorientasikan Inovasi",
+            description: "Inovasi dan kreativiti digalakkan.",
+            imgSrc: "/Docs/Assets/Images/career/work3.webp"
+        },
+        {
+            title: "Keseimbangan Kerja-Hidup",
+            description: "ChupOnline menyokong keseimbangan kerja-hidup dengan fleksibiliti.",
+            imgSrc: "/Docs/Assets/Images/career/work4.webp"
+        },
+        {
+            title: "Pembelajaran Berterusan",
+            description: "Pendidikan yang berterusan dan pertumbuhan kemahiran digalakkan.",
+            imgSrc: "/Docs/Assets/Images/career/work5.webp"
+        },
+        {
+            title: "Waktu Kerja Fleksibel",
+            description: "Membolehkan anda mencipta jadual kerja yang sesuai dengan gaya hidup untuk menyeimbangkan produktiviti.",
+            imgSrc: "/Docs/Assets/Images/career/work6.webp"
+        },
+    ];
+
+    function renderCards2(cards) {
+        const cardContainer = document.getElementById('cardContainer2');
+        cardContainer.innerHTML = ''; // Clear previous cards
+
+        cards.forEach(card => {
+            const cardHTML = `
+      <div class="bg-white text-[#115934] p-5 md:pr-0 rounded-xl mx-auto w-full h-full">
+        <h2 class="font-semibold lg:text-[32px] text-[18px] md:pr-5 max-w-[300px] w-full md:leading-[41.6px] sm:pb-5 pb-2">${card.title}</h2>
+        <div class="flex items-start justify-between gap-2 lg:text-[18px] text-[14px] poppins">
+          <p>${card.description}</p>
+          <img src="${card.imgSrc}" class="max-w-[225px] w-full md:block hidden" alt="${card.title}">
+        </div>
+      </div>
+    `;
+
+            cardContainer.innerHTML += cardHTML;
+        });
+    }
+
+    renderCards2(cardsData2);
+
+
+
+</script>
+
+</html>

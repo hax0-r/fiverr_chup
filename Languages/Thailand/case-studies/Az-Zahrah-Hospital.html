@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Docs/Assets/Images/Global/favIcon.png" type="image/x-icon">
+    <title>Chup!</title>
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/Docs/Styles/global.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
+
+</head>
+
+<body>
+
+    <nav class="bg-[#ffede5]">
+        <div class="flex h-20 lg:px-16 px-8 items-center justify-between mx-auto">
+            <a href="/Languages/Malaysia/index.html">
+                <img src="/Docs/Assets/Images/Global/logo.svg" alt="log" class="h-9 md:h-12">
+            </a>
+            <ul class="items-center text-[#115934] xl:flex hidden gap-7 text-[17px]">
+                <li><a href="/Languages/Malaysia/about.html" class="navUnderLine">Tentang Kami</a></li>
+                <li><a href="/Languages/Malaysia/case-study.html" class="navUnderLine">Kajian Kes</a></li>
+                <li><a href="/Languages/Malaysia/News/chup-news.html" class="navUnderLine">Berita & Blog</a></li>
+                <li><a href="/Languages/Malaysia/FAQ.html" class="navUnderLine">Soalan Lazim</a></li>
+                <li><a href="/Languages/Malaysia/Products.html" class="navUnderLine">Produk</a></li>
+                <li class="flex items-center gap-2 cursor-pointer relative py-5" id="dropDownNav">
+                    Lain-Lain<i
+                        class="fa-solid fa-angle-down mt-1 text-[#115934] text-sm transition-all duration-300"></i>
+
+                    <div
+                        class="border-2 border-[#a9a099] z-30 w-64 rounded-lg absolute  bg-[#ffede5] left-1 overflow-hidden fadeIn">
+                        <ul>
+                            <a href="/Languages/Malaysia/Career.html">
+                                <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">Kerjaya</li>
+                            </a>
+                            <a href="/Languages/Malaysia/Security-Compliance.html">
+                                <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">Pematuhan
+                                    Keselamatan</li>
+                            </a>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <div class=" items-center gap-4 sm:flex hidden">
+
+                <div class="relative py-3 mainlanguage">
+                    <div
+                        class="flex items-center  gap-1.5 border-2 border-[#115934]  p-2.5 transition-all cursor-pointer rounded-xl language">
+                        <img src="/Docs/Assets/Images/Global/language.svg" class="max-w-[19.5px] w-full" alt="">
+                        <i class="fa-solid fa-angle-down text-sm text-[#115934] transition-all duration-500"></i>
+                        <div
+                            class="border-2 border-[#115934]  text-[#115934] w-32 rounded-lg absolute z-30  bg-[#f1e4da] top-16 right-0 overflow-hidden fadeIn div2">
+                            <ul>
+                                <a href="/index.html">
+                                    <li class="px-5 py-3 transition-all hover:bg-[#115934]  hover:text-white">English
+                                    </li>
+                                </a>
+                                <a href="/Languages/Malaysia/index.html">
+                                    <li class="px-5 py-3 transition-all hover:bg-[#115934]  font-bold  hover:text-white">Malaysia
+                                    </li>
+                                </a>
+                                <a href="/Languages/Indonesia/index.html">
+                                    <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">
+                                        Indonesia</li>
+                                </a>
+                                <a href="/Languages/Thailand/index.html">
+                                    <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">Thailand
+                                    </li>
+                                </a>
+                                <a href="/Languages/Mandarin/index.html">
+                                    <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">Mandarin
+                                    </li>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <button
+                    class="bg-[#115934] xl:flex hidden text-[#F1E4DA] px-6 py-2.5 rounded-lg transition-all items-center justify-center gap-2 font-medium ">
+                    <img src="/Docs/Assets/Images/Navbar/whatsapp.png" class="h-[18px]" alt="">
+                    Hubungi Kami
+                </button>
+            </div>
+            <i class="fa-solid fa-bars text-2xl xl:hidden cursor-pointer text-[#115934]" id="openNav"></i>
+        </div>
+    </nav>
+    <!-- responsive Navbar -->
+    <div class="fixed top-0 right-0 h-screen bg-[#ffede5] text-[#115934] font-36 z-50 transition-all duration-500"
+        id="responsiveNav" style="width: 0;">
+        <div class="px-10 pt-10 pb-4 relative flex flex-col h-full justify-between">
+            <div class="">
+                <div class="flex items-center justify-between">
+                    <a href="/index.html">
+                        <img src="/Docs/Assets/Images/Global/logo.svg" class="h-[32px]" alt="">
+                    </a>
+                    <img src="/Docs/Assets/Images/Navbar/close.png" id="closeNav" class="h-[21px] cursor-pointer"
+                        alt="">
+                </div>
+                <ul class="mt-10 text-[#115934] flex flex-col text-[17px]">
+                    <a href="/about.html">
+                        <li class="py-4  poppins">About Us</li>
+                    </a>
+                    <a href="/case-study.html">
+                        <li class="py-4  poppins">Case Study</li>
+                    </a>
+                    <a href="/News/chup-news.html">
+                        <li class="py-4  poppins">News & Blog</li>
+                    </a>
+                    <a href="/FAQ.html">
+                        <li class="py-4  poppins">FAQ</li>
+                    </a>
+                    <a href="/Products.html">
+                        <li class="py-4  poppins">Products</li>
+                    </a>
+                    <li class="py-5" x-data="accordion(2)">
+                        <h2 @click="handleClick()" class="flex flex-row gap-2 items-center cursor-pointer">
+                            <span>More</span>
+                            <i :class="handleRotate()"
+                                class="fa-solid fa-angle-down mt-1 text-[#115934] text-sm transition-all duration-300"></i>
+                        </h2>
+                        <div x-ref="tab" :style="handleToggle()"
+                            class="overflow-hidden max-h-0 duration-500 transition-all">
+                            <ul class="pl-5 pt-5">
+                                <a href="/Career.html">
+                                    <li class="py-3">Career</li>
+                                </a>
+                                <a href="/Security-Compliance.html">
+                                    <li class="py-3">Security Compliance</li>
+                                </a>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <a href="">
+                <button
+                    class="bg-[#115934] flex w-full text-[#ffede5] p-3 rounded-lg transition-all items-center justify-center gap-4 font-medium ">
+                    <img src="/Docs/Assets/Images/Navbar/whatsapp.png" class="h-5" alt="">
+                    WhatsApp Us
+                </button>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="heroSection flex flex-col px-5 relative py-16 items-center justify-center w-full bg-[#ffede5]">
+
+        <div
+            class="px-5 pt-5 max-w-7xl w-full mx-auto text-[18px] absolute top-0  transition-all font-semibold text-[#000000]  poppins ">
+            <a href="/Languages/Malaysia/case-study.html"
+                class="hover:opacity-65 duration-500 inline-flex items-center gap-3">
+                <i class="fa-solid fa-angle-left"></i>
+                Kembali
+            </a>
+        </div>
+
+        <img src="/Docs/Assets/Images/caseStudy/img2.png" class="md:max-w-[276.35px] max-w-[200px] w-full " alt="">
+        <h1
+            class="font-bold uppercase md:text-[50px] text-[36px] text-center max-w-[1200px] sm:w-auto w-[327px] md:leading-[65px] leading-[39px] text-[#115934]">
+
+            Integrasi Efisien untuk Pengalaman Pesakit yang Cemerlang: Penyelesaian Chup
+            Integrasi Efisien untuk Pengalaman Pasien yang Luar Biasa: Solusi Chup <span
+                class="bg-[#f26522]  rounded-lg  text-white ">Mengurangkan Masa Menunggu menjadi Hanya 5 Minit</span> DI
+            AZ-ZAHRAH.
+        </h1>
+    </div>
+
+
+    <div class="bg-[#fbf7f4]">
+
+
+        <div class="max-w-7xl w-full mx-auto lg:pt-16 pt-10 p-5">
+            <div class="flex justify-center items-start lg:flex-row flex-col w-full lg:gap-14 gap-6">
+                <div class="max-w-[427px] w-full">
+                    <div class="flex justify-between w-full items-center gap-2">
+                        <div class="">
+                            <h2 class="text-[#F26522] md:text-[18px] text-[14px] font-bold poppins">Syarikat</h2>
+                            <p class="text-[#115934] md:text-[24px] text-[16px]">Hospital Islam Az-Zahrah </p>
+                        </div>
+                        <div class="">
+                            <h2 class="text-[#F26522] md:text-[18px] text-[14px] font-bold poppins">Industri</h2>
+                            <p class="text-[#115934] md:text-[24px] text-[16px]">Hospital </p>
+                        </div>
+                    </div>
+                    <div class="mt-7">
+                        <h2 class="text-[#F26522] md:text-[18px] text-[14px] font-bold poppins">Alamat</h2>
+                        <p class="text-[#115934] md:text-[24px] text-[16px]">Jalan Medan Pb 1, Seksyen 9, 43650 Bandar
+                            Baru Bangi, Selangor, Malaysia</p>
+                    </div>
+                    <div class="mt-7">
+                        <h2 class="text-[#F26522] md:text-[18px] text-[14px] font-bold poppins">Tarikh mula</h2>
+                        <p class="text-[#115934] md:text-[24px] text-[16px]">20 Maret 2024</p>
+                    </div>
+                </div>
+
+                <div class="w-[1px] h-[22rem] lg:block hidden bg-[#AEAEB2]"></div>
+                <div class="w-full h-[1px] bg-[#AEAEB2] lg:hidden"></div>
+
+                <p class="text-[#115934] max-w-[753px] w-full md:text-[24px] text-[16px]">
+                    Ditubuhkan pada tahun 1997, Hospital Az-Zahrah (HIAZ) adalah sebuah institusi multidisiplin yang
+                    <strong>mengintegrasikan nilai-nilai Islam ke dalam amalan perawatan kesihatannya</strong>.
+                    Didedikasikan untuk memberikan perawatan yang proaktif, profesional, dan berkualiti tinggi, hospital
+                    ini menawarkan servis khas 'Hospital Mesra Ibadah' dengan <strong>fokus pada kehangatan dan
+                        kecekapan</strong>. Dengan melaksanakan Chup Online, Az-Zahrah mengoptimumkan masa menunggu
+                    pesakit dan mengubah proses manual menjadi sistem yang <strong>terintegrasi dengan lancar,
+                        meningkatkan keseluruhan perjalanan pesakit</strong> sambil tetap setia kepada nilai-nilai
+                    terasnya
+                </p>
+
+            </div>
+        </div>
+
+
+        <div class="max-w-[1200px] w-full p-5 mx-auto flex items-center justify-between gap-5 md:gap-10">
+            <div class="sm:max-w-[570px]">
+                <img src="/Docs/Assets/Images/caseStudy/az/img1.webp" class=" w-full" alt="">
+            </div>
+            <div class="sm:max-w-[570px]">
+                <img src="/Docs/Assets/Images/caseStudy/az/img2.webp" class=" w-full" alt="">
+            </div>
+        </div>
+
+        <div class="max-w-7xl w-full mx-auto lg:py-16 py-8 ">
+
+            <div class="grid md:grid-cols-3 gap-x-2 gap-y-5">
+
+                <div class="text-center">
+                    <h2 class="md:text-[60px] text-[45px] font-bold text-[#F26522]">20 <span
+                            class="md:text-2xl text-lg font-semibold">Menit</span></h2>
+                    <p class="text-[#115934] md:text-[28px] text-[22px] font-medium ">Purata Masa Menunggu</p>
+                </div>
+                <div class="text-center mx-auto">
+                    <h2 class="md:text-[60px] text-[45px] font-bold text-[#F26522]">90%</h2>
+                    <p class="text-[#115934] md:text-[28px] text-[22px] font-medium ">Masalah Diselesaikan</p>
+                    <p class="text-[#115934] md:text-[22px] text-[17.5px]">*hari yang sama</p>
+                </div>
+                <div class="text-center mx-auto">
+                    <h2 class="md:text-[60px] text-[45px] font-bold text-[#F26522]">97%</h2>
+                    <p class="text-[#115934] md:text-[28px] text-[22px] font-medium ">Kadar Kejayaan</p>
+                    <p class="text-[#115934] md:text-[22px] text-[17.5px]">*Kemas kini Masa Nyata</p>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-x-2 gap-y-5 mt-12">
+                <div class="text-center">
+                    <h2 class="md:text-[60px] text-[45px] font-bold text-[#F26522]">98%</h2>
+                    <p class="text-[#115934] md:text-[28px] text-[22px] font-medium ">Kepuasan Pelanggan</p>
+                </div>
+                <div class="text-center">
+                    <h2 class="md:text-[60px] text-[45px] font-bold text-[#F26522]">614</h2>
+                    <p class="text-[#115934] md:text-[28px] text-[22px] font-medium ">Pesakit yang Dilayani</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-[#ffede5] p-5 lg:py-16 py-10">
+        <div class="flex md:items-center text-[#115934] max-w-7xl w-full mx-auto justify-between">
+            <i class="fa-solid fa-quote-left md:text-6xl text-3xl"></i>
+            <h1
+                class="flex md:text-[60px] text-[40px] font-semibold md:flex-row flex-col leading-tight items-center justify-center">
+                Sebelum&nbsp; <span class="text-[#F26522]"> Pelaksanaan</span></h1>
+            <i class="fa-solid fa-quote-right md:text-6xl text-3xl"></i>
+        </div>
+
+        <div class="max-w-7xl w-full mx-auto md:mt-14 mt-7">
+            <img src="../../../Docs/Assets/Images/caseStudy/az/Azahrah-min.webp" class="w-full" alt="">
+        </div>
+
+    </div>
+
+    <div class="bg-[#115934] p-5 lg:py-16 py-10">
+
+        <div class="max-w-7xl mx-auto w-full">
+            <div class="flex items-center justify-center md:flex-row flex-col md:gap-12 gap-4">
+                <h2 class="lg:text-[60px] text-[45px] md:max-w-[298px] leading-tight w-full font-semibold text-white">
+                    Cabaran <span class="text-[#F26522]">Utama</span></h2>
+                <p class="text-white lg:text-[24px] text-[16px] w-full poppins">Hospital Az-Zahrah menghadapi cabaran
+                    dengan <strong>proses manual yang ketinggalan zaman</strong>, yang menyebabkan masa menunggu yang
+                    panjang dan ketidakpuasan pesakit, terutama bagi mereka yang mempunyai keperluan khas. Kekurangan
+                    pemantauan pesakit menyebabkan <strong>kelewatan dan kesesakan, manakala jurang komunikasi
+                        membuatkan pesakit tidak pasti tentang status mereka</strong>. Integrasi tahap yang tidak
+                    mencukupi juga mengganggu komunikasi antara kakitangan dan pesakit
+                </p>
+            </div>
+            <p class="text-white pt-12 lg:text-[24px] text-[16px] w-full poppins">Integrasi antara <strong>pelbagai
+                    tahap telah
+                    menjadi kurang berkesan</strong>, dan komunikasi antara kakitangan dan pesakit kadangkala
+                menyebabkan salah
+                faham. Isu-isu ini kadang-kadang mengganggu aliran operasi.
+                <br><br>
+                Sistem 'siapa cepat, dia dapat' hospital menyebabkan <strong>kesesakan semasa waktu puncak</strong>,
+                dengan <strong>pesakit tiba
+                    awal dan menunggu sehingga 4 jam</strong>. Kecemasan doktor memperburuk kelewatan, yang
+                <strong>memberi kesan kepada
+                    kepuasan pelanggan</strong>.
+            </p>
+        </div>
+    </div>
+
+
+    <div class="bg-[#fbf7f4] p-5 lg:py-16 py-10">
+        <div class="max-w-7xl mx-auto w-full">
+
+            <h2 class="lg:text-[60px] text-[45px] text-center font-semibold text-[#115934]">Penyelesaian <span
+                    class="text-[#F26522]">Masalah</span></h2>
+            <p class="text-[#115934] text-center lg:text-[24px] text-[16px] w-full poppins">Hospital Az-Zahrah
+                bekerjasama dengan Chup Online untuk <strong>mengurangkan masa menunggu</strong> pesakit dan
+                meningkatkan pengurusan, bertujuan untuk mencapai <strong>kecekapan yang lebih baik</strong> dan
+                pengalaman pesakit yang lebih lancar
+            </p>
+
+
+            <div class="grid sm:grid-cols-3 gap-6 md:mt-16 mt-10">
+
+                <div class="flex flex-col md:gap-5 gap-2.5 w-full bg-white p-5 md:p-10 rounded-xl">
+                    <img src="/Docs/Assets/Images/caseStudy/ukmsc/solution1.webp"
+                        class="max-w-[252px] md:block hidden w-full mx-auto" alt="">
+                    <h2 class="text-[24px] font-semibold md:text-center text-[#115934]">Fitur Tutup Khusus</h2>
+                    <p class="text-[#115934] text-[18px] poppins md:text-center">Membolehkan pentadbir menjadualkan
+                        semula janji temu jika seorang doktor cuti.</p>
+                </div>
+                <div class="flex flex-col md:gap-5 gap-2.5 w-full bg-white p-5 md:p-10 rounded-xl">
+                    <img src="/Docs/Assets/Images/caseStudy/ukmsc/solution5.webp"
+                        class="max-w-[252px] md:block hidden w-full mx-auto" alt="">
+                    <h2 class="text-[24px] font-semibold md:text-center text-[#115934]">Pengesanan & Komunikasi Masa
+                        Nyata</h2>
+                    <p class="text-[#115934] text-[18px] poppins md:text-center">Sistem Chup menjejak masa menunggu dan
+                        kedudukan pesakit.</p>
+                </div>
+                <div class="flex flex-col md:gap-5 gap-2.5 w-full bg-white p-5 md:p-10 rounded-xl">
+                    <img src="/Docs/Assets/Images/caseStudy/ukmsc/solution4.webp"
+                        class="max-w-[252px] md:block hidden w-full mx-auto" alt="">
+                    <h2 class="text-[24px] font-semibold md:text-center text-[#115934]">Penggabungan Janji temu Dengan
+                        Giliran Langsung
+                    </h2>
+                    <p class="text-[#115934] text-[18px] poppins md:text-center">Menggabungkan janji temu dan pesakit
+                        tanpa janji temu ke dalam giliran langsung</p>
+                </div>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-6 mt-6">
+
+                <div class="flex flex-col md:gap-5 gap-2.5 w-full bg-white p-5 md:p-10 rounded-xl">
+                    <img src="/Docs/Assets/Images/caseStudy/ukmsc/solution3.webp"
+                        class="max-w-[252px] md:block hidden w-full mx-auto" alt="">
+                    <h2 class="text-[24px] font-semibold md:text-center text-[#115934]">Tiada Jurang Masa</h2>
+                    <p class="text-[#115934] text-[18px] poppins md:text-center">Meminimumkan jurang masa dengan
+                        menempah slot ke masa yang tersedia</p>
+                </div>
+                <div class="flex flex-col md:gap-5 gap-2.5 w-full bg-white p-5 md:p-10 rounded-xl">
+                    <img src="/Docs/Assets/Images/caseStudy/ukmsc/solution2.webp"
+                        class="max-w-[252px] md:block hidden w-full mx-auto" alt="">
+                    <h2 class="text-[24px] font-semibold md:text-center text-[#115934]">Terintegrasi Dengan HIS Dengan
+                        Tambah Tanggungan</h2>
+                    <p class="text-[#115934] text-[18px] poppins md:text-center">Beralih ke pengurusan data automatik,
+                        sambung dengan HIS hospital.</p>
+                </div>
+            </div>
+
+            <div class="w-full text-[#115934] sm:p-8 p-4 bg-white myShadow rounded-lg mt-10">
+                <h2 class=" lg:text-[60px] text-[24px] md:text-[36px] font-semibold">Fitur Tutup Khusus
+                </h2>
+                <img src="/Docs/Assets/Images/caseStudy/az/Picture1.webp"
+                    class="max-w-[1120px] select-none w-full mx-auto my-6 md:mt-10" alt="">
+                <p class="lg:text-[32px] md:text-[24px] text-[16px] ">Penjadualan janji temu telah dipertingkatkan,
+                    membolehkan Pembantu Klinik <strong>menyesuaikan janji temu dengan mudah</strong>. Ciri seperti
+                    Tutup Khusus dan
+                    Tutup Kecemasan menghalang kesesakan, manakala ciri On-Off mengoptimumkan waktu servis untuk
+                    mengurangkan kesesakan puncak.
+                    <br><br>
+                    Pesakit menerima <strong>pemberitahuan automatik tentang penjadualan semula janji temu</strong>,
+                    sama ada disebabkan
+                    oleh kecemasan atau penyesuaian umum. Ini memastikan mereka dimaklumkan tentang ketersediaan doktor
+                    yang terkini, mengelakkan kesulitan dan memastikan <strong>ketibaan tepat pada masanya</strong>.
+                    Sistem ini juga
+                    menghapuskan keperluan untuk menghubungi pesakit secara individu, menyelaraskan komunikasi dan
+                    meningkatkan pengalaman keseluruhan untuk kedua-dua pesakit dan kakitangan.
+                </p>
+            </div>
+            <div class="w-full text-[#115934] sm:p-8 p-4 bg-white myShadow rounded-lg mt-10">
+                <h2 class=" lg:text-[60px] text-[24px] md:text-[36px] font-semibold">Pengesanan & Komunikasi Masa Nyata
+                </h2>
+                <img src="/Docs/Assets/Images/caseStudy/az/Picture2.webp"
+                    class="max-w-[1120px] select-none w-full mx-auto my-6 md:mt-10" alt="">
+                <p class="lg:text-[32px] md:text-[24px] text-[16px] ">Di Chup, kami menggunakan <strong>WhatsApp untuk
+                        meningkatkan komunikasi dengan pesakit</strong>, menjadikannya lancar dan mudah. Pesakit dalam
+                    giliran langsung atau dengan janji temu yang dijadualkan menerima pemberitahuan dan peringatan tepat
+                    pada masanya melalui WhatsApp, disesuaikan mengikut tetapan pentadbir. Ini <strong>memastikan
+                        pesakit dimaklumkan tentang status mereka dan tindakan yang perlu diambil</strong>,
+                    menyelaraskan komunikasi dan <strong>mengurangkan follow-up manual</strong>. Pesakit juga menerima
+                    kemas kini mengenai anggaran masa menunggu semasa lawatan mereka, <strong>memastikan komunikasi yang
+                        jelas</strong>, menguruskan jangkaan, dan meningkatkan pengalaman keseluruhan mereka.
+                </p>
+            </div>
+            <div class="w-full text-[#115934] sm:p-8 p-4 bg-white myShadow rounded-lg mt-10">
+                <h2 class=" lg:text-[60px] text-[24px] md:text-[36px] font-semibold">Penggabungan Janji temu Dengan
+                    Giliran Langsung
+                </h2>
+                <img src="/Docs/Assets/Images/caseStudy/az/Picture3.webp"
+                    class="max-w-[1120px] select-none w-full mx-auto my-6 md:mt-10" alt="">
+                <p class="lg:text-[32px] md:text-[24px] text-[16px] ">Fitur Penggabungan Janji temu dengan Giliran
+                    Langsung mengintegrasikan janji temu yang dijadualkan dan pesakit tanpa janji temu ke dalam satu
+                    giliran masa nyata. Ini membolehkan pentadbir mengawasi dan mengurus semua pesakit untuk hari
+                    tersebut dari satu antaramuka, memastikan aliran pesakit yang teratur dan efisien. Dengan
+                    menggabungkan senarai ini, sistem memberikan <strong>pandangan menyeluruh mengenai jadual hari
+                        tersebut dan
+                        status pesakit</strong>, menyelaraskan operasi dan meningkatkan keseluruhan kecekapan.
+                    <br><br>
+                    Butang Ketibaan Awal secara signifikan memperbaiki proses daftar masuk untuk pesakit yang
+                    <strong>tiba awal
+                        dengan cepat</strong> menambah mereka ke dalam <strong>Giliran Langsung</strong>. Ciri ini
+                    membolehkan kakitangan penerimaan
+                    mengurus ketibaan awal dengan efisien, meningkatkan fleksibiliti penjadualan dan
+                    <strong>mengurangkan masa
+                        menunggu</strong>
+                </p>
+            </div>
+            <div class="w-full text-[#115934] sm:p-8 p-4 bg-white myShadow rounded-lg mt-10">
+                <h2 class=" lg:text-[60px] text-[24px] md:text-[36px] font-semibold">Fitur Tiada Jurang Masa
+                </h2>
+                <img src="/Docs/Assets/Images/caseStudy/az/Picture4.webp"
+                    class="max-w-[1120px] select-none w-full mx-auto my-6 md:mt-10" alt="">
+                <p class="lg:text-[32px] md:text-[24px] text-[16px] ">Sistem pengurusan janji temu kami yang canggih
+                    meningkatkan penjadualan dengan <strong>meminimumkan jurang antara janji temu dan mengurangkan masa
+                        penampan</strong>. Dengan menetapkan 'slot terhad', sistem ini mendorong pesakit untuk memilih
+                    dari masa yang tersedia terdekat, memastikan aliran lawatan yang berterusan dan <strong>penggunaan
+                        slot masa yang optimum</strong>. Pendekatan ini mengurangkan masa menunggu dan meningkatkan
+                    kecekapan operasi, mencipta proses penjadualan yang lebih teratur dan boleh diramal. Pesakit
+                    mendapat manfaat daripada lawatan yang tepat pada masanya dan lancar, manakala penyedia dapat
+                    mengurus jadual mereka <strong>dengan lebih tepat</strong>, membawa kepada peningkatan kualiti
+                    servis dan kepuasan keseluruhan
+                </p>
+            </div>
+            <div class="w-full text-[#115934] sm:p-8 p-4 bg-white myShadow rounded-lg mt-10">
+                <h2 class=" lg:text-[60px] text-[24px] md:text-[36px] font-semibold">Terintegrasi Dengan HIS Dengan
+                    Tambah Tanggungan
+                </h2>
+                <img src="/Docs/Assets/Images/caseStudy/ukmsc/Picture5.webp"
+                    class="max-w-[1120px] select-none w-full mx-auto my-6 md:mt-10" alt="">
+                <p class="lg:text-[32px] md:text-[24px] text-[16px] ">Chup Online terintegrasi dengan lancar dengan HIS
+                    hospital, mengautomasi pengurusan ID pesakit, MRN, dan data keluarga. Ia mengendalikan senario
+                    kompleks seperti MRN yang dikongsi untuk ahli keluarga dan data untuk bayi baru lahir, memastikan
+                    ketepatan dan kemas kini masa nyata. Fitur Tambah Tanggungan yang baru <strong>memudahkan
+                        pendaftaran sehingga 5 ahli keluarga bagi setiap lawatan</strong>. Integrasi ini
+                    <strong>mengurangkan tugas manual, meningkatkan ketepatan data</strong>, dan meningkatkan
+                    keseluruhan kecekapan operasi serta pengalaman pesakit.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="bg-[#FFEDE5]">
+        <div class="max-w-7xl w-full mx-auto p-5 md:py-16 py-10">
+            <div class="flex items-center justify-center md:flex-row flex-col md:gap-12 gap-4 text-[#115934]">
+                <h2 class="lg:text-[60px] text-[45px] md:max-w-[298px] leading-tight w-full font-semibold">
+                    Hasil <span class="text-[#F26522]">Kajian </span></h2>
+                <p class="lg:text-[24px] text-[16px] w-full poppins">Selepas pelaksanaan Chup Online, <strong>masa
+                        menunggu pesakit turun kepada 5-17 minit</strong>, dengan pesakit yang mempunyai keperluan khas
+                    menerima perawatan yang dipercepatkan. Kemas kini masa nyata dan pengurusan giliran meningkatkan
+                    <strong>kepuasan pesakit kepada 98%</strong>, kerana mereka sentiasa dimaklumkan sepanjang lawatan
+                    mereka, mengurangkan kebimbangan.
+                </p>
+            </div>
+
+            <img src="/Docs/Assets/Images/caseStudy/az/result.webp" class="max-w-[1200px] w-full my-10" alt="">
+
+            <p class="lg:text-[24px] text-[#115934] text-[16px] w-full poppins">Menurut papan pemuka Dr. Azmaniza
+                Baharudin, <strong>masa menunggu pesakit berkurang dengan ketara</strong>. Pesakit dengan janji temu
+                <strong>menunggu purata 3 minit</strong>, manakala tanpa janji temu menunggu sekitar 5 minit. Beberapa
+                pesakit dilihat dalam <strong>hanya 1 minit</strong>. Purata tempoh servis pula efisien, sekitar 28
+                minit, menunjukkan pengalaman yang cepat dan lancar.
+            </p>
+
+
+            <div class="bg-white rounded-md my-8 md:block hidden">
+                <h2 class=" mb-4 text-[12px] font-medium px-5 pt-3 poppins lg:text-[24px]">Ringkasan Undian WhatsApp
+                    Kepuasan</h2>
+                <table class="w-full table-auto border-collapse border-l">
+                    <thead class="lg:text-[24px] text-[12px]">
+                        <tr class="text-left border-t">
+                            <th class="px-4 py-2.5 flex gap-6 items-center bg-white text-center font-normal poppins">
+                                <img src="/Docs/Assets/Images/caseStudy/ukmsc/calender.svg" alt=""> <span>Month</span>
+                            </th>
+                            <th class="px-4 py-2.5 text-center bg-[#89E1B4] font-normal poppins"><i
+                                    class="fa-regular fa-thumbs-up"></i> <span>Berpuas hati</span></th>
+                            <th class="px-4 py-2.5 text-center bg-[#FFA29D] font-normal poppins"><i
+                                    class="fa-regular fa-thumbs-up rotate-180"></i> <span>Tidak puas</span></th>
+                            <th class="px-4 py-2.5 text-center bg-[#89E1B4] font-normal poppins"><i
+                                    class="fa-regular fa-thumbs-up"></i> <span>Berpuas hati (%)</span></th>
+                            <th class="px-4 py-2.5 text-center bg-[#FFA29D] font-normal poppins"><i
+                                    class="fa-regular fa-thumbs-up rotate-180"></i> <span>Tidak puas (%)</span></th>
+                        </tr>
+                    </thead>
+                    <tbody class="lg:text-[22px] text-[12px] font-normal">
+                        <tr>
+                            <td class="px-4 py-2.5">April 2024</td>
+                            <td class="px-4 text-center py-2.5 poppins bg-[#89E1B4]">275 Pesakit</td>
+                            <td class="px-4 text-center py-2.5 poppins bg-[#FFA29D]">6 Pesakit</td>
+                            <td class="px-4 text-center py-2.5 poppins bg-[#89E1B4]">98.00% Pesakit</td>
+                            <td class="px-4 text-center py-2.5 poppins bg-[#FFA29D]">2.00% Pesakit</td>
+                        </tr>
+                        <tr class="">
+                            <td class="px-4 py-2.5">Mac 2024</td>
+                            <td class="px-4 text-center py-2.5 poppins bg-[#89E1B4]">72 Pesakit</td>
+                            <td class="px-4 text-center py-2.5 poppins bg-[#FFA29D]">1 Pesakit</td>
+                            <td class="px-4 text-center py-2.5 poppins bg-[#89E1B4]">99.00% Pesakit</td>
+                            <td class="px-4 text-center py-2.5 poppins bg-[#FFA29D]">1.00% Pesakit</td>
+                        </tr>
+                        <tr class="border-b font-semibold">
+                            <td class="px-4 py-2.5">Total</td>
+                            <td class="px-4 text-center py-2.5 poppins bg-[#89E1B4]">347 Pesakit</td>
+                            <td class="px-4 text-center py-2.5 poppins bg-[#FFA29D]">7 Pesakit</td>
+                            <td class="px-4 text-center py-2.5 poppins bg-[#89E1B4]">98.02% Pesakit</td>
+                            <td class="px-4 text-center py-2.5 poppins bg-[#FFA29D]">1.98% Pesakit</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="bg-white rounded-md my-8 md:hidden">
+                <h2 class=" mb-4 text-[12px] font-medium px-5 pt-3 poppins lg:text-[24px]">Ringkasan Undian WhatsApp
+                    Kepuasan</h2>
+                <table class="w-full table-auto border-collapse border-l">
+                    <thead class="lg:text-[24px] text-[12px]">
+                        <tr class="text-left border-t">
+                            <th
+                                class="px-4 py-2.5 flex gap-6 items-center justify-center bg-white text-center font-normal poppins">
+                                <img src="/Docs/Assets/Images/caseStudy/ukmsc/calender.svg" class="h-4" alt="">
+                            </th>
+                            <th class="px-4 py-2.5 text-center bg-[#89E1B4] font-normal poppins"><i
+                                    class="fa-regular fa-thumbs-up"></i> </th>
+                            <th class="px-4 py-2.5 text-center bg-[#FFA29D] font-normal poppins"><i
+                                    class="fa-regular fa-thumbs-up rotate-180"></i></th>
+                            <th class="px-4 py-2.5 text-center bg-[#89E1B4] font-normal poppins"><i
+                                    class="fa-regular fa-thumbs-up"></i> </th>
+                            <th class="px-4 py-2.5 text-center bg-[#FFA29D] font-normal poppins"><i
+                                    class="fa-regular fa-thumbs-up rotate-180"></i></th>
+                        </tr>
+                    </thead>
+                    <tbody class="lg:text-[22px] text-[12px] font-normal">
+                        <tr>
+                            <td class="px-4 py-2.5">April 2024</td>
+                            <td class="px-4 text-center py-2.5 poppins bg-[#89E1B4]">275</td>
+                            <td class="px-4 text-center py-2.5 poppins bg-[#FFA29D]">6</td>
+                            <td class="px-4 text-center py-2.5 poppins bg-[#89E1B4]">98.00%</td>
+                            <td class="px-4 text-center py-2.5 poppins bg-[#FFA29D]">2.00%</td>
+                        </tr>
+                        <tr class="">
+                            <td class="px-4 py-2.5">March 2024</td>
+                            <td class="px-4 text-center py-2.5 poppins bg-[#89E1B4]">72</td>
+                            <td class="px-4 text-center py-2.5 poppins bg-[#FFA29D]">1</td>
+                            <td class="px-4 text-center py-2.5 poppins bg-[#89E1B4]">99.00%</td>
+                            <td class="px-4 text-center py-2.5 poppins bg-[#FFA29D]">1.00%</td>
+                        </tr>
+
+                        <tr class="border-b font-semibold">
+                            <td class="px-4 py-2.5">Total</td>
+                            <td class="px-4 text-center py-2.5 poppins bg-[#89E1B4]">347</td>
+                            <td class="px-4 text-center py-2.5 poppins bg-[#FFA29D]">7</td>
+                            <td class="px-4 text-center py-2.5 poppins bg-[#89E1B4]">98.24%</td>
+                            <td class="px-4 text-center py-2.5 poppins bg-[#FFA29D]">1.66%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+
+            <p class="lg:text-[24px] text-[#115934] text-[16px] w-full poppins"><strong>Kepuasan pengguna hampir
+                    100%</strong> semasa
+                fasa percubaan menonjolkan peningkatan ketara dalam kecekapan operasi dan pengalaman pesakit,
+                menunjukkan <strong>keberkesanan sistem</strong> dalam menyelaraskan aliran kerja dan meminimumkan
+                kelewatan.
+                <br><br>
+                Penyelarasan dengan HIS meningkatkan aliran pesakit, <strong>mencapai kadar kejayaan automasi sebanyak
+                    97%</strong> dan
+                mengurangkan kelewatan serta ralat. <strong>Beban kerja kakitangan berkurangan</strong>, dan kecekapan
+                servis meningkat,
+                semuanya dengan latihan yang minimum dan dalam tempoh masa yang singkat, walaupun terdapat isu Wi-Fi
+                pada awalnya dan penyesuaian perisian yang berterusan.
+                <br><br>
+                Dengan mengendalikan <strong>jumlah pesakit yang lebih tinggi dengan berkesan tanpa mengorbankan kualiti
+                    perawatan</strong>, Hospital Az-Zahrah memperbaiki hasil pesakit dan kecekapan operasi. Chup Online
+                <strong>adalah kunci
+                    kejayaan ini</strong>, meningkatkan produktiviti kakitangan, mengoptimumkan aliran pesakit, dan
+                mengurangkan
+                ketidakhadiran.
+            </p>
+
+        </div>
+    </div>
+
+
+    <div class="bg-[#115934]">
+        <div class="max-w-7xl w-full mx-auto p-5 md:py-16 py-10">
+            <div class="flex md:flex-row flex-col md:items-center justify-between">
+                <i class="fa-solid fa-quote-left text-white md:text-6xl text-4xl"></i>
+                <h2 class="lg:text-[60px] text-[45px] text-center font-semibold flex items-center text-[#ffffff]">
+                    Terima <span class="text-[#F26522]">Kasih</span></h2>
+                <i class="fa-solid fa-quote-right text-white md:text-6xl text-4xl md:block hidden"></i>
+            </div>
+            <p class="text-[#ffffff] text-center lg:text-[24px] md:mt-14 mt-8  text-[16px] w-full poppins">Kami sangat
+                berterima kasih atas kerjasama, maklum balas, dan komitmen anda yang teguh sepanjang perjalanan ini.
+                Sumbangan anda yang tidak ternilai telah memainkan peranan penting dalam memajukan masa depan di mana
+                servis kesihatan lebih tersusun, efisien, dan berfokus pada pesakit.
+                <br><br>
+            <p class="text-[#ffffff] lg:text-[24px] pb-4 md:mt-14 mt-8  text-[16px] w-full poppins">
+                Chup Online Sdn mengucapkan setinggi-tinggi penghargaan kepada pasukan Pengurusan HIAZ:
+            </p>
+            <ul class="space-y-1 list-disc text-[#ffffff] pl-7 lg:text-[24px] text-[16px] w-full poppins">
+                <li> Dr. Ahmad Syukri Jamaludin, Chief Executive Officer</li>
+                <li> En. Kamarulanizal Yusof, Head of Office Management</li>
+                <li> Puan Haifa Elayna Mohd Ramli, Head of Support Services Management</li>
+                <li> Puan Rozeelawati Md Nor, Head of Customer Relations</li>
+                <li> En. Mohd Noor Azmi Bin Ismail, Head of Information Technology (IT)</li>
+
+
+            </ul>
+            <p class="text-[#ffffff] lg:text-[24px] pb-4 md:mt-14 mt-8  text-[16px] w-full poppins">
+                Kami juga ingin mengucapkan terima kasih yang tulus kepada doktor pakar yang terlibat dari semua Klinik
+                O&G :
+            </p>
+            <ul class="space-y-1 list-disc text-[#ffffff] pl-7 lg:text-[24px] text-[16px] w-full poppins">
+                <li> Dr. Mashita Mohamed Kassim</li>
+                <li> Dr. Noraini Bt. Nor</li>
+                <li> Dr. Fazlina Hanum Bt. Mohd Ali</li>
+                <li> Dr. Anita Rina Binti Ali</li>
+                <li> Dr. Azmaniza Baharudin</li>
+            </ul>
+
+            <div class="mt-1 flex items-end justify-end">
+                <i class="fa-solid fa-quote-right text-white md:text-6xl text-4xl md:hidden"></i>
+            </div>
+
+            <h2
+                class="lg:text-[60px]  text-[45px] text-center justify-center md:gap-3 md:mt-16 mt-8 font-semibold xl:flex items-center text-[#ffffff]">
+                Apa yang hospital <span class="text-[#F26522]"> katakan tentang </span> <img
+                    src="/Docs/Assets/Images/caseStudy/ukmsc/chup.svg"
+                    class="md:max-w-[250px] max-w-[180px] md:mx-0 mx-auto w-full md:mt-0 mt-2" alt=""> </h2>
+
+            <div
+                class="max-w-[1200px] flex items-center  w-full md:flex-row flex-col justify-center mx-auto md:gap-16 gap-6 bg-[#FFEDE5] rounded-3xl md:p-10 p-5 mt-8">
+                <img src="/Docs/Assets/Images/caseStudy/az/man.webp" class="md:max-w-[300px] max-w-[150px] w-full"
+                    alt="">
+                <div class="text-[#115934] w-full poppins md:text-start text-center">
+                    <h2 class="font-bold md:text-[30px] text-[18px]">Dr. Ahmad Syukri Jamaludin</h2>
+                    <p class="font-semibold md:text-[20px] text-[14px]">Chief Executive Officer <br> Az-Zahrah Hospital
+                    </p>
+                    <p class="md:text-[24px] text-[16px] pt-7">“Jadual waktu masa nyata dan automasi janji temu
+                        ChupOnline telah menyelaraskan aliran kerja kami. Pesakit lebih dimaklumkan, dan kakitangan kami
+                        kini dapat memberi tumpuan lebih kepada tugas kritikal, sambil mengurangkan masa menunggu dengan
+                        ketara.”</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="bg-[#FFEDE5]">
+        <div class="max-w-7xl w-full mx-auto p-5 md:py-16 py-10">
+            <div class="md:p-10 p-5 bg-[#115934] rounded-xl">
+                <h2
+                    class="text-white lg:text-[52px] md:text-[40px] text-[32px] leading-[31.2px] font-medium md:leading-[52px]">
+                    Alami yang Terbaik dalam perawatan Kesihatan Islam di Hospital Az-Zahrah
+                </h2>
+
+                <p class="md:text-[38px] text-[24px] text-white font-medium pt-8 pb-5 leading-tight">
+                    Tempah dengan Chup untuk mengalami gabungan sempurna <span class="text-[#F26522]">nilai-nilai Islam dan perawatan moden di
+                        Hospital Az-Zahrah</span>. Kemudahan pelbagai disiplin ini berdedikasi untuk menawarkan perawatan
+                    profesional dan berkualiti tinggi dalam pelbagai kepakaran, semuanya <span class="text-[#F26522]">dengan sentuhan peribadi</span>.
+                </p>
+
+                <!-- <button
+                    class="text-white md:w-auto w-full md:text-nowrap bg-[#F26522] flex py-4 px-6 items-center rounded-lg gap-3 lg:text-[22px] md:text-[22px] text-[18px] font-bold">
+                    <img src="/Docs/Assets/Images/caseStudy/ukmsc/schedule.svg" class="max-w-[26.67px] w-full" alt="">
+                    Schedule Appointment Now!</button> -->
+            </div>
+
+
+            <h2
+                class="lg:text-[60px] text-[45px] md:pt-8 pt-4 text-center leading-tight font-semibold md:mt-16 mt-8 text-[#115934]">
+                Perjalanan  <span class="text-[#F26522]"> Pengenalan</span></h2>
+
+            <div class="flex items-center justify-center gap-5 flex-wrap md:mt-10 mt-6">
+                <div class="md:max-w-[380px] w-full flex">
+                    <img src="/Docs/Assets/Images/caseStudy/az/onboard1.webp" class="w-full" alt="">
+                </div>
+                <div class="md:max-w-[380px] w-full flex">
+                    <img src="/Docs/Assets/Images/caseStudy/az/onboard2.webp" class="w-full" alt="">
+                </div>
+                <div class="md:max-w-[380px] w-full flex">
+                    <img src="/Docs/Assets/Images/caseStudy/az/onboard3.webp" class="w-full" alt="">
+                </div>
+            </div>
+
+            <div class="md:p-10 p-5 bg-[#115934] md:mt-16 mt-10 rounded-xl">
+                <h2
+                    class="text-white lg:text-[40px] md:text-[40px] text-[24px] leading-[31.2px] font-medium md:leading-[52px]">
+                    Jadilah sebahagian daripada masa depan perawatan kesihatan dengan penyelesaian barisan automatik Chup Online.
+                </h2>
+
+                <div class="flex md:items-center md:flex-row flex-col justify-between md:gap-2 gap-6 mt-10">
+                    <div class="flex items-center md:flex-row flex-col gap-3 w-full">
+                        <a href="https://wa.me/60173756569">
+                            <button
+                                class="text-white md:w-auto w-full  bg-[#F26522] flex py-5 px-6 items-center rounded-lg gap-3 lg:text-[22px] md:text-[22px] text-[18px] font-bold">
+                                <img src="/Docs/Assets/Images/Navbar/whatsapp.png" class="max-w-[26.67px] w-full"
+                                    alt="">
+                                    Konsultasi Percuma</button>
+                        </a>
+                        <a href="mailto:hello@chup.online" class="md:w-auto w-full">
+                            <div
+                                class="text-white md:w-auto w-full  bg-[#F26522] flex py-2 font-bold px-6 items-center rounded-lg gap-4 lg:text-[22px] md:text-[22px] text-[18px] ">
+                                <img src="/Docs/Assets/Images/Home/mail.svg" class="max-w-[26.67px] w-full" alt="">
+                                <div class="">
+                                    Emel Kami
+                                    <p class="lg:text-[19px] text-[14px] font-normal">hello@chup.online</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <a href="/index.html">
+                        <img src="/Docs/Assets/Images/Global/whiteLogo.svg" class="max-w-[189.22px] w-full" alt="">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="" id="dynamic-footer"></div>
+
+
+
+
+
+</body>
+<script src="/Languages/Malaysia/Docs/javascript/footer.js"></script>
+<script src=" https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.store('accordion', {
+            tab: 0
+        });
+
+        Alpine.data('accordion', (idx) => ({
+            init() {
+                this.idx = idx;
+            },
+            idx: -1,
+            handleClick() {
+                this.$store.accordion.tab = this.$store.accordion.tab === this.idx ? 0 : this.idx;
+            },
+            handleRotate() {
+                return this.$store.accordion.tab === this.idx ? 'rotate-180' : '';
+            },
+            handleToggle() {
+                return this.$store.accordion.tab === this.idx ? `max-height: ${this.$refs.tab.scrollHeight}px` : '';
+            }
+        }));
+    })
+
+
+    const openNav = document.getElementById("openNav")
+    const responsiveNav = document.getElementById("responsiveNav")
+    const closeNav = document.getElementById("closeNav")
+
+    openNav.addEventListener('click', () => {
+        responsiveNav.style.width = "100%"
+    })
+    closeNav.addEventListener('click', () => {
+        responsiveNav.style.width = "0rem"
+    })
+
+    const lenis = new Lenis()
+
+    function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+</script>
+
+</html>
