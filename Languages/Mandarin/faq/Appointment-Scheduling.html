@@ -155,95 +155,84 @@
     <div class="heroSection flex flex-col px-5 md:pt-12 pb-14 items-center justify-center w-full bg-[#f1e4da]">
 
         <div class="p-5 xl:px-0 max-w-7xl w-full mx-auto text-[18px]  transition-all font-semibold  poppins ">
-            <a href="/Languages/Malaysia/FAQ.html" class="hover:opacity-65 duration-500 inline-flex items-center gap-3">
+            <a href="/Languages/Mandarin/FAQ.html" class="hover:opacity-65 duration-500 inline-flex items-center gap-3">
                 <i class="fa-solid fa-angle-left"></i>
-                Kembali
+                返回
             </a>
         </div>
 
         <div class=" sm:mt-5 bg-white p-5 md:px-8 rounded-xl max-w-7xl mx-auto">
             <h2 class="font-medium lg:text-[44px] text-[20px] text-[#F26522] flex items-center gap-3"> <img
                     src="/Docs/Assets/Images/faq/Frame3.png" class="md:max-w-[60px] max-w-[52px] w-full " alt="">
-                Jadual Janji Temu</h2>
+                    预约调度</h2>
             <div class="w-full h-[1px] bg-[#ECECEC] my-5"></div>
             <ul class="flex flex-col">
                 <li class="my-2 rounded-xl overflow-hidden border border-[#9D9D9D] bg-[#fbf7f4]" x-data="accordion(3)">
                     <h2 @click="handleClick()"
                         class="flex flex-row justify-between items-center p-3 gap-3  cursor-pointer">
-                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">Bagaimanakah
-                            ChupOnline mengendalikan tempahan janji temu?</span>
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">ChupOnline 如何处理预约？</span>
                         <i class="fa-solid fa-plus transition-all duration-500 text-[#115934]"
                             :class="handleRotate()"></i>
                     </h2>
                     <div x-ref="tab" :style="handleToggle()"
                         class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
                         <p class="p-3 text-[#115934] lg:text-[20px] md:text-[16px] text-[15px]">
-                            ChupOnline memudahkan pengurusan janji temu melalui laman web atau WhatsApp, jadi pesakit
-                            boleh menempah dan mengurus janji temu dari jauh dengan mudah.
+                            ChupOnline 通过网站或 WhatsApp 简化预约管理，让患者能够轻松远程预约和管理预约。
                         </p>
                     </div>
                 </li>
                 <li class="my-2 rounded-xl overflow-hidden border border-[#9D9D9D] bg-[#fbf7f4]" x-data="accordion(4)">
                     <h2 @click="handleClick()"
                         class="flex flex-row justify-between gap-3 items-center p-3 cursor-pointer">
-                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">Bagaimanakah
-                            ChupOnline memastikan janji temu tidak bertindih?</span>
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">ChupOnline 如何确保预约不重叠？</span>
                         <i class="fa-solid fa-plus transition-all duration-500 text-[#115934]"
                             :class="handleRotate()"></i>
                     </h2>
                     <div x-ref="tab" :style="handleToggle()"
                         class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
                         <p class="p-3 text-[#115934] lg:text-[20px] md:text-[16px] text-[15px]">
-                            Sistem ini menguruskan slot masa secara dinamik dalam masa nyata, menghalang tempahan
-                            terlebih dahulu dan konflik penjadualan. </p>
+                            它实时动态管理时间段，防止超额预约和排程冲突。 </p>
                     </div>
                 </li>
                 <li class="my-2 rounded-xl overflow-hidden border border-[#9D9D9D] bg-[#fbf7f4]" x-data="accordion(5)">
                     <h2 @click="handleClick()"
                         class="flex flex-row justify-between items-center p-3 gap-3 cursor-pointer">
-                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">Bagaimanakah
-                            ChupOnline membantu klinik menguruskan aliran pesakit semasa kelewatan?</span>
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">ChupOnline 如何帮助诊所管理患者在延迟期间的流动？</span>
                         <i class="fa-solid fa-plus transition-all duration-500 text-[#115934]"
                             :class="handleRotate()"></i>
                     </h2>
                     <div x-ref="tab" :style="handleToggle()"
                         class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
                         <p class="p-3 text-[#115934] lg:text-[20px] md:text-[16px] text-[15px]">
-                            ChupOnline secara automatik menjadualkan semula dan menyediakan kemas kini masa nyata,
-                            memastikan aliran pesakit lancar semasa kelewatan yang tidak dijangka.
+                            ChupOnline 自动重新安排并提供实时更新，确保在意外延迟期间患者队列顺畅。
                         </p>
                     </div>
                 </li>
                 <li class="my-2 rounded-xl overflow-hidden border border-[#9D9D9D] bg-[#fbf7f4]" x-data="accordion(6)">
                     <h2 @click="handleClick()"
                         class="flex flex-row justify-between items-center p-3 gap-3 cursor-pointer">
-                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">Bagaimanakah
-                            ChupOnline mengurangkan kerja manual untuk kakitangan?</span>
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">ChupOnline 如何减少员工的手动工作？</span>
                         <i class="fa-solid fa-plus transition-all duration-500 text-[#115934]"
                             :class="handleRotate()"></i>
                     </h2>
                     <div x-ref="tab" :style="handleToggle()"
                         class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
                         <p class="p-3 text-[#115934] lg:text-[20px] md:text-[16px] text-[15px]">
-                            Dengan mengautomasikan penjadualan semula dan pemberitahuan pesakit, ChupOnline mengurangkan
-                            keperluan untuk kakitangan melaraskan jadual secara manual atau memaklumkan kepada pesakit
-                            tentang perubahan.
+                            通过自动化重新调度和通知患者，ChupOnline 减少了员工手动调整日程或通知患者变更时间的工作量。
                         </p>
                     </div>
                 </li>
                 <li class="my-2 rounded-xl overflow-hidden border border-[#9D9D9D] bg-[#fbf7f4]" x-data="accordion(7)">
                     <h2 @click="handleClick()"
                         class="flex flex-row justify-between items-center p-3 gap-3 cursor-pointer">
-                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">Bagaimanakah
-                            ChupOnline menyesuaikan diri dengan perubahan janji temu saat akhir?</span>
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">ChupOnline 如何适应临时的预约变更？</span>
                         <i class="fa-solid fa-plus transition-all duration-500 text-[#115934]"
                             :class="handleRotate()"></i>
                     </h2>
                     <div x-ref="tab" :style="handleToggle()"
                         class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
                         <p class="p-3 text-[#115934] lg:text-[20px] md:text-[16px] text-[15px]">
-                            ChupOnline melaraskan jadual serta-merta dan memberitahu pesakit dan doktor tentang sebarang
-                            perubahan dengan kemas kini masa nyata.
+                            ChupOnline 立即调整日程，并通过实时更新通知患者和医生任何变更。
                         </p>
                     </div>
                 </li>

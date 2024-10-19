@@ -155,82 +155,82 @@
     <div class="heroSection flex flex-col px-5 md:pt-12 pb-14 items-center justify-center w-full bg-[#f1e4da]">
 
         <div class="p-5 xl:px-0 max-w-7xl w-full mx-auto text-[18px]  transition-all font-semibold  poppins ">
-            <a href="/Languages/Malaysia/FAQ.html" class="hover:opacity-65 duration-500 inline-flex items-center gap-3">
+            <a href="/Languages/Mandarin/FAQ.html" class="hover:opacity-65 duration-500 inline-flex items-center gap-3">
                 <i class="fa-solid fa-angle-left"></i>
-                Kembali
+                返回
             </a>
         </div>
 
         <div class=" sm:mt-5 bg-white p-5 md:px-8 rounded-xl max-w-7xl mx-auto">
             <h2 class="font-medium lg:text-[44px] text-[20px] text-[#F26522] flex items-center gap-3"> <img
                     src="/Docs/Assets/Images/faq/Frame10.png" class="md:max-w-[60px] max-w-[52px] w-full " alt="">
-                    Penyepaduan Aplikasi Cloud, Kiosk dan TV</h2>
+                    云端、终端和电视应用集成</h2>
             <div class="w-full h-[1px] bg-[#ECECEC] my-5"></div>
             <ul class="flex flex-col">
                 <li class="my-2 rounded-xl overflow-hidden border border-[#9D9D9D] bg-[#fbf7f4]" x-data="accordion(3)">
                     <h2 @click="handleClick()"
                         class="flex flex-row justify-between items-center p-3 gap-3  cursor-pointer">
-                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">Adakah ChupOnline berasaskan awan?</span>
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">ChupOnline 是基于云的吗？</span>
                         <i class="fa-solid fa-plus transition-all duration-500 text-[#115934]"
                             :class="handleRotate()"></i>
                     </h2>
                     <div x-ref="tab" :style="handleToggle()"
                         class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
                         <p class="p-3 text-[#115934] lg:text-[20px] md:text-[16px] text-[15px]">
-                            Ya, ia menawarkan storan berasaskan awan yang selamat dan berskala dengan akses masa nyata.
+                            是的。它提供安全、可扩展的基于云的存储，并支持实时访问。
                         </p>
                     </div>
                 </li>
                 <li class="my-2 rounded-xl overflow-hidden border border-[#9D9D9D] bg-[#fbf7f4]" x-data="accordion(4)">
                     <h2 @click="handleClick()"
                         class="flex flex-row justify-between gap-3 items-center p-3 cursor-pointer">
-                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">Bolehkah ChupOnline disepadukan dengan sistem kiosk?</span>
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">ChupOnline 可以与自助终端系统集成吗？</span>
                         <i class="fa-solid fa-plus transition-all duration-500 text-[#115934]"
                             :class="handleRotate()"></i>
                     </h2>
                     <div x-ref="tab" :style="handleToggle()"
                         class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
                         <p class="p-3 text-[#115934] lg:text-[20px] md:text-[16px] text-[15px]">
-                            Ya, ia disepadukan dengan kiosk untuk daftar masuk layan diri dan pengurusan barisan, sekali gus meningkatkan aliran pesakit.         </p>
+                            是的。它与自助终端集成，以实现自助登记和排队管理，改善患者流动。         </p>
                     </div>
                 </li>
                 <li class="my-2 rounded-xl overflow-hidden border border-[#9D9D9D] bg-[#fbf7f4]" x-data="accordion(5)">
                     <h2 @click="handleClick()"
                         class="flex flex-row justify-between items-center p-3 gap-3 cursor-pointer">
-                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">Bolehkah ChupOnline bersepadu dengan TV awam untuk tontonan barisan?</span>
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">ChupOnline 可以与公共电视集成以显示队列吗？</span>
                         <i class="fa-solid fa-plus transition-all duration-500 text-[#115934]"
                             :class="handleRotate()"></i>
                     </h2>
                     <div x-ref="tab" :style="handleToggle()"
                         class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
                         <p class="p-3 text-[#115934] lg:text-[20px] md:text-[16px] text-[15px]">
-                            Ya, ia mempunyai kemas kini baris gilir masa nyata dan maklumat di TV awam, jadi pesakit sentiasa dimaklumkan.                        </p>
+                            是的。它在公共电视上显示实时队列更新和信息，让患者获得最新信息。                   </p>
                     </div>
                 </li>
                 <li class="my-2 rounded-xl overflow-hidden border border-[#9D9D9D] bg-[#fbf7f4]" x-data="accordion(6)">
                     <h2 @click="handleClick()"
                         class="flex flex-row justify-between items-center p-3 gap-3 cursor-pointer">
-                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">Bagaimanakah ChupOnline menguruskan sandaran data?</span>
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">ChupOnline 如何管理数据备份？</span>
                         <i class="fa-solid fa-plus transition-all duration-500 text-[#115934]"
                             :class="handleRotate()"></i>
                     </h2>
                     <div x-ref="tab" :style="handleToggle()"
                         class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
                         <p class="p-3 text-[#115934] lg:text-[20px] md:text-[16px] text-[15px]">
-                            ChupOnline secara automatik menyandarkan data dengan selamat, memastikan integriti dan pemulihan yang mudah.                        </p>
+                            ChupOnline 自动安全备份数据，确保数据的完整性和容易恢复。                 </p>
                     </div>
                 </li>
                 <li class="my-2 rounded-xl overflow-hidden border border-[#9D9D9D] bg-[#fbf7f4]" x-data="accordion(7)">
                     <h2 @click="handleClick()"
                         class="flex flex-row justify-between items-center p-3 gap-3 cursor-pointer">
-                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">Adakah ChupOnline menyediakan penyulitan data?</span>
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">ChupOnline 提供数据加密吗？</span>
                         <i class="fa-solid fa-plus transition-all duration-500 text-[#115934]"
                             :class="handleRotate()"></i>
                     </h2>
                     <div x-ref="tab" :style="handleToggle()"
                         class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
                         <p class="p-3 text-[#115934] lg:text-[20px] md:text-[16px] text-[15px]">
-                            ChupOnline menyediakan bantuan penyiapan, pemecahan masalah, dan pemeliharaan berkelanjutan untuk integrasi aplikasi kios dan TV untuk memastikan kelancaran operasi.
+                            ChupOnline 提供自助终端和电视应用集成的设置协助、故障排除和持续维护，以确保顺利运行。
                         </p>
                     </div>
                 </li>

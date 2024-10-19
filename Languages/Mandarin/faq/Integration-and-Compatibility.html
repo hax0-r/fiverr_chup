@@ -155,85 +155,85 @@
     <div class="heroSection flex flex-col px-5 md:pt-12 pb-14 items-center justify-center w-full bg-[#f1e4da]">
 
         <div class="p-5 xl:px-0 max-w-7xl w-full mx-auto text-[18px]  transition-all font-semibold  poppins ">
-            <a href="/Languages/Malaysia/FAQ.html" class="hover:opacity-65 duration-500 inline-flex items-center gap-3">
+            <a href="/Languages/Mandarin/FAQ.html" class="hover:opacity-65 duration-500 inline-flex items-center gap-3">
                 <i class="fa-solid fa-angle-left"></i>
-                Kembali
+                返回
             </a>
         </div>
 
         <div class=" sm:mt-5 bg-white p-5 md:px-8 rounded-xl max-w-7xl mx-auto">
             <h2 class="font-medium lg:text-[44px] text-[20px] text-[#F26522] flex items-center gap-3"> <img
                     src="/Docs/Assets/Images/faq/Frame4.png" class="md:max-w-[60px] max-w-[52px] w-full " alt="">
-                    Integrasi dan Keserasian</h2>
+                    集成与兼容性</h2>
             <div class="w-full h-[1px] bg-[#ECECEC] my-5"></div>
             <ul class="flex flex-col">
                 <li class="my-2 rounded-xl overflow-hidden border border-[#9D9D9D] bg-[#fbf7f4]" x-data="accordion(3)">
                     <h2 @click="handleClick()"
                         class="flex flex-row justify-between items-center p-3 gap-3  cursor-pointer">
-                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">Apakah sistem yang boleh disepadukan dengan ChupOnline?</span>
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">ChupOnline 可以与哪些系统集成？</span>
                         <i class="fa-solid fa-plus transition-all duration-500 text-[#115934]"
                             :class="handleRotate()"></i>
                     </h2>
                     <div x-ref="tab" :style="handleToggle()"
                         class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
                         <p class="p-3 text-[#115934] lg:text-[20px] md:text-[16px] text-[15px]">
-                            ChupOnline disepadukan dengan sistem HIS, CMS dan pihak ketiga, memastikan penyelarasan data pesakit dan aliran kerja penjagaan kesihatan yang lancar.
+                            ChupOnline 可以与 HIS、CMS 和第三方系统集成，确保无缝协调患者数据和医疗保健工作流程。
                         </p>
                     </div>
                 </li>
                 <li class="my-2 rounded-xl overflow-hidden border border-[#9D9D9D] bg-[#fbf7f4]" x-data="accordion(4)">
                     <h2 @click="handleClick()"
                         class="flex flex-row justify-between gap-3 items-center p-3 cursor-pointer">
-                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">Sejauh manakah proses penyepaduan dengan ChupOnline?</span>
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">与 ChupOnline 的整合过程有多完美？</span>
                         <i class="fa-solid fa-plus transition-all duration-500 text-[#115934]"
                             :class="handleRotate()"></i>
                     </h2>
                     <div x-ref="tab" :style="handleToggle()"
                         class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
                         <p class="p-3 text-[#115934] lg:text-[20px] md:text-[16px] text-[15px]">
-                            ChupOnline disepadukan dengan lancar dengan gangguan yang minimum, jadi hospital boleh mengekalkan operasi biasa semasa persediaan.
+                            ChupOnline 可顺利集成，并将中断影响降至最低，使医院在设置期间保持正常运营。
                         </p>
                     </div>
                 </li>
                 <li class="my-2 rounded-xl overflow-hidden border border-[#9D9D9D] bg-[#fbf7f4]" x-data="accordion(5)">
                     <h2 @click="handleClick()"
                         class="flex flex-row justify-between items-center p-3 gap-3 cursor-pointer">
-                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">Bolehkah ChupOnline disesuaikan untuk hospital saya?</span>
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">ChupOnline 可以为我院量身定制吗？</span>
                         <i class="fa-solid fa-plus transition-all duration-500 text-[#115934]"
                             :class="handleRotate()"></i>
                     </h2>
                     <div x-ref="tab" :style="handleToggle()"
                         class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
                         <p class="p-3 text-[#115934] lg:text-[20px] md:text-[16px] text-[15px]">
-                            Ya, ChupOnline boleh disesuaikan untuk disesuaikan dengan aliran kerja hospital anda, menyesuaikan diri dengan aliran pesakit dan keperluan kerja khusus.
+                            是的，ChupOnline 可以根据医院的工作流程进行定制，以适应特定的病人流程和部门需求。
                         </p>
                     </div>
                 </li>
                 <li class="my-2 rounded-xl overflow-hidden border border-[#9D9D9D] bg-[#fbf7f4]" x-data="accordion(6)">
                     <h2 @click="handleClick()"
                         class="flex flex-row justify-between items-center p-3 gap-3 cursor-pointer">
-                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">Adakah ChupOnline menyokong integrasi API?</span>
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">ChupOnline 是否支持 API 集成？</span>
                         <i class="fa-solid fa-plus transition-all duration-500 text-[#115934]"
                             :class="handleRotate()"></i>
                     </h2>
                     <div x-ref="tab" :style="handleToggle()"
                         class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
                         <p class="p-3 text-[#115934] lg:text-[20px] md:text-[16px] text-[15px]">
-                            Ya, ChupOnline menyokong sambungan API, membolehkan pertukaran data mudah dengan sistem seperti farmasi dan pengebilan.
+                            是的，ChupOnline 支持 API 连接，可以方便地与药房和账单等系统进行数据交换。
                         </p>
                     </div>
                 </li>
                 <li class="my-2 rounded-xl overflow-hidden border border-[#9D9D9D] bg-[#fbf7f4]" x-data="accordion(7)">
                     <h2 @click="handleClick()"
                         class="flex flex-row justify-between items-center p-3 gap-3 cursor-pointer">
-                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">Berapa lama proses integrasi mengambil masa?</span>
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">整合过程需要多久？</span>
                         <i class="fa-solid fa-plus transition-all duration-500 text-[#115934]"
                             :class="handleRotate()"></i>
                     </h2>
                     <div x-ref="tab" :style="handleToggle()"
                         class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
                         <p class="p-3 text-[#115934] lg:text-[20px] md:text-[16px] text-[15px]">
-                            Penyepaduan mengambil masa 1-2 minggu termasuk ujian, memastikan penggunaan pantas dan masa rehat minimum untuk hospital anda
+                            包括测试在内的集成时间为 1-2 周，可确保医院快速部署并将停机时间降至最短。
                         </p>
                     </div>
                 </li>
