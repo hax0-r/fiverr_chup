@@ -153,84 +153,84 @@
     <div class="heroSection flex flex-col px-5 md:pt-12 pb-14 items-center justify-center w-full bg-[#f1e4da]">
 
         <div class="p-5 xl:px-0 max-w-7xl w-full mx-auto text-[18px]  transition-all font-semibold  poppins ">
-            <a href="/Languages/Mandarin/FAQ.html" class="hover:opacity-65 duration-500 inline-flex items-center gap-3">
+            <a href="/Languages/Thailand/FAQ.html" class="hover:opacity-65 duration-500 inline-flex items-center gap-3">
                 <i class="fa-solid fa-angle-left"></i>
-                返回
+                กลับ
             </a>
         </div>
 
         <div class=" sm:mt-5 bg-white p-5 md:px-8 rounded-xl max-w-7xl mx-auto">
             <h2 class="font-medium lg:text-[44px] text-[20px] text-[#F26522] flex items-center gap-3"> <img
                     src="/Docs/Assets/Images/faq/Frame2.png" class="md:max-w-[60px] max-w-[52px] w-full " alt="">
-                    动态队列和自动预约</h2>
+                    คิวแบบไดนามิกและการนัดหมายอัตโนมัติ</h2>
             <div class="w-full h-[1px] bg-[#ECECEC] my-5"></div>
             <ul class="flex flex-col">
                 <li class="my-2 rounded-xl overflow-hidden border border-[#9D9D9D] bg-[#fbf7f4]" x-data="accordion(3)">
                     <h2 @click="handleClick()"
                         class="flex flex-row justify-between items-center p-3 gap-3  cursor-pointer">
-                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">ChupOnline 的动态队列和预约自动化是如何运作的？</span>
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">การทำงานของคิวแบบไดนามิกและการนัดหมายอัตโนมัติอง jongQ เป็นอย่างไร?</span>
                         <i class="fa-solid fa-plus transition-all duration-500 text-[#115934]"
                             :class="handleRotate()"></i>
                     </h2>
                     <div x-ref="tab" :style="handleToggle()"
                         class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
                         <p class="p-3 text-[#115934] lg:text-[20px] md:text-[16px] text-[15px]">
-                            ChupOnline 实时自动重新安排日程，适时调整医生的看诊延误时间和患者的可用时间，提供顺畅的体验。
+                            jongQจะทำการนัดหมายใหม่โดยอัตโนมัติในแบบเรียลไทม์ปรับตามความล่าช้าของแพทย์และความพร้อมของผู้ป่วยเพื่อให้ประสบการณ์ที่ราบรื่น
                         </p>
                     </div>
                 </li>
                 <li class="my-2 rounded-xl overflow-hidden border border-[#9D9D9D] bg-[#fbf7f4]" x-data="accordion(4)">
                     <h2 @click="handleClick()"
                         class="flex flex-row justify-between gap-3 items-center p-3 cursor-pointer">
-                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">ChupOnline 实时调度的准确性如何？</span>
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">การจัดตารางเวลาแบบเรียลไทม์อง jongQ มีความแม่นยำแค่ไหน?</span>
                         <i class="fa-solid fa-plus transition-all duration-500 text-[#115934]"
                             :class="handleRotate()"></i>
                     </h2>
                     <div x-ref="tab" :style="handleToggle()"
                         class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
                         <p class="p-3 text-[#115934] lg:text-[20px] md:text-[16px] text-[15px]">
-                            得益于医生和患者病情的持续实时更新，准确率接近 100%。
+                            ความแม่นยำเกือบ 100% ขอบคุณการอัปเดตแบบเรียลไทม์อย่างต่อเนื่องจากแพทย์และสภาพของผู้ป่วย
                         </p>
                     </div>
                 </li>
                 <li class="my-2 rounded-xl overflow-hidden border border-[#9D9D9D] bg-[#fbf7f4]" x-data="accordion(5)">
                     <h2 @click="handleClick()"
                         class="flex flex-row justify-between items-center p-3 gap-3 cursor-pointer">
-                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">患者能否轻松地重新安排预约时间？</span>
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">ผู้ป่วยสามารถนัดหมายใหม่ได้อย่างง่ายดายหรือไม่</span>
                         <i class="fa-solid fa-plus transition-all duration-500 text-[#115934]"
                             :class="handleRotate()"></i>
                     </h2>
                     <div x-ref="tab" :style="handleToggle()"
                         class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
                         <p class="p-3 text-[#115934] lg:text-[20px] md:text-[16px] text-[15px]">
-                            是的。有了 ChupOnline，您可以通过网络或 WhatsApp 轻松地重新安排时间，并始终与医生的空闲时间保持一致。
+                            ใช่! ด้วย jongQ การนัดหมายใหม่เป็นเรื่องง่ายผ่านเว็บไซต์หรือ WhatsAppซึ่งจะตรงกับตารางนัดหมายของแพทย์เสมอ
                         </p>
                     </div>
                 </li>
                 <li class="my-2 rounded-xl overflow-hidden border border-[#9D9D9D] bg-[#fbf7f4]" x-data="accordion(6)">
                     <h2 @click="handleClick()"
                         class="flex flex-row justify-between items-center p-3 gap-3 cursor-pointer">
-                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">ChupOnline 是否提供预约状况的实时更新？</span>
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">jongQมีการอัปเดตนัดหมายแบบเรียลไทม์หรือไม่?</span>
                         <i class="fa-solid fa-plus transition-all duration-500 text-[#115934]"
                             :class="handleRotate()"></i>
                     </h2>
                     <div x-ref="tab" :style="handleToggle()"
                         class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
                         <p class="p-3 text-[#115934] lg:text-[20px] md:text-[16px] text-[15px]">
-                            当然可以！通过 WhatsApp 即时接收预约变更或延迟的最新信息。                        </p>
+                            แน่นอน! คุณจะได้รับการอัปเดทการนัดหมายทันทีผ่าน WhatsApp สำหรับการเปลี่ยนแปลงหรือความล่าช้าในการนัดหมายใดๆ                        </p>
                     </div>
                 </li>
                 <li class="my-2 rounded-xl overflow-hidden border border-[#9D9D9D] bg-[#fbf7f4]" x-data="accordion(7)">
                     <h2 @click="handleClick()"
                         class="flex flex-row justify-between items-center p-3 gap-3 cursor-pointer">
-                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">ChupOnline 如何确保患者队列顺畅？</span>
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">jongQทำให้การไหลของผู้ป่วยเป็นไปอย่างราบรื่นได้อย่างไร?</span>
                         <i class="fa-solid fa-plus transition-all duration-500 text-[#115934]"
                             :class="handleRotate()"></i>
                     </h2>
                     <div x-ref="tab" :style="handleToggle()"
                         class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
                         <p class="p-3 text-[#115934] lg:text-[20px] md:text-[16px] text-[15px]">
-                            Chup 会将病人引导到正确的工作人员和部门，指导他们完成每个就诊流程。    </p>
+                            jongQจะแนะนำผู้ป่วยไปยังเจ้าหน้าที่และแผนกที่ถูกต้องช่วยนำทางพวกเขาผ่านแต่ละขั้นตอนในการเข้ารับบริการ    </p>
                     </div>
                 </li>
             </ul>

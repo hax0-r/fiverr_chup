@@ -153,14 +153,14 @@
     <div class="heroSection flex flex-col px-5 md:py-16 py-10 items-center justify-center w-full bg-[#f1e4da]">
         <h2
             class="lg:text-[60px] flex items-center gap-3 md:flex-row flex-col text-[#115934] text-[36px] md:pb-10 pb-6 text-center font-bold">
-            <img src="/Docs/Assets/Images/products/ChupOnlineGreen.svg" class="md:h-[64px] h-[41.85px]" alt=""> <span>
-
-                <span class="text-[#F26522]">如何</span> 如何帮助您？</span></h2>
+            <img src="/Docs/Assets/Images/Global/thaiLogo.svg" class="md:h-16 h-14" alt=""> <span>
+                สามารถช่วยคุณ
+                <span class="text-[#F26522]"> ได้อย่างไร?</span> </span></h2>
 
         <div
             class="border border-white flex items-center max-w-[988px] myShadow w-full gap-2 bg-white px-3 rounded-lg md:mb-6">
             <i class="fa-solid fa-magnifying-glass pt-0.5 text-[#00000080]"></i>
-            <input type="text" id="searchInput" class="py-3.5 px-2 w-full text-[#00000080]" placeholder="描述您的问题">
+            <input type="text" id="searchInput" class="py-3.5 px-2 w-full text-[#00000080]" placeholder="อธิบายปัญหาของคุณ">
         </div>
 
         <div class="max-w-7xl mx-auto w-full">
@@ -224,61 +224,61 @@
     // Array of objects representing card data
     const cardsData = [
         {
-            title: "概述和详细信息",
+            title: "ภาพรวมและรายละเอียด",
             imgSrc: "/Docs/Assets/Images/faq/Frame1.png",
             buttonText: "Lebih Lanjut",
             link: "Overview-and-Details",
         },
         {
-            title: "动态排队与自动预约",
+            title: "คิวแบบไดนามิกและการนัดหมายอัตโนมัติ",
             imgSrc: "/Docs/Assets/Images/faq/Frame2.png",
             buttonText: "Lebih Lanjut",
             link: "Dynamic-Queue-&-Automatic-Appointment",
         },
         {
-            title: "预约调度",
+            title: "การจัดตารางนัดหมาย",
             imgSrc: "/Docs/Assets/Images/faq/Frame3.png",
             buttonText: "Lebih Lanjut",
             link: "Appointment-Scheduling",
         },
         {
-            title: "集成与兼容性",
+            title: "การรวมและความเข้ากันได้",
             imgSrc: "/Docs/Assets/Images/faq/Frame4.png",
             buttonText: "Lebih Lanjut",
             link: "Integration-and-Compatibility",
         },
         {
-            title: "定价与费用",
+            title: "ราคาและค่าใช้จ่าย",
             imgSrc: "/Docs/Assets/Images/faq/Frame5.png",
             buttonText: "Lebih Lanjut",
             link: "Pricing-and-Costs",
         },
         {
-            title: "设置与安装",
+            title: "การตั้งค่าและการติดตั้ง",
             imgSrc: "/Docs/Assets/Images/faq/Frame6.png",
             buttonText: "Lebih Lanjut",
             link: "Setup-and-Installation",
         },
         {
-            title: "安全性与合规性",
+            title: "ความปลอดภัยและการปฏิบัติตามข้อกำหนด",
             imgSrc: "/Docs/Assets/Images/faq/Frame7.png",
             buttonText: "Lebih Lanjut",
             link: "Security-and-Compliance",
         },
         {
-            title: "支持与培训",
+            title: "การสนับสนุนและการฝึกอบรม",
             imgSrc: "/Docs/Assets/Images/faq/Frame8.png",
             buttonText: "Lebih Lanjut",
             link: "Support-and-Training",
         },
         {
-            title: "定制化",
+            title: "การปรับแต่ง",
             imgSrc: "/Docs/Assets/Images/faq/Frame9.png",
             buttonText: "Lebih Lanjut",
             link: "Customization",
         },
         {
-            title: " 云端、终端和电视应用集成",
+            title: " การรวมระบบ Cloud, Kiosk และแอปทีวี",
             imgSrc: "/Docs/Assets/Images/faq/Frame10.png",
             buttonText: "Lebih Lanjut",
             link: "Cloud-Kiosk-and-TV-App-Integration",
@@ -294,8 +294,8 @@
       <div class="card bg-white border-2 flex flex-col h-full gap-5 p-4 pt-6 max-w-[580px] w-full rounded-xl justify-between" data-title="${card.title}">
         <img src="${card.imgSrc}" class="md:max-w-[56px] mx-auto max-w-[48px] w-full" alt="img">
         <h2 class="md:text-[26px] text-[14px] text-[#115934] font-medium text-center">${card.title}</h2>
-        <a href="/Languages/Mandarin/faq/${card.link}.html">
-          <button class="bg-[#F26522] transition-all w-full font-medium hover:bg-[#fd6823] text-white p-2.5 w-full text-center rounded-lg">阅读常见问题</button>
+        <a href="/Languages/Thailand/faq/${card.link}.html">
+          <button class="bg-[#F26522] transition-all w-full font-medium hover:bg-[#fd6823] text-white p-2.5 w-full text-center rounded-lg">อ่านคำถามที่พบบ่อย</button>
         </a>
       </div>
     `;

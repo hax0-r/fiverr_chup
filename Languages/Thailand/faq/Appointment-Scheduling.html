@@ -153,84 +153,84 @@
     <div class="heroSection flex flex-col px-5 md:pt-12 pb-14 items-center justify-center w-full bg-[#f1e4da]">
 
         <div class="p-5 xl:px-0 max-w-7xl w-full mx-auto text-[18px]  transition-all font-semibold  poppins ">
-            <a href="/Languages/Mandarin/FAQ.html" class="hover:opacity-65 duration-500 inline-flex items-center gap-3">
+            <a href="/Languages/Thailand/FAQ.html" class="hover:opacity-65 duration-500 inline-flex items-center gap-3">
                 <i class="fa-solid fa-angle-left"></i>
-                返回
+                กลับ
             </a>
         </div>
 
         <div class=" sm:mt-5 bg-white p-5 md:px-8 rounded-xl max-w-7xl mx-auto">
             <h2 class="font-medium lg:text-[44px] text-[20px] text-[#F26522] flex items-center gap-3"> <img
                     src="/Docs/Assets/Images/faq/Frame3.png" class="md:max-w-[60px] max-w-[52px] w-full " alt="">
-                    预约调度</h2>
+                    การจัดตารางนัดหมาย</h2>
             <div class="w-full h-[1px] bg-[#ECECEC] my-5"></div>
             <ul class="flex flex-col">
                 <li class="my-2 rounded-xl overflow-hidden border border-[#9D9D9D] bg-[#fbf7f4]" x-data="accordion(3)">
                     <h2 @click="handleClick()"
                         class="flex flex-row justify-between items-center p-3 gap-3  cursor-pointer">
-                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">ChupOnline 如何处理预约？</span>
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">jongQ จัดการการจองนัดหมายอย่างไร?</span>
                         <i class="fa-solid fa-plus transition-all duration-500 text-[#115934]"
                             :class="handleRotate()"></i>
                     </h2>
                     <div x-ref="tab" :style="handleToggle()"
                         class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
                         <p class="p-3 text-[#115934] lg:text-[20px] md:text-[16px] text-[15px]">
-                            ChupOnline 通过网站或 WhatsApp 简化预约管理，让患者能够轻松远程预约和管理预约。
+                            jongQช่วยให้การจัดการนัดหมายง่ายขึ้นผ่านเว็บไซต์หรือWhatsAppทำให้ผู้ป่วยสามารถจองและจัดการนัดหมายจากระยะไกลได้อย่างง่ายดาย
                         </p>
                     </div>
                 </li>
                 <li class="my-2 rounded-xl overflow-hidden border border-[#9D9D9D] bg-[#fbf7f4]" x-data="accordion(4)">
                     <h2 @click="handleClick()"
                         class="flex flex-row justify-between gap-3 items-center p-3 cursor-pointer">
-                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">ChupOnline 如何确保预约不重叠？</span>
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">jongQทำอย่างไรเพื่อให้แน่ใจว่าการนัดหมายจะไม่ซ้อนกัน?</span>
                         <i class="fa-solid fa-plus transition-all duration-500 text-[#115934]"
                             :class="handleRotate()"></i>
                     </h2>
                     <div x-ref="tab" :style="handleToggle()"
                         class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
                         <p class="p-3 text-[#115934] lg:text-[20px] md:text-[16px] text-[15px]">
-                            它实时动态管理时间段，防止超额预约和排程冲突。 </p>
+                            ช่วยจัดการช่วงเวลานัดหมายแบบไดนามิกในเวลาจริงป้องกันการจองซ้อนและปัญหาการจัดตารางเวลา </p>
                     </div>
                 </li>
                 <li class="my-2 rounded-xl overflow-hidden border border-[#9D9D9D] bg-[#fbf7f4]" x-data="accordion(5)">
                     <h2 @click="handleClick()"
                         class="flex flex-row justify-between items-center p-3 gap-3 cursor-pointer">
-                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">ChupOnline 如何帮助诊所管理患者在延迟期间的流动？</span>
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">jongQช่วยคลินิกจัดการการไหลของผู้ป่วยในระหว่างเกิดความล่าช้าอย่างไร?</span>
                         <i class="fa-solid fa-plus transition-all duration-500 text-[#115934]"
                             :class="handleRotate()"></i>
                     </h2>
                     <div x-ref="tab" :style="handleToggle()"
                         class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
                         <p class="p-3 text-[#115934] lg:text-[20px] md:text-[16px] text-[15px]">
-                            ChupOnline 自动重新安排并提供实时更新，确保在意外延迟期间患者队列顺畅。
+                            jongQจัดตารางใหม่อัตโนมัติและให้ข้อมูลอัปเดตตามเวลาจริงเพื่อให้การจัดการการไหลของผู้ป่วยเป็นไปอย่างราบรื่นในระหว่างเกิดความล่าช้าที่ไม่คาดคิด
                         </p>
                     </div>
                 </li>
                 <li class="my-2 rounded-xl overflow-hidden border border-[#9D9D9D] bg-[#fbf7f4]" x-data="accordion(6)">
                     <h2 @click="handleClick()"
                         class="flex flex-row justify-between items-center p-3 gap-3 cursor-pointer">
-                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">ChupOnline 如何减少员工的手动工作？</span>
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">jongQลดงานที่ต้องทำด้วยมือสำหรับเจ้าหน้าที่อย่างไร?</span>
                         <i class="fa-solid fa-plus transition-all duration-500 text-[#115934]"
                             :class="handleRotate()"></i>
                     </h2>
                     <div x-ref="tab" :style="handleToggle()"
                         class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
                         <p class="p-3 text-[#115934] lg:text-[20px] md:text-[16px] text-[15px]">
-                            通过自动化重新调度和通知患者，ChupOnline 减少了员工手动调整日程或通知患者变更时间的工作量。
+                            ด้วยการทำให้การจัดตารางใหม่และการแจ้งเตือนผู้ป่วยเป็นอัตโนมัติjongQลดความจำเป็นที่เจ้าหน้าที่ต้องปรับตารางด้วยตนเองหรือแจ้งให้ผู้ป่วยทราบถึงการเปลี่ยนแปลง
                         </p>
                     </div>
                 </li>
                 <li class="my-2 rounded-xl overflow-hidden border border-[#9D9D9D] bg-[#fbf7f4]" x-data="accordion(7)">
                     <h2 @click="handleClick()"
                         class="flex flex-row justify-between items-center p-3 gap-3 cursor-pointer">
-                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">ChupOnline 如何适应临时的预约变更？</span>
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">jongQปรับตัวกับการเปลี่ยนแปลงการนัดหมายในนาทีสุดท้ายอย่างไร?</span>
                         <i class="fa-solid fa-plus transition-all duration-500 text-[#115934]"
                             :class="handleRotate()"></i>
                     </h2>
                     <div x-ref="tab" :style="handleToggle()"
                         class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
                         <p class="p-3 text-[#115934] lg:text-[20px] md:text-[16px] text-[15px]">
-                            ChupOnline 立即调整日程，并通过实时更新通知患者和医生任何变更。
+                            jongQปรับตารางนัดหมายทันทีและแจ้งให้ผู้ป่วยและแพทย์ทราบถึงการเปลี่ยนแปลงใดๆด้วยข้อมูลอัปเดตตามเวลาจริง
                         </p>
                     </div>
                 </li>
