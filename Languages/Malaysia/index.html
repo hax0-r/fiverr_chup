@@ -33,10 +33,10 @@
     }
 
     @media screen and (min-width:768px) {
-    .heroSectionMal {
-        min-height: calc(100vh - 96px);
+        .heroSectionMal {
+            min-height: calc(100vh - 96px);
+        }
     }
-}
 </style>
 
 <body>
@@ -383,8 +383,8 @@
                     <h2 class="font-medium lg:text-[32px] md:text-[24px] text-[20px]">Kepuasan Pelanggan</h2>
                     <div class="w-full h-[1.5px] bg-[#F26522] sm:my-3 my-2"></div>
                     <p class="lg:text-[24px] md:text-[20px] text-[12px] font-medium md:-mb-8">Sampai</p>
-                    <h2 class="lg:text-[100px] text-[64px]  font-medium ">97<span
-                            class="md:text-6xl text-6xl">%</span></h2>
+                    <h2 class="lg:text-[100px] text-[64px]  font-medium ">97<span class="md:text-6xl text-6xl">%</span>
+                    </h2>
                 </div>
             </div>
 
@@ -590,7 +590,8 @@
                 <h2 class=" lg:text-[60px] text-[24px] md:text-[36px] font-semibold">Layan Layan</h2>
                 <img src="/Docs/Assets/Images/Home/longServer.webp"
                     class="max-w-[700px] select-none w-full mx-auto my-6" alt="">
-                <p class="lg:text-[32px] md:text-[24px] text-[16px] md:max-w-[1120px] w-full">Apabila doktor terpaksa berkhidmat dalam tempoh
+                <p class="lg:text-[32px] md:text-[24px] text-[16px] md:max-w-[1120px] w-full">Apabila doktor terpaksa
+                    berkhidmat dalam tempoh
                     yang lama, pesakit dalam barisan akan mendapat mesej kelewatan melalui WhatsApp dan pesakit lain
                     akan menjadualkan semula secara automatik ke masa baharu.</p>
             </div>
@@ -685,13 +686,13 @@
             <div class="w-full text-[#115934] sm:p-8 p-4 bg-white myShadow rounded-md mt-10">
                 <h2 class=" lg:text-[60px] text-[24px] md:text-[36px] font-semibold">Pengebilan - Tandai Sebagai Dibayar
                 </h2>
-                <img src="/Languages/Malaysia/Docs/Images/Pengebilan - Tandai Sebagai Dibayar-min.webp" class="max-w-[856px] select-none w-full mx-auto my-6"
-                    alt="">
+                <img src="/Languages/Malaysia/Docs/Images/Pengebilan - Tandai Sebagai Dibayar-min.webp"
+                    class="max-w-[856px] select-none w-full mx-auto my-6" alt="">
                 <p class="lg:text-[32px] md:text-[24px] text-[16px] ">Dalam ciri Pengebilan - Tandakan sebagai Berbayar
                     ChupOnline, sebaik sahaja pesakit menyelesaikan pembayaran, kakitangan juruwang mengklik "Tandakan
                     sebagai Dibayar" untuk mengemas kini status pesakit.</p>
-                <img src="/Languages/Malaysia/Docs/Images/Pengebilan - Tandai Sebagai Dibayar2-min.webp" class="max-w-[856px] select-none w-full mx-auto my-8"
-                    alt="">
+                <img src="/Languages/Malaysia/Docs/Images/Pengebilan - Tandai Sebagai Dibayar2-min.webp"
+                    class="max-w-[856px] select-none w-full mx-auto my-8" alt="">
                 <p class="lg:text-[32px] md:text-[24px] text-[16px] ">Sekiranya pesakit perlu pergi ke farmasi, mereka
                     secara automatik dipindahkan ke sana. Sekiranya pesakit tidak mengambil ubat, lawatan pesakit akan
                     ditamatkan. Pesakit juga boleh dialihkan secara manual jika butang "Tandakan sebagai Dibayar" tidak
@@ -844,7 +845,7 @@
                 <li class="bg-white my-2 rounded-lg overflow-hidden shadow-lg" x-data="accordion(4)">
                     <h2 @click="handleClick()" class="flex flex-row justify-between items-center p-3 cursor-pointer">
                         <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934]">Temujanji
-                            </span>
+                        </span>
                         <i class="fa-solid fa-plus transition-all duration-500" :class="handleRotate()"></i>
                     </h2>
                     <div x-ref="tab" :style="handleToggle()"
@@ -873,7 +874,8 @@
                 </li>
                 <li class="bg-white my-2 rounded-lg overflow-hidden shadow-lg" x-data="accordion(5)">
                     <h2 @click="handleClick()" class="flex flex-row justify-between items-center p-3 cursor-pointer">
-                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] capitalize">Jadualkan
+                        <span
+                            class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] capitalize">Jadualkan
                             semula Pelantikan</span>
                         <i class="fa-solid fa-plus transition-all duration-500" :class="handleRotate()"></i>
                     </h2>
@@ -1069,9 +1071,11 @@
         <div class=" max-w-7xl mx-auto">
 
             <div
-                class="flex sm:flex-row flex-col items-center justify-center sm:gap-2 gap-1.5 text-[#F26522] lg:text-[80px] md:text-[60px] text-[30px]   font-bold ">
-                Bagaimana<img src="/Docs/Assets/Images/Home/chup.svg" class="lg:h-20 md:h-16 h-8" alt=""> berfungsi <img
-                    src="/Docs/Assets/Images/Home/questionMark.svg" class="lg:h-20 md:h-16 h-8" alt="">
+                class="flex sm:flex-row flex-col items-center justify-center sm:gap-4 pb-3 text-[#F26522] lg:text-[80px] md:text-[60px] text-[30px]   font-bold ">
+                <span class="flex items-center md:gap-3 gap-1">
+                    Bagaimana<img src="/Docs/Assets/Images/Home/chup.svg" class="lg:h-20 md:h-16 h-8" alt=""></span>
+                <span class="flex items-center gap-3"> berfungsi <img src="/Docs/Assets/Images/Home/questionMark.svg" class="lg:h-20 md:h-16 h-6"
+                        alt=""></span>
             </div>
             <p
                 class="text-[14px] md:text-[24px] text-center text-[#115934] max-w-[978px] w-full mx-auto lg:leading-tight lg:text-[32px]">
@@ -1105,7 +1109,8 @@
                         Pelanggan dipanggil apabil agiliran mereka tiba</p>
                 </div>
                 <div class="flex flex-col gap-5 w-full">
-                    <img src="/Languages/Malaysia/Docs/Images/Pelanggan dilayan pada pelbagai perkhidmatan (jika ada).png" alt="">
+                    <img src="/Languages/Malaysia/Docs/Images/Pelanggan dilayan pada pelbagai perkhidmatan (jika ada).png"
+                        alt="">
                     <p class="text-[#115934] lg:leading-tight font-medium lg:text-[38px] md:text-[24px] text-[16px]">
                         Pelanggan dilayan pelbagai perkhidmatan (jika ada)</p>
                 </div>
@@ -1257,7 +1262,8 @@
                     <img src="/Docs/Assets/Images/Home/whyChupWork3.webp"
                         class="lg:max-w-[240px] max-w-[145px] mx-auto w-full" alt="">
                     <div class="text-[#115934] md:text-start text-center">
-                        <h2 class="lg:text-[38px] md:text-[22.01px] text-[18px] capitalize font-bold lg:pb-5 pb-2">Tempahan
+                        <h2 class="lg:text-[38px] md:text-[22.01px] text-[18px] capitalize font-bold lg:pb-5 pb-2">
+                            Tempahan
                             sendiri, giliran sendiri dan pembatalan sendiri</h2>
                         <p class="lg:text-[32px] md:text-[18.53px] text-[14px] lg:leading-tight">Pelanggan anda boleh
                             melakukan segala-galanya sendiri dan mengelakkan panggilan telefon yang panjang dengan
@@ -1283,7 +1289,8 @@
                     <img src="/Docs/Assets/Images/Home/whyChupWork5.webp"
                         class="lg:max-w-[240px] max-w-[145px] mx-auto w-full" alt="">
                     <div class="text-[#115934] md:text-start text-center">
-                        <h2 class="lg:text-[38px] md:text-[22.01px] text-[18px] capitalize font-bold lg:pb-5 pb-2">Walk-in
+                        <h2 class="lg:text-[38px] md:text-[22.01px] text-[18px] capitalize font-bold lg:pb-5 pb-2">
+                            Walk-in
                             bergabung dengan Janji Temu</h2>
                         <p class="lg:text-[32px] md:text-[18.53px] text-[14px] lg:leading-tight">Kebanyakan janji temu
                             dan aplikasi baris gilir akan gagal kerana pada hakikatnya terdapat walk-in dan janji temu.
@@ -1294,7 +1301,8 @@
                     <img src="/Docs/Assets/Images/Home/whyChupWork6.webp"
                         class="lg:max-w-[240px] max-w-[145px] mx-auto w-full" alt="">
                     <div class="text-[#115934] md:text-start text-center">
-                        <h2 class="lg:text-[38px] md:text-[22.01px] text-[18px] capitalize font-bold lg:pb-5 pb-2">Tiada perkakasan
+                        <h2 class="lg:text-[38px] md:text-[22.01px] text-[18px] capitalize font-bold lg:pb-5 pb-2">Tiada
+                            perkakasan
                             untuk dibeli</h2>
                         <p class="lg:text-[32px] md:text-[18.53px] text-[14px] lg:leading-tight">Chup berfungsi pada
                             awan. Anda tidak perlu membeli sebarang perkakasan jika anda memilih untuk tidak membelinya.
@@ -1382,7 +1390,8 @@
                     <img src="/Docs/Assets/Images/Home/benefit1.webp"
                         class="lg:max-w-[240px] max-w-[145px] mx-auto w-full" alt="">
                     <div class="text-[#115934] md:text-start text-center">
-                        <h2 class="lg:text-[38px] md:text-[22.01px] text-[18px] font-bold capitalize lg:pb-5 pb-2">Selesaikan isu
+                        <h2 class="lg:text-[38px] md:text-[22.01px] text-[18px] font-bold capitalize lg:pb-5 pb-2">
+                            Selesaikan isu
                             giliran anda</h2>
                         <p class="lg:text-[32px] md:text-[18.53px] text-[14px] lg:leading-tight">Tiada siapa suka
                             menunggu. Jika anda selesaikan masalah ini, anda selangkah lebih maju berbanding yang lain
@@ -1393,7 +1402,8 @@
                     <img src="/Docs/Assets/Images/Home/benefit2.webp"
                         class="lg:max-w-[240px] max-w-[145px] mx-auto w-full" alt="">
                     <div class="text-[#115934] md:text-start text-center">
-                        <h2 class="lg:text-[38px] md:text-[22.01px] text-[18px] font-bold capitalize lg:pb-5 pb-2">Lebih perniagaan
+                        <h2 class="lg:text-[38px] md:text-[22.01px] text-[18px] font-bold capitalize lg:pb-5 pb-2">Lebih
+                            perniagaan
                             dan pelanggan berulang</h2>
                         <p class="lg:text-[32px] md:text-[18.53px] text-[14px] lg:leading-tight">Apabila anda menghargai
                             masa orang, mereka akan meninggalkan premis anda dengan perasaan yang baik dan akan
@@ -1415,7 +1425,8 @@
                     <img src="/Docs/Assets/Images/Home/benefit4.webp"
                         class="lg:max-w-[240px] max-w-[145px] mx-auto w-full" alt="">
                     <div class="text-[#115934] md:text-start text-center">
-                        <h2 class="lg:text-[38px] md:text-[22.01px] text-[18px] font-bold capitalize lg:pb-5 pb-2">Kegembiraan
+                        <h2 class="lg:text-[38px] md:text-[22.01px] text-[18px] font-bold capitalize lg:pb-5 pb-2">
+                            Kegembiraan
                             kakitangan sepanjang masa</h2>
                         <p class="lg:text-[32px] md:text-[18.53px] text-[14px] lg:leading-tight">Ucapkan selamat tinggal
                             kepada pelanggan yang marah kerana menunggu terlalu lama atau kakitangan yang keletihan</p>
@@ -1435,7 +1446,8 @@
                     <img src="/Docs/Assets/Images/Home/benefit6.webp"
                         class="lg:max-w-[240px] max-w-[145px] mx-auto w-full" alt="">
                     <div class="text-[#115934] md:text-start text-center">
-                        <h2 class="lg:text-[38px] md:text-[22.01px] text-[18px] font-bold capitalize lg:pb-5 pb-2">Ulasan
+                        <h2 class="lg:text-[38px] md:text-[22.01px] text-[18px] font-bold capitalize lg:pb-5 pb-2">
+                            Ulasan
                         </h2>
                         <p class="lg:text-[32px] md:text-[18.53px] text-[14px] lg:leading-tight">Pelanggan mempunyai
                             pilihan untuk meninggalkan ulasan supaya anda boleh meningkatkan perniagaan anda atau Google
@@ -1446,7 +1458,8 @@
                     <img src="/Docs/Assets/Images/Home/benefit7.webp"
                         class="lg:max-w-[240px] max-w-[145px] mx-auto w-full" alt="">
                     <div class="text-[#115934] md:text-start text-center">
-                        <h2 class="lg:text-[38px] md:text-[22.01px] text-[18px] font-bold capitalize lg:pb-5 pb-2">Masalah Tempat
+                        <h2 class="lg:text-[38px] md:text-[22.01px] text-[18px] font-bold capitalize lg:pb-5 pb-2">
+                            Masalah Tempat
                             Letak Kereta
                         </h2>
                         <p class="lg:text-[32px] md:text-[18.53px] text-[14px] lg:leading-tight">Dengan orang yang
@@ -1491,7 +1504,9 @@
                     <div x-ref="tab" :style="handleToggle()"
                         class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
                         <p class="p-3 text-[#115934] lg:text-[20px] md:text-[16px] text-[15px]">
-                            ChupOnline ialah aplikasi giliran & janji temu yang paling dinamik di dunia, yang menyesuaikan diri dengan situasi sebenar di premis supaya orang akan diberitahu sebelum melawat.
+                            ChupOnline ialah aplikasi giliran & janji temu yang paling dinamik di dunia, yang
+                            menyesuaikan diri dengan situasi sebenar di premis supaya orang akan diberitahu sebelum
+                            melawat.
                         </p>
                     </div>
                 </li>
@@ -1504,7 +1519,9 @@
                     <div x-ref="tab" :style="handleToggle()"
                         class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
                         <p class="p-3 text-[#115934] lg:text-[20px] md:text-[16px] text-[15px]">
-                            Tidak seperti sistem tradisional yang bergantung kepada ketepatan masa yang ketat, Chup menyesuaikan diri dengan keadaan masa sebenar, memastikan pesakit tiba tepat pada waktunya untuk janji temu mereka.
+                            Tidak seperti sistem tradisional yang bergantung kepada ketepatan masa yang ketat, Chup
+                            menyesuaikan diri dengan keadaan masa sebenar, memastikan pesakit tiba tepat pada waktunya
+                            untuk janji temu mereka.
                         </p>
                     </div>
                 </li>
@@ -1517,7 +1534,8 @@
                     <div x-ref="tab" :style="handleToggle()"
                         class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
                         <p class="p-3 text-[#115934] lg:text-[20px] md:text-[16px] text-[15px]">
-                            Pengurangan masa menunggu meningkatkan kecekapan, kepuasan pesakit, dan memperkemaskan operasi hospital.
+                            Pengurangan masa menunggu meningkatkan kecekapan, kepuasan pesakit, dan memperkemaskan
+                            operasi hospital.
                         </p>
                     </div>
                 </li>
@@ -1530,7 +1548,8 @@
                     <div x-ref="tab" :style="handleToggle()"
                         class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
                         <p class="p-3 text-[#115934] lg:text-[20px] md:text-[16px] text-[15px]">
-                            Ya, Chup boleh berintegrasi dengan CMS dan HIS untuk mengurus giliran dinamik serta menyelaras data pesakit dan jadual secara masa nyata.
+                            Ya, Chup boleh berintegrasi dengan CMS dan HIS untuk mengurus giliran dinamik serta
+                            menyelaras data pesakit dan jadual secara masa nyata.
                         </p>
                     </div>
                 </li>
@@ -1543,7 +1562,8 @@
                     <div x-ref="tab" :style="handleToggle()"
                         class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
                         <p class="p-3 text-[#115934] lg:text-[20px] md:text-[16px] text-[15px]">
-                            Chup memberi tumpuan kepada sektor penjagaan kesihatan tetapi juga boleh digunakan di sektor lain seperti kerajaan, salon, spa, dan automotif.
+                            Chup memberi tumpuan kepada sektor penjagaan kesihatan tetapi juga boleh digunakan di sektor
+                            lain seperti kerajaan, salon, spa, dan automotif.
                         </p>
                     </div>
                 </li>
