@@ -18,7 +18,7 @@ document.getElementById('dynamic-footer').innerHTML = `
                 </div>
             </div>
             <div class="w-full h-[1px] bg-white md:mt-10 mt-6 mb-5"></div>
-            <p class="text-white text-center">© 2024 jongQ Sdn Bhd. สงวนลิขสิทธิ์</p>
+            <p class="text-white text-center">© 2024 Chup Online Sdn Bhd. สงวนลิขสิทธิ์</p>
         </div>
     </div>
 `;
