@@ -121,26 +121,26 @@
         <div class="px-10 pt-10 pb-4 relative flex flex-col h-full justify-between">
             <div class="">
                 <div class="flex items-center justify-between">
-                    <a href="/index.html">
+                    <a href="/Languages/Malaysia/index.html">
                         <img src="/Docs/Assets/Images/Global/logo.svg" class="h-[32px]" alt="">
                     </a>
                     <img src="/Docs/Assets/Images/Navbar/close.png" id="closeNav" class="h-[21px] cursor-pointer"
                         alt="">
                 </div>
                 <ul class="mt-10 text-[#115934] flex flex-col text-[17px]">
-                    <a href="/about.html">
+                    <a href="/Languages/Malaysia/about.html">
                         <li class="py-4  poppins">Tentang Kami</li>
                     </a>
-                    <a href="/case-study.html">
+                    <a href="/Languages/Malaysia/case-study.html">
                         <li class="py-4  poppins">Kajian Kes</li>
                     </a>
-                    <a href="/News/chup-news.html">
+                    <a href="/Languages/Malaysia/News/chup-news.html">
                         <li class="py-4  poppins">Berita & Blog</li>
                     </a>
-                    <a href="/FAQ.html">
+                    <a href="/Languages/Malaysia/FAQ.html">
                         <li class="py-4  poppins">Soalan Lazim</li>
                     </a>
-                    <a href="/Products.html">
+                    <a href="/Languages/Malaysia/Products.html">
                         <li class="py-4  poppins">Produk</li>
                     </a>
                     <li class="py-5" x-data="accordion(2)">
@@ -152,10 +152,10 @@
                         <div x-ref="tab" :style="handleToggle()"
                             class="overflow-hidden max-h-0 duration-500 transition-all">
                             <ul class="pl-5 pt-5">
-                                <a href="/Career.html">
+                                <a href="/Languages/Malaysia/Career.html">
                                     <li class="py-3">Karir</li>
                                 </a>
-                                <a href="/Security-Compliance.html">
+                                <a href="/Languages/Malaysia/Security-Compliance.html">
                                     <li class="py-3">Kepatuhan Keamanan</li>
                                 </a>
                             </ul>
@@ -163,13 +163,47 @@
                     </li>
                 </ul>
             </div>
-            <a href="">
-                <button
-                    class="bg-[#115934] flex w-full text-[#F1E4DA] p-3 rounded-lg transition-all items-center justify-center gap-4 font-medium ">
-                    <img src="/Docs/Assets/Images/Navbar/whatsapp.png" class="h-5" alt="">
-                    WhatsApp Kami
-                </button>
-            </a>
+            <div class="mb-5">
+                <div class="relative py-3 mainlanguage">
+                    <div
+                        class="flex items-center justify-center  gap-1.5 border-2 border-[#115934]  p-2.5 transition-all cursor-pointer rounded-xl language">
+                        <img src="/Docs/Assets/Images/Global/language.svg" class="max-w-[19.5px] w-full" alt="">
+                        <i class="fa-solid fa-angle-down text-sm text-[#115934] transition-all duration-500"></i>
+                        <div
+                            class="border-2 border-[#115934] text-[#115934] w-full rounded-lg absolute z-20  bg-[#f1e4da] bottom-16 right-0 overflow-hidden fadeIn div2">
+                            <ul>
+                                <a href="/Languages/English/index.html">
+                                    <li class="px-5 py-3 transition-all hover:bg-[#115934] font-bold hover:text-white">
+                                        English</li>
+                                </a>
+                                <a href="./Languages/Malaysia/index.html">
+                                    <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">Malaysia
+                                    </li>
+                                </a>
+                                <a href="/Languages/Indonesia/index.html">
+                                    <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">Indonesia
+                                    </li>
+                                </a>
+                                <a href="./Languages/Thailand/index.html">
+                                    <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">Thailand
+                                    </li>
+                                </a>
+                                <a href="./Languages/Mandarin/index.html">
+                                    <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">Mandarin
+                                    </li>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <a href="">
+                    <button
+                        class="bg-[#115934] flex w-full text-[#F1E4DA] p-3 rounded-lg transition-all items-center justify-center gap-4 font-medium ">
+                        <img src="/Docs/Assets/Images/Navbar/whatsapp.png" class="h-5" alt="">
+                        WhatsApp Us
+                    </button>
+                </a>
+            </div>
         </div>
     </div>
 
@@ -393,43 +427,60 @@
 
             <div class="">
 
-                <div class="flex items-center flex-wrap justify-center gap-3  mt-6">
-                    <p
-                        class="lg:text-[24px] font-medium text-nowrap py-2.5 px-4 text-center text-[14px] bg-[#F26522] text-white rounded-sm">
-                        Ketibaan Lewat</p>
-                    <p
-                        class="lg:text-[24px] font-medium text-nowrap py-2.5 px-4 text-center text-[14px] bg-[#F26522] text-white rounded-sm">
-                        Ketibaan Awal</p>
-                    <p
-                        class="lg:text-[24px] font-medium text-nowrap py-2.5 px-4 text-center text-[14px] bg-[#F26522] text-white rounded-sm">
-                        Pembatalan</p>
-                    <p
-                        class="lg:text-[24px] font-medium text-nowrap py-2.5 px-4 text-center text-[14px] bg-[#F26522] text-white rounded-sm">
-                        Jadual Semua</p>
-                    <p
-                        class="lg:text-[24px] font-medium text-nowrap py-2.5 px-4 text-center text-[14px] bg-[#F26522] text-white rounded-sm">
-                        Kelewatan (tanpa memaklumkan)</p>
-                    <p
-                        class="lg:text-[24px] font-medium text-nowrap py-2.5 px-4 text-center text-[14px] bg-[#F26522] text-white rounded-sm">
-                        Terlupa Janji Temu</p>
-                    <p
-                        class="lg:text-[24px] font-medium text-nowrap py-2.5 px-4 text-center text-[14px] bg-[#F26522] text-white rounded-sm">
-                        Kelewatan (dengan memaklumkan)</p>
-                    <p
-                        class="lg:text-[24px] font-medium text-nowrap py-2.5 px-4 text-center text-[14px] bg-[#F26522] text-white rounded-sm">
-                        Tiada Telefon Pintar</p>
-                    <p
-                        class="lg:text-[24px] font-medium text-nowrap py-2.5 px-4 text-center text-[14px] bg-[#F26522] text-white rounded-sm">
-                        Jahil dengan Mesej</p>
-                    <p
-                        class="lg:text-[24px] font-medium text-nowrap py-2.5 px-4 text-center text-[14px] bg-[#F26522] text-white rounded-sm">
-                        Tidak Mahu Memuat Turun Aplikasi</p>
-                    <p
-                        class="lg:text-[24px] font-medium text-nowrap py-2.5 px-4 text-center text-[14px] bg-[#F26522] text-white rounded-sm">
-                        Tiada Tunjuk</p>
-                    <p
-                        class="lg:text-[24px] font-medium text-nowrap py-2.5 px-4 text-center text-[14px] bg-[#F26522] text-white rounded-sm">
-                        Terlupa Janji Temu</p>
+                <div class="flex items-center xl:flex-row flex-col justify-center md:gap-2 gap-1 mt-6">
+                    <div class="flex items-center justify-center md:gap-3 gap-1 w-full max-w-full">
+                        <p
+                            class="lg:text-[24px] md:h-[72px] max-w-full h-[44px] leading-tight w-full font-medium flex items-center justify-center md:px-4 px-0.5 text-center text-[14px] bg-[#F26522] text-white lg:text-nowrap rounded-md">
+                            Ketibaan Lewat</p>
+                        <p
+                            class="lg:text-[24px] md:h-[72px] max-w-full h-[44px] leading-tight w-full font-medium flex items-center justify-center md:px-4 px-0.5 text-center text-[14px] bg-[#F26522] text-white rounded-md">
+                            Ketibaan Awal</p>
+                        <p
+                            class="lg:text-[24px] md:h-[72px] max-w-full h-[44px] leading-tight w-full font-medium flex items-center justify-center md:px-4 px-0.5 text-center text-[14px] bg-[#F26522] text-white rounded-md">
+                            Pembatalan</p>
+                    </div>
+                    <div class="flex items-center justify-center md:gap-3 gap-1 w-full max-w-full">
+                        <p
+                            class="lg:text-[24px] md:h-[72px] max-w-full h-[44px] leading-tight w-full font-medium flex items-center justify-center md:px-4 px-0.5 text-center text-[14px] bg-[#F26522] text-white rounded-md">
+                            Jadual Semua</p>
+                        <p
+                            class="lg:text-[24px] md:h-[72px] max-w-full h-[44px] leading-tight w-full font-medium flex items-center justify-center md:px-4 px-0.5 text-center text-[14px] bg-[#F26522] text-white rounded-md">
+                            Kelewatan (tanpa memaklumkan)</p>
+                    </div>
+                </div>
+                <div class="flex items-center xl:flex-row flex-col justify-center md:gap-2 gap-1 xl:mt-3 mt-1">
+                    <div class="flex items-center justify-center md:gap-3 gap-1 w-full max-w-full">
+                        <p
+                            class="lg:text-[24px] md:h-[72px] max-w-full h-[44px] leading-tight w-full font-medium flex items-center justify-center md:px-4 px-0.5 text-center text-[14px] bg-[#F26522] text-white rounded-md">
+                            Terlupa Janji Temu</p>
+                        <p
+                            class="lg:text-[24px] md:h-[72px] max-w-full h-[44px] leading-tight w-full font-medium flex items-center justify-center md:px-4 px-0.5 text-center text-[14px] bg-[#F26522] text-white rounded-md">
+                            Kelewatan (dengan memaklumkan)</p>
+                    </div>
+                    <div class="flex items-center justify-center md:gap-3 gap-1 w-full max-w-full">
+                        <p
+                            class="lg:text-[24px] md:h-[72px] max-w-full h-[44px] leading-tight w-full font-medium flex items-center justify-center md:px-4 px-0.5 text-center text-[14px] bg-[#F26522] text-white rounded-md">
+                            Tiada Telefon Pintar</p>
+                        <p
+                            class="lg:text-[24px] md:h-[72px] max-w-full h-[44px] leading-tight w-full font-medium flex items-center justify-center md:px-4 px-0.5 text-center text-[14px] bg-[#F26522] text-white rounded-md">
+                            Jahil dengan Mesej</p>
+                    </div>
+                </div>
+                <div class="flex items-center xl:flex-row flex-col justify-center md:gap-2 gap-1 xl:mt-3 mt-1">
+                    <div class="flex items-center justify-center md:gap-3 gap-1 w-full max-w-full">
+
+                        <p
+                            class="lg:text-[24px] md:h-[72px] max-w-full h-[44px] leading-tight w-full font-medium flex items-center justify-center md:px-4 px-0.5 text-center text-[14px] bg-[#F26522] text-white rounded-md">
+                            Tidak Mahu Memuat Turun Aplikasi</p>
+                        <p
+                            class="lg:text-[24px] md:h-[72px] max-w-full h-[44px] leading-tight w-full font-medium flex items-center justify-center md:px-4 px-0.5 text-center text-[14px] bg-[#F26522] text-white rounded-md">
+                            Tiada Tunjuk</p>
+                    </div>
+                    <div class="flex items-center justify-center md:gap-3 gap-1 w-full max-w-full">
+                        <p
+                            class="lg:text-[24px] md:h-[72px] max-w-full h-[44px] leading-tight w-full font-medium flex items-center justify-center md:px-4 px-0.5 text-center text-[14px] bg-[#F26522] text-white rounded-md">
+                            Terlupa Janji Temu</p>
+                    </div>
                 </div>
 
 
@@ -452,98 +503,110 @@
                 </div>
 
                 <div class="flex items-center flex-wrap justify-center gap-3 mt-6">
-                    <p
-                        class="lg:text-[24px] text-[14px] font-medium text-center bg-[#115934] text-white py-2.5 px-4 rounded-sm">
-                        Beberapa kaunter dirancang / ditutup secara tiba-tiba
-                    </p>
-                    <p
-                        class="lg:text-[24px] text-[14px] font-medium text-center bg-[#115934] text-white py-2.5 px-4 rounded-sm">
-                        Rehat Tengah Hari
-                    </p>
-                    <p
-                        class="lg:text-[24px] text-[14px] font-medium text-center bg-[#115934] text-white py-2.5 px-4 rounded-sm">
-                        Berjalan Masuk
-                    </p>
-                    <p
-                        class="lg:text-[24px] text-[14px] font-medium text-center bg-[#115934] text-white py-2.5 px-4 rounded-sm">
-                        Lawatan berbilang stesen
-                    </p>
-                    <p
-                        class="lg:text-[24px] text-[14px] font-medium text-center bg-[#115934] text-white py-2.5 px-4 rounded-sm">
-                        Semua kaunter untuk perkhidmatan ditutup secara mengejut
-                    </p>
-                    <p
-                        class="lg:text-[24px] text-[14px] font-medium text-center bg-[#115934] text-white py-2.5 px-4 rounded-sm">
-                        Penggantian dengan kakitangan lain
-                    </p>
-                    <p
-                        class="lg:text-[24px] text-[14px] font-medium text-center bg-[#115934] text-white py-2.5 px-4 rounded-sm">
-                        Pergi ke Cawangan lain
-                    </p>
-                    <p
-                        class="lg:text-[24px] text-[14px] font-medium text-center bg-[#115934] text-white py-2.5 px-4 rounded-sm">
-                        Menghidangkan masa yang lebih lama daripada yang dianggarkan
-                    </p>
-                    <p
-                        class="lg:text-[24px] text-[14px] font-medium text-center bg-[#115934] text-white py-2.5 px-4 rounded-sm">
-                        Berkhidmat lebih cepat daripada anggaran
-                    </p>
-                    <p
-                        class="lg:text-[24px] text-[14px] font-medium text-center bg-[#115934] text-white py-2.5 px-4 rounded-sm">
-                        Sistem Pembekal Perkhidmatan Turun
-                    </p>
-                    <p
-                        class="lg:text-[24px] text-[14px] font-medium text-center bg-[#115934] text-white py-2.5 px-4 rounded-sm">
-                        Waktu Tutup Mengejut atau Tetap
-                    </p>
-                    <p
-                        class="lg:text-[24px] text-[14px] font-medium text-center bg-[#115934] text-white py-2.5 px-4 rounded-sm">
-                        Lewat Tiba
-                    </p>
-                    <p
-                        class="lg:text-[24px] text-[14px] font-medium text-center bg-[#115934] text-white py-2.5 px-4 rounded-sm">
-                        Cuti kecemasan masa nyata
-                    </p>
-                    <p
-                        class="lg:text-[24px] text-[14px] font-medium text-center bg-[#115934] text-white py-2.5 px-4 rounded-sm">
-                        Cuti kecemasan akan datang
-                    </p>
+                    <div class="w-full grid md:gap-3 gap-1 md:grid-cols-4 grid-cols-2">
+                        <p
+                            class="lg:text-[24px] md:h-[72px] col-span-2 max-w-full h-[44px] leading-tight w-full font-medium flex items-center justify-center md:px-4 px-0.5 text-center text-[14px] bg-[#115934] text-white rounded-md">
+                            Beberapa kaunter dirancang / ditutup secara tiba-tiba
+                        </p>
+                        <p
+                            class="lg:text-[24px] md:h-[72px] max-w-full h-[44px] leading-tight w-full font-medium flex items-center justify-center md:px-4 px-0.5 text-center text-[14px] bg-[#115934] text-white rounded-md">
+                            Rehat Tengah Hari
+                        </p>
+                        <p
+                            class="lg:text-[24px] md:h-[72px] max-w-full h-[44px] leading-tight w-full font-medium flex items-center justify-center md:px-4 px-0.5 text-center text-[14px] bg-[#115934] text-white rounded-md">
+                            Berjalan Masuk
+                        </p>
+                        <p
+                            class="lg:text-[24px] md:h-[72px] md:col-span-1 col-span-2 max-w-full h-[44px] leading-tight w-full font-medium flex items-center justify-center md:px-4 px-0.5 text-center text-[14px] bg-[#115934] text-white rounded-md">
+                            Lawatan berbilang stesen
+                        </p>
+                        <p
+                            class="lg:text-[24px] md:h-[72px] col-span-2 max-w-full h-[44px] leading-tight w-full font-medium flex items-center justify-center md:px-4 px-0.5 text-center text-[14px] bg-[#115934] text-white rounded-md">
+                            Semua kaunter untuk perkhidmatan ditutup secara mengejut
+                        </p>
+                        <p
+                            class="lg:text-[24px] md:h-[72px] max-w-full h-[44px] leading-tight w-full font-medium flex items-center justify-center md:px-4 px-0.5 text-center text-[14px] bg-[#115934] text-white rounded-md">
+                            Penggantian dengan kakitangan lain
+                        </p>
+                        <p
+                            class="lg:text-[24px] md:h-[72px] max-w-full h-[44px] leading-tight w-full font-medium flex items-center justify-center md:px-4 px-0.5 text-center text-[14px] bg-[#115934] text-white rounded-md">
+                            Pergi ke Cawangan lain
+                        </p>
+                        <p
+                            class="lg:text-[24px] col-span-2 md:h-[72px] max-w-full h-[44px] leading-tight w-full font-medium flex items-center justify-center md:px-4 px-0.5 text-center text-[14px] bg-[#115934] text-white rounded-md">
+                            Menghidangkan masa yang lebih lama daripada yang dianggarkan
+                        </p>
+                        <p
+                            class="lg:text-[24px] md:h-[72px] md:col-span-1 col-span-2 max-w-full h-[44px] leading-tight w-full font-medium flex items-center justify-center md:px-4 px-0.5 text-center text-[14px] bg-[#115934] text-white rounded-md">
+                            Berkhidmat lebih cepat daripada anggaran
+                        </p>
+                        <p
+                            class="lg:text-[24px] md:h-[72px] max-w-full h-[44px] leading-tight w-full font-medium flex items-center justify-center md:px-4 px-0.5 text-center text-[14px] bg-[#115934] text-white rounded-md">
+                            Sistem Pembekal Perkhidmatan Turun
+                        </p>
+                        <p
+                            class="lg:text-[24px] md:h-[72px] max-w-full h-[44px] leading-tight w-full font-medium flex items-center justify-center md:px-4 px-0.5 text-center text-[14px] bg-[#115934] text-white rounded-md">
+                            Waktu Tutup Mengejut atau Tetap
+                        </p>
+                        <p
+                            class="lg:text-[24px] md:h-[72px] max-w-full h-[44px] leading-tight w-full font-medium flex items-center justify-center md:px-4 px-0.5 text-center text-[14px] bg-[#115934] text-white rounded-md">
+                            Lewat Tiba
+                        </p>
+                        <p
+                            class="lg:text-[24px] md:h-[72px] max-w-full h-[44px] leading-tight w-full font-medium flex items-center justify-center md:px-4 px-0.5 text-center text-[14px] bg-[#115934] text-white rounded-md">
+                            Cuti kecemasan masa nyata
+                        </p>
+                        <p
+                            class="lg:text-[24px] md:col-span-4 col-span-2 md:h-[72px] max-w-full h-[44px] leading-tight w-full font-medium flex items-center justify-center md:px-4 px-0.5 text-center text-[14px] bg-[#115934] text-white rounded-md">
+                            Cuti kecemasan akan datang
+                        </p>
 
-                    <p class="lg:text-[28px] sm:text-[18px] text-[12px] bg-[#f1e4da] p-4 mt-8 rounded-md">Dalam dunia
+                    </div>
+
+                    <p class="lg:text-[28px] sm:text-[18px] text-[12px] bg-[#f1e4da] p-4 mt-8 rounded-md">Dalam
+                        dunia
                         yang sempurna, pelanggan membuat tempahan pada pukul <strong>10.00 PG</strong> dan pembekal
                         perkhidmatan akan
                         hadir kepada pelanggan pada slot <strong>10.00 PG</strong>. Atau anda menyertai barisan dan
                         diberi masa menunggu
                         yang tepat dan disampaikan dengan sewajarnya. <strong>Tetapi ini BUKAN DUNIA YANG
                             SEMPURNA</strong>. Kedua-dua
-                        pembekal perkhidmatan dan pelanggan <b>tidak pernah menepati masa</b> - menjadikan tempahan dan
-                        anggaran masa menunggu <b>dibazirkan</b>. Mengapa, walaupun pengurusan pelantikan, orang masih
+                        pembekal perkhidmatan dan pelanggan <b>tidak pernah menepati masa</b> - menjadikan tempahan
+                        dan
+                        anggaran masa menunggu <b>dibazirkan</b>. Mengapa, walaupun pengurusan pelantikan, orang
+                        masih
                         menunggu
                         berjam-jam? Mereka menempah pada 10:00 AM tetapi akhirnya dilayan pada 2:00 PM?</p>
                     <div class="lg:text-[28px] sm:text-[18px] text-[12px] bg-[#d8fae8] p-4 mt-2 rounded-md">
                         <p>Chup berfungsi sebagai pengurus trafik dinamik, sama seperti trafik polis di persimpangan
                             sibuk semasa waktu sibuk, mengendalikan input daripada pengguna/pelanggan dan penyedia
                             perkhidmatan. Sama ada maklumat disediakan melalui input butang atau dikumpulkan melalui
-                            logik algoritma automatik, Chup bertanggungjawab memprosesnya. Setelah dikesan, Chup segera
-                            memberitahu kedua-dua pengguna dan pembekal perkhidmatan, dan dengan itu melaraskan baris
+                            logik algoritma automatik, Chup bertanggungjawab memprosesnya. Setelah dikesan, Chup
+                            segera
+                            memberitahu kedua-dua pengguna dan pembekal perkhidmatan, dan dengan itu melaraskan
+                            baris
                             gilir langsung yang sedang berlangsung dan janji temu baris gilir masa hadapan.</p> <br>
 
                         <p class="flex items-center gap-6">
                             <span
                                 class="lg:text-[80px] md:text-[32px] text-[18px] leading-[60px] text-nowrap text-[#115934] font-bold">Hasilnya?
-                            </span>Pelanggan pra-ketibaan menerima pemberitahuan, membolehkan mereka merancang ketibaan
+                            </span>Pelanggan pra-ketibaan menerima pemberitahuan, membolehkan mereka merancang
+                            ketibaan
                             mereka dan meminimumkan masa menunggu mereka.
                         </p>
 
-                        <p class="text-[#115934]">Pelanggan selepas ketibaan? Mereka boleh merancang untuk pergi atau
+                        <p class="text-[#115934]">Pelanggan selepas ketibaan? Mereka boleh merancang untuk pergi
+                            atau
                             menunggu di tempat lain. Penyelidikan menunjukkan bahawa <strong>tidak mengetahui berapa
-                                lama untuk menunggu membunuh lebih daripada menunggu itu sendiri</strong>. Bagi penyedia
+                                lama untuk menunggu membunuh lebih daripada menunggu itu sendiri</strong>. Bagi
+                            penyedia
                             perkhidmatan, mereka boleh beroperasi dengan <strong>cekap, bebas tekanan dan bebas rasa
                                 bersalah</strong> dengan pengurusan kesesakan orang ramai yang berkesan Chup.
                         </p>
                     </div>
                     <p class="lg:text-[28px] sm:text-[18px] text-[12px] bg-[#E0E0E0] p-4 mt-2 rounded-md">Situasi
-                        dinamik yang disebut di sini mewakili senario utama, tetapi terdapat juga banyak sub-situasi di
+                        dinamik yang disebut di sini mewakili senario utama, tetapi terdapat juga banyak sub-situasi
+                        di
                         bawah setiap satu daripadanya. Senarai ini tidak lengkap. Logik dan algoritma untuk
                         mengendalikan situasi ini telah dibangunkan selama beberapa tahun. Selain daripada menguji
                         situasi yang diramalkan semasa pembangunan, Chup telah menjalani ujian manual dan automatik
@@ -590,7 +653,8 @@
                 <h2 class=" lg:text-[60px] text-[24px] md:text-[36px] font-semibold">Layan Layan</h2>
                 <img src="/Docs/Assets/Images/Home/longServer.webp"
                     class="max-w-[700px] select-none w-full mx-auto my-6" alt="">
-                <p class="lg:text-[32px] md:text-[24px] text-[16px] md:max-w-[1120px] w-full">Apabila doktor terpaksa
+                <p class="lg:text-[32px] md:text-[24px] text-[16px] md:max-w-[1120px] w-full">Apabila doktor
+                    terpaksa
                     berkhidmat dalam tempoh
                     yang lama, pesakit dalam barisan akan mendapat mesej kelewatan melalui WhatsApp dan pesakit lain
                     akan menjadualkan semula secara automatik ke masa baharu.</p>
@@ -600,7 +664,8 @@
                 <h2 class=" lg:text-[60px] text-[24px] md:text-[36px] font-semibold">Tutup Tersuai</h2>
                 <img src="/Docs/Assets/Images/Home/customClose.webp"
                     class="max-w-[1120px] select-none w-full mx-auto my-6" alt="">
-                <p class="lg:text-[32px] md:text-[24px] text-[16px] ">Dalam Chup, pentadbir boleh menggunakan ciri Tutup
+                <p class="lg:text-[32px] md:text-[24px] text-[16px] ">Dalam Chup, pentadbir boleh menggunakan ciri
+                    Tutup
                     Tersuai untuk kecemasan atau sebab lain. Janji temu yang belum selesai boleh dibatalkan atau
                     dialihkan ke slot yang tersedia seterusnya.</p>
             </div>
@@ -609,7 +674,8 @@
                 <h2 class=" lg:text-[60px] text-[24px] md:text-[36px] font-semibold">Rehat Kecemasan</h2>
                 <img src="/Docs/Assets/Images/Home/emergncyBreak.webp"
                     class="max-w-[700px] select-none w-full mx-auto my-6" alt="">
-                <p class="lg:text-[32px] md:text-[24px] text-[16px] ">Dalam Chup, pentadbir boleh mengaktifkan ciri Cuti
+                <p class="lg:text-[32px] md:text-[24px] text-[16px] ">Dalam Chup, pentadbir boleh mengaktifkan ciri
+                    Cuti
                     Kecemasan untuk mengendalikan situasi mendesak. Ia membatalkan janji temu yang belum selesai dan
                     memaklumkan pesakit untuk menjadualkan semula ke slot yang tersedia seterusnya.</p>
             </div>
@@ -619,17 +685,20 @@
                 <h2 class=" lg:text-[60px] text-[24px] md:text-[36px] font-semibold">Doktor Lewat Tiba</h2>
                 <img src="/Docs/Assets/Images/Home/doctorlate.webp"
                     class="max-w-[700px] select-none w-full mx-auto my-6" alt="">
-                <p class="lg:text-[32px] md:text-[24px] text-[16px] ">Admin boleh mesej doktor tentang ketibaan lewat
+                <p class="lg:text-[32px] md:text-[24px] text-[16px] ">Admin boleh mesej doktor tentang ketibaan
+                    lewat
                     dan beri pilihan jadual semula, jadi doktor boleh pilih jadual mengikut ketibaan mereka.</p>
                 <img src="/Docs/Assets/Images/Home/doctorlate2.webp"
                     class="max-w-[700px] select-none w-full mx-auto my-6" alt="">
-                <p class="lg:text-[32px] md:text-[24px] text-[16px] ">Pesakit akan menerima peringatan automatik apabila
+                <p class="lg:text-[32px] md:text-[24px] text-[16px] ">Pesakit akan menerima peringatan automatik
+                    apabila
                     doktor lewat melalui WhatsApp.</p>
             </div>
 
 
             <div class="w-full text-[#115934] sm:p-8 p-4 bg-white myShadow rounded-md mt-10">
-                <h2 class=" lg:text-[60px] text-[24px] md:text-[36px] font-semibold">Perkhidmatan Transit Automatik</h2>
+                <h2 class=" lg:text-[60px] text-[24px] md:text-[36px] font-semibold">Perkhidmatan Transit Automatik
+                </h2>
                 <img src="/Docs/Assets/Images/Home/automaticTransit.webp"
                     class="max-w-[1120px] select-none w-full mx-auto my-6 sm:block hidden" alt="">
                 <img src="/Docs/Assets/Images/Home/automaticTransitres1.webp"
@@ -664,7 +733,8 @@
                         class="sm:w-full w-16 sm:static absolute  -top-8 right-1" alt="">
                 </div>
             </div>
-            <p class="lg:text-[32px] md:text-[24px] text-[#115934] max-w-[1200px] ">Kami benar-benar memprogram RIBUAN
+            <p class="lg:text-[32px] md:text-[24px] text-[#115934] max-w-[1200px] ">Kami benar-benar memprogram
+                RIBUAN
                 algoritma untuk memenuhi setiap situasi yang mungkin atau mungkin tidak berlaku.</p>
             <div class="w-full h-[1.5px] bg-zinc-400 my-8"></div>
 
@@ -676,7 +746,8 @@
                 <img src="/Languages/Malaysia/Docs/Images/Pra - Kelulusan - Surat rujukan.png"
                     class="max-w-[1120px] select-none w-full mx-auto my-6" alt="">
                 <p class="lg:text-[32px] md:text-[24px] text-[16px] ">Sistem Pelantikan Pra-Kelulusan membolehkan
-                    hospital menetapkan slot temujanji berdasarkan surat rujukan, memastikan pesakit dipadankan dengan
+                    hospital menetapkan slot temujanji berdasarkan surat rujukan, memastikan pesakit dipadankan
+                    dengan
                     doktor yang betul. Setelah pesakit melengkapkan langkah tempahan, mereka menerima pemberitahuan
                     WhatsApp.
                 </p>
@@ -684,25 +755,32 @@
 
 
             <div class="w-full text-[#115934] sm:p-8 p-4 bg-white myShadow rounded-md mt-10">
-                <h2 class=" lg:text-[60px] text-[24px] md:text-[36px] font-semibold">Pengebilan - Tandai Sebagai Dibayar
+                <h2 class=" lg:text-[60px] text-[24px] md:text-[36px] font-semibold">Pengebilan - Tandai Sebagai
+                    Dibayar
                 </h2>
                 <img src="/Languages/Malaysia/Docs/Images/Pengebilan - Tandai Sebagai Dibayar-min.webp"
                     class="max-w-[856px] select-none w-full mx-auto my-6" alt="">
-                <p class="lg:text-[32px] md:text-[24px] text-[16px] ">Dalam ciri Pengebilan - Tandakan sebagai Berbayar
-                    ChupOnline, sebaik sahaja pesakit menyelesaikan pembayaran, kakitangan juruwang mengklik "Tandakan
+                <p class="lg:text-[32px] md:text-[24px] text-[16px] ">Dalam ciri Pengebilan - Tandakan sebagai
+                    Berbayar
+                    ChupOnline, sebaik sahaja pesakit menyelesaikan pembayaran, kakitangan juruwang mengklik
+                    "Tandakan
                     sebagai Dibayar" untuk mengemas kini status pesakit.</p>
                 <img src="/Languages/Malaysia/Docs/Images/Pengebilan - Tandai Sebagai Dibayar2-min.webp"
                     class="max-w-[856px] select-none w-full mx-auto my-8" alt="">
-                <p class="lg:text-[32px] md:text-[24px] text-[16px] ">Sekiranya pesakit perlu pergi ke farmasi, mereka
-                    secara automatik dipindahkan ke sana. Sekiranya pesakit tidak mengambil ubat, lawatan pesakit akan
-                    ditamatkan. Pesakit juga boleh dialihkan secara manual jika butang "Tandakan sebagai Dibayar" tidak
+                <p class="lg:text-[32px] md:text-[24px] text-[16px] ">Sekiranya pesakit perlu pergi ke farmasi,
+                    mereka
+                    secara automatik dipindahkan ke sana. Sekiranya pesakit tidak mengambil ubat, lawatan pesakit
+                    akan
+                    ditamatkan. Pesakit juga boleh dialihkan secara manual jika butang "Tandakan sebagai Dibayar"
+                    tidak
                     mengalihkannya secara automatik</p>
             </div>
             <div class="w-full text-[#115934] sm:p-8 p-4 bg-white myShadow rounded-md mt-10">
                 <h2 class=" lg:text-[60px] text-[24px] md:text-[36px] font-semibold">Insurans</h2>
                 <img src="/Docs/Assets/Images/Home/insurence.webp"
                     class="max-w-[1120px] select-none w-full mx-auto my-6" alt="">
-                <p class="lg:text-[32px] md:text-[24px] text-[16px] ">Dalam Chup, pentadbir boleh mengesahkan insurans
+                <p class="lg:text-[32px] md:text-[24px] text-[16px] ">Dalam Chup, pentadbir boleh mengesahkan
+                    insurans
                     dan menetapkan had perlindungan. Kakitangan insurans juga boleh menjana surat permintaan secara
                     automatik</p>
             </div>
@@ -751,7 +829,8 @@
                 <h2 class=" lg:text-[60px] text-[24px] md:text-[36px] font-semibold">Kepuasan hati</h2>
                 <img src="/Docs/Assets/Images/Home/Satisfaction.webp"
                     class="max-w-[1120px] select-none w-full mx-auto md:my-10 my-6" alt="">
-                <p class="lg:text-[32px] md:text-[24px] text-[16px] ">Memantau trend kepuasan masa nyata, menunjukkan
+                <p class="lg:text-[32px] md:text-[24px] text-[16px] ">Memantau trend kepuasan masa nyata,
+                    menunjukkan
                     bilangan pesakit yang berpuas hati dalam tempoh tertentu.</p>
             </div>
             <div class="w-full text-[#115934] sm:p-8 p-4 bg-white myShadow rounded-md mt-10">
@@ -761,7 +840,8 @@
                 <img src="/Docs/Assets/Images/Home/GoogleReviewres.webp"
                     class="max-w-[1120px] select-none w-full mx-auto md:my-10 my-6 sm:hidden" alt="">
                 <p class="lg:text-[32px] md:text-[24px] text-[16px] ">ChupOnline menyepadukan dengan lancar dengan
-                    hospital dan klinik untuk memautkan ulasan Google. Ia menyegerakkan maklum balas pesakit masa nyata,
+                    hospital dan klinik untuk memautkan ulasan Google. Ia menyegerakkan maklum balas pesakit masa
+                    nyata,
                     membantu penyedia penjagaan kesihatan menjejaki kepuasan dan membuat penambahbaikan berdasarkan
                     pengalaman pengguna yang tulen.</p>
             </div>
@@ -780,7 +860,8 @@
             <ul class="flex flex-col sm:mt-10 mt-6">
                 <li class="bg-white my-2 rounded-lg overflow-hidden shadow-lg" x-data="accordion(1)">
                     <h2 @click="handleClick()" class="flex flex-row justify-between items-center p-3 cursor-pointer">
-                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934]">Perniagaan &
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934]">Perniagaan
+                            &
                             Tetapan Pengguna</span>
                         <i class="fa-solid fa-plus transition-all duration-500" :class="handleRotate()"></i>
                     </h2>
@@ -926,7 +1007,8 @@
                 </li>
                 <li class="bg-white my-2 rounded-lg overflow-hidden shadow-lg" x-data="accordion(8)">
                     <h2 @click="handleClick()" class="flex flex-row justify-between items-center p-3 cursor-pointer">
-                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934]">Pengebilan &
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934]">Pengebilan
+                            &
                             Insurans</span>
                         <i class="fa-solid fa-plus transition-all duration-500" :class="handleRotate()"></i>
                     </h2>
@@ -1036,7 +1118,8 @@
                 </li>
                 <li class="bg-white my-2 rounded-lg overflow-hidden shadow-lg" x-data="accordion(13)">
                     <h2 @click="handleClick()" class="flex flex-row justify-between items-center p-3 cursor-pointer">
-                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934]">Ciri Tambahan
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934]">Ciri
+                            Tambahan
                         </span>
                         <i class="fa-solid fa-plus transition-all duration-500" :class="handleRotate()"></i>
                     </h2>
@@ -1074,12 +1157,13 @@
                 class="flex sm:flex-row flex-col items-center justify-center sm:gap-4 pb-3 text-[#F26522] lg:text-[80px] md:text-[60px] text-[30px]   font-bold ">
                 <span class="flex items-center md:gap-3 gap-1">
                     Bagaimana<img src="/Docs/Assets/Images/Home/chup.svg" class="lg:h-20 md:h-16 h-8" alt=""></span>
-                <span class="flex items-center gap-3"> berfungsi <img src="/Docs/Assets/Images/Home/questionMark.svg" class="lg:h-20 md:h-16 h-6"
-                        alt=""></span>
+                <span class="flex items-center gap-3"> berfungsi <img src="/Docs/Assets/Images/Home/questionMark.svg"
+                        class="lg:h-20 md:h-16 h-6" alt=""></span>
             </div>
             <p
                 class="text-[14px] md:text-[24px] text-center text-[#115934] max-w-[978px] w-full mx-auto lg:leading-tight lg:text-[32px]">
-                Chup bekerja semudah ABC. Mereka tetap menunggu, tetapi mereka bisa melakukannya dengan nyaman di rumah.
+                Chup bekerja semudah ABC. Mereka tetap menunggu, tetapi mereka bisa melakukannya dengan nyaman di
+                rumah.
                 Menunggu di tempat terasa lebih lama.
             </p>
 
@@ -1099,7 +1183,8 @@
                 <div class="flex flex-col gap-5 w-full">
                     <img src="/Docs/Assets/Images/Home/howChupWork3.webp" alt="">
                     <p class="text-[#115934] lg:leading-tight font-medium lg:text-[38px] md:text-[24px] text-[16px]">
-                        Pelanggan mendapat kemas kini langsung supaya mereka boleh berada di klinik seminimum mungkin
+                        Pelanggan mendapat kemas kini langsung supaya mereka boleh berada di klinik seminimum
+                        mungkin
                         mengikut situasi langsung klinik
                     </p>
                 </div>
@@ -1161,7 +1246,8 @@
                         <h2 class="lg:text-[30px] pb-2 font-medium md:leading-tight md:text-[20px] text-[16px] ">
                             AUTOMATIK
                         </h2>
-                        <p class="lg:text-[18px] md:text-[16px] text-[12px]">Pelanggan menerima teks secara automatik
+                        <p class="lg:text-[18px] md:text-[16px] text-[12px]">Pelanggan menerima teks secara
+                            automatik
                         </p>
                     </div>
                 </div>
@@ -1170,9 +1256,11 @@
                     <img src="/Docs/Assets/Images/Home/customerToJoin2.webp"
                         class="lg:max-w-[240px]  md:max-w-[160px] max-w-[74.05px] w-full" alt="">
                     <div class="">
-                        <h2 class="lg:text-[30px] pb-2 font-medium md:leading-tight md:text-[20px] text-[16px] ">Online
+                        <h2 class="lg:text-[30px] pb-2 font-medium md:leading-tight md:text-[20px] text-[16px] ">
+                            Online
                         </h2>
-                        <p class="lg:text-[18px] md:text-[16px] text-[12px]">Melalui pautan web di Google, atau tapak
+                        <p class="lg:text-[18px] md:text-[16px] text-[12px]">Melalui pautan web di Google, atau
+                            tapak
                             anda</p>
                     </div>
                 </div>
@@ -1183,7 +1271,8 @@
                     <div class="">
                         <h2 class="lg:text-[30px] pb-2 font-medium md:leading-tight md:text-[20px] text-[16px] ">QR
                         </h2>
-                        <p class="lg:text-[18px] md:text-[16px] text-[12px]">Pelanggan menerima teks secara automatik
+                        <p class="lg:text-[18px] md:text-[16px] text-[12px]">Pelanggan menerima teks secara
+                            automatik
                         </p>
                     </div>
                 </div>
@@ -1192,7 +1281,8 @@
                     <img src="/Docs/Assets/Images/Home/customerToJoin4.webp"
                         class="lg:max-w-[240px]  md:max-w-[160px] max-w-[74.05px] w-full" alt="">
                     <div class="">
-                        <h2 class="lg:text-[30px] pb-2 font-medium md:leading-tight md:text-[20px] text-[16px] ">KIOSK
+                        <h2 class="lg:text-[30px] pb-2 font-medium md:leading-tight md:text-[20px] text-[16px] ">
+                            KIOSK
                         </h2>
                         <p class="lg:text-[18px] md:text-[16px] text-[12px]">Daftar melalui tablet</p>
                     </div>
@@ -1222,12 +1312,13 @@
 
             <div
                 class="flex items-center sm:flex-row flex-col justify-center sm:gap-2 gap-1.5 text-[#F26522] lg:text-[80px] md:text-[60px] text-[30px]   font-bold">
-                Bagaimana<img src="/Docs/Assets/Images/Home/chup.svg" class="lg:h-20 md:h-16 h-8" alt=""> berfungsi <img
-                    src="/Docs/Assets/Images/Home/questionMark.svg" class="lg:h-20 md:h-16 h-8" alt="">
+                Bagaimana<img src="/Docs/Assets/Images/Home/chup.svg" class="lg:h-20 md:h-16 h-8" alt=""> berfungsi
+                <img src="/Docs/Assets/Images/Home/questionMark.svg" class="lg:h-20 md:h-16 h-8" alt="">
             </div>
             <p
                 class="text-[14px] md:text-[24px] text-center text-[#115934] max-w-[978px] w-full mx-auto lg:leading-tight lg:text-[32px]">
-                Mengapa Chup boleh menyelesaikan masalah giliran anda berbanding dengan penyelesaian lain di pasaran.
+                Mengapa Chup boleh menyelesaikan masalah giliran anda berbanding dengan penyelesaian lain di
+                pasaran.
             </p>
 
             <div class="flex flex-col gap-7 md:mt-16 mt-10">
@@ -1238,10 +1329,14 @@
                     <div class="text-[#115934] md:text-start text-center">
                         <h2 class="lg:text-[38px] md:text-[22.01px] text-[18px] font-bold lg:pb-5 pb-2">Sistem Baris
                             Dinamik</h2>
-                        <p class="lg:text-[32px] md:text-[18.53px] text-[14px] lg:leading-tight">Menggunakan algoritma
-                            Pembelajaran Mesin, apl akan berfungsi pada masa penyajian, rehat kecemasan, kelewatan dan
-                            semua situasi yang berlaku di premis untuk memastikan pelanggan mendapat kemas kini Anggaran
-                            Masa Menunggu (Baris Beratur Langsung) atau masa pelantikan semula baharu (Tempahan Janji
+                        <p class="lg:text-[32px] md:text-[18.53px] text-[14px] lg:leading-tight">Menggunakan
+                            algoritma
+                            Pembelajaran Mesin, apl akan berfungsi pada masa penyajian, rehat kecemasan, kelewatan
+                            dan
+                            semua situasi yang berlaku di premis untuk memastikan pelanggan mendapat kemas kini
+                            Anggaran
+                            Masa Menunggu (Baris Beratur Langsung) atau masa pelantikan semula baharu (Tempahan
+                            Janji
                             Temu)
                         </p>
                     </div>
@@ -1250,11 +1345,14 @@
                     <img src="/Docs/Assets/Images/Home/whyChupWork2.webp"
                         class="lg:max-w-[240px] max-w-[145px] mx-auto w-full" alt="">
                     <div class="text-[#115934] md:text-start text-center">
-                        <h2 class="lg:text-[38px] md:text-[22.01px] text-[18px] font-bold lg:pb-5 pb-2">Tiada Apl untuk
+                        <h2 class="lg:text-[38px] md:text-[22.01px] text-[18px] font-bold lg:pb-5 pb-2">Tiada Apl
+                            untuk
                             Muat Turun</h2>
-                        <p class="lg:text-[32px] md:text-[18.53px] text-[14px] lg:leading-tight">Tiada aplikasi untuk
+                        <p class="lg:text-[32px] md:text-[18.53px] text-[14px] lg:leading-tight">Tiada aplikasi
+                            untuk
                             dimuat turun untuk pengguna atau premis anda kerana setiap perkara akan berada di awan.
-                            Untuk pelanggan sedia ada, muat naik sahaja data anda dan mereka tidak perlu berbuat apa-apa
+                            Untuk pelanggan sedia ada, muat naik sahaja data anda dan mereka tidak perlu berbuat
+                            apa-apa
                             kerana sistem akan menghantar pemberitahuan apabila tiba masanya.</p>
                     </div>
                 </div>
@@ -1265,9 +1363,11 @@
                         <h2 class="lg:text-[38px] md:text-[22.01px] text-[18px] capitalize font-bold lg:pb-5 pb-2">
                             Tempahan
                             sendiri, giliran sendiri dan pembatalan sendiri</h2>
-                        <p class="lg:text-[32px] md:text-[18.53px] text-[14px] lg:leading-tight">Pelanggan anda boleh
+                        <p class="lg:text-[32px] md:text-[18.53px] text-[14px] lg:leading-tight">Pelanggan anda
+                            boleh
                             melakukan segala-galanya sendiri dan mengelakkan panggilan telefon yang panjang dengan
-                            penyambut tetamu untuk membuat tempahan, menyertai baris gilir langsung, menjadualkan semula
+                            penyambut tetamu untuk membuat tempahan, menyertai baris gilir langsung, menjadualkan
+                            semula
                             atau membatalkan dan memaklumkan sebarang kelewatan atau ketibaan.
                         </p>
                     </div>
@@ -1279,8 +1379,10 @@
                         <h2 class="lg:text-[38px] md:text-[22.01px] text-[18px] font-bold lg:pb-5 pb-2 capitalize">
                             Peringatan kerap automatik</h2>
                         <p class="lg:text-[32px] md:text-[18.53px] text-[14px] lg:leading-tight">Aplikasi ini akan
-                            mengingatkan kedudukan baris gilir anda untuk baris gilir langsung. Untuk janji temu, apl
-                            akan menghantar pemberitahuan sebagai lalai - 1 hari, 4 jam, 2 jam dan 30 minit sebelum ini
+                            mengingatkan kedudukan baris gilir anda untuk baris gilir langsung. Untuk janji temu,
+                            apl
+                            akan menghantar pemberitahuan sebagai lalai - 1 hari, 4 jam, 2 jam dan 30 minit sebelum
+                            ini
                             supaya mereka boleh merancang dan tidak lupa.
                         </p>
                     </div>
@@ -1292,8 +1394,10 @@
                         <h2 class="lg:text-[38px] md:text-[22.01px] text-[18px] capitalize font-bold lg:pb-5 pb-2">
                             Walk-in
                             bergabung dengan Janji Temu</h2>
-                        <p class="lg:text-[32px] md:text-[18.53px] text-[14px] lg:leading-tight">Kebanyakan janji temu
-                            dan aplikasi baris gilir akan gagal kerana pada hakikatnya terdapat walk-in dan janji temu.
+                        <p class="lg:text-[32px] md:text-[18.53px] text-[14px] lg:leading-tight">Kebanyakan janji
+                            temu
+                            dan aplikasi baris gilir akan gagal kerana pada hakikatnya terdapat walk-in dan janji
+                            temu.
                             Chup berfungsi dengan menggabungkan kedua-dua situasi kompleks ini dengan sempurna.</p>
                     </div>
                 </div>
@@ -1301,11 +1405,13 @@
                     <img src="/Docs/Assets/Images/Home/whyChupWork6.webp"
                         class="lg:max-w-[240px] max-w-[145px] mx-auto w-full" alt="">
                     <div class="text-[#115934] md:text-start text-center">
-                        <h2 class="lg:text-[38px] md:text-[22.01px] text-[18px] capitalize font-bold lg:pb-5 pb-2">Tiada
+                        <h2 class="lg:text-[38px] md:text-[22.01px] text-[18px] capitalize font-bold lg:pb-5 pb-2">
+                            Tiada
                             perkakasan
                             untuk dibeli</h2>
                         <p class="lg:text-[32px] md:text-[18.53px] text-[14px] lg:leading-tight">Chup berfungsi pada
-                            awan. Anda tidak perlu membeli sebarang perkakasan jika anda memilih untuk tidak membelinya.
+                            awan. Anda tidak perlu membeli sebarang perkakasan jika anda memilih untuk tidak
+                            membelinya.
                             Anda juga boleh menjalankan premis anda 100% menggunakan telefon bimbit. Asalkan ada
                             sambungan internet di premis anda. TV dan Tablet adalah pilihan.</p>
                     </div>
@@ -1317,9 +1423,12 @@
                         <h2 class="lg:text-[38px] md:text-[22.01px] text-[18px] capitalize font-bold lg:pb-5 pb-2">
                             Rehat kecemasan </h2>
                         <p class="lg:text-[32px] md:text-[18.53px] text-[14px] lg:leading-tight">Pada hakikatnya,
-                            pembekal mungkin perlu keluar untuk berehat selama beberapa minit hingga beberapa jam, apl
-                            boleh memaklumkan dan mengatur semula janji temu dan orang beratur secara langsung supaya
-                            mereka boleh merancang untuk terus menunggu di tempat lain dan kembali tepat pada masanya
+                            pembekal mungkin perlu keluar untuk berehat selama beberapa minit hingga beberapa jam,
+                            apl
+                            boleh memaklumkan dan mengatur semula janji temu dan orang beratur secara langsung
+                            supaya
+                            mereka boleh merancang untuk terus menunggu di tempat lain dan kembali tepat pada
+                            masanya
                             atau memilih untuk menjadualkan semula diri mereka.</p>
                     </div>
                 </div>
@@ -1394,7 +1503,8 @@
                             Selesaikan isu
                             giliran anda</h2>
                         <p class="lg:text-[32px] md:text-[18.53px] text-[14px] lg:leading-tight">Tiada siapa suka
-                            menunggu. Jika anda selesaikan masalah ini, anda selangkah lebih maju berbanding yang lain
+                            menunggu. Jika anda selesaikan masalah ini, anda selangkah lebih maju berbanding yang
+                            lain
                         </p>
                     </div>
                 </div>
@@ -1402,10 +1512,12 @@
                     <img src="/Docs/Assets/Images/Home/benefit2.webp"
                         class="lg:max-w-[240px] max-w-[145px] mx-auto w-full" alt="">
                     <div class="text-[#115934] md:text-start text-center">
-                        <h2 class="lg:text-[38px] md:text-[22.01px] text-[18px] font-bold capitalize lg:pb-5 pb-2">Lebih
+                        <h2 class="lg:text-[38px] md:text-[22.01px] text-[18px] font-bold capitalize lg:pb-5 pb-2">
+                            Lebih
                             perniagaan
                             dan pelanggan berulang</h2>
-                        <p class="lg:text-[32px] md:text-[18.53px] text-[14px] lg:leading-tight">Apabila anda menghargai
+                        <p class="lg:text-[32px] md:text-[18.53px] text-[14px] lg:leading-tight">Apabila anda
+                            menghargai
                             masa orang, mereka akan meninggalkan premis anda dengan perasaan yang baik dan akan
                             menghargai anda dengan memberitahu orang lain</p>
                     </div>
@@ -1417,7 +1529,8 @@
                         <h2 class="lg:text-[38px] md:text-[22.01px] text-[18px] font-bold capitalize lg:pb-5 pb-2">
                             Wawasan dan Data Penting</h2>
                         <p class="lg:text-[32px] md:text-[18.53px] text-[14px] lg:leading-tight">Anda boleh menilai
-                            titik lemah perniagaan anda, seperti berapa lama masa menunggu untuk sumber atau layanan dan
+                            titik lemah perniagaan anda, seperti berapa lama masa menunggu untuk sumber atau layanan
+                            dan
                             mengambil tindakan segera</p>
                     </div>
                 </div>
@@ -1428,8 +1541,10 @@
                         <h2 class="lg:text-[38px] md:text-[22.01px] text-[18px] font-bold capitalize lg:pb-5 pb-2">
                             Kegembiraan
                             kakitangan sepanjang masa</h2>
-                        <p class="lg:text-[32px] md:text-[18.53px] text-[14px] lg:leading-tight">Ucapkan selamat tinggal
-                            kepada pelanggan yang marah kerana menunggu terlalu lama atau kakitangan yang keletihan</p>
+                        <p class="lg:text-[32px] md:text-[18.53px] text-[14px] lg:leading-tight">Ucapkan selamat
+                            tinggal
+                            kepada pelanggan yang marah kerana menunggu terlalu lama atau kakitangan yang keletihan
+                        </p>
                     </div>
                 </div>
                 <div class="bg-[#f1e4da] md:p-12 p-5 flex lg:flex-row flex-col items-center lg:gap-16 gap-6 rounded-md">
@@ -1450,7 +1565,8 @@
                             Ulasan
                         </h2>
                         <p class="lg:text-[32px] md:text-[18.53px] text-[14px] lg:leading-tight">Pelanggan mempunyai
-                            pilihan untuk meninggalkan ulasan supaya anda boleh meningkatkan perniagaan anda atau Google
+                            pilihan untuk meninggalkan ulasan supaya anda boleh meningkatkan perniagaan anda atau
+                            Google
                             Review (pilihan) jika mereka berpuas hati dengan perkhidmatan tersebut</p>
                     </div>
                 </div>
@@ -1463,7 +1579,8 @@
                             Letak Kereta
                         </h2>
                         <p class="lg:text-[32px] md:text-[18.53px] text-[14px] lg:leading-tight">Dengan orang yang
-                            datang tepat pada slot mereka, tempat letak kereta terhad anda tidak akan menjadi masalah
+                            datang tepat pada slot mereka, tempat letak kereta terhad anda tidak akan menjadi
+                            masalah
                             lagi
                         </p>
                     </div>
@@ -1520,14 +1637,16 @@
                         class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
                         <p class="p-3 text-[#115934] lg:text-[20px] md:text-[16px] text-[15px]">
                             Tidak seperti sistem tradisional yang bergantung kepada ketepatan masa yang ketat, Chup
-                            menyesuaikan diri dengan keadaan masa sebenar, memastikan pesakit tiba tepat pada waktunya
+                            menyesuaikan diri dengan keadaan masa sebenar, memastikan pesakit tiba tepat pada
+                            waktunya
                             untuk janji temu mereka.
                         </p>
                     </div>
                 </li>
                 <li class="my-2 rounded-xl overflow-hidden border border-[#9D9D9D] bg-[#fbf7f4]" x-data="accordion(16)">
                     <h2 @click="handleClick()" class="flex flex-row justify-between items-center p-3 cursor-pointer">
-                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">Mengapa masa
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">Mengapa
+                            masa
                             menunggu pesakit penting untuk hospital?</span>
                         <i class="fa-solid fa-plus transition-all duration-500" :class="handleRotate()"></i>
                     </h2>
@@ -1541,7 +1660,8 @@
                 </li>
                 <li class="my-2 rounded-xl overflow-hidden border border-[#9D9D9D] bg-[#fbf7f4]" x-data="accordion(17)">
                     <h2 @click="handleClick()" class="flex flex-row justify-between items-center p-3 cursor-pointer">
-                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">Adakah Chup
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">Adakah
+                            Chup
                             serasi dengan sistem CMS atau HIS?</span>
                         <i class="fa-solid fa-plus transition-all duration-500" :class="handleRotate()"></i>
                     </h2>
@@ -1555,14 +1675,16 @@
                 </li>
                 <li class="my-2 rounded-xl overflow-hidden border border-[#9D9D9D] bg-[#fbf7f4]" x-data="accordion(18)">
                     <h2 @click="handleClick()" class="flex flex-row justify-between items-center p-3 cursor-pointer">
-                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">Siapa yang
+                        <span class="lg:text-[24px] md:text-[18px] text-[16px] font-medium text-[#115934] ">Siapa
+                            yang
                             boleh menggunakan ChupOnline?</span>
                         <i class="fa-solid fa-plus transition-all duration-500" :class="handleRotate()"></i>
                     </h2>
                     <div x-ref="tab" :style="handleToggle()"
                         class=" overflow-hidden max-h-0 bg-[#d8fae8] duration-500 transition-all">
                         <p class="p-3 text-[#115934] lg:text-[20px] md:text-[16px] text-[15px]">
-                            Chup memberi tumpuan kepada sektor penjagaan kesihatan tetapi juga boleh digunakan di sektor
+                            Chup memberi tumpuan kepada sektor penjagaan kesihatan tetapi juga boleh digunakan di
+                            sektor
                             lain seperti kerajaan, salon, spa, dan automotif.
                         </p>
                     </div>
@@ -1599,7 +1721,8 @@
                                 class="text-white md:w-auto w-full  bg-[#F26522] flex py-2 font-bold px-6 items-center rounded-lg gap-4 lg:text-[22px] md:text-[22px] text-[18px] ">
                                 <img src="/Docs/Assets/Images/Home/mail.svg" class="max-w-[26.67px] w-full" alt="">
                                 <div class="leading-7">
-                                    Email Kami <p class="lg:text-[19px] text-[14px] font-normal">hello@chup.online</p>
+                                    Email Kami <p class="lg:text-[19px] text-[14px] font-normal">hello@chup.online
+                                    </p>
                                 </div>
                             </div>
                         </a>
