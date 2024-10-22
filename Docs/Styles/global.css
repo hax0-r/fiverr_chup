@@ -5,6 +5,7 @@
 .poppins {
     font-family: Poppins, sans-serif;
 }
+
 .san {
     font-family: "DM Sans", sans-serif;
 }
@@ -137,19 +138,34 @@
 }
 
 .language {
-    div{
-        display:none;
+    div {
+        display: none;
     }
 }
+
 .mainlanguage:hover {
     i {
         transform: rotate(180deg);
     }
-    .div2{
+
+    .div2 {
         display: block;
     }
 }
 
-img,a,button{
+
+.responsiveLanguages {
+    i {
+        transform: rotate(180deg);
+    }
+
+    .div22 {
+        display: block;
+    }
+}
+
+img,
+a,
+button {
     user-select: none;
 }

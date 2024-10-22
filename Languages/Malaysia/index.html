@@ -37,6 +37,16 @@
             min-height: calc(100vh - 96px);
         }
     }
+
+    .responsiveLanguages {
+        i {
+            transform: rotate(180deg);
+        }
+
+        .div2 {
+            display: block;
+        }
+    }
 </style>
 
 <body>
@@ -163,14 +173,14 @@
                     </li>
                 </ul>
             </div>
-            <div class="mb-5">
-                <div class="relative py-3 mainlanguage">
+            <div class="pb-7">
+                <div class="relative py-3 " id="responsiveLanguages">
                     <div
-                        class="flex items-center justify-center  gap-1.5 border-2 border-[#115934]  p-2.5 transition-all cursor-pointer rounded-xl language">
+                        class="flex items-center justify-center  gap-1.5 border-2 border-[#115934]  p-2.5 transition-all cursor-pointer rounded-xl ">
                         <img src="/Docs/Assets/Images/Global/language.svg" class="max-w-[19.5px] w-full" alt="">
                         <i class="fa-solid fa-angle-down text-sm text-[#115934] transition-all duration-500"></i>
-                        <div
-                            class="border-2 border-[#115934] text-[#115934] w-full rounded-lg absolute z-20  bg-[#f1e4da] bottom-16 right-0 overflow-hidden fadeIn div2">
+                        <div class="border-2 border-[#115934] text-[#115934] w-full rounded-lg absolute z-20  bg-[#f1e4da] bottom-16 right-0 overflow-hidden fadeIn div22 "
+                            id="responsiveLanguagesShow" style="display: none;">
                             <ul>
                                 <a href="/Languages/English/index.html">
                                     <li class="px-5 py-3 transition-all hover:bg-[#115934] font-bold hover:text-white">
