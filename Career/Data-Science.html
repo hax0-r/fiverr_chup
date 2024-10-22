@@ -120,79 +120,85 @@
         </div>
     </nav>
     <!-- responsive Navbar -->
-    <div class="fixed top-0 right-0 h-screen bg-[#f1e4da] text-[#115934] font-36 z-50 transition-all duration-500"
-        id="responsiveNav" style="width: 0;">
-        <div class="px-10 pt-10 pb-4 relative flex flex-col h-full justify-between">
-            <div class="">
-                <div class="flex items-center justify-between">
-                    <a href="/index.html">
-                        <img src="/Docs/Assets/Images/Global/logo.svg" class="h-[32px]" alt="">
-                    </a>
-                    <img src="/Docs/Assets/Images/Navbar/close.png" id="closeNav" class="h-[21px] cursor-pointer"
-                        alt="">
+    <div class="fixed top-0 right-0 h-screen bg-[#fbf7f4] text-[#115934] font-36 z-50 transition-all duration-500"
+    id="responsiveNav" style="width: 0;">
+    <div class="px-10 pt-10 pb-4 relative flex flex-col h-full justify-between">
+        <div class="">
+            <div class="flex items-center justify-between">
+                <a href="/index.html">
+                    <img src="/Docs/Assets/Images/Global/logo.svg" class="h-[32px]" alt="">
+                </a>
+                <img src="/Docs/Assets/Images/Navbar/close.png" id="closeNav" class="h-[21px] cursor-pointer"
+                    alt="">
+            </div>
+            <ul class="mt-10 text-[#115934] flex flex-col text-[17px]">
+                <a href="/about.html">
+                    <li class="py-4  poppins">About Us</li>
+                </a>
+                <a href="/case-study.html">
+                    <li class="py-4  poppins">Case Study</li>
+                </a>
+                <a href="/News/chup-news.html">
+                    <li class="py-4  poppins">News & Blog</li>
+                </a>
+                <a href="/FAQ.html">
+                    <li class="py-4  poppins">FAQ</li>
+                </a>
+                <a href="/Products.html">
+                    <li class="py-4  poppins">Products</li>
+                </a>
+                <li class="py-5" x-data="accordion(2)">
+                    <h2 @click="handleClick()" class="flex flex-row gap-2 items-center cursor-pointer">
+                        <span>More</span>
+                        <i :class="handleRotate()"
+                            class="fa-solid fa-angle-down mt-1 text-[#115934] text-sm transition-all duration-300"></i>
+                    </h2>
+                    <div x-ref="tab" :style="handleToggle()"
+                        class="overflow-hidden max-h-0 duration-500 transition-all">
+                        <ul class="pl-5 pt-5">
+                            <a href="/Career.html">
+                                <li class="py-3">Career</li>
+                            </a>
+                            <a href="/Security-Compliance.html">
+                                <li class="py-3">Security Compliance</li>
+                            </a>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="pb-7">
+            <div class="relative py-3 " id="responsiveLanguages">
+                <div
+                    class="flex items-center justify-center  gap-1.5 border-2 border-[#115934]  p-2.5 transition-all cursor-pointer rounded-xl ">
+                    <img src="/Docs/Assets/Images/Global/language.svg" class="max-w-[19.5px] w-full" alt="">
+                    <i class="fa-solid fa-angle-down text-sm text-[#115934] transition-all duration-500"></i>
+                    <div class="border-2 border-[#115934] text-[#115934] w-full rounded-lg absolute z-20  bg-[#fbf7f4] bottom-16 right-0 overflow-hidden fadeIn div22 "
+                        id="responsiveLanguagesShow" style="display: none;">
+                        <ul>
+                            <a href="/Languages/English/index.html">
+                                <li class="px-5 py-3 transition-all hover:bg-[#115934] font-bold hover:text-white">
+                                    English</li>
+                            </a>
+                            <a href="/Languages/Malaysia/index.html">
+                                <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">Malaysia
+                                </li>
+                            </a>
+                            <a href="/Languages/Indonesia/index.html">
+                                <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">Indonesia
+                                </li>
+                            </a>
+                            <a href="/Languages/Thailand/index.html">
+                                <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">Thailand
+                                </li>
+                            </a>
+                            <a href="/Languages/Mandarin/index.html">
+                                <li class="px-5 py-3 transition-all hover:bg-[#115934] hover:text-white">Mandarin
+                                </li>
+                            </a>
+                        </ul>
+                    </div>
                 </div>
-                <ul class="mt-10 text-[#115934] flex flex-col text-[17px]">
-                    <a href="/about.html">
-                        <li class="py-4  poppins">About Us</li>
-                    </a>
-                    <a href="/case-study.html">
-                        <li class="py-4  poppins">Case Study</li>
-                    </a>
-                    <a href="/News/chup-news.html">
-                        <li class="py-4  poppins">News & Blog</li>
-                    </a>
-                    <a href="/FAQ.html">
-                        <li class="py-4  poppins">FAQ</li>
-                    </a>
-                    <li class="py-5" x-data="accordion(1)">
-                        <h2 @click="handleClick()" class="flex flex-row gap-2 items-center cursor-pointer">
-                            <span>Products</span>
-                            <i :class="handleRotate()"
-                                class="fa-solid fa-angle-down mt-1 text-[#115934] text-sm transition-all duration-300"></i>
-                        </h2>
-                        <div x-ref="tab" :style="handleToggle()"
-                            class="overflow-hidden max-h-0 duration-500 transition-all">
-                            <ul class="pl-5 pt-5">
-                                <a href="/Products.html">
-                                    <li class="py-3">ChupOnline</li>
-                                </a>
-                                <a href="/Products.html">
-                                    <li class="py-3">ChupHospital</li>
-                                </a>
-                                <a href="/Products.html">
-                                    <li class="py-3">ChupClinic</li>
-                                </a>
-                                <a href="/Products.html">
-                                    <li class="py-3">ChupWork</li>
-                                </a>
-                                <a href="/Products.html">
-                                    <li class="py-3">Paperize.AI</li>
-                                </a>
-                                <a href="/Products.html">
-                                    <li class="py-3">My Mental</li>
-                                </a>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="py-5" x-data="accordion(2)">
-                        <h2 @click="handleClick()" class="flex flex-row gap-2 items-center cursor-pointer">
-                            <span>More</span>
-                            <i :class="handleRotate()"
-                                class="fa-solid fa-angle-down mt-1 text-[#115934] text-sm transition-all duration-300"></i>
-                        </h2>
-                        <div x-ref="tab" :style="handleToggle()"
-                            class="overflow-hidden max-h-0 duration-500 transition-all">
-                            <ul class="pl-5 pt-5">
-                                <a href="/Career.html">
-                                    <li class="py-3">Career</li>
-                                </a>
-                                <a href="/Security-Compliance.html">
-                                    <li class="py-3">Security Compliance</li>
-                                </a>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
             </div>
             <a href="">
                 <button
@@ -203,6 +209,7 @@
             </a>
         </div>
     </div>
+</div>
 
 
     <div class="px-5 pt-5 md:pb-14 pb-8 w-full bg-[#fbf7f4] heroSectionCareers">
@@ -247,7 +254,7 @@
                <li> Ability to communicate complex ideas.</li>
             </ul>
 
-            <a href="/Career/Data-Science-form.html">
+            <a href="#">
 
                 <button
                     class="w-full p-3 text-center rounded-full font-semibold md:text-[24px] text-[20px] text-white bg-[#F26522] mt-8 transition-all hover:bg-[#ff5a0d] duration-500">Apply

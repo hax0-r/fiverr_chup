@@ -22,3 +22,10 @@ document.getElementById('dynamic-footer').innerHTML = `
         </div>
     </div>
 `;
+
+
+const responsiveLanguages = document.getElementById('responsiveLanguages');
+const responsiveLanguagesShow = document.getElementById('responsiveLanguagesShow');
+responsiveLanguages.addEventListener('click', () => {
+    responsiveLanguagesShow.style.display = responsiveLanguagesShow.style.display === "block" ? "none" : "block";
+});
